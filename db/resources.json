@@ -1,0 +1,1312 @@
+[
+  {
+    "id": "ugc1",
+    "pillar": "education-career",
+    "data_type": "A_public_source",
+    "location": "nationwide",
+    "cost": "free",
+    "life_stages": [
+      "student"
+    ],
+    "name_en": "UGC Merit Scholarship",
+    "name_bn": "ইউজিসি মেধাবৃত্তি",
+    "org_en": "University Grants Commission of Bangladesh",
+    "org_bn": "বাংলাদেশ বিশ্ববিদ্যালয় মঞ্জুরী কমিশন",
+    "description_en": "Merit scholarship for outstanding students at public universities, funded by UGC. Your university's registrar invites applications by notice and sends nominations to UGC.",
+    "description_bn": "সরকারি বিশ্ববিদ্যালয়ের মেধাবী শিক্ষার্থীদের জন্য ইউজিসি-অর্থায়িত মেধাবৃত্তি। বিশ্ববিদ্যালয়ের রেজিস্ট্রার অফিস নোটিশ দিয়ে আবেদন আহ্বান করে এবং মনোনয়ন ইউজিসিতে পাঠায়।",
+    "eligibility_en": "Regular undergraduate (Honours) or Master's students at a public university, based on results. Private-university students are not covered. Exact rules vary by university.",
+    "eligibility_bn": "সরকারি বিশ্ববিদ্যালয়ের নিয়মিত স্নাতক (সম্মান) বা স্নাতকোত্তর শিক্ষার্থী, ফলাফলের ভিত্তিতে। বেসরকারি বিশ্ববিদ্যালয়ের শিক্ষার্থীরা এর আওতায় নয়। নিয়ম বিশ্ববিদ্যালয়ভেদে আলাদা।",
+    "required_documents": [
+      {
+        "en": "Your university's application form (from the registrar's notice)",
+        "bn": "বিশ্ববিদ্যালয়ের আবেদন ফরম (রেজিস্ট্রারের নোটিশ অনুযায়ী)"
+      },
+      {
+        "en": "Results or papers the notice asks for",
+        "bn": "নোটিশে চাওয়া ফলাফল বা কাগজপত্র"
+      }
+    ],
+    "phone": null,
+    "email": null,
+    "website": "https://ugc.gov.bd",
+    "facebook": null,
+    "address_en": null,
+    "address_bn": null,
+    "caution_en": null,
+    "caution_bn": null,
+    "sources": [
+      {
+        "en": "University of Barishal merit scholarship regulations (UGC-funded), 2026",
+        "bn": "বরিশাল বিশ্ববিদ্যালয় মেধাবৃত্তি নীতিমালা, ২০২৬",
+        "url": "https://www.bu.ac.bd/uploads/notice/2026-07-07-a52cb0_406814280.pdf"
+      },
+      {
+        "en": "UGC official website",
+        "bn": "ইউজিসি ওয়েবসাইট",
+        "url": "https://ugc.gov.bd"
+      }
+    ],
+    "last_checked": "2026-11-13",
+    "next_review": "2027-02-13"
+  },
+  {
+    "id": "sicip1",
+    "pillar": "education-career",
+    "data_type": "A_public_source",
+    "location": "nationwide",
+    "cost": "free",
+    "life_stages": [
+      "career",
+      "working",
+      "entrepreneur"
+    ],
+    "name_en": "SICIP Free Skills Training",
+    "name_bn": "এসআইসিআইপি বিনামূল্যে দক্ষতা প্রশিক্ষণ",
+    "org_en": "Finance Division, Ministry of Finance (with ADB)",
+    "org_bn": "অর্থ বিভাগ, অর্থ মন্ত্রণালয় (এডিবির সহায়তায়)",
+    "description_en": "Government skills programme running until June 2029. Free job-ready courses through partner training institutes, with an allowance for trainees who attend at least 80% of classes. At least 30% of basic-course places are planned for women.",
+    "description_bn": "জুন ২০২৯ পর্যন্ত চলমান সরকারি দক্ষতা কর্মসূচি। অংশীদার প্রশিক্ষণ প্রতিষ্ঠানে বিনামূল্যে চাকরি-উপযোগী কোর্স, কমপক্ষে ৮০% ক্লাসে উপস্থিত থাকলে ভাতা। মৌলিক কোর্সে কমপক্ষে ৩০% আসন নারীদের জন্য পরিকল্পিত।",
+    "eligibility_en": "Depends on the course: many need SSC. You cannot join if you are already enrolled in another SEIP or SICIP course.",
+    "eligibility_bn": "কোর্সভেদে আলাদা: অনেক কোর্সে এসএসসি লাগে। অন্য কোনো SEIP বা SICIP কোর্সে ভর্তি থাকলে আবেদন করা যাবে না।",
+    "required_documents": [
+      {
+        "en": "Educational certificate required by the course",
+        "bn": "কোর্সের জন্য প্রয়োজনীয় শিক্ষাগত সনদ"
+      },
+      {
+        "en": "Ask the training institute for its full list",
+        "bn": "পূর্ণ তালিকার জন্য প্রশিক্ষণ প্রতিষ্ঠানে জিজ্ঞাসা করুন"
+      }
+    ],
+    "phone": null,
+    "email": null,
+    "website": "https://www.sicip.gov.bd",
+    "facebook": null,
+    "address_en": null,
+    "address_bn": null,
+    "caution_en": null,
+    "caution_bn": null,
+    "sources": [
+      {
+        "en": "SICIP official website",
+        "bn": "এসআইসিআইপি ওয়েবসাইট",
+        "url": "https://sicip.gov.bd/?p=334"
+      },
+      {
+        "en": "SICIP training notice, June 2026",
+        "bn": "এসআইসিআইপি প্রশিক্ষণ নোটিশ, জুন ২০২৬",
+        "url": "https://sicip.gov.bd/backend/assets/images/notices/20260616092505_6a311671ee333_17062026.pdf"
+      }
+    ],
+    "last_checked": "2026-11-13",
+    "next_review": "2027-02-13"
+  },
+  {
+    "id": "sicip2",
+    "pillar": "education-career",
+    "data_type": "A_public_source",
+    "location": "nationwide",
+    "cost": "free",
+    "life_stages": [
+      "career",
+      "working"
+    ],
+    "name_en": "SICIP-PKSF Training for Disadvantaged Youth",
+    "name_bn": "সুবিধাবঞ্চিত তরুণদের জন্য এসআইসিআইপি-পিকেএসএফ প্রশিক্ষণ",
+    "org_en": "Palli Karma-Sahayak Foundation (PKSF)",
+    "org_bn": "পল্লী কর্ম-সহায়ক ফাউন্ডেশন (পিকেএসএফ)",
+    "description_en": "Hands-on technical training in about 12–13 trades through partner institutes across the country. Accommodation and meals are covered, and trainees get help finding a job or starting self-employment afterwards.",
+    "description_bn": "সারাদেশে অংশীদার প্রতিষ্ঠানের মাধ্যমে প্রায় ১২–১৩টি ট্রেডে হাতে-কলমে কারিগরি প্রশিক্ষণ। থাকা ও খাওয়ার খরচ দেওয়া হয়, এবং প্রশিক্ষণ শেষে চাকরি বা আত্মকর্মসংস্থানে সহায়তা করা হয়।",
+    "eligibility_en": "Youth from low-income, marginalised and remote communities. 30% of places are reserved for women.",
+    "eligibility_bn": "নিম্ন-আয়ের, প্রান্তিক ও প্রত্যন্ত এলাকার তরুণ-তরুণী। ৩০% আসন নারীদের জন্য সংরক্ষিত।",
+    "required_documents": [
+      {
+        "en": "Ask the training institute for its document list",
+        "bn": "প্রশিক্ষণ প্রতিষ্ঠানের কাছ থেকে কাগজপত্রের তালিকা নিন"
+      }
+    ],
+    "phone": null,
+    "email": null,
+    "website": "https://pksf.org.bd/skills-for-industry-competitiveness-and-innovation-program-sicip/",
+    "facebook": null,
+    "address_en": null,
+    "address_bn": null,
+    "caution_en": null,
+    "caution_bn": null,
+    "sources": [
+      {
+        "en": "UNB, 12,000 youth to receive skills training under PKSF programme",
+        "bn": "ইউএনবি",
+        "url": "https://unb.com.bd/category/Bangladesh/12000-youth-to-receive-skills-training-under-pksf-program/165053"
+      },
+      {
+        "en": "PKSF SICIP project page",
+        "bn": "পিকেএসএফ প্রকল্প পাতা",
+        "url": "https://pksf.org.bd/skills-for-industry-competitiveness-and-innovation-program-sicip/"
+      }
+    ],
+    "last_checked": "2026-11-13",
+    "next_review": "2027-02-13"
+  },
+  {
+    "id": "hb16263",
+    "pillar": "health-wellbeing",
+    "data_type": "A_public_source",
+    "location": "nationwide",
+    "cost": "free",
+    "life_stages": [
+      "student",
+      "career",
+      "working",
+      "entrepreneur",
+      "family",
+      "later"
+    ],
+    "name_en": "Shastho Batayon 16263",
+    "name_bn": "স্বাস্থ্য বাতায়ন ১৬২৬৩",
+    "org_en": "Directorate General of Health Services (DGHS)",
+    "org_bn": "স্বাস্থ্য অধিদপ্তর (ডিজিএইচএস)",
+    "description_en": "Government health call centre. Speak to an MBBS doctor by phone at any hour, get health information, ambulance details, or make a complaint about a health service. Works from any phone.",
+    "description_bn": "সরকারি স্বাস্থ্য কল সেন্টার। যেকোনো সময় ফোনে এমবিবিএস চিকিৎসকের সাথে কথা বলুন, স্বাস্থ্য তথ্য ও অ্যাম্বুলেন্সের খোঁজ নিন, বা স্বাস্থ্যসেবা নিয়ে অভিযোগ করুন। যেকোনো ফোন থেকে কল করা যায়।",
+    "eligibility_en": "Anyone.",
+    "eligibility_bn": "যে কেউ।",
+    "required_documents": [],
+    "phone": "16263",
+    "email": null,
+    "website": null,
+    "facebook": null,
+    "address_en": null,
+    "address_bn": null,
+    "caution_en": "In Feb 2026 news reports said the service was at risk of closing over unpaid salaries. If the call doesn't connect, visit your nearest government health facility.",
+    "caution_bn": "ফেব্রুয়ারি ২০২৬-এ বেতন বকেয়ার কারণে সেবাটি বন্ধ হওয়ার ঝুঁকির কথা সংবাদে এসেছে। কল না গেলে নিকটস্থ সরকারি স্বাস্থ্যকেন্দ্রে যান।",
+    "sources": [
+      {
+        "en": "Jago News, Feb 2026",
+        "bn": "জাগো নিউজ, ফেব্রুয়ারি ২০২৬",
+        "url": "https://www.jagonews24.com/en/national/news/89609"
+      },
+      {
+        "en": "TBS, Shastho Batayon services",
+        "bn": "টিবিএস",
+        "url": "https://www.tbsnews.net/node/151003"
+      }
+    ],
+    "last_checked": "2026-11-13",
+    "next_review": "2026-12-13"
+  },
+  {
+    "id": "dghsfr",
+    "pillar": "health-wellbeing",
+    "data_type": "A_public_source",
+    "location": "nationwide",
+    "cost": "unknown",
+    "life_stages": [
+      "student",
+      "career",
+      "working",
+      "entrepreneur",
+      "family",
+      "later"
+    ],
+    "name_en": "DGHS Health Facility Registry",
+    "name_bn": "ডিজিএইচএস স্বাস্থ্য সেবাকেন্দ্র রেজিস্ট্রি",
+    "org_en": "MIS, Directorate General of Health Services",
+    "org_bn": "এমআইএস, স্বাস্থ্য অধিদপ্তর",
+    "description_en": "The official national list of places where health services are provided, including type, ownership and major services. NariPath will use it to build a nearby-clinic finder.",
+    "description_bn": "যেসব স্থানে স্বাস্থ্যসেবা দেওয়া হয় তার সরকারি জাতীয় তালিকা, ধরন, মালিকানা ও প্রধান সেবাসহ। নারীপথ এটি দিয়ে কাছের ক্লিনিক খোঁজার সুবিধা তৈরি করবে।",
+    "eligibility_en": "Public information.",
+    "eligibility_bn": "উন্মুক্ত তথ্য।",
+    "required_documents": [],
+    "phone": null,
+    "email": null,
+    "website": "https://info.shr.dghs.gov.bd/technical-support/facility-registry",
+    "facebook": null,
+    "address_en": null,
+    "address_bn": null,
+    "caution_en": "This is a data source, not a helpline. Costs depend on each facility.",
+    "caution_bn": "এটি একটি তথ্যভান্ডার, হেল্পলাইন নয়। খরচ সেবাকেন্দ্রভেদে আলাদা।",
+    "sources": [
+      {
+        "en": "DGHS Shared Health Record, Facility Registry",
+        "bn": "ডিজিএইচএস শেয়ার্ড হেলথ রেকর্ড",
+        "url": "https://en.info.shr.dghs.gov.bd/technical-support/facility-registry"
+      }
+    ],
+    "last_checked": "2026-11-13",
+    "next_review": "2027-02-13"
+  },
+  {
+    "id": "r01",
+    "pillar": "rights-legal",
+    "data_type": "A_public_source",
+    "location": "nationwide",
+    "cost": "free",
+    "life_stages": [
+      "student",
+      "career",
+      "working",
+      "entrepreneur",
+      "family",
+      "later"
+    ],
+    "name_en": "National Helpline 109",
+    "name_bn": "ন্যাশনাল হেল্পলাইন ১০৯",
+    "org_en": "Department of Women Affairs, Ministry of Women and Children Affairs",
+    "org_bn": "মহিলা বিষয়ক অধিদপ্তর, মহিলা ও শিশু বিষয়ক মন্ত্রণালয়",
+    "description_en": "Toll-free, 24-hour helpline for violence against women and children. Offers rescue, legal and psychosocial support, health referrals, child-marriage prevention and guidance on cyber violence.",
+    "description_bn": "নারী ও শিশু নির্যাতন প্রতিরোধে টোল-ফ্রি, ২৪ ঘণ্টার হেল্পলাইন। উদ্ধার, আইনি ও মনোসামাজিক সহায়তা, স্বাস্থ্য রেফারেল, বাল্যবিবাহ প্রতিরোধ এবং সাইবার সহিংসতা বিষয়ে পরামর্শ দেয়।",
+    "eligibility_en": "Anyone can call, including on someone else's behalf.",
+    "eligibility_bn": "যে কেউ কল করতে পারেন, অন্যের পক্ষ থেকেও।",
+    "required_documents": [],
+    "phone": "109",
+    "email": null,
+    "website": null,
+    "facebook": null,
+    "address_en": null,
+    "address_bn": null,
+    "caution_en": null,
+    "caution_bn": null,
+    "sources": [
+      {
+        "en": "The Daily Star, When danger strikes, where can women turn? (Nov 2025)",
+        "bn": "দ্য ডেইলি স্টার, নভেম্বর ২০২৫",
+        "url": "https://www.thedailystar.net/supplements/16-days-activism-2025/news/when-danger-strikes-where-can-women-turn-4042526"
+      },
+      {
+        "en": "UN Women Asia-Pacific, list of helplines",
+        "bn": "ইউএন উইমেন এশিয়া-প্যাসিফিক, হেল্পলাইন তালিকা",
+        "url": "https://asiapacific.unwomen.org/en/focus-areas/end-violence-against-women/shadow-pandemic-evaw-and-covid-response/list-of-helplines"
+      }
+    ],
+    "last_checked": "2026-11-13",
+    "next_review": "2027-02-13"
+  },
+  {
+    "id": "ntcc",
+    "pillar": "rights-legal",
+    "data_type": "A_public_source",
+    "location": "dhaka",
+    "cost": "free",
+    "life_stages": [
+      "student",
+      "career",
+      "working",
+      "entrepreneur",
+      "family",
+      "later"
+    ],
+    "name_en": "National Trauma Counselling Centre",
+    "name_bn": "জাতীয় ট্রমা কাউন্সেলিং সেন্টার",
+    "org_en": "Multi-Sectoral Programme on Violence Against Women, MoWCA",
+    "org_bn": "নারী নির্যাতন প্রতিরোধকল্পে মাল্টিসেক্টরাল প্রোগ্রাম, মহিলা ও শিশু বিষয়ক মন্ত্রণালয়",
+    "description_en": "Psychosocial counselling for women and children affected by violence, at the Department of Women Affairs in Dhaka. Regional trauma counselling centres also exist.",
+    "description_bn": "ঢাকায় মহিলা বিষয়ক অধিদপ্তরে সহিংসতার শিকার নারী ও শিশুদের জন্য মনোসামাজিক কাউন্সেলিং। আঞ্চলিক ট্রমা কাউন্সেলিং সেন্টারও রয়েছে।",
+    "eligibility_en": "Women and children affected by violence. You can also be referred through 109 or an OCC.",
+    "eligibility_bn": "সহিংসতার শিকার নারী ও শিশু। ১০৯ বা ওসিসির মাধ্যমেও রেফার করা যায়।",
+    "required_documents": [],
+    "phone": null,
+    "email": null,
+    "website": null,
+    "facebook": null,
+    "address_en": "Department of Women Affairs, 37/3 Eskaton Garden Road, Dhaka-1000",
+    "address_bn": "মহিলা বিষয়ক অধিদপ্তর, ৩৭/৩ ইস্কাটন গার্ডেন রোড, ঢাকা-১০০০",
+    "caution_en": "Address is from a public reference page. Call 109 to confirm before visiting.",
+    "caution_bn": "ঠিকানাটি একটি পাবলিক রেফারেন্স পাতা থেকে নেওয়া। যাওয়ার আগে ১০৯-এ কল করে নিশ্চিত হোন।",
+    "sources": [
+      {
+        "en": "MoWCA, National Trauma Counseling Centre",
+        "bn": "মহিলা ও শিশু বিষয়ক মন্ত্রণালয়",
+        "url": "https://mowca.portal.gov.bd/site/page/306712ab-30bb-471c-bb95-ea0865ccd0c3/nolink/সাফল্য-ও-অর্জন"
+      },
+      {
+        "en": "National Trauma Counselling Centre (reference page)",
+        "bn": "রেফারেন্স পাতা",
+        "url": "https://en.wikipedia-on-ipfs.org/wiki/National_Trauma_Counselling_Centre"
+      },
+      {
+        "en": "The Daily Star, When danger strikes, where can women turn? (Nov 2025)",
+        "bn": "দ্য ডেইলি স্টার, নভেম্বর ২০২৫",
+        "url": "https://www.thedailystar.net/supplements/16-days-activism-2025/news/when-danger-strikes-where-can-women-turn-4042526"
+      }
+    ],
+    "last_checked": "2026-11-13",
+    "next_review": "2027-02-13"
+  },
+  {
+    "id": "occcells",
+    "pillar": "rights-legal",
+    "data_type": "A_public_source",
+    "location": "nationwide",
+    "cost": "free",
+    "life_stages": [
+      "student",
+      "career",
+      "working",
+      "entrepreneur",
+      "family",
+      "later"
+    ],
+    "name_en": "One-Stop Crisis Cells (district & upazila hospitals)",
+    "name_bn": "ওয়ান-স্টপ ক্রাইসিস সেল (জেলা ও উপজেলা হাসপাতাল)",
+    "org_en": "Ministry of Women and Children Affairs",
+    "org_bn": "মহিলা ও শিশু বিষয়ক মন্ত্রণালয়",
+    "description_en": "About 95 cells (30 at district hospitals, 65 at upazila health complexes) offering medical care, legal help, police support and counselling in one place.",
+    "description_bn": "প্রায় ৯৫টি সেল (৩০টি জেলা হাসপাতালে, ৬৫টি উপজেলা স্বাস্থ্য কমপ্লেক্সে), যেখানে এক জায়গায় চিকিৎসা, আইনি সহায়তা, পুলিশি সহায়তা ও কাউন্সেলিং পাওয়া যায়।",
+    "eligibility_en": "Women and children affected by violence.",
+    "eligibility_bn": "সহিংসতার শিকার নারী ও শিশু।",
+    "required_documents": [],
+    "phone": null,
+    "email": null,
+    "website": null,
+    "facebook": null,
+    "address_en": null,
+    "address_bn": null,
+    "caution_en": "NariPath does not yet list each hospital. Call 109 to find the nearest cell.",
+    "caution_bn": "নারীপথে এখনো প্রতিটি হাসপাতালের তালিকা নেই। নিকটতম সেল জানতে ১০৯-এ কল করুন।",
+    "sources": [
+      {
+        "en": "The Daily Star, All public medical colleges to have OCCs (2026)",
+        "bn": "দ্য ডেইলি স্টার, ২০২৬",
+        "url": "https://online91.thedailystar.net/news/bangladesh/news/all-public-medical-colleges-have-one-stop-crisis-centres-4195736"
+      },
+      {
+        "en": "UNB, Govt moves to expand one-stop crisis support",
+        "bn": "ইউএনবি",
+        "url": "https://unb.com.bd/category/Special/govt-moves-to-expand-one-stop-crisis-support-for-victims-amid-rising-violence/183496"
+      }
+    ],
+    "last_checked": "2026-11-13",
+    "next_review": "2027-02-13"
+  },
+  {
+    "id": "nlaso",
+    "pillar": "rights-legal",
+    "data_type": "A_public_source",
+    "location": "nationwide",
+    "cost": "free",
+    "life_stages": [
+      "student",
+      "career",
+      "working",
+      "entrepreneur",
+      "family",
+      "later"
+    ],
+    "name_en": "Government Legal Aid Helpline 16699",
+    "name_bn": "সরকারি আইনি সহায়তা হেল্পলাইন ১৬৬৯৯",
+    "org_en": "National Legal Aid Services Organisation, Law and Justice Division",
+    "org_bn": "জাতীয় আইনগত সহায়তা প্রদান সংস্থা, আইন ও বিচার বিভাগ",
+    "description_en": "Toll-free national call centre giving free legal advice at government cost, and connecting callers to their District Legal Aid Office.",
+    "description_bn": "টোল-ফ্রি জাতীয় কল সেন্টার, সরকারি খরচে বিনামূল্যে আইনি পরামর্শ দেয় এবং জেলা লিগ্যাল এইড অফিসের সাথে যুক্ত করে।",
+    "eligibility_en": "People who are financially insolvent or otherwise unable to get justice on their own, under the Legal Aid Act.",
+    "eligibility_bn": "আইনগত সহায়তা প্রদান আইন অনুযায়ী আর্থিকভাবে অসচ্ছল বা নিজে বিচার পেতে অসমর্থ ব্যক্তি।",
+    "required_documents": [],
+    "phone": "16699",
+    "email": null,
+    "website": null,
+    "facebook": null,
+    "address_en": null,
+    "address_bn": null,
+    "caution_en": null,
+    "caution_bn": null,
+    "sources": [
+      {
+        "en": "BSS, Legal aid report (May 2026)",
+        "bn": "বাসস, মে ২০২৬",
+        "url": "https://www.bssnews.net/bangla/law-and-courts/308075"
+      },
+      {
+        "en": "BSS, Legal aid report (July 2026)",
+        "bn": "বাসস, জুলাই ২০২৬",
+        "url": "https://www.bssnews.net/bangla/news/325176"
+      }
+    ],
+    "last_checked": "2026-11-13",
+    "next_review": "2027-02-13"
+  },
+  {
+    "id": "dlao",
+    "pillar": "rights-legal",
+    "data_type": "A_public_source",
+    "location": "nationwide",
+    "cost": "free",
+    "life_stages": [
+      "student",
+      "career",
+      "working",
+      "entrepreneur",
+      "family",
+      "later"
+    ],
+    "name_en": "District Legal Aid Offices (all 64 districts)",
+    "name_bn": "জেলা লিগ্যাল এইড অফিস (৬৪ জেলা)",
+    "org_en": "National Legal Aid Services Organisation",
+    "org_bn": "জাতীয় আইনগত সহায়তা প্রদান সংস্থা",
+    "description_en": "Free legal advice, mediation and a lawyer at government cost. Every district has an office. Supports women and children facing physical, sexual, psychological or domestic abuse.",
+    "description_bn": "সরকারি খরচে বিনামূল্যে আইনি পরামর্শ, মধ্যস্থতা ও আইনজীবী। প্রতিটি জেলায় অফিস আছে। শারীরিক, যৌন, মানসিক বা পারিবারিক নির্যাতনের শিকার নারী ও শিশুদের সহায়তা করে।",
+    "eligibility_en": "People who cannot afford a lawyer, under the Legal Aid Act.",
+    "eligibility_bn": "আইনগত সহায়তা প্রদান আইন অনুযায়ী যাদের আইনজীবী নেওয়ার সামর্থ্য নেই।",
+    "required_documents": [
+      {
+        "en": "Bring any papers about the matter. The office will tell you what else is needed.",
+        "bn": "বিষয়টির সাথে সম্পর্কিত যেকোনো কাগজ সঙ্গে আনুন। আর কী লাগবে অফিস জানিয়ে দেবে।"
+      }
+    ],
+    "phone": null,
+    "email": null,
+    "website": null,
+    "facebook": null,
+    "address_en": null,
+    "address_bn": null,
+    "caution_en": "Call 16699 first to find your district office and what to bring.",
+    "caution_bn": "জেলা অফিসের ঠিকানা ও কী আনতে হবে জানতে প্রথমে ১৬৬৯৯-এ কল করুন।",
+    "sources": [
+      {
+        "en": "The Daily Star, When danger strikes, where can women turn? (Nov 2025)",
+        "bn": "দ্য ডেইলি স্টার, নভেম্বর ২০২৫",
+        "url": "https://www.thedailystar.net/supplements/16-days-activism-2025/news/when-danger-strikes-where-can-women-turn-4042526"
+      },
+      {
+        "en": "BSS, Legal aid report (July 2026)",
+        "bn": "বাসস, জুলাই ২০২৬",
+        "url": "https://www.bssnews.net/bangla/news/325176"
+      }
+    ],
+    "last_checked": "2026-11-13",
+    "next_review": "2027-02-13"
+  },
+  {
+    "id": "blast",
+    "pillar": "rights-legal",
+    "data_type": "A_public_source",
+    "location": "nationwide",
+    "cost": "free",
+    "life_stages": [
+      "student",
+      "career",
+      "working",
+      "entrepreneur",
+      "family",
+      "later"
+    ],
+    "name_en": "BLAST Legal Aid",
+    "name_bn": "ব্লাস্ট আইনি সহায়তা",
+    "org_en": "Bangladesh Legal Aid and Services Trust (BLAST)",
+    "org_bn": "বাংলাদেশ লিগ্যাল এইড অ্যান্ড সার্ভিসেস ট্রাস্ট (ব্লাস্ট)",
+    "description_en": "Free legal advice, mediation and court representation, from lower courts up to the Supreme Court, through district offices and legal aid clinics.",
+    "description_bn": "জেলা অফিস ও আইনি সহায়তা ক্লিনিকের মাধ্যমে নিম্ন আদালত থেকে সুপ্রিম কোর্ট পর্যন্ত বিনামূল্যে আইনি পরামর্শ, মধ্যস্থতা ও মামলা পরিচালনা।",
+    "eligibility_en": "People who cannot afford a lawyer, especially women and marginalised people.",
+    "eligibility_bn": "যাদের আইনজীবী নেওয়ার সামর্থ্য নেই, বিশেষ করে নারী ও প্রান্তিক জনগোষ্ঠী।",
+    "required_documents": [
+      {
+        "en": "Bring any papers about the matter. BLAST will tell you what else is needed.",
+        "bn": "বিষয়টির সাথে সম্পর্কিত যেকোনো কাগজ সঙ্গে আনুন। আর কী লাগবে ব্লাস্ট জানিয়ে দেবে।"
+      }
+    ],
+    "phone": null,
+    "email": null,
+    "website": "https://www.blast.org.bd",
+    "facebook": null,
+    "address_en": "Head office: 1/1 Pioneer Road, Kakrail, Dhaka-1000",
+    "address_bn": "প্রধান কার্যালয়: ১/১ পাইওনিয়ার রোড, কাকরাইল, ঢাকা-১০০০",
+    "caution_en": null,
+    "caution_bn": null,
+    "sources": [
+      {
+        "en": "The Daily Star, When danger strikes, where can women turn? (Nov 2025)",
+        "bn": "দ্য ডেইলি স্টার, নভেম্বর ২০২৫",
+        "url": "https://www.thedailystar.net/supplements/16-days-activism-2025/news/when-danger-strikes-where-can-women-turn-4042526"
+      },
+      {
+        "en": "BLAST official website",
+        "bn": "ব্লাস্ট ওয়েবসাইট",
+        "url": "https://blast.org.bd/programmes"
+      }
+    ],
+    "last_checked": "2026-11-13",
+    "next_review": "2027-02-13"
+  },
+  {
+    "id": "s01",
+    "pillar": "personal-digital-safety",
+    "data_type": "A_public_source",
+    "location": "nationwide",
+    "cost": "free",
+    "life_stages": [
+      "student",
+      "career",
+      "working",
+      "entrepreneur",
+      "family",
+      "later"
+    ],
+    "name_en": "National Emergency Service 999",
+    "name_bn": "জাতীয় জরুরি সেবা ৯৯৯",
+    "org_en": "Bangladesh Police",
+    "org_bn": "বাংলাদেশ পুলিশ",
+    "description_en": "Free national emergency number for police, fire and ambulance. Violence, harassment and stalking against women and children are classed as emergencies.",
+    "description_bn": "পুলিশ, ফায়ার সার্ভিস ও অ্যাম্বুলেন্সের জন্য বিনামূল্যের জাতীয় জরুরি নম্বর। নারী ও শিশুর প্রতি সহিংসতা, হয়রানি ও পিছু নেওয়া জরুরি হিসেবে গণ্য।",
+    "eligibility_en": "Anyone in immediate danger, or someone calling for them.",
+    "eligibility_bn": "তাৎক্ষণিক বিপদে থাকা যে কেউ, বা তার পক্ষে অন্য কেউ।",
+    "required_documents": [],
+    "phone": "999",
+    "email": null,
+    "website": null,
+    "facebook": null,
+    "address_en": null,
+    "address_bn": null,
+    "caution_en": null,
+    "caution_bn": null,
+    "sources": [
+      {
+        "en": "The Daily Star, When danger strikes, where can women turn? (Nov 2025)",
+        "bn": "দ্য ডেইলি স্টার, নভেম্বর ২০২৫",
+        "url": "https://www.thedailystar.net/supplements/16-days-activism-2025/news/when-danger-strikes-where-can-women-turn-4042526"
+      },
+      {
+        "en": "UN Women Asia-Pacific, list of helplines",
+        "bn": "ইউএন উইমেন এশিয়া-প্যাসিফিক, হেল্পলাইন তালিকা",
+        "url": "https://asiapacific.unwomen.org/en/focus-areas/end-violence-against-women/shadow-pandemic-evaw-and-covid-response/list-of-helplines"
+      }
+    ],
+    "last_checked": "2026-11-13",
+    "next_review": "2027-02-13"
+  },
+  {
+    "id": "pcsw",
+    "pillar": "personal-digital-safety",
+    "data_type": "A_public_source",
+    "location": "nationwide",
+    "cost": "free",
+    "life_stages": [
+      "student",
+      "career",
+      "working",
+      "entrepreneur",
+      "family",
+      "later"
+    ],
+    "name_en": "Police Cyber Support for Women (PCSW)",
+    "name_bn": "পুলিশ সাইবার সাপোর্ট ফর উইমেন (পিসিএসডব্লিউ)",
+    "org_en": "Police Headquarters, Bangladesh Police",
+    "org_bn": "পুলিশ সদর দপ্তর, বাংলাদেশ পুলিশ",
+    "description_en": "An all-women police team that helps with online harassment, blackmail and other cyber-crimes against women. Gives advice and counselling, and connects you to the right police station or victim support centre. Keeps your information confidential.",
+    "description_bn": "সম্পূর্ণ নারী পুলিশ সদস্যদের একটি দল, যারা অনলাইনে হয়রানি, ব্ল্যাকমেইলসহ নারীর বিরুদ্ধে সাইবার অপরাধে সহায়তা করে। পরামর্শ ও কাউন্সেলিং দেয় এবং উপযুক্ত থানা বা ভিকটিম সাপোর্ট সেন্টারে যুক্ত করে। আপনার তথ্য গোপন রাখে।",
+    "eligibility_en": "Women facing cyber-crime or online harassment.",
+    "eligibility_bn": "সাইবার অপরাধ বা অনলাইন হয়রানির শিকার নারী।",
+    "required_documents": [
+      {
+        "en": "Screenshots with dates",
+        "bn": "তারিখসহ স্ক্রিনশট"
+      },
+      {
+        "en": "Links to the posts or profiles",
+        "bn": "পোস্ট বা প্রোফাইলের লিংক"
+      }
+    ],
+    "phone": "01320000888",
+    "email": "cybersupport.women@police.gov.bd",
+    "website": null,
+    "facebook": "https://www.facebook.com/PCSW.PHQ",
+    "address_en": null,
+    "address_bn": null,
+    "caution_en": null,
+    "caution_bn": null,
+    "sources": [
+      {
+        "en": "Bangladesh Police, PCSW page",
+        "bn": "বাংলাদেশ পুলিশ, পিসিএসডব্লিউ পাতা",
+        "url": "https://police.portal.gov.bd/site/page/e0c99d75-d7fc-4ccd-9023-a69df169c483"
+      }
+    ],
+    "last_checked": "2026-11-13",
+    "next_review": "2027-02-13"
+  },
+  {
+    "id": "blastcyber",
+    "pillar": "personal-digital-safety",
+    "data_type": "A_public_source",
+    "location": "nationwide",
+    "cost": "free",
+    "life_stages": [
+      "student",
+      "career",
+      "working",
+      "entrepreneur",
+      "family",
+      "later"
+    ],
+    "name_en": "Cyber Support for Women and Children",
+    "name_bn": "সাইবার সাপোর্ট ফর উইমেন অ্যান্ড চিলড্রেন",
+    "org_en": "BLAST, Cybercrime Awareness Foundation and Naripokkho",
+    "org_bn": "ব্লাস্ট, সাইবারক্রাইম অ্যাওয়ারনেস ফাউন্ডেশন ও নারীপক্ষ",
+    "description_en": "A non-government platform for reporting online abuse, with legal help, counselling and referrals.",
+    "description_bn": "অনলাইন নির্যাতন রিপোর্ট করার একটি বেসরকারি প্ল্যাটফর্ম, আইনি সহায়তা, কাউন্সেলিং ও রেফারেলসহ।",
+    "eligibility_en": "Women and children facing online abuse.",
+    "eligibility_bn": "অনলাইন নির্যাতনের শিকার নারী ও শিশু।",
+    "required_documents": [
+      {
+        "en": "Screenshots with dates",
+        "bn": "তারিখসহ স্ক্রিনশট"
+      }
+    ],
+    "phone": null,
+    "email": null,
+    "website": "https://www.blast.org.bd",
+    "facebook": null,
+    "address_en": null,
+    "address_bn": null,
+    "caution_en": "Contact details for this platform aren't confirmed yet. Reach it through BLAST.",
+    "caution_bn": "এই প্ল্যাটফর্মের যোগাযোগের তথ্য এখনো নিশ্চিত নয়। ব্লাস্টের মাধ্যমে যোগাযোগ করুন।",
+    "sources": [
+      {
+        "en": "The Daily Star, When danger strikes, where can women turn? (Nov 2025)",
+        "bn": "দ্য ডেইলি স্টার, নভেম্বর ২০২৫",
+        "url": "https://www.thedailystar.net/supplements/16-days-activism-2025/news/when-danger-strikes-where-can-women-turn-4042526"
+      }
+    ],
+    "last_checked": "2026-11-13",
+    "next_review": "2027-02-13"
+  },
+  {
+    "id": "wehelp",
+    "pillar": "financial-independence",
+    "data_type": "A_public_source",
+    "location": "nationwide",
+    "cost": "free",
+    "life_stages": [
+      "entrepreneur"
+    ],
+    "name_en": "WE-HELP Platform for Women Entrepreneurs",
+    "name_bn": "নারী উদ্যোক্তাদের জন্য উই-হেল্প প্ল্যাটফর্ম",
+    "org_en": "SME Foundation, with UN ESCAP",
+    "org_bn": "এসএমই ফাউন্ডেশন, জাতিসংঘ এসকাপের সহায়তায়",
+    "description_en": "One-stop digital hub launched in 2023 offering about 20 kinds of support: policy information, networking, market linkage, marketing, exhibitions, webinars and online business guidance.",
+    "description_bn": "২০২৩ সালে চালু হওয়া ওয়ান-স্টপ ডিজিটাল প্ল্যাটফর্ম, প্রায় ২০ ধরনের সহায়তা দেয়: নীতি তথ্য, নেটওয়ার্কিং, বাজার সংযোগ, বিপণন, প্রদর্শনী, ওয়েবিনার ও অনলাইন ব্যবসার পরামর্শ।",
+    "eligibility_en": "Women entrepreneurs anywhere in Bangladesh.",
+    "eligibility_bn": "বাংলাদেশের যেকোনো স্থানের নারী উদ্যোক্তা।",
+    "required_documents": [
+      {
+        "en": "Trade licence, if you have one",
+        "bn": "ট্রেড লাইসেন্স (থাকলে)"
+      }
+    ],
+    "phone": null,
+    "email": null,
+    "website": "https://smef.gov.bd",
+    "facebook": null,
+    "address_en": null,
+    "address_bn": null,
+    "caution_en": "The direct WE-HELP web address isn't confirmed yet. Start from the SME Foundation website.",
+    "caution_bn": "উই-হেল্পের সরাসরি ওয়েব ঠিকানা এখনো নিশ্চিত নয়। এসএমই ফাউন্ডেশনের ওয়েবসাইট থেকে শুরু করুন।",
+    "sources": [
+      {
+        "en": "TBS, WE-HELP to provide 20 types of services",
+        "bn": "টিবিএস",
+        "url": "https://www.tbsnews.net/node/700702"
+      },
+      {
+        "en": "UN ESCAP, Launch of WeHelp",
+        "bn": "জাতিসংঘ এসকাপ",
+        "url": "https://www.asiapacificgender.org/node/635"
+      }
+    ],
+    "last_checked": "2026-11-13",
+    "next_review": "2027-02-13"
+  },
+  {
+    "id": "bbwomen",
+    "pillar": "financial-independence",
+    "data_type": "A_public_source",
+    "location": "nationwide",
+    "cost": "paid",
+    "life_stages": [
+      "entrepreneur"
+    ],
+    "name_en": "Bangladesh Bank Refinance Loan for Women Entrepreneurs",
+    "name_bn": "নারী উদ্যোক্তাদের জন্য বাংলাদেশ ব্যাংক রিফাইন্যান্স ঋণ",
+    "org_en": "Bangladesh Bank, through participating banks and finance companies",
+    "org_bn": "বাংলাদেশ ব্যাংক, অংশগ্রহণকারী ব্যাংক ও আর্থিক প্রতিষ্ঠানের মাধ্যমে",
+    "description_en": "Small Enterprise Refinance Scheme dedicated to women since 2023. Interest is capped at 5%. Example limits from one lender: Tk 5 lakh (informal/marginal), Tk 20 lakh (cottage), Tk 50 lakh (micro), Tk 1 crore (small). Loans up to Tk 25 lakh may be given on personal guarantee.",
+    "description_bn": "২০২৩ সাল থেকে শুধু নারীদের জন্য নির্ধারিত ক্ষুদ্র উদ্যোগ রিফাইন্যান্স স্কিম। সুদের হার সর্বোচ্চ ৫%। একটি প্রতিষ্ঠানের উদাহরণ সীমা: ৫ লাখ টাকা (অনানুষ্ঠানিক/প্রান্তিক), ২০ লাখ (কুটির), ৫০ লাখ (মাইক্রো), ১ কোটি (ক্ষুদ্র)। ২৫ লাখ টাকা পর্যন্ত ঋণ ব্যক্তিগত জামিনে দেওয়া যেতে পারে।",
+    "eligibility_en": "Women-owned cottage, micro and small enterprises. Each bank sets its own checks.",
+    "eligibility_bn": "নারী মালিকানাধীন কুটির, মাইক্রো ও ক্ষুদ্র উদ্যোগ। প্রতিটি ব্যাংক নিজস্ব যাচাই করে।",
+    "required_documents": [
+      {
+        "en": "Ask the bank for its document list",
+        "bn": "ব্যাংকের কাছ থেকে কাগজপত্রের তালিকা নিন"
+      }
+    ],
+    "phone": null,
+    "email": null,
+    "website": null,
+    "facebook": null,
+    "address_en": null,
+    "address_bn": null,
+    "caution_en": "You apply at a bank or finance company, not at Bangladesh Bank. This is a loan with interest; compare offers before signing.",
+    "caution_bn": "আবেদন করতে হয় ব্যাংক বা আর্থিক প্রতিষ্ঠানে, বাংলাদেশ ব্যাংকে নয়। এটি সুদসহ ঋণ; স্বাক্ষরের আগে বিভিন্ন প্রস্তাব তুলনা করুন।",
+    "sources": [
+      {
+        "en": "The Daily Star, World MSME Day 2025",
+        "bn": "দ্য ডেইলি স্টার, ২০২৫",
+        "url": "https://images.thedailystar.net/node/3926526"
+      },
+      {
+        "en": "IIDFC, CMSME Refinance Schemes of Bangladesh Bank",
+        "bn": "আইআইডিএফসি",
+        "url": "https://iidfc.com/refinenance-scheme"
+      },
+      {
+        "en": "TBS, personal guarantee up to Tk25 lakh",
+        "bn": "টিবিএস",
+        "url": "https://www.tbsnews.net/node/289741"
+      }
+    ],
+    "last_checked": "2026-11-13",
+    "next_review": "2027-02-13"
+  },
+  {
+    "id": "bbnew",
+    "pillar": "financial-independence",
+    "data_type": "A_public_source",
+    "location": "nationwide",
+    "cost": "paid",
+    "life_stages": [
+      "entrepreneur",
+      "career"
+    ],
+    "name_en": "Bangladesh Bank Loans for New Entrepreneurs",
+    "name_bn": "নতুন উদ্যোক্তাদের জন্য বাংলাদেশ ব্যাংক ঋণ",
+    "org_en": "Bangladesh Bank refinance schemes, through banks",
+    "org_bn": "বাংলাদেশ ব্যাংক রিফাইন্যান্স স্কিম, ব্যাংকের মাধ্যমে",
+    "description_en": "Collateral-free loans up to Tk 10 lakh at a maximum of 7% interest, and up to Tk 35 lakh against collateral. A separate Startup Fund lends at 4%.",
+    "description_bn": "জামানত ছাড়া সর্বোচ্চ ১০ লাখ টাকা পর্যন্ত ঋণ, সুদ সর্বোচ্চ ৭%; জামানতসহ ৩৫ লাখ টাকা পর্যন্ত। আলাদা স্টার্টআপ ফান্ড থেকে ৪% সুদে ঋণ।",
+    "eligibility_en": "New and young entrepreneurs. Each bank sets its own checks.",
+    "eligibility_bn": "নতুন ও তরুণ উদ্যোক্তা। প্রতিটি ব্যাংক নিজস্ব যাচাই করে।",
+    "required_documents": [
+      {
+        "en": "Ask the bank for its document list",
+        "bn": "ব্যাংকের কাছ থেকে কাগজপত্রের তালিকা নিন"
+      }
+    ],
+    "phone": null,
+    "email": null,
+    "website": null,
+    "facebook": null,
+    "address_en": null,
+    "address_bn": null,
+    "caution_en": "Figures are from the Finance Minister's statement to Parliament in June 2026.",
+    "caution_bn": "তথ্যগুলো জুন ২০২৬-এ সংসদে অর্থমন্ত্রীর বক্তব্য থেকে নেওয়া।",
+    "sources": [
+      {
+        "en": "The Daily Observer, June 2026",
+        "bn": "দ্য ডেইলি অবজারভার, জুন ২০২৬",
+        "url": "https://observerbd.com/news/578824"
+      }
+    ],
+    "last_checked": "2026-11-13",
+    "next_review": "2027-02-13"
+  },
+  {
+    "id": "h333",
+    "pillar": "everyday-community",
+    "data_type": "A_public_source",
+    "location": "nationwide",
+    "cost": "unknown",
+    "life_stages": [
+      "student",
+      "career",
+      "working",
+      "entrepreneur",
+      "family",
+      "later"
+    ],
+    "name_en": "National Helpline 333",
+    "name_bn": "জাতীয় হেল্পলাইন ৩৩৩",
+    "org_en": "Aspire to Innovate (a2i), ICT Division",
+    "org_bn": "এসপায়ার টু ইনোভেট (এটুআই), আইসিটি বিভাগ",
+    "description_en": "24-hour government line for information on public services and allowances, help with service applications, and reporting social problems such as child marriage and violence against women.",
+    "description_bn": "সরকারি সেবা ও ভাতার তথ্য, সেবার আবেদনে সহায়তা এবং বাল্যবিবাহ ও নারী নির্যাতনের মতো সামাজিক সমস্যা জানাতে ২৪ ঘণ্টার সরকারি নম্বর।",
+    "eligibility_en": "Anyone, from any mobile or landline.",
+    "eligibility_bn": "যে কেউ, যেকোনো মোবাইল বা ল্যান্ডফোন থেকে।",
+    "required_documents": [],
+    "phone": "333",
+    "email": null,
+    "website": null,
+    "facebook": null,
+    "address_en": null,
+    "address_bn": null,
+    "caution_en": null,
+    "caution_bn": null,
+    "sources": [
+      {
+        "en": "a2i, National Helpline 333",
+        "bn": "এটুআই, জাতীয় হেল্পলাইন ৩৩৩",
+        "url": "https://a2i.gov.bd/pages/static-pages/6922df18933eb65569e1fced"
+      }
+    ],
+    "last_checked": "2026-11-13",
+    "next_review": "2027-02-13"
+  },
+  {
+    "id": "dwacare",
+    "pillar": "everyday-community",
+    "data_type": "A_public_source",
+    "location": "dhaka",
+    "cost": "paid",
+    "life_stages": [
+      "working",
+      "family"
+    ],
+    "name_en": "Low-cost Government Daycare Centres",
+    "name_bn": "স্বল্প খরচের সরকারি ডে-কেয়ার সেন্টার",
+    "org_en": "Department of Women Affairs",
+    "org_bn": "মহিলা বিষয়ক অধিদপ্তর",
+    "description_en": "Daytime care with meals for children aged 6 months to 6 years, 8:30am to 5:30pm. In Dhaka, centres for low-income families are in Mogbazar, Kallyanpur, Mohammadpur, Khilgaon, Rampura, Azimpur, Faridabad and Kamrangirchar, for about Tk 100 a month. More centres run in other districts.",
+    "description_bn": "৬ মাস থেকে ৬ বছর বয়সী শিশুদের জন্য খাবারসহ দিবাযত্ন, সকাল ৮:৩০ থেকে বিকেল ৫:৩০। ঢাকায় নিম্ন-আয়ের পরিবারের জন্য মগবাজার, কল্যাণপুর, মোহাম্মদপুর, খিলগাঁও, রামপুরা, আজিমপুর, ফরিদাবাদ ও কামরাঙ্গীরচরে কেন্দ্র আছে, মাসে প্রায় ১০০ টাকা। অন্যান্য জেলাতেও কেন্দ্র আছে।",
+    "eligibility_en": "Children of low- and middle-income working mothers. Seats are limited and some centres have waiting lists.",
+    "eligibility_bn": "নিম্ন ও মধ্যম আয়ের কর্মজীবী মায়েদের সন্তান। আসন সীমিত, কিছু কেন্দ্রে অপেক্ষমাণ তালিকা আছে।",
+    "required_documents": [
+      {
+        "en": "Ask the centre for its admission requirements",
+        "bn": "ভর্তির শর্তাবলি কেন্দ্রে জিজ্ঞাসা করুন"
+      }
+    ],
+    "phone": null,
+    "email": null,
+    "website": null,
+    "facebook": null,
+    "address_en": null,
+    "address_bn": null,
+    "caution_en": null,
+    "caution_bn": null,
+    "sources": [
+      {
+        "en": "The Daily Star, Child daycare for only Tk 100 a month",
+        "bn": "দ্য ডেইলি স্টার",
+        "url": "https://www.thedailystar.net/node/3285596"
+      },
+      {
+        "en": "Prothom Alo, daycare waiting lists",
+        "bn": "প্রথম আলো",
+        "url": "https://en.prothomalo.com/bangladesh/mkpbchsbgp"
+      }
+    ],
+    "last_checked": "2026-11-13",
+    "next_review": "2027-02-13"
+  },
+  {
+    "id": "occ1",
+    "pillar": "rights-legal",
+    "data_type": "A_public_source",
+    "location": "dhaka",
+    "cost": "free",
+    "life_stages": [
+      "student",
+      "career",
+      "working",
+      "entrepreneur",
+      "family",
+      "later"
+    ],
+    "name_en": "One-Stop Crisis Centre, Dhaka Medical College Hospital",
+    "name_bn": "ওয়ান-স্টপ ক্রাইসিস সেন্টার, ঢাকা মেডিকেল কলেজ হাসপাতাল",
+    "org_en": "Multi-Sectoral Programme on Violence Against Women, MoWCA",
+    "org_bn": "নারী নির্যাতন প্রতিরোধকল্পে মাল্টিসেক্টরাল প্রোগ্রাম, মহিলা ও শিশু বিষয়ক মন্ত্রণালয়",
+    "description_en": "Inside the hospital. Medical treatment, police help, legal advice, counselling and short-term shelter for women and children who have faced violence, in one place.",
+    "description_bn": "হাসপাতালের ভেতরে। সহিংসতার শিকার নারী ও শিশুদের জন্য এক জায়গায় চিকিৎসা, পুলিশি সহায়তা, আইনি পরামর্শ, কাউন্সেলিং ও স্বল্পমেয়াদি আশ্রয়।",
+    "eligibility_en": "Women and children affected by violence. You can go directly or be referred through 109.",
+    "eligibility_bn": "সহিংসতার শিকার নারী ও শিশু। সরাসরি যেতে পারেন বা ১০৯-এর মাধ্যমে রেফার হতে পারেন।",
+    "required_documents": [],
+    "phone": null,
+    "email": null,
+    "website": null,
+    "facebook": null,
+    "address_en": "Dhaka Medical College Hospital",
+    "address_bn": "ঢাকা মেডিকেল কলেজ হাসপাতাল",
+    "caution_en": "No direct phone number confirmed yet. Call 109 for directions to the centre.",
+    "caution_bn": "সরাসরি ফোন নম্বর এখনো নিশ্চিত নয়। কেন্দ্রের পথ জানতে ১০৯-এ কল করুন।",
+    "sources": [
+      {
+        "en": "Bangladesh Post, One-stop centres (OCC locations)",
+        "bn": "বাংলাদেশ পোস্ট, ওয়ান-স্টপ ক্রাইসিস সেন্টার",
+        "url": "https://bangladeshpost.net/posts/one-stop-centres-help-woman-children-to-cope-with-crisis-situation-19729"
+      },
+      {
+        "en": "The Daily Star, All public medical colleges to have OCCs (2026)",
+        "bn": "দ্য ডেইলি স্টার, ২০২৬",
+        "url": "https://online91.thedailystar.net/news/bangladesh/news/all-public-medical-colleges-have-one-stop-crisis-centres-4195736"
+      }
+    ],
+    "last_checked": "2026-11-13",
+    "next_review": "2027-02-13"
+  },
+  {
+    "id": "occ2",
+    "pillar": "rights-legal",
+    "data_type": "A_public_source",
+    "location": "rajshahi",
+    "cost": "free",
+    "life_stages": [
+      "student",
+      "career",
+      "working",
+      "entrepreneur",
+      "family",
+      "later"
+    ],
+    "name_en": "One-Stop Crisis Centre, Rajshahi Medical College Hospital",
+    "name_bn": "ওয়ান-স্টপ ক্রাইসিস সেন্টার, রাজশাহী মেডিকেল কলেজ হাসপাতাল",
+    "org_en": "Multi-Sectoral Programme on Violence Against Women, MoWCA",
+    "org_bn": "নারী নির্যাতন প্রতিরোধকল্পে মাল্টিসেক্টরাল প্রোগ্রাম, মহিলা ও শিশু বিষয়ক মন্ত্রণালয়",
+    "description_en": "Inside the hospital. Medical treatment, police help, legal advice, counselling and short-term shelter for women and children who have faced violence, in one place.",
+    "description_bn": "হাসপাতালের ভেতরে। সহিংসতার শিকার নারী ও শিশুদের জন্য এক জায়গায় চিকিৎসা, পুলিশি সহায়তা, আইনি পরামর্শ, কাউন্সেলিং ও স্বল্পমেয়াদি আশ্রয়।",
+    "eligibility_en": "Women and children affected by violence. You can go directly or be referred through 109.",
+    "eligibility_bn": "সহিংসতার শিকার নারী ও শিশু। সরাসরি যেতে পারেন বা ১০৯-এর মাধ্যমে রেফার হতে পারেন।",
+    "required_documents": [],
+    "phone": null,
+    "email": null,
+    "website": null,
+    "facebook": null,
+    "address_en": "Rajshahi Medical College Hospital",
+    "address_bn": "রাজশাহী মেডিকেল কলেজ হাসপাতাল",
+    "caution_en": "No direct phone number confirmed yet. Call 109 for directions to the centre.",
+    "caution_bn": "সরাসরি ফোন নম্বর এখনো নিশ্চিত নয়। কেন্দ্রের পথ জানতে ১০৯-এ কল করুন।",
+    "sources": [
+      {
+        "en": "Bangladesh Post, One-stop centres (OCC locations)",
+        "bn": "বাংলাদেশ পোস্ট, ওয়ান-স্টপ ক্রাইসিস সেন্টার",
+        "url": "https://bangladeshpost.net/posts/one-stop-centres-help-woman-children-to-cope-with-crisis-situation-19729"
+      },
+      {
+        "en": "The Daily Star, All public medical colleges to have OCCs (2026)",
+        "bn": "দ্য ডেইলি স্টার, ২০২৬",
+        "url": "https://online91.thedailystar.net/news/bangladesh/news/all-public-medical-colleges-have-one-stop-crisis-centres-4195736"
+      }
+    ],
+    "last_checked": "2026-11-13",
+    "next_review": "2027-02-13"
+  },
+  {
+    "id": "occ3",
+    "pillar": "rights-legal",
+    "data_type": "A_public_source",
+    "location": "chattogram",
+    "cost": "free",
+    "life_stages": [
+      "student",
+      "career",
+      "working",
+      "entrepreneur",
+      "family",
+      "later"
+    ],
+    "name_en": "One-Stop Crisis Centre, Chattogram Medical College Hospital",
+    "name_bn": "ওয়ান-স্টপ ক্রাইসিস সেন্টার, চট্টগ্রাম মেডিকেল কলেজ হাসপাতাল",
+    "org_en": "Multi-Sectoral Programme on Violence Against Women, MoWCA",
+    "org_bn": "নারী নির্যাতন প্রতিরোধকল্পে মাল্টিসেক্টরাল প্রোগ্রাম, মহিলা ও শিশু বিষয়ক মন্ত্রণালয়",
+    "description_en": "Inside the hospital. Medical treatment, police help, legal advice, counselling and short-term shelter for women and children who have faced violence, in one place.",
+    "description_bn": "হাসপাতালের ভেতরে। সহিংসতার শিকার নারী ও শিশুদের জন্য এক জায়গায় চিকিৎসা, পুলিশি সহায়তা, আইনি পরামর্শ, কাউন্সেলিং ও স্বল্পমেয়াদি আশ্রয়।",
+    "eligibility_en": "Women and children affected by violence. You can go directly or be referred through 109.",
+    "eligibility_bn": "সহিংসতার শিকার নারী ও শিশু। সরাসরি যেতে পারেন বা ১০৯-এর মাধ্যমে রেফার হতে পারেন।",
+    "required_documents": [],
+    "phone": null,
+    "email": null,
+    "website": null,
+    "facebook": null,
+    "address_en": "Chattogram Medical College Hospital",
+    "address_bn": "চট্টগ্রাম মেডিকেল কলেজ হাসপাতাল",
+    "caution_en": "No direct phone number confirmed yet. Call 109 for directions to the centre.",
+    "caution_bn": "সরাসরি ফোন নম্বর এখনো নিশ্চিত নয়। কেন্দ্রের পথ জানতে ১০৯-এ কল করুন।",
+    "sources": [
+      {
+        "en": "Bangladesh Post, One-stop centres (OCC locations)",
+        "bn": "বাংলাদেশ পোস্ট, ওয়ান-স্টপ ক্রাইসিস সেন্টার",
+        "url": "https://bangladeshpost.net/posts/one-stop-centres-help-woman-children-to-cope-with-crisis-situation-19729"
+      },
+      {
+        "en": "The Daily Star, All public medical colleges to have OCCs (2026)",
+        "bn": "দ্য ডেইলি স্টার, ২০২৬",
+        "url": "https://online91.thedailystar.net/news/bangladesh/news/all-public-medical-colleges-have-one-stop-crisis-centres-4195736"
+      }
+    ],
+    "last_checked": "2026-11-13",
+    "next_review": "2027-02-13"
+  },
+  {
+    "id": "occ4",
+    "pillar": "rights-legal",
+    "data_type": "A_public_source",
+    "location": "sylhet",
+    "cost": "free",
+    "life_stages": [
+      "student",
+      "career",
+      "working",
+      "entrepreneur",
+      "family",
+      "later"
+    ],
+    "name_en": "One-Stop Crisis Centre, Sylhet MAG Osmani Medical College Hospital",
+    "name_bn": "ওয়ান-স্টপ ক্রাইসিস সেন্টার, সিলেট এম এ জি ওসমানী মেডিকেল কলেজ হাসপাতাল",
+    "org_en": "Multi-Sectoral Programme on Violence Against Women, MoWCA",
+    "org_bn": "নারী নির্যাতন প্রতিরোধকল্পে মাল্টিসেক্টরাল প্রোগ্রাম, মহিলা ও শিশু বিষয়ক মন্ত্রণালয়",
+    "description_en": "Inside the hospital. Medical treatment, police help, legal advice, counselling and short-term shelter for women and children who have faced violence, in one place.",
+    "description_bn": "হাসপাতালের ভেতরে। সহিংসতার শিকার নারী ও শিশুদের জন্য এক জায়গায় চিকিৎসা, পুলিশি সহায়তা, আইনি পরামর্শ, কাউন্সেলিং ও স্বল্পমেয়াদি আশ্রয়।",
+    "eligibility_en": "Women and children affected by violence. You can go directly or be referred through 109.",
+    "eligibility_bn": "সহিংসতার শিকার নারী ও শিশু। সরাসরি যেতে পারেন বা ১০৯-এর মাধ্যমে রেফার হতে পারেন।",
+    "required_documents": [],
+    "phone": null,
+    "email": null,
+    "website": null,
+    "facebook": null,
+    "address_en": "Sylhet MAG Osmani Medical College Hospital",
+    "address_bn": "সিলেট এম এ জি ওসমানী মেডিকেল কলেজ হাসপাতাল",
+    "caution_en": "No direct phone number confirmed yet. Call 109 for directions to the centre.",
+    "caution_bn": "সরাসরি ফোন নম্বর এখনো নিশ্চিত নয়। কেন্দ্রের পথ জানতে ১০৯-এ কল করুন।",
+    "sources": [
+      {
+        "en": "Bangladesh Post, One-stop centres (OCC locations)",
+        "bn": "বাংলাদেশ পোস্ট, ওয়ান-স্টপ ক্রাইসিস সেন্টার",
+        "url": "https://bangladeshpost.net/posts/one-stop-centres-help-woman-children-to-cope-with-crisis-situation-19729"
+      },
+      {
+        "en": "The Daily Star, All public medical colleges to have OCCs (2026)",
+        "bn": "দ্য ডেইলি স্টার, ২০২৬",
+        "url": "https://online91.thedailystar.net/news/bangladesh/news/all-public-medical-colleges-have-one-stop-crisis-centres-4195736"
+      }
+    ],
+    "last_checked": "2026-11-13",
+    "next_review": "2027-02-13"
+  },
+  {
+    "id": "occ5",
+    "pillar": "rights-legal",
+    "data_type": "A_public_source",
+    "location": "khulna",
+    "cost": "free",
+    "life_stages": [
+      "student",
+      "career",
+      "working",
+      "entrepreneur",
+      "family",
+      "later"
+    ],
+    "name_en": "One-Stop Crisis Centre, Khulna Medical College Hospital",
+    "name_bn": "ওয়ান-স্টপ ক্রাইসিস সেন্টার, খুলনা মেডিকেল কলেজ হাসপাতাল",
+    "org_en": "Multi-Sectoral Programme on Violence Against Women, MoWCA",
+    "org_bn": "নারী নির্যাতন প্রতিরোধকল্পে মাল্টিসেক্টরাল প্রোগ্রাম, মহিলা ও শিশু বিষয়ক মন্ত্রণালয়",
+    "description_en": "Inside the hospital. Medical treatment, police help, legal advice, counselling and short-term shelter for women and children who have faced violence, in one place.",
+    "description_bn": "হাসপাতালের ভেতরে। সহিংসতার শিকার নারী ও শিশুদের জন্য এক জায়গায় চিকিৎসা, পুলিশি সহায়তা, আইনি পরামর্শ, কাউন্সেলিং ও স্বল্পমেয়াদি আশ্রয়।",
+    "eligibility_en": "Women and children affected by violence. You can go directly or be referred through 109.",
+    "eligibility_bn": "সহিংসতার শিকার নারী ও শিশু। সরাসরি যেতে পারেন বা ১০৯-এর মাধ্যমে রেফার হতে পারেন।",
+    "required_documents": [],
+    "phone": null,
+    "email": null,
+    "website": null,
+    "facebook": null,
+    "address_en": "Khulna Medical College Hospital",
+    "address_bn": "খুলনা মেডিকেল কলেজ হাসপাতাল",
+    "caution_en": "No direct phone number confirmed yet. Call 109 for directions to the centre.",
+    "caution_bn": "সরাসরি ফোন নম্বর এখনো নিশ্চিত নয়। কেন্দ্রের পথ জানতে ১০৯-এ কল করুন।",
+    "sources": [
+      {
+        "en": "Bangladesh Post, One-stop centres (OCC locations)",
+        "bn": "বাংলাদেশ পোস্ট, ওয়ান-স্টপ ক্রাইসিস সেন্টার",
+        "url": "https://bangladeshpost.net/posts/one-stop-centres-help-woman-children-to-cope-with-crisis-situation-19729"
+      },
+      {
+        "en": "The Daily Star, All public medical colleges to have OCCs (2026)",
+        "bn": "দ্য ডেইলি স্টার, ২০২৬",
+        "url": "https://online91.thedailystar.net/news/bangladesh/news/all-public-medical-colleges-have-one-stop-crisis-centres-4195736"
+      }
+    ],
+    "last_checked": "2026-11-13",
+    "next_review": "2027-02-13"
+  },
+  {
+    "id": "occ6",
+    "pillar": "rights-legal",
+    "data_type": "A_public_source",
+    "location": "barishal",
+    "cost": "free",
+    "life_stages": [
+      "student",
+      "career",
+      "working",
+      "entrepreneur",
+      "family",
+      "later"
+    ],
+    "name_en": "One-Stop Crisis Centre, Sher-e-Bangla Medical College Hospital, Barishal",
+    "name_bn": "ওয়ান-স্টপ ক্রাইসিস সেন্টার, শের-ই-বাংলা মেডিকেল কলেজ হাসপাতাল, বরিশাল",
+    "org_en": "Multi-Sectoral Programme on Violence Against Women, MoWCA",
+    "org_bn": "নারী নির্যাতন প্রতিরোধকল্পে মাল্টিসেক্টরাল প্রোগ্রাম, মহিলা ও শিশু বিষয়ক মন্ত্রণালয়",
+    "description_en": "Inside the hospital. Medical treatment, police help, legal advice, counselling and short-term shelter for women and children who have faced violence, in one place.",
+    "description_bn": "হাসপাতালের ভেতরে। সহিংসতার শিকার নারী ও শিশুদের জন্য এক জায়গায় চিকিৎসা, পুলিশি সহায়তা, আইনি পরামর্শ, কাউন্সেলিং ও স্বল্পমেয়াদি আশ্রয়।",
+    "eligibility_en": "Women and children affected by violence. You can go directly or be referred through 109.",
+    "eligibility_bn": "সহিংসতার শিকার নারী ও শিশু। সরাসরি যেতে পারেন বা ১০৯-এর মাধ্যমে রেফার হতে পারেন।",
+    "required_documents": [],
+    "phone": null,
+    "email": null,
+    "website": null,
+    "facebook": null,
+    "address_en": "Sher-e-Bangla Medical College Hospital, Barishal",
+    "address_bn": "শের-ই-বাংলা মেডিকেল কলেজ হাসপাতাল, বরিশাল",
+    "caution_en": "No direct phone number confirmed yet. Call 109 for directions to the centre.",
+    "caution_bn": "সরাসরি ফোন নম্বর এখনো নিশ্চিত নয়। কেন্দ্রের পথ জানতে ১০৯-এ কল করুন।",
+    "sources": [
+      {
+        "en": "Bangladesh Post, One-stop centres (OCC locations)",
+        "bn": "বাংলাদেশ পোস্ট, ওয়ান-স্টপ ক্রাইসিস সেন্টার",
+        "url": "https://bangladeshpost.net/posts/one-stop-centres-help-woman-children-to-cope-with-crisis-situation-19729"
+      },
+      {
+        "en": "The Daily Star, All public medical colleges to have OCCs (2026)",
+        "bn": "দ্য ডেইলি স্টার, ২০২৬",
+        "url": "https://online91.thedailystar.net/news/bangladesh/news/all-public-medical-colleges-have-one-stop-crisis-centres-4195736"
+      }
+    ],
+    "last_checked": "2026-11-13",
+    "next_review": "2027-02-13"
+  },
+  {
+    "id": "occ7",
+    "pillar": "rights-legal",
+    "data_type": "A_public_source",
+    "location": "rangpur",
+    "cost": "free",
+    "life_stages": [
+      "student",
+      "career",
+      "working",
+      "entrepreneur",
+      "family",
+      "later"
+    ],
+    "name_en": "One-Stop Crisis Centre, Rangpur Medical College Hospital",
+    "name_bn": "ওয়ান-স্টপ ক্রাইসিস সেন্টার, রংপুর মেডিকেল কলেজ হাসপাতাল",
+    "org_en": "Multi-Sectoral Programme on Violence Against Women, MoWCA",
+    "org_bn": "নারী নির্যাতন প্রতিরোধকল্পে মাল্টিসেক্টরাল প্রোগ্রাম, মহিলা ও শিশু বিষয়ক মন্ত্রণালয়",
+    "description_en": "Inside the hospital. Medical treatment, police help, legal advice, counselling and short-term shelter for women and children who have faced violence, in one place.",
+    "description_bn": "হাসপাতালের ভেতরে। সহিংসতার শিকার নারী ও শিশুদের জন্য এক জায়গায় চিকিৎসা, পুলিশি সহায়তা, আইনি পরামর্শ, কাউন্সেলিং ও স্বল্পমেয়াদি আশ্রয়।",
+    "eligibility_en": "Women and children affected by violence. You can go directly or be referred through 109.",
+    "eligibility_bn": "সহিংসতার শিকার নারী ও শিশু। সরাসরি যেতে পারেন বা ১০৯-এর মাধ্যমে রেফার হতে পারেন।",
+    "required_documents": [],
+    "phone": null,
+    "email": null,
+    "website": null,
+    "facebook": null,
+    "address_en": "Rangpur Medical College Hospital",
+    "address_bn": "রংপুর মেডিকেল কলেজ হাসপাতাল",
+    "caution_en": "No direct phone number confirmed yet. Call 109 for directions to the centre.",
+    "caution_bn": "সরাসরি ফোন নম্বর এখনো নিশ্চিত নয়। কেন্দ্রের পথ জানতে ১০৯-এ কল করুন।",
+    "sources": [
+      {
+        "en": "Bangladesh Post, One-stop centres (OCC locations)",
+        "bn": "বাংলাদেশ পোস্ট, ওয়ান-স্টপ ক্রাইসিস সেন্টার",
+        "url": "https://bangladeshpost.net/posts/one-stop-centres-help-woman-children-to-cope-with-crisis-situation-19729"
+      },
+      {
+        "en": "The Daily Star, All public medical colleges to have OCCs (2026)",
+        "bn": "দ্য ডেইলি স্টার, ২০২৬",
+        "url": "https://online91.thedailystar.net/news/bangladesh/news/all-public-medical-colleges-have-one-stop-crisis-centres-4195736"
+      }
+    ],
+    "last_checked": "2026-11-13",
+    "next_review": "2027-02-13"
+  },
+  {
+    "id": "occ8",
+    "pillar": "rights-legal",
+    "data_type": "A_public_source",
+    "location": "faridpur",
+    "cost": "free",
+    "life_stages": [
+      "student",
+      "career",
+      "working",
+      "entrepreneur",
+      "family",
+      "later"
+    ],
+    "name_en": "One-Stop Crisis Centre, Faridpur Medical College Hospital",
+    "name_bn": "ওয়ান-স্টপ ক্রাইসিস সেন্টার, ফরিদপুর মেডিকেল কলেজ হাসপাতাল",
+    "org_en": "Multi-Sectoral Programme on Violence Against Women, MoWCA",
+    "org_bn": "নারী নির্যাতন প্রতিরোধকল্পে মাল্টিসেক্টরাল প্রোগ্রাম, মহিলা ও শিশু বিষয়ক মন্ত্রণালয়",
+    "description_en": "Inside the hospital. Medical treatment, police help, legal advice, counselling and short-term shelter for women and children who have faced violence, in one place.",
+    "description_bn": "হাসপাতালের ভেতরে। সহিংসতার শিকার নারী ও শিশুদের জন্য এক জায়গায় চিকিৎসা, পুলিশি সহায়তা, আইনি পরামর্শ, কাউন্সেলিং ও স্বল্পমেয়াদি আশ্রয়।",
+    "eligibility_en": "Women and children affected by violence. You can go directly or be referred through 109.",
+    "eligibility_bn": "সহিংসতার শিকার নারী ও শিশু। সরাসরি যেতে পারেন বা ১০৯-এর মাধ্যমে রেফার হতে পারেন।",
+    "required_documents": [],
+    "phone": null,
+    "email": null,
+    "website": null,
+    "facebook": null,
+    "address_en": "Faridpur Medical College Hospital",
+    "address_bn": "ফরিদপুর মেডিকেল কলেজ হাসপাতাল",
+    "caution_en": "No direct phone number confirmed yet. Call 109 for directions to the centre.",
+    "caution_bn": "সরাসরি ফোন নম্বর এখনো নিশ্চিত নয়। কেন্দ্রের পথ জানতে ১০৯-এ কল করুন।",
+    "sources": [
+      {
+        "en": "Bangladesh Post, One-stop centres (OCC locations)",
+        "bn": "বাংলাদেশ পোস্ট, ওয়ান-স্টপ ক্রাইসিস সেন্টার",
+        "url": "https://bangladeshpost.net/posts/one-stop-centres-help-woman-children-to-cope-with-crisis-situation-19729"
+      },
+      {
+        "en": "The Daily Star, All public medical colleges to have OCCs (2026)",
+        "bn": "দ্য ডেইলি স্টার, ২০২৬",
+        "url": "https://online91.thedailystar.net/news/bangladesh/news/all-public-medical-colleges-have-one-stop-crisis-centres-4195736"
+      }
+    ],
+    "last_checked": "2026-11-13",
+    "next_review": "2027-02-13"
+  },
+  {
+    "id": "occ9",
+    "pillar": "rights-legal",
+    "data_type": "A_public_source",
+    "location": "coxsbazar",
+    "cost": "free",
+    "life_stages": [
+      "student",
+      "career",
+      "working",
+      "entrepreneur",
+      "family",
+      "later"
+    ],
+    "name_en": "One-Stop Crisis Centre, Cox's Bazar Medical College Hospital",
+    "name_bn": "ওয়ান-স্টপ ক্রাইসিস সেন্টার, কক্সবাজার মেডিকেল কলেজ হাসপাতাল",
+    "org_en": "Multi-Sectoral Programme on Violence Against Women, MoWCA",
+    "org_bn": "নারী নির্যাতন প্রতিরোধকল্পে মাল্টিসেক্টরাল প্রোগ্রাম, মহিলা ও শিশু বিষয়ক মন্ত্রণালয়",
+    "description_en": "Inside the hospital. Medical treatment, police help, legal advice, counselling and short-term shelter for women and children who have faced violence, in one place.",
+    "description_bn": "হাসপাতালের ভেতরে। সহিংসতার শিকার নারী ও শিশুদের জন্য এক জায়গায় চিকিৎসা, পুলিশি সহায়তা, আইনি পরামর্শ, কাউন্সেলিং ও স্বল্পমেয়াদি আশ্রয়।",
+    "eligibility_en": "Women and children affected by violence. You can go directly or be referred through 109.",
+    "eligibility_bn": "সহিংসতার শিকার নারী ও শিশু। সরাসরি যেতে পারেন বা ১০৯-এর মাধ্যমে রেফার হতে পারেন।",
+    "required_documents": [],
+    "phone": null,
+    "email": null,
+    "website": null,
+    "facebook": null,
+    "address_en": "Cox's Bazar Medical College Hospital",
+    "address_bn": "কক্সবাজার মেডিকেল কলেজ হাসপাতাল",
+    "caution_en": "No direct phone number confirmed yet. Call 109 for directions to the centre.",
+    "caution_bn": "সরাসরি ফোন নম্বর এখনো নিশ্চিত নয়। কেন্দ্রের পথ জানতে ১০৯-এ কল করুন।",
+    "sources": [
+      {
+        "en": "Bangladesh Post, One-stop centres (OCC locations)",
+        "bn": "বাংলাদেশ পোস্ট, ওয়ান-স্টপ ক্রাইসিস সেন্টার",
+        "url": "https://bangladeshpost.net/posts/one-stop-centres-help-woman-children-to-cope-with-crisis-situation-19729"
+      },
+      {
+        "en": "The Daily Star, All public medical colleges to have OCCs (2026)",
+        "bn": "দ্য ডেইলি স্টার, ২০২৬",
+        "url": "https://online91.thedailystar.net/news/bangladesh/news/all-public-medical-colleges-have-one-stop-crisis-centres-4195736"
+      }
+    ],
+    "last_checked": "2026-11-13",
+    "next_review": "2027-02-13"
+  }
+]
