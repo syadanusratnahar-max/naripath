@@ -221,6 +221,12 @@ table.cov td.some{background:color-mix(in srgb,var(--ok) 16%,transparent);color:
 .alarm-ov{background:#b3261e;justify-content:center;gap:28px}
 .alarm-ov b{font-size:2.2rem}
 .alarm-ov button{border:0;border-radius:999px;padding:16px 32px;font-size:1.1rem;font-weight:700;background:#fff;color:#b3261e;cursor:pointer}
+.vh{position:fixed;inset:0;z-index:70;display:none;align-items:flex-end;justify-content:center;background:rgba(10,12,30,.5)}
+.vh.show{display:flex}
+.vh-card{background:var(--surface);color:var(--text);width:100%;max-width:480px;max-height:88%;overflow:auto;border-radius:18px 18px 0 0;padding:20px 16px 24px;display:flex;flex-direction:column;gap:10px}
+.frame-note{display:flex;gap:10px;align-items:flex-start;justify-content:space-between;padding:9px 16px;background:color-mix(in srgb,var(--primary) 10%,var(--surface));border-bottom:1px solid var(--line);font-size:.84rem}
+.frame-note[hidden]{display:none}
+.frame-note button{border:0;background:none;color:var(--muted);font-size:1.1rem;cursor:pointer;padding:0 4px}
 @media (prefers-reduced-motion:no-preference){.alarm-ov.show{animation:flash .6s steps(2) infinite}}
 @keyframes flash{50%{background:#7a120c}}
 .safety-entry{display:flex;gap:12px;align-items:center;text-decoration:none;color:var(--text);background:color-mix(in srgb,var(--bad) 8%,var(--surface));border:1.5px solid color-mix(in srgb,var(--bad) 40%,var(--line));border-radius:var(--r);padding:14px}
@@ -246,12 +252,18 @@ table.cov td.some{background:color-mix(in srgb,var(--ok) 16%,transparent);color:
     </div>
   </header>
   <div class="demo-strip" id="demo-strip"></div>
+  <div class="frame-note" id="frame-note" hidden></div>
   <div class="timer-strip" id="timer-strip" role="status"><span id="timer-text"></span><button type="button" id="strip-safe"></button></div>
   <main id="view" tabindex="-1"></main>
   <button id="listen" class="listen" type="button" aria-pressed="false"></button>
   <nav class="tabs" id="tabs" aria-label="Main"></nav>
 </div>
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
+<div id="voicehelp" class="vh" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="vh-card"><div class="vh-body"></div>
+    <div class="btn-row" style="margin-top:6px"><button type="button" class="btn primary" id="vh-english">Read in English instead</button><button type="button" class="btn ghost" id="vh-close">Close</button></div>
+  </div>
+</div>
 <div id="fakecall" class="overlay" aria-hidden="true">
   <div class="who"><div class="avatar" id="fc-initial">A</div><b id="fc-name">Ammu</b><p id="fc-status">Mobile · incoming call</p></div>
   <div class="row" id="fc-ringing"><button type="button" class="rb dec" id="fc-decline">Decline</button><button type="button" class="rb acc" id="fc-accept">Accept</button></div>
@@ -797,10 +809,10 @@ const copyBtn = n => `<button type="button" class="copy" data-copy="${n}" aria-l
 function helpline(n,id,k,lab){
   const big = !lab;
   return `<div class="helpline">
-    <a class="num" href="tel:${n}" aria-label="${t("call")} ${n}" style="${big?"":"font-size:1.1rem"}">${big?bnNum(n):lab}</a>
+    <a class="num" href="tel:${n}" target="_top" aria-label="${t("call")} ${n}" style="${big?"":"font-size:1.1rem"}">${big?bnNum(n):lab}</a>
     <a href="#r-${id}" class="hl-name"><b>${L(byId(id).name)}</b></a>
     <span class="small muted">${big?"":`<b style="font-variant-numeric:tabular-nums">${bnNum(n)}</b> · `}${t(k)}</span>
-    <span class="hl-actions"><a class="callbtn" href="tel:${n}">${t("call")}</a>${copyBtn(n)}</span>
+    <span class="hl-actions"><a class="callbtn" href="tel:${n}" target="_top">${t("call")}</a>${copyBtn(n)}</span>
   </div>`;
 }
 function resCard(r, extra=""){
@@ -944,7 +956,7 @@ function viewResource(id){
   const ext = (u,label) => `<a href="${u}" target="_blank" rel="noopener">${label}</a>`;
   const cparts=[];
   if(r.type==="demo") cparts.push(`<span class="muted">${t("demoContact")}</span>`);
-  if(r.phone) cparts.push(`<span class="phone-line"><a class="callbtn" href="tel:${r.phone}">${t("call")} ${r.phone}</a>${copyBtn(r.phone)}</span>`);
+  if(r.phone) cparts.push(`<span class="phone-line"><a class="callbtn" href="tel:${r.phone}" target="_top">${t("call")} ${r.phone}</a>${copyBtn(r.phone)}</span>`);
   if(r.email) cparts.push(`<span>${r.email}</span>`);
   if(r.fb) cparts.push(ext(r.fb,"Facebook"));
   if(r.web) cparts.push(ext(r.web,r.web.replace(/^https?:\/\/(www\.)?/,"").split("/")[0]));
@@ -1274,28 +1286,79 @@ function viewNavigator(){
 /* ---------------- Read aloud ---------------- */
 let speaking=false, toastTimer=null;
 function toast(msg){const el=document.getElementById("toast");el.textContent=msg;el.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove("show"),5000);}
-function stopSpeech(){ if(speaking){ try{speechSynthesis.cancel()}catch(e){} speaking=false; } }
-function toggleSpeech(){
+function stopSpeech(){ if(speaking){ try{speechSynthesis.cancel()}catch(e){} speaking=false; clearInterval(keepAlive); } }
+function loadVoices(){
+  return new Promise(res=>{
+    let v=[]; try{v=speechSynthesis.getVoices()}catch(e){}
+    if(v.length) return res(v);
+    let done=false; const fin=()=>{ if(done) return; done=true; let x=[]; try{x=speechSynthesis.getVoices()}catch(e){} res(x); };
+    try{ speechSynthesis.addEventListener("voiceschanged",fin,{once:true}); }catch(e){}
+    setTimeout(fin,1500);
+  });
+}
+function pickVoice(voices,want){
+  const n=v=>(v.lang||"").toLowerCase().replace("_","-");
+  if(want==="bn"){
+    return voices.find(v=>n(v)==="bn-bd") || voices.find(v=>n(v)==="bn-in") || voices.find(v=>n(v).startsWith("bn"))
+        || voices.find(v=>/bangla|bengali|বাংলা/i.test(v.name));
+  }
+  return voices.find(v=>n(v)==="en-gb") || voices.find(v=>n(v)==="en-in") || voices.find(v=>n(v).startsWith("en"));
+}
+let keepAlive=null;
+async function toggleSpeech(forceLang){
   if(speaking){stopSpeech();render();return;}
-  if(!("speechSynthesis" in window)){toast(t("noTTS"));return;}
-  const want=S.lang==="bn"?"bn":"en";
-  let voices=[]; try{voices=speechSynthesis.getVoices()}catch(e){}
-  const voice=voices.find(v=>v.lang.toLowerCase().replace("_","-").startsWith(want));
-  if(voices.length && !voice && want==="bn"){toast(t("noBnVoice"));return;}
-  const text=document.getElementById("view").innerText.replace(/[✓✕]/g,"").replace(/\n{2,}/g,"\n");
-  const chunks=text.split(/(?<=[।.!?:])\s+|\n+/).map(s=>s.trim()).filter(s=>s.length>1);
+  if(!("speechSynthesis" in window)){showVoiceHelp(true);return;}
+  const want=forceLang||(S.lang==="bn"?"bn":"en");
+  const voices=await loadVoices();
+  const voice=pickVoice(voices,want);
+  if(want==="bn" && !voice){ showVoiceHelp(false); return; }
+  const text=document.getElementById("view").innerText.replace(/[✓✕★]/g,"").replace(/\n{2,}/g,"\n");
+  const chunks=text.split(/(?<=[।.!?:])\s+|\n+/).map(x=>x.trim()).filter(x=>x.length>1);
   if(!chunks.length) return;
   try{speechSynthesis.cancel()}catch(e){}
   speaking=true; render();
-  chunks.forEach((c,i)=>{
-    const u=new SpeechSynthesisUtterance(c);
-    u.lang = want==="bn" ? "bn-BD" : "en-GB"; if(voice) u.voice=voice; u.rate=0.95;
-    if(i===chunks.length-1){u.onend=()=>{speaking=false;render();};}
-    u.onerror=()=>{ if(speaking){speaking=false;render();} };
-    speechSynthesis.speak(u);
-  });
+  setTimeout(()=>{
+    let started=false;
+    chunks.forEach((c,i)=>{
+      const u=new SpeechSynthesisUtterance(c);
+      u.lang = want==="bn" ? (voice?voice.lang:"bn-BD") : (voice?voice.lang:"en-GB");
+      if(voice) u.voice=voice; u.rate = want==="bn" ? 0.9 : 0.95;
+      u.onstart=()=>{started=true;};
+      if(i===chunks.length-1){u.onend=()=>{speaking=false;clearInterval(keepAlive);render();};}
+      u.onerror=ev=>{
+        if(!speaking) return;
+        if(ev && ev.error==="interrupted"||ev && ev.error==="canceled") return;
+        speaking=false; clearInterval(keepAlive); try{speechSynthesis.cancel()}catch(e){} render();
+        if(want==="bn") showVoiceHelp(false); else toast(t("noTTS"));
+      };
+      speechSynthesis.speak(u);
+    });
+    clearInterval(keepAlive);
+    keepAlive=setInterval(()=>{ if(!speaking){clearInterval(keepAlive);return;} try{ if(speechSynthesis.speaking && !speechSynthesis.paused){ speechSynthesis.pause(); speechSynthesis.resume(); } }catch(e){} },10000);
+    setTimeout(()=>{ if(speaking && !started && !speechSynthesis.speaking){ speaking=false; clearInterval(keepAlive); render(); if(want==="bn") showVoiceHelp(false); else toast(t("noTTS")); } },4000);
+  },120);
 }
-try{ if("speechSynthesis" in window){ speechSynthesis.getVoices(); speechSynthesis.onvoiceschanged=()=>{}; } }catch(e){}
+function showVoiceHelp(noSupport){
+  const ov=document.getElementById("voicehelp");
+  const en=S.lang==="en";
+  ov.querySelector(".vh-body").innerHTML = noSupport
+    ? `<h2>${en?"Read-aloud isn't available here":"এখানে পড়ে শোনানো যাচ্ছে না"}</h2><p>${en?"This browser can't speak text. Open NariPath in Google Chrome.":"এই ব্রাউজার লেখা পড়ে শোনাতে পারে না। গুগল ক্রোমে নারীপথ খুলুন।"}</p>`
+    : `<h2>${en?"Add a Bangla voice to your phone":"আপনার ফোনে বাংলা ভয়েস যোগ করুন"}</h2>
+       <p class="small muted">${en?"NariPath uses your phone's own voice. Your phone doesn't have a Bangla voice yet. It's free and takes about a minute.":"নারীপথ আপনার ফোনের নিজস্ব ভয়েস ব্যবহার করে। আপনার ফোনে এখনো বাংলা ভয়েস নেই। এটি বিনামূল্যে, প্রায় এক মিনিট লাগে।"}</p>
+       <h3>Android</h3>
+       <ol class="small" style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:4px">
+         <li>${en?"Open the Play Store and install or update <b>Speech Services by Google</b>.":"প্লে স্টোর খুলে <b>Speech Services by Google</b> ইনস্টল বা আপডেট করুন।"}</li>
+         <li>${en?"Open <b>Settings</b> and search for <b>Text-to-speech</b>.":"<b>Settings</b> খুলে <b>Text-to-speech</b> লিখে খুঁজুন।"}</li>
+         <li>${en?"Choose <b>Speech Services by Google</b> as the engine, tap the ⚙ next to it, then <b>Install voice data</b>.":"ইঞ্জিন হিসেবে <b>Speech Services by Google</b> বেছে নিন, পাশের ⚙ চাপুন, তারপর <b>Install voice data</b>।"}</li>
+         <li>${en?"Pick <b>Bengali (Bangladesh)</b> and download it.":"<b>Bengali (Bangladesh)</b> বেছে নিয়ে ডাউনলোড করুন।"}</li>
+         <li>${en?"Close Chrome fully, open NariPath again and tap Listen.":"ক্রোম পুরোপুরি বন্ধ করে আবার নারীপথ খুলুন, তারপর শুনুন চাপুন।"}</li>
+       </ol>
+       <h3>iPhone</h3>
+       <p class="small">${en?"iPhones don't offer a Bangla voice yet. Use English read-aloud, or an Android phone.":"আইফোনে এখনো বাংলা ভয়েস নেই। ইংরেজিতে শুনুন, অথবা অ্যান্ড্রয়েড ফোন ব্যবহার করুন।"}</p>`;
+  ov.classList.add("show"); ov.setAttribute("aria-hidden","false");
+}
+function hideVoiceHelp(){ const ov=document.getElementById("voicehelp"); ov.classList.remove("show"); ov.setAttribute("aria-hidden","true"); }
+try{ if("speechSynthesis" in window){ speechSynthesis.getVoices(); } }catch(e){}
 
 /* ---------------- Quick exit ---------------- */
 let coverTaps=[];
@@ -1321,6 +1384,9 @@ document.addEventListener("click",e=>{
   if(el.closest("#qexit")){quickExit();return;}
   if(el.closest("#cover-title")){const now=Date.now();coverTaps=coverTaps.filter(x=>now-x<1500);coverTaps.push(now);if(coverTaps.length>=3){coverTaps=[];leaveCover();}return;}
   if(el.closest("#listen")){toggleSpeech();return;}
+  if(el.closest("#vh-close")){hideVoiceHelp();return;}
+  if(el.closest("#vh-english")){hideVoiceHelp();toggleSpeech("en");return;}
+  if(el.closest("#frame-close")){document.getElementById("frame-note").remove();return;}
   const q=el.closest("[data-q]");
   if(q){const k=q.dataset.q,v=q.dataset.v;
     if(k==="sit"){S.check.sit=S.check.sit.includes(v)?S.check.sit.filter(x=>x!==v):[...S.check.sit,v];}
@@ -1449,6 +1515,11 @@ function render(){
   ["bn","en"].forEach(l=>document.getElementById("lang-"+l).setAttribute("aria-pressed", S.lang===l));
   const r=route();
   document.getElementById("qexit").textContent = t("qexit");
+  document.getElementById("vh-english").textContent = S.lang==="bn"?"ইংরেজিতে শুনুন":"Read in English instead";
+  document.getElementById("vh-close").textContent = t("dismiss");
+  const fn=document.getElementById("frame-note");
+  if(fn){ let framed=false; try{framed=window.self!==window.top}catch(e){framed=true}
+    if(framed){ fn.hidden=false; fn.innerHTML=`<span>${S.lang==="bn"?"কল ও বাংলা ভয়েস ঠিকমতো চালাতে ফোনের ব্রাউজারে খুলুন:":"For calling and Bangla voice, open NariPath in your phone browser:"} <b>syadanusratnahar-max.github.io/naripath</b> ${copyBtn("https://syadanusratnahar-max.github.io/naripath/").replace(t("copyNum")+"</button>",(S.lang==="bn"?"লিংক কপি":"Copy link")+"</button>")}</span><button type="button" id="frame-close" aria-label="${t("dismiss")}">✕</button>`; } }
   document.getElementById("listen").innerHTML = speaking
     ? `<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/></svg>${t("stop")}`
     : `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg>${t("listen")}`;
