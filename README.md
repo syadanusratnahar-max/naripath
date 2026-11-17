@@ -9,12 +9,15 @@ NariPath does not replace existing organisations or provide medical, legal, fina
 ## What it does
 
 - **Six areas of support:** Education & Career, Health & Wellbeing, Rights & Legal Support, Personal & Digital Safety, Financial Independence, Everyday Life & Community.
-- **Life Situation Navigator:** start from "I want to…" instead of a category, get suggested next steps and matching services.
+- **What should I do next?** Start from your situation (study, work, health, rights, online problems, money) and get a step-by-step action plan linked to services and guides. Save it and tick off steps.
+- **Support near you:** choose any of the 64 districts to see local services with address, contact, eligibility, cost, source, checked date and status, then nationwide services. Shows which districts have local information and which have not yet been researched.
+- **Learn and understand:** five short guides (online safety, money and fraud, preparing for work, basic rights, reliable health information), each with sources.
 - **Resource Passport:** every listing shows who it is for, cost, documents, contact, original sources, last-checked date and verification status.
-- **Personal Action Path:** turn any listing into a checklist with progress tracking.
+- **My Path dashboard:** saved listings, plans and Action Paths with progress, and "continue where you left off". Optional, private (stored only in the browser) and clearable in one tap.
 - **Relevance checker:** four tap-only questions show *potentially relevant* services, which answers matched and what still needs confirming. It never decides eligibility; answers are never saved.
 - **Discreet mode:** hide saved items in My Path.
-- **Read aloud** in Bangla or English, **tap-to-call** and **copy number** buttons.
+- **Report a problem:** wrong phone number, broken link, closed service, changed eligibility, wrong cost. Reports stay on the device in this prototype and can be copied to send to the team.
+- **Read aloud** in Bangla or English (on-device voices preferred), **tap-to-call** and **copy number** buttons.
 - **Information Gap Finder:** an admin view that separates information *not yet researched* from information *checked and not publicly available*, with coverage across all 64 districts.
 
 ## Data

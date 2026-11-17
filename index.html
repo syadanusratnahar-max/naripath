@@ -59,7 +59,7 @@ header.top{position:sticky;top:0;z-index:5;background:var(--surface);border-bott
 .demo-strip{background:color-mix(in srgb,var(--warn) 14%,var(--surface));color:var(--text);font-size:.82rem;padding:7px 16px;border-bottom:1px solid var(--line)}
 .demo-strip strong{color:var(--warn)}
 main{flex:1;padding:18px 16px 96px;display:flex;flex-direction:column;gap:22px}
-nav.tabs{position:sticky;bottom:0;z-index:5;background:var(--surface);border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(4,1fr)}
+nav.tabs{position:sticky;bottom:0;z-index:5;background:var(--surface);border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(5,1fr)}
 nav.tabs a{display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 4px 10px;text-decoration:none;color:var(--muted);font-size:.78rem}
 nav.tabs a svg{width:22px;height:22px}
 nav.tabs a[aria-current="page"]{color:var(--primary);font-weight:600}
@@ -333,7 +333,7 @@ main{padding:18px 16px 120px;gap:26px}
 nav.tabs{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);width:min(456px,calc(100% - 24px));border:1px solid var(--line);border-radius:22px;background:color-mix(in srgb,var(--surface) 88%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 12px 32px -14px rgba(28,26,63,.45);padding:6px;z-index:8}
 nav.tabs a{border-radius:16px;padding:7px 4px 8px;position:relative;z-index:1}
 nav.tabs a[aria-current="page"]{color:#fff}
-nav.tabs .pill{position:absolute;top:6px;bottom:6px;left:6px;width:calc((100% - 12px)/4);border-radius:16px;background:var(--night);transition:transform .35s cubic-bezier(.3,1.3,.5,1);z-index:0}
+nav.tabs .pill{position:absolute;top:6px;bottom:6px;left:6px;width:calc((100% - 12px)/5);border-radius:16px;background:var(--night);transition:transform .35s cubic-bezier(.3,1.3,.5,1);z-index:0}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) nav.tabs .pill{background:var(--primary)} :root:not([data-theme="light"]) nav.tabs a[aria-current="page"]{color:var(--night)}}
 :root[data-theme="dark"] nav.tabs .pill{background:var(--primary)} :root[data-theme="dark"] nav.tabs a[aria-current="page"]{color:var(--night)}
 .listen{bottom:92px;color:var(--surface)}
@@ -358,6 +358,39 @@ nav.tabs .pill{position:absolute;top:6px;bottom:6px;left:6px;width:calc((100% - 
 .match .crit-head{font-size:.8rem;color:var(--muted);margin-top:4px}
 .planned{border:1.5px dashed var(--line);background:transparent}
 .planned .tag{display:inline-block;font-size:.75rem;font-weight:600;color:var(--warn);border:1px solid currentColor;border-radius:999px;padding:1px 8px}
+.guide-steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;counter-reset:g}
+.guide-steps li{counter-increment:g;position:relative;padding-left:52px;display:flex;flex-direction:column;gap:6px}
+.guide-steps li::before{content:counter(g);position:absolute;left:14px;top:14px;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:.85rem;border:2px dashed var(--pc);color:var(--pc)}
+.guide-steps li h3{font-family:var(--display);font-weight:400;font-size:1.15rem}
+.guide-card .ico{flex:none}
+.plan-steps{list-style:none;margin:0;padding:0 0 0 6px;display:flex;flex-direction:column;counter-reset:ps}
+.plan-steps li{counter-increment:ps;position:relative;padding:0 0 16px 34px;display:flex;flex-direction:column;gap:6px}
+.plan-steps li::before{content:counter(ps);position:absolute;left:0;top:0;width:24px;height:24px;border-radius:50%;background:var(--night);color:#fff;display:grid;place-items:center;font-size:.8rem;font-weight:700;z-index:1}
+.plan-steps li:not(:last-child)::after{content:"";position:absolute;left:11px;top:26px;bottom:2px;border-left:2px dashed var(--line)}
+.plan-steps .chips{gap:6px}
+.plan-steps .chip{font-size:.8rem;padding:4px 10px;text-decoration:none}
+.guide-chip svg{width:14px;height:14px}
+.detail{display:flex;flex-direction:column;gap:6px;border-left:3px solid var(--pc)}
+.detail .dt-name{color:var(--text);text-decoration:none}
+.detail h3{font-family:var(--display);font-weight:400;font-size:1.05rem}
+dl.mini{margin:4px 0 0;display:flex;flex-direction:column;gap:6px;font-size:.88rem}
+dl.mini div{display:grid;grid-template-columns:6.5rem 1fr;gap:8px}
+dl.mini dt{color:var(--muted)} dl.mini dd{margin:0;overflow-wrap:anywhere;min-width:0}
+@media (max-width:380px){dl.mini div{grid-template-columns:1fr;gap:0}}
+details.card summary{cursor:pointer;font-weight:600}
+.legend{display:flex;gap:8px;flex-wrap:wrap}
+.div-row{display:flex;flex-direction:column;gap:6px;padding-top:10px;border-top:1.5px dashed var(--line)}
+.dchips{display:flex;flex-wrap:wrap;gap:6px}
+.dchip{border-radius:999px;padding:4px 10px;font-size:.8rem;border:1px solid var(--line);background:var(--surface);color:var(--muted);cursor:pointer}
+.dchip.has{border-color:var(--ok);color:var(--ok);font-weight:600;background:color-mix(in srgb,var(--ok) 9%,var(--surface))}
+.dchip.none{border-style:dashed}
+.dchip span{font-variant-numeric:tabular-nums}
+.dchip[aria-pressed="true"]{outline:2px solid var(--primary);outline-offset:1px}
+.continue{display:flex;flex-direction:column;gap:4px;text-decoration:none;color:var(--text);background:var(--surface);border:1.5px solid color-mix(in srgb,var(--ok) 45%,var(--line));border-radius:var(--r);padding:14px}
+.continue b{font-family:var(--display);font-weight:400;font-size:1.1rem}
+.continue .progress{display:block;margin-top:6px}
+.privacy-box ul{margin:8px 0;padding-left:18px;display:flex;flex-direction:column;gap:3px}
+.tiles.dash .tile b{font-size:1.4rem}
 </style>
 </head>
 <body>
@@ -734,6 +767,7 @@ const LOCAL_COUNT = R.reduce((m,r)=>{ if(r.loc!=="nationwide") m[r.loc]=(m[r.loc
 const SITUATIONS = [
   {id:"edu",pillars:[1],en:"I want to continue my education",bn:"আমি পড়াশোনা চালিয়ে যেতে চাই",
    steps:[["Shortlist 2 or 3 opportunities that match your level","আপনার পর্যায়ের সাথে মেলে এমন ২–৩টি সুযোগ বেছে নিন"],["Check each deadline on the original source","প্রতিটির শেষ তারিখ মূল উৎসে যাচাই করুন"],["Turn your top choice into an Action Path and gather documents","পছন্দেরটি দিয়ে অ্যাকশন পাথ তৈরি করে কাগজপত্র গুছিয়ে নিন"]]},
+  {id:"job",pillars:[1,5],en:"I'm looking for work",bn:"আমি কাজ খুঁজছি",steps:[]},
   {id:"health",pillars:[2],en:"I need healthcare information",bn:"আমার স্বাস্থ্য বিষয়ক তথ্য দরকার",
    steps:[["Read the health information listed first","প্রথমে তালিকার স্বাস্থ্য তথ্যগুলো পড়ুন"],["Find a facility near you and check whether it is free","কাছের একটি সেবাকেন্দ্র খুঁজে দেখুন সেটি বিনামূল্যে কিনা"],["For symptoms or urgent concerns, see a qualified provider","উপসর্গ বা জরুরি সমস্যায় যোগ্য চিকিৎসকের কাছে যান"]]},
   {id:"rights",pillars:[3],en:"I want to understand my rights",bn:"আমি আমার অধিকার জানতে চাই",
@@ -808,7 +842,7 @@ const T = {
   skipDistrict:{en:"Skip: show everything",bn:"বাদ দিন: সব দেখান"},
   freeOnly:{en:"Show free services first",bn:"বিনামূল্যের সেবা আগে দেখান"},
   showResults:{en:"Show my next steps",bn:"আমার পরবর্তী পদক্ষেপ দেখান"},
-  yourSteps:{en:"Suggested next steps",bn:"প্রস্তাবিত পরবর্তী পদক্ষেপ"},
+  yourSteps:{en:"What should I do next?",bn:"এরপর কী করব?"},
   matched:{en:"Resources for you",bn:"আপনার জন্য তথ্য"},
   startOver:{en:"Choose a different situation",bn:"অন্য পরিস্থিতি বেছে নিন"},
   near:{en:"Near you",bn:"আপনার কাছে"},
@@ -837,10 +871,10 @@ const T = {
   changeAnswers:{en:"Change my answers",bn:"উত্তর পরিবর্তন করুন"},
   reportBtn:{en:"Report a problem with this listing",bn:"এই তথ্যে সমস্যা জানান"},
   reportQ:{en:"What's wrong?",bn:"সমস্যাটি কী?"},
-  rp_contact:{en:"Phone number or link doesn't work",bn:"ফোন নম্বর বা লিংক কাজ করে না"},
-  rp_outdated:{en:"Information is out of date",bn:"তথ্য পুরনো হয়ে গেছে"},
+  rp_contact:{en:"Phone number is wrong",bn:"ফোন নম্বর ভুল"},
+  rp_outdated:{en:"Something else is out of date",bn:"অন্য কোনো তথ্য পুরনো"},
   rp_closed:{en:"Service has closed",bn:"সেবাটি বন্ধ হয়ে গেছে"},
-  rp_wrong:{en:"Eligibility or cost is wrong",bn:"যোগ্যতা বা খরচের তথ্য ভুল"},
+  rp_wrong:{en:"Cost is wrong",bn:"খরচের তথ্য ভুল"},
   reportThanks:{en:"Thank you. In the full version this goes to the review team. Your name is never attached.",bn:"ধন্যবাদ। পূর্ণ সংস্করণে এটি পর্যালোচনা দলের কাছে যাবে। আপনার নাম কখনো যুক্ত হয় না।"},
   cancel:{en:"Cancel",bn:"বাতিল"},
   hideMine:{en:"Hide my saved items on this screen",bn:"এই পাতায় আমার সেভ করা তথ্য লুকান"},
@@ -857,6 +891,49 @@ const T = {
   st_confirmedLong:{en:"The provider confirmed these details directly, with a recorded reviewer and date.",bn:"প্রদানকারী সরাসরি এই তথ্য নিশ্চিত করেছে, পর্যালোচক ও তারিখসহ।"},
   st_reviewLong:{en:"This information may be out of date. Contact the provider before relying on it.",bn:"এই তথ্য পুরনো হতে পারে। ভরসা করার আগে প্রদানকারীর সাথে যোগাযোগ করুন।"},
   st_demoLong:{en:"Synthetic record used only for testing. Not a real service.",bn:"শুধু পরীক্ষার জন্য তৈরি কৃত্রিম তথ্য। বাস্তব সেবা নয়।"},
+  learn:{en:"Learn",bn:"শিখুন"},
+  learnTitle:{en:"Learn and understand",bn:"শিখুন ও বুঝুন"},
+  learnSub:{en:"Short guides in plain language. Each one lists its sources.",bn:"সহজ ভাষায় ছোট নির্দেশিকা। প্রতিটিতে উৎস দেওয়া আছে।"},
+  learnCard:{en:"Online safety, money, work, rights and health information",bn:"অনলাইন নিরাপত্তা, টাকা, কাজ, অধিকার ও স্বাস্থ্য তথ্য"},
+  shortParts:{en:"short parts",bn:"টি ছোট অংশ"}, sourcesN:{en:"sources",bn:"টি উৎস"},
+  guideDisclaimer:{en:"General information to help you understand your options. It is not legal, medical or financial advice. Laws and services change, so check the sources.",bn:"আপনার বিকল্পগুলো বুঝতে সাহায্যের জন্য সাধারণ তথ্য। এটি আইনি, চিকিৎসা বা আর্থিক পরামর্শ নয়। আইন ও সেবা বদলায়, তাই উৎস দেখে নিন।"},
+  relatedServices:{en:"Related services",bn:"সংশ্লিষ্ট সেবা"},
+  nearTitle:{en:"Support near you",bn:"আপনার কাছের সহায়তা"},
+  nearSub:{en:"Choose your district to see local services first, then nationwide services that also cover it.",bn:"আপনার জেলা বেছে নিন: আগে স্থানীয় সেবা, তারপর সেই জেলাতেও প্রযোজ্য সারাদেশের সেবা দেখাবে।"},
+  nearCard:{en:"Services by district, with contacts and sources",bn:"জেলাভিত্তিক সেবা, যোগাযোগ ও উৎসসহ"},
+  chooseDistrict:{en:"Choose a district",bn:"জেলা বেছে নিন"},
+  localIn:{en:"Local services in {d}",bn:"{d}-এর স্থানীয় সেবা"},
+  nationAlso:{en:"Nationwide services that also cover {d}",bn:"সারাদেশের যে সেবাগুলো {d}-তেও প্রযোজ্য"},
+  showNation:{en:"Show nationwide services",bn:"সারাদেশের সেবা দেখান"},
+  coverageTitle:{en:"Which districts have local information",bn:"কোন জেলায় স্থানীয় তথ্য আছে"},
+  coverageSub:{en:"{n} of {t} districts have at least one local listing. The others have not been researched yet: services may exist there that NariPath doesn't list.",bn:"{t}টি জেলার মধ্যে {n}টিতে অন্তত একটি স্থানীয় তথ্য আছে। বাকিগুলো এখনো খোঁজা হয়নি: সেখানে এমন সেবা থাকতে পারে যা নারীপথে নেই।"},
+  hasInfo:{en:"Has local information",bn:"স্থানীয় তথ্য আছে"},
+  notResearched:{en:"Not yet researched",bn:"এখনো খোঁজা হয়নি"},
+  addressL:{en:"Address",bn:"ঠিকানা"},
+  notPublic:{en:"Searched for, not publicly available. Call 109 for directions.",bn:"খোঁজা হয়েছে, প্রকাশ্যে পাওয়া যায়নি। পথ জানতে ১০৯-এ কল করুন।"},
+  noSource:{en:"No source recorded",bn:"উৎস নথিভুক্ত নেই"},
+  continueTitle:{en:"Continue where you left off",bn:"যেখানে থেমেছিলেন সেখান থেকে চালিয়ে যান"},
+  nextStep:{en:"Next step",bn:"পরবর্তী ধাপ"},
+  planSub:{en:"A step-by-step plan. Open any linked service or guide for details. Save it to tick off steps as you go.",bn:"ধাপে ধাপে পরিকল্পনা। বিস্তারিত জানতে সংযুক্ত সেবা বা নির্দেশিকা খুলুন। সেভ করলে এগোতে এগোতে ধাপে টিক দিতে পারবেন।"},
+  planSave:{en:"Save this plan to My Path",bn:"এই পরিকল্পনা আমার পথে সেভ করুন"},
+  planOpen:{en:"Open this plan in My Path",bn:"আমার পথে এই পরিকল্পনা দেখুন"},
+  planSaved:{en:"Plan saved to My Path.",bn:"পরিকল্পনা আমার পথে সেভ হয়েছে।"},
+  myPlans:{en:"My plans",bn:"আমার পরিকল্পনা"},
+  seeDetails:{en:"See details",bn:"বিস্তারিত দেখুন"},
+  plansAndPaths:{en:"Plans and Action Paths",bn:"পরিকল্পনা ও অ্যাকশন পাথ"},
+  storedTitle:{en:"What is saved on this device",bn:"এই ডিভাইসে কী সংরক্ষিত থাকে"},
+  st1:{en:"Your language choice",bn:"আপনার ভাষা"},
+  st2:{en:"Listings you saved",bn:"আপনার সেভ করা তথ্য"},
+  st3:{en:"Plans and Action Paths, and which steps you ticked",bn:"পরিকল্পনা ও অ্যাকশন পাথ, এবং কোন ধাপে টিক দিয়েছেন"},
+  st4:{en:"Whether discreet mode is on",bn:"গোপন মোড চালু কিনা"},
+  st5:{en:"Problem reports you made (listing, reason and date only)",bn:"আপনার করা সমস্যার রিপোর্ট (শুধু তথ্য, কারণ ও তারিখ)"},
+  st6:{en:"No name, phone number, location or answers to the checker are saved",bn:"কোনো নাম, ফোন নম্বর, অবস্থান বা যাচাইয়ের উত্তর সংরক্ষণ করা হয় না"},
+  storedNot:{en:"Nothing you do in NariPath is sent to NariPath or anyone else. Like any website, the host (GitHub Pages) and Google Fonts see your device's internet address when the page loads. Read aloud prefers voices that run on your phone, but some phones use an online voice service that receives the text being read.",bn:"নারীপথে আপনি যা করেন তার কিছুই নারীপথ বা অন্য কারও কাছে পাঠানো হয় না। যেকোনো ওয়েবসাইটের মতো, পাতা খোলার সময় হোস্ট (গিটহাব পেজেস) ও গুগল ফন্টস আপনার ডিভাইসের ইন্টারনেট ঠিকানা দেখতে পায়। পড়ে শোনানোর জন্য ফোনের নিজস্ব ভয়েসকে অগ্রাধিকার দেওয়া হয়, তবে কিছু ফোন অনলাইন ভয়েস সেবা ব্যবহার করে, যা পড়া লেখাটি পায়।"},
+  rp_link:{en:"Website link is broken",bn:"ওয়েবসাইটের লিংক কাজ করে না"},
+  rp_eligibility:{en:"Eligibility requirements have changed",bn:"যোগ্যতার শর্ত বদলে গেছে"},
+  reportLocal:{en:"In this prototype, reports are saved only on this phone and shown in the Gap Finder. They are not sent anywhere. To tell the NariPath team, copy the report and send it to them.",bn:"এই প্রোটোটাইপে রিপোর্ট শুধু এই ফোনে সংরক্ষিত হয় এবং তথ্য ঘাটতি শনাক্তকারীতে দেখায়। কোথাও পাঠানো হয় না। নারীপথ দলকে জানাতে রিপোর্টটি কপি করে পাঠান।"},
+  copyReport:{en:"Copy report",bn:"রিপোর্ট কপি করুন"},
+  copiedText:{en:"Copied.",bn:"কপি হয়েছে।"},
   noLocal:{en:"NariPath has no local listing for {d} yet. The results below are nationwide services that also cover {d}.",bn:"{d}-এর জন্য নারীপথে এখনো কোনো স্থানীয় তথ্য নেই। নিচের ফলাফলগুলো সারাদেশের সেবা, যা {d}-তেও প্রযোজ্য।"},
   copyNum:{en:"Copy",bn:"কপি"},
   copied:{en:"Number copied: {n}. Open your phone app and paste it.",bn:"নম্বর কপি হয়েছে: {n}। ফোন অ্যাপ খুলে পেস্ট করুন।"},
@@ -966,16 +1043,143 @@ function matchEligibility(a){
   return out.sort((x,y)=>y.matched.length-x.matched.length);
 }
 
+/* ---------------- Learn & Understand guides ----------------
+   Short, plain-language guides. Every guide lists its sources and the date it was checked.
+   General information only: not legal, medical or financial advice. */
+const GSRC = {
+  cirt:{en:"BGD e-GOV CIRT, password and multi-factor authentication advice",bn:"বিজিডি ই-গভ সার্ট, পাসওয়ার্ড ও মাল্টি-ফ্যাক্টর অথেনটিকেশন পরামর্শ",url:"https://www.cirt.gov.bd/security-advisories-alerts/page/5"},
+  pcsw:{en:"Bangladesh Police, Police Cyber Support for Women",bn:"বাংলাদেশ পুলিশ, পুলিশ সাইবার সাপোর্ট ফর উইমেন",url:"https://police.portal.gov.bd/site/page/e0c99d75-d7fc-4ccd-9023-a69df169c483"},
+  otp:{en:"The Daily Observer, Safety tips: never share OTP, PIN or passwords (Aug 2026)",bn:"দ্য ডেইলি অবজারভার, নিরাপত্তা পরামর্শ (আগস্ট ২০২৬)",url:"https://observerbd.com/news/590831"},
+  police999:{en:"TBS, Police request all not to share MFS and bank PINs",bn:"টিবিএস, এমএফএস ও ব্যাংকের পিন শেয়ার না করার পুলিশি অনুরোধ",url:"https://www.tbsnews.net/bangladesh/police-request-all-not-share-mfs-bank-pin-numbers-1027811"},
+  wallet:{en:"The Daily Star, Guarding your digital wallet",bn:"দ্য ডেইলি স্টার, ডিজিটাল ওয়ালেট সুরক্ষা",url:"https://www.thedailystar.net/supplements/better-banking-together/news/guarding-your-digital-wallet-3810211"},
+  wfh:{en:"TBS, Rise in work-from-home job scams in Bangladesh",bn:"টিবিএস, ঘরে বসে কাজের প্রতারণা বাড়ছে",url:"https://www.tbsnews.net/node/705162"},
+  wfh2:{en:"The New Nation, Work from home job scams on rise (Dec 2025)",bn:"দ্য নিউ নেশন, ডিসেম্বর ২০২৫",url:"https://dailynewnation.com/?p=722229"},
+  labour26:{en:"The Daily Star, Confronting gender inequality in Bangladesh's labour laws (Mar 2026)",bn:"দ্য ডেইলি স্টার, শ্রম আইনে লিঙ্গবৈষম্য (মার্চ ২০২৬)",url:"https://online-d11.thedailystar.net/supplements/international-womens-day-2026/news/confronting-gender-inequality-bangladeshs-labour-laws-4122936"},
+  labourAct:{en:"Labour Review, Evaluating Bangladesh's labour reform (ordinance Nov 2025, ratified Apr 2026)",bn:"লেবার রিভিউ, শ্রম সংস্কার মূল্যায়ন",url:"https://labourreview.org/?p=4049"},
+  cmra:{en:"BSS, Child Marriage Restraint Act 2017 (minimum age)",bn:"বাসস, বাল্যবিবাহ নিরোধ আইন ২০১৭",url:"https://www.bssnews.net/news/203120"},
+  dvact:{en:"Ministry of Women and Children Affairs, Domestic Violence (Prevention and Protection) Act 2010",bn:"মহিলা ও শিশু বিষয়ক মন্ত্রণালয়, পারিবারিক সহিংসতা (প্রতিরোধ ও সুরক্ষা) আইন ২০১০",url:"https://mowca.portal.gov.bd/sites/default/files/files/mowca.portal.gov.bd/law/a56e138b_0992_490b_8a23_aaed0c1fbeea/act2010.pdf"},
+  dvorders:{en:"The Daily Star, Implementation challenges of the domestic violence law",bn:"দ্য ডেইলি স্টার, পারিবারিক সহিংসতা আইন",url:"https://www.thedailystar.net/node/1853959"},
+  legalaid:{en:"BSS, Government legal aid helpline 16699 (2026)",bn:"বাসস, সরকারি আইনি সহায়তা হেল্পলাইন ১৬৬৯৯",url:"https://www.bssnews.net/bangla/law-and-courts/308075"},
+  whoTips:{en:"WHO, Let's flatten the infodemic curve: tips to identify misinformation",bn:"বিশ্ব স্বাস্থ্য সংস্থা, ভুল তথ্য চেনার উপায়",url:"https://www.who.int/news-room/spotlight/let-s-flatten-the-infodemic-curve"},
+  whoPrinciples:{en:"WHO, Global principles for identifying credible sources of health information",bn:"বিশ্ব স্বাস্থ্য সংস্থা, বিশ্বাসযোগ্য স্বাস্থ্য তথ্যের উৎস চেনার নীতি",url:"https://www.who.int/teams/digital-health-and-innovation/digital-channels/global-principles-for-identifying-credible-sources-of-health-information-on-social-media"}
+};
+const GUIDES = [
+ {id:"digital",p:4,icon:"shield",checked:"2026-11-17",
+  title:K("Stay safe online","অনলাইনে নিরাপদ থাকুন"),
+  intro:K("Five habits that protect your accounts, your money and your privacy.","পাঁচটি অভ্যাস, যা আপনার অ্যাকাউন্ট, টাকা ও গোপনীয়তা রক্ষা করে।"),
+  sections:[
+   [K("Use strong passwords and 2-step login","শক্ত পাসওয়ার্ড ও ২-ধাপ লগইন ব্যবহার করুন"),K("Use a long password that is different for each account. Turn on two-step login (multi-factor authentication) on Facebook, email and mobile banking, so a stolen password alone can't open your account. Bangladesh's government cyber team recommends both.","প্রতিটি অ্যাকাউন্টে আলাদা, লম্বা পাসওয়ার্ড দিন। ফেসবুক, ইমেইল ও মোবাইল ব্যাংকিংয়ে ২-ধাপ লগইন (মাল্টি-ফ্যাক্টর অথেনটিকেশন) চালু করুন, যাতে শুধু পাসওয়ার্ড চুরি হলেই কেউ অ্যাকাউন্টে ঢুকতে না পারে। বাংলাদেশ সরকারের সাইবার দল দুটোই করার পরামর্শ দেয়।")],
+   [K("Never share a code, PIN or password","কোড, পিন বা পাসওয়ার্ড কখনো শেয়ার করবেন না"),K("No real bank, mobile-money company or police officer will ask for your OTP, PIN or password, even if the caller sounds official. Anyone asking is trying to steal from you. Hang up.","কোনো আসল ব্যাংক, মোবাইল ব্যাংকিং প্রতিষ্ঠান বা পুলিশ আপনার ওটিপি, পিন বা পাসওয়ার্ড চাইবে না, ফোনকারীকে যতই সরকারি মনে হোক। কেউ চাইলে বুঝবেন সে প্রতারণা করছে। ফোন কেটে দিন।")],
+   [K("Check before you click","ক্লিক করার আগে যাচাই করুন"),K("Messages that say \"your account will close today\" or \"you won a prize\" are common tricks. Look carefully at the web address, and open apps or websites yourself instead of using links in messages.","\"আজই আপনার অ্যাকাউন্ট বন্ধ হবে\" বা \"আপনি পুরস্কার জিতেছেন\" ধরনের বার্তা সাধারণ প্রতারণা। ওয়েব ঠিকানা মনোযোগ দিয়ে দেখুন, এবং বার্তার লিংক ব্যবহার না করে নিজে অ্যাপ বা ওয়েবসাইট খুলুন।")],
+   [K("Control who sees your posts","কে আপনার পোস্ট দেখবে তা ঠিক করুন"),K("Review your privacy settings so only people you know see your photos, phone number and location. Think before posting where you are right now.","প্রাইভেসি সেটিং দেখে নিন, যাতে শুধু পরিচিতরাই আপনার ছবি, ফোন নম্বর ও অবস্থান দেখতে পারে। এই মুহূর্তে কোথায় আছেন, তা পোস্ট করার আগে ভাবুন।")],
+   [K("If someone harasses or blackmails you online","কেউ অনলাইনে হয়রানি বা ব্ল্যাকমেইল করলে"),K("Don't delete anything yet. Take screenshots with dates and save links to the posts or profiles. Then contact Police Cyber Support for Women, an all-women police team, which keeps your information confidential.","এখনই কিছু মুছবেন না। তারিখসহ স্ক্রিনশট নিন এবং পোস্ট বা প্রোফাইলের লিংক সংরক্ষণ করুন। তারপর পুলিশ সাইবার সাপোর্ট ফর উইমেনে যোগাযোগ করুন। এটি সম্পূর্ণ নারী পুলিশ সদস্যদের দল, যারা আপনার তথ্য গোপন রাখে।")]
+  ],
+  related:["pcsw","blastcyber"], sources:["cirt","otp","pcsw"]},
+
+ {id:"money",p:5,icon:"coin",checked:"2026-11-17",
+  title:K("Manage money and stay safe from fraud","টাকা সামলান, প্রতারণা থেকে বাঁচুন"),
+  intro:K("Simple steps for budgeting, saving and using mobile money safely.","বাজেট, সঞ্চয় ও নিরাপদে মোবাইল ব্যাংকিং ব্যবহারের সহজ ধাপ।"),
+  sections:[
+   [K("Write down money in and money out","আয় ও খরচ লিখে রাখুন"),K("For one month, note every amount you receive and spend, even small ones. At the end of the month you'll see where your money really goes.","এক মাস ধরে যত টাকা পান ও খরচ করেন, ছোট অঙ্কও লিখে রাখুন। মাস শেষে দেখবেন টাকা আসলে কোথায় যাচ্ছে।")],
+   [K("Split needs from wants","প্রয়োজন আর ইচ্ছা আলাদা করুন"),K("Needs are rent, food, school and medicine. Wants can wait. Pay needs first, then set aside a small fixed amount for savings before spending on wants.","প্রয়োজন হলো ভাড়া, খাবার, পড়াশোনা ও ওষুধ। ইচ্ছা অপেক্ষা করতে পারে। আগে প্রয়োজন মেটান, তারপর ইচ্ছার খরচের আগেই সঞ্চয়ের জন্য ছোট একটি নির্দিষ্ট অঙ্ক আলাদা করুন।")],
+   [K("Keep mobile money safe","মোবাইল ব্যাংকিং নিরাপদ রাখুন"),K("Your PIN and the one-time code together protect your account. Never share either, not even with someone claiming to be from your mobile-money company, a bank or 999. Police have said 999 never asks for a PIN.","আপনার পিন আর ওটিপি মিলেই অ্যাকাউন্ট সুরক্ষিত থাকে। কোনোটিই শেয়ার করবেন না, এমনকি কেউ মোবাইল ব্যাংকিং প্রতিষ্ঠান, ব্যাংক বা ৯৯৯ থেকে বলছে দাবি করলেও। পুলিশ জানিয়েছে ৯৯৯ কখনো পিন চায় না।")],
+   [K("Before you borrow, compare the total cost","ঋণ নেওয়ার আগে মোট খরচ তুলনা করুন"),K("Ask each lender for the interest rate, all fees and the total amount you will repay. Read everything before signing, and only borrow what you can repay from regular income.","প্রতিটি ঋণদাতার কাছে সুদের হার, সব ফি এবং মোট কত টাকা ফেরত দিতে হবে জেনে নিন। স্বাক্ষরের আগে সব পড়ুন, আর নিয়মিত আয় থেকে যতটুকু শোধ করতে পারবেন ততটুকুই নিন।")],
+   [K("If you've been cheated","প্রতারিত হলে"),K("Call your mobile-money or bank helpline straight away to block the account, then report it to your local police station or 999.","সঙ্গে সঙ্গে আপনার মোবাইল ব্যাংকিং বা ব্যাংকের হেল্পলাইনে কল করে অ্যাকাউন্ট বন্ধ করুন, তারপর স্থানীয় থানা বা ৯৯৯-এ জানান।")]
+  ],
+  related:["wehelp","bbwomen"], sources:["wallet","police999","otp"]},
+
+ {id:"career",p:1,icon:"book",checked:"2026-11-17",
+  title:K("Prepare for work","কাজের জন্য প্রস্তুত হোন"),
+  intro:K("A CV, the right skills, real job offers and your rights at work.","সিভি, সঠিক দক্ষতা, আসল চাকরির প্রস্তাব এবং কর্মক্ষেত্রে আপনার অধিকার।"),
+  sections:[
+   [K("Write a short, clear CV","ছোট ও পরিষ্কার সিভি লিখুন"),K("One or two pages: your name and phone number, education, skills, and any work, including volunteering, family business or tuition. Put the most recent first, and ask someone to check spelling.","এক বা দুই পাতা: নাম ও ফোন নম্বর, শিক্ষা, দক্ষতা এবং যেকোনো কাজের অভিজ্ঞতা, স্বেচ্ছাসেবা, পারিবারিক ব্যবসা বা টিউশনিসহ। সবচেয়ে সাম্প্রতিকটি আগে লিখুন, এবং কাউকে দিয়ে বানান দেখিয়ে নিন।")],
+   [K("Build skills for free","বিনামূল্যে দক্ষতা বাড়ান"),K("Government programmes such as SICIP offer free job-ready training, some with an allowance. Check the course's entry requirements first.","এসআইসিআইপির মতো সরকারি কর্মসূচি বিনামূল্যে চাকরি-উপযোগী প্রশিক্ষণ দেয়, কিছুতে ভাতাও আছে। আগে কোর্সের ভর্তির শর্ত দেখে নিন।")],
+   [K("Spot fake job offers","ভুয়া চাকরির প্রস্তাব চিনুন"),K("A real employer will not ask you to pay to get a job. Be careful with \"easy money\" work-from-home offers that ask you to send money or complete tasks to unlock earnings: these scams are rising in Bangladesh.","আসল নিয়োগকর্তা চাকরি দেওয়ার জন্য টাকা চায় না। ঘরে বসে \"সহজ আয়\"-এর প্রস্তাবে সাবধান থাকুন, যেখানে আয় পেতে টাকা পাঠাতে বা কাজ শেষ করতে বলা হয়: বাংলাদেশে এ ধরনের প্রতারণা বাড়ছে।")],
+   [K("Prepare for the interview","সাক্ষাৎকারের প্রস্তুতি নিন"),K("Learn what the organisation does, practise saying in two minutes why you fit the job, and bring copies of your certificates. It's fine to ask about pay, hours and leave.","প্রতিষ্ঠানটি কী করে জেনে নিন, কেন আপনি কাজটির উপযুক্ত তা দুই মিনিটে বলা অনুশীলন করুন, এবং সনদের কপি সঙ্গে নিন। বেতন, সময় ও ছুটি নিয়ে প্রশ্ন করা স্বাভাবিক।")],
+   [K("Know your rights at work","কর্মক্ষেত্রে আপনার অধিকার জানুন"),K("Under the Bangladesh Labour Act, as amended in 2025–2026, women workers get 120 days of paid maternity leave. Women government employees get six months. Ask for a written appointment letter.","২০২৫–২০২৬ সালে সংশোধিত বাংলাদেশ শ্রম আইন অনুযায়ী নারী শ্রমিকরা ১২০ দিনের সবেতন মাতৃত্বকালীন ছুটি পান। সরকারি নারী কর্মচারীরা পান ছয় মাস। লিখিত নিয়োগপত্র চেয়ে নিন।")]
+  ],
+  related:["sicip1","sicip2"], sources:["wfh","wfh2","labour26","labourAct"]},
+
+ {id:"rights",p:3,icon:"scale",checked:"2026-11-17",
+  title:K("Understand your basic rights","আপনার মৌলিক অধিকার জানুন"),
+  intro:K("What some key laws say, and where to get free legal help.","কয়েকটি গুরুত্বপূর্ণ আইন কী বলে, আর কোথায় বিনামূল্যে আইনি সহায়তা পাবেন।"),
+  sections:[
+   [K("Marriage age","বিয়ের বয়স"),K("The Child Marriage Restraint Act 2017 sets the minimum age of marriage at 18 for women and 21 for men. To report a planned child marriage, call 109 or 333.","বাল্যবিবাহ নিরোধ আইন ২০১৭ অনুযায়ী বিয়ের ন্যূনতম বয়স নারীর ১৮ ও পুরুষের ২১। পরিকল্পিত বাল্যবিবাহ জানাতে ১০৯ বা ৩৩৩-এ কল করুন।")],
+   [K("Violence at home","পরিবারে সহিংসতা"),K("Under the Domestic Violence (Prevention and Protection) Act 2010, physical, psychological, sexual and economic abuse by a family member counts as domestic violence. A court can order protection, let you stay in your home, and order compensation or child custody.","পারিবারিক সহিংসতা (প্রতিরোধ ও সুরক্ষা) আইন ২০১০ অনুযায়ী পরিবারের সদস্যের শারীরিক, মানসিক, যৌন ও আর্থিক নির্যাতন পারিবারিক সহিংসতা। আদালত সুরক্ষা আদেশ, নিজের বাসায় থাকার আদেশ, ক্ষতিপূরণ বা সন্তানের হেফাজতের আদেশ দিতে পারে।")],
+   [K("Maternity leave","মাতৃত্বকালীন ছুটি"),K("Women workers covered by the Labour Act get 120 days of paid maternity leave since the 2025 amendment. Women government employees get six months.","২০২৫ সালের সংশোধনের পর শ্রম আইনের আওতাভুক্ত নারী শ্রমিকরা ১২০ দিনের সবেতন মাতৃত্বকালীন ছুটি পান। সরকারি নারী কর্মচারীরা পান ছয় মাস।")],
+   [K("Free legal help","বিনামূল্যে আইনি সহায়তা"),K("If you can't afford a lawyer, call the government legal aid helpline 16699, toll-free, or visit your District Legal Aid Office. Organisations such as BLAST also help for free.","আইনজীবী নেওয়ার সামর্থ্য না থাকলে টোল-ফ্রি সরকারি আইনি সহায়তা হেল্পলাইন ১৬৬৯৯-এ কল করুন, বা জেলা লিগ্যাল এইড অফিসে যান। ব্লাস্টের মতো সংস্থাও বিনামূল্যে সহায়তা করে।")],
+   [K("You decide","সিদ্ধান্ত আপনার"),K("Knowing your rights doesn't mean you must take action. You can get advice first and decide later. If you're in danger now, call 999.","অধিকার জানা মানেই এখনই ব্যবস্থা নিতে হবে এমন নয়। আগে পরামর্শ নিয়ে পরে সিদ্ধান্ত নিতে পারেন। এখনই বিপদে থাকলে ৯৯৯-এ কল করুন।")]
+  ],
+  related:["nlaso","dlao","blast","r01"], sources:["cmra","dvact","dvorders","labour26","legalaid"]},
+
+ {id:"health",p:2,icon:"heart",checked:"2026-11-17",
+  title:K("Find health information you can trust","বিশ্বাসযোগ্য স্বাস্থ্য তথ্য খুঁজুন"),
+  intro:K("How to tell reliable health advice from rumours and sales pitches.","গুজব ও বিজ্ঞাপন থেকে নির্ভরযোগ্য স্বাস্থ্য পরামর্শ আলাদা করার উপায়।"),
+  sections:[
+   [K("Start with official sources","সরকারি উৎস দিয়ে শুরু করুন"),K("The World Health Organization advises using your national health ministry and WHO for reliable information. In Bangladesh that means the Directorate General of Health Services (DGHS).","বিশ্ব স্বাস্থ্য সংস্থা নির্ভরযোগ্য তথ্যের জন্য দেশের স্বাস্থ্য মন্ত্রণালয় ও বিশ্ব স্বাস্থ্য সংস্থার ওয়েবসাইট দেখার পরামর্শ দেয়। বাংলাদেশে এর মানে স্বাস্থ্য অধিদপ্তর (ডিজিএইচএস)।")],
+   [K("Check who said it, and when","কে বলেছে, কবে বলেছে দেখুন"),K("Find out who wrote the advice and whether they are a real health professional. Check the date: health advice changes as more is learned. Read beyond the headline.","কে পরামর্শটি লিখেছে এবং তিনি সত্যিকারের স্বাস্থ্য পেশাজীবী কিনা দেখুন। তারিখ দেখুন: নতুন জ্ঞানের সাথে স্বাস্থ্য পরামর্শ বদলায়। শিরোনামের বাইরেও পড়ুন।")],
+   [K("Be careful with miracle cures","অলৌকিক নিরাময় থেকে সাবধান"),K("Be suspicious of posts that promise a quick cure, tell you to stop prescribed medicine, or try to sell you something. Ask a qualified doctor first.","দ্রুত নিরাময়ের প্রতিশ্রুতি, ডাক্তারের দেওয়া ওষুধ বন্ধ করতে বলা বা কিছু বিক্রির চেষ্টা করা পোস্ট সন্দেহের চোখে দেখুন। আগে যোগ্য চিকিৎসককে জিজ্ঞেস করুন।")],
+   [K("Ask a doctor","চিকিৎসককে জিজ্ঞেস করুন"),K("Shastho Batayon 16263 has offered free advice from doctors by phone, but news in 2026 reported funding problems. If it doesn't connect, go to your nearest government health facility.","স্বাস্থ্য বাতায়ন ১৬২৬৩ ফোনে বিনামূল্যে চিকিৎসকের পরামর্শ দিয়ে আসছে, তবে ২০২৬ সালে অর্থায়ন সমস্যার খবর এসেছে। কল না গেলে নিকটস্থ সরকারি স্বাস্থ্যকেন্দ্রে যান।")],
+   [K("Think before you share","শেয়ার করার আগে ভাবুন"),K("If you're not sure a health post is true, don't forward it, even to warn others. Sharing spreads it further.","কোনো স্বাস্থ্য পোস্ট সত্য কিনা নিশ্চিত না হলে, অন্যদের সতর্ক করতেও তা পাঠাবেন না। শেয়ার করলে তা আরও ছড়ায়।")]
+  ],
+  related:["hb16263","dghsfr"], sources:["whoTips","whoPrinciples"]}
+];
+const guideById = id => GUIDES.find(g=>g.id===id);
+
+/* ---------------- "What should I do next?" action plans ---------------- */
+const PLANS = {
+  edu:[
+   {t:K("Decide what and where you want to study","কী ও কোথায় পড়তে চান ঠিক করুন"),d:K("Write down the subject, level and the institutions you're considering. This decides which scholarships fit.","বিষয়, স্তর ও যে প্রতিষ্ঠানগুলোর কথা ভাবছেন তা লিখে রাখুন। এতে বোঝা যাবে কোন বৃত্তি প্রযোজ্য।")},
+   {t:K("Look for scholarships","বৃত্তি খুঁজুন"),d:K("Public-university students can apply for the UGC merit scholarship through their university's notice. Read each notice for its rules.","সরকারি বিশ্ববিদ্যালয়ের শিক্ষার্থীরা বিশ্ববিদ্যালয়ের নোটিশের মাধ্যমে ইউজিসি মেধাবৃত্তির জন্য আবেদন করতে পারেন। প্রতিটি নোটিশের নিয়ম পড়ুন।"),res:["ugc1"]},
+   {t:K("Gather your documents early","আগেভাগে কাগজপত্র গুছিয়ে নিন"),d:K("Keep copies of certificates, mark sheets and your NID or birth certificate in one folder.","সনদ, নম্বরপত্র এবং এনআইডি বা জন্মনিবন্ধনের কপি এক ফোল্ডারে রাখুন।")},
+   {t:K("Apply before the deadline and keep proof","শেষ তারিখের আগে আবেদন করুন, প্রমাণ রাখুন"),d:K("Submit early, and keep a copy or photo of everything you submit.","আগেভাগে জমা দিন, আর যা জমা দিচ্ছেন সবকিছুর কপি বা ছবি রাখুন।")},
+   {t:K("Consider free skills training too","বিনামূল্যের দক্ষতা প্রশিক্ষণও বিবেচনা করুন"),d:K("Job-ready courses can be a good next step alongside or instead of a degree.","ডিগ্রির পাশাপাশি বা বিকল্প হিসেবে চাকরি-উপযোগী কোর্স ভালো পরবর্তী ধাপ হতে পারে।"),res:["sicip1","sicip2"]}
+  ],
+  job:[
+   {t:K("Prepare your CV","আপনার সিভি তৈরি করুন"),d:K("One or two pages with your contact details, education, skills and any experience.","যোগাযোগের তথ্য, শিক্ষা, দক্ষতা ও যেকোনো অভিজ্ঞতা নিয়ে এক বা দুই পাতা।"),guide:"career"},
+   {t:K("Build skills with free training","বিনামূল্যে প্রশিক্ষণে দক্ষতা বাড়ান"),d:K("Government programmes offer free job-ready courses; some pay an allowance for good attendance.","সরকারি কর্মসূচি বিনামূল্যে চাকরি-উপযোগী কোর্স দেয়; কিছুতে ভালো উপস্থিতির জন্য ভাতা দেওয়া হয়।"),res:["sicip1","sicip2"]},
+   {t:K("Find real opportunities","আসল সুযোগ খুঁজুন"),d:K("Use official employer and training-provider websites. Never pay money to get a job.","নিয়োগকর্তা ও প্রশিক্ষণ প্রতিষ্ঠানের অফিসিয়াল ওয়েবসাইট ব্যবহার করুন। চাকরি পেতে কখনো টাকা দেবেন না।"),guide:"career"},
+   {t:K("Understand each application's requirements","প্রতিটি আবেদনের শর্ত বুঝে নিন"),d:K("List the documents, deadline and qualifications each job asks for before applying.","আবেদনের আগে প্রতিটি চাকরির কাগজপত্র, শেষ তারিখ ও যোগ্যতা লিখে নিন।")},
+   {t:K("Prepare for interviews","সাক্ষাৎকারের প্রস্তুতি নিন"),d:K("Practise explaining why you fit the job, and bring copies of certificates.","কেন আপনি উপযুক্ত তা বলা অনুশীলন করুন, সনদের কপি সঙ্গে নিন।"),guide:"career"},
+   {t:K("Know your rights at work","কর্মক্ষেত্রে অধিকার জানুন"),d:K("Ask for a written appointment letter, and learn about leave, including maternity leave.","লিখিত নিয়োগপত্র চেয়ে নিন, এবং মাতৃত্বকালীনসহ ছুটি সম্পর্কে জানুন।"),guide:"rights"}
+  ],
+  health:[
+   {t:K("Check the information is reliable","তথ্য নির্ভরযোগ্য কিনা যাচাই করুন"),d:K("Prefer DGHS and WHO, and check who wrote advice and when.","ডিজিএইচএস ও বিশ্ব স্বাস্থ্য সংস্থাকে অগ্রাধিকার দিন, কে কবে পরামর্শ দিয়েছে দেখুন।"),guide:"health"},
+   {t:K("Get advice from a doctor by phone","ফোনে চিকিৎসকের পরামর্শ নিন"),d:K("Shastho Batayon 16263 may help, but its service was reported as unstable in 2026.","স্বাস্থ্য বাতায়ন ১৬২৬৩ সাহায্য করতে পারে, তবে ২০২৬ সালে এর সেবা অনিশ্চিত বলে খবর এসেছে।"),res:["hb16263"]},
+   {t:K("Find a health facility","স্বাস্থ্যকেন্দ্র খুঁজুন"),d:K("Visit your nearest government health facility. NariPath plans to add a facility finder from the official registry.","নিকটস্থ সরকারি স্বাস্থ্যকেন্দ্রে যান। নারীপথ সরকারি রেজিস্ট্রি থেকে সেবাকেন্দ্র খোঁজার সুবিধা যোগ করার পরিকল্পনা করছে।"),res:["dghsfr"]},
+   {t:K("If you were hurt by violence","সহিংসতায় আহত হলে"),d:K("One-Stop Crisis Centres in hospitals offer treatment, legal help and counselling together.","হাসপাতালের ওয়ান-স্টপ ক্রাইসিস সেন্টারে একসাথে চিকিৎসা, আইনি সহায়তা ও কাউন্সেলিং পাওয়া যায়।"),res:["occcells","r01"]}
+  ],
+  rights:[
+   {t:K("Learn what the law says","আইন কী বলে জানুন"),d:K("Short explanations of marriage age, domestic violence and maternity leave.","বিয়ের বয়স, পারিবারিক সহিংসতা ও মাতৃত্বকালীন ছুটির সংক্ষিপ্ত ব্যাখ্যা।"),guide:"rights"},
+   {t:K("Get free legal advice","বিনামূল্যে আইনি পরামর্শ নিন"),d:K("Call the toll-free government legal aid helpline 16699.","টোল-ফ্রি সরকারি আইনি সহায়তা হেল্পলাইন ১৬৬৯৯-এ কল করুন।"),res:["nlaso"]},
+   {t:K("Meet a legal aid lawyer","আইনি সহায়তার আইনজীবীর সাথে দেখা করুন"),d:K("Your District Legal Aid Office or BLAST can advise you and take your case for free if you can't afford a lawyer.","আইনজীবী নেওয়ার সামর্থ্য না থাকলে জেলা লিগ্যাল এইড অফিস বা ব্লাস্ট বিনামূল্যে পরামর্শ দিতে ও মামলা পরিচালনা করতে পারে।"),res:["dlao","blast"]},
+   {t:K("Keep copies of important papers","গুরুত্বপূর্ণ কাগজের কপি রাখুন"),d:K("Keep copies of your NID, marriage papers and anything related to the matter somewhere safe.","এনআইডি, বিয়ের কাগজ ও বিষয়টির সাথে সম্পর্কিত সবকিছুর কপি নিরাপদ জায়গায় রাখুন।")},
+   {t:K("You choose what happens next","পরবর্তী সিদ্ধান্ত আপনার"),d:K("You can get advice and decide later. If you are in danger now, call 999 or 109.","পরামর্শ নিয়ে পরে সিদ্ধান্ত নিতে পারেন। এখনই বিপদে থাকলে ৯৯৯ বা ১০৯-এ কল করুন।"),res:["s01","r01"]}
+  ],
+  online:[
+   {t:K("Save the evidence","প্রমাণ সংরক্ষণ করুন"),d:K("Take dated screenshots and copy links to the posts or profiles before anything is deleted.","কিছু মুছে যাওয়ার আগে তারিখসহ স্ক্রিনশট নিন এবং পোস্ট বা প্রোফাইলের লিংক কপি করুন।")},
+   {t:K("Secure your accounts","অ্যাকাউন্ট সুরক্ষিত করুন"),d:K("Change passwords and turn on two-step login. Never share a code or PIN.","পাসওয়ার্ড বদলান এবং ২-ধাপ লগইন চালু করুন। কোনো কোড বা পিন শেয়ার করবেন না।"),guide:"digital"},
+   {t:K("Report it","রিপোর্ট করুন"),d:K("Police Cyber Support for Women is an all-women team that keeps your information confidential.","পুলিশ সাইবার সাপোর্ট ফর উইমেন একটি সম্পূর্ণ নারী দল, যারা আপনার তথ্য গোপন রাখে।"),res:["pcsw","blastcyber"]},
+   {t:K("If you feel physically unsafe","শারীরিকভাবে অনিরাপদ মনে হলে"),d:K("Call 999 straight away.","সঙ্গে সঙ্গে ৯৯৯-এ কল করুন।"),res:["s01"]}
+  ],
+  money:[
+   {t:K("Track money in and out for a month","এক মাস আয়-ব্যয় লিখে রাখুন"),d:K("Seeing where money goes is the first step to saving.","টাকা কোথায় যায় দেখাই সঞ্চয়ের প্রথম ধাপ।"),guide:"money"},
+   {t:K("Protect your mobile money","মোবাইল ব্যাংকিং সুরক্ষিত রাখুন"),d:K("Never share your PIN or one-time code with anyone.","পিন বা ওটিপি কখনো কারও সাথে শেয়ার করবেন না।"),guide:"money"},
+   {t:K("Learn business skills","ব্যবসার দক্ষতা শিখুন"),d:K("WE-HELP offers information, networking and market support for women entrepreneurs; SICIP offers free training.","উই-হেল্প নারী উদ্যোক্তাদের তথ্য, নেটওয়ার্কিং ও বাজার সহায়তা দেয়; এসআইসিআইপি বিনামূল্যে প্রশিক্ষণ দেয়।"),res:["wehelp","sicip1"]},
+   {t:K("Compare loans before you borrow","ঋণ নেওয়ার আগে তুলনা করুন"),d:K("Ask banks about the women entrepreneurs' refinance scheme, and compare total cost before signing.","ব্যাংকে নারী উদ্যোক্তা রিফাইন্যান্স স্কিম সম্পর্কে জিজ্ঞেস করুন, এবং স্বাক্ষরের আগে মোট খরচ তুলনা করুন।"),res:["bbwomen","bbnew"]}
+  ]
+};
+
 /* ---------------- State ---------------- */
 const store = {
   get(k,d){try{const v=localStorage.getItem("naripath:"+k);return v?JSON.parse(v):d}catch(e){return d}},
   set(k,v){try{localStorage.setItem("naripath:"+k,JSON.stringify(v))}catch(e){}},
-  clear(){try{["lang","saved","paths","reports","hide","circle","lastTest"].forEach(k=>localStorage.removeItem("naripath:"+k))}catch(e){}}
+  clear(){try{["lang","saved","paths","plans","reports","hide","circle","lastTest"].forEach(k=>localStorage.removeItem("naripath:"+k))}catch(e){}}
 };
 const S = {
   lang: store.get("lang","bn"),
-  saved: (store.get("saved",null) ?? ["pcsw","bbwomen"]).filter(id=>R.some(r=>r.id===id)),
-  paths: Object.fromEntries(Object.entries(store.get("paths",null) ?? {sicip1:{done:[true,true,false,false,false,false],example:true}}).filter(([id])=>R.some(r=>r.id===id))),
+  saved: (store.get("saved",null) ?? []).filter(id=>R.some(r=>r.id===id)),
+  paths: Object.fromEntries(Object.entries(store.get("paths",null) ?? {}).filter(([id])=>R.some(r=>r.id===id))),
   q:"", pillar:0, district:"", cost:"", status:"", stage:"",
   nav:{sit:null, district:"", freeFirst:true, done:false},
   clearArmed:false, flash:"",
@@ -984,9 +1188,9 @@ const S = {
   check:{goal:"",age:"",edu:"",sit:[],done:false},
   reportOpen:false, reportDone:false,
   circle: store.get("circle",[]), lastTest: store.get("lastTest",null),
-  sewn:false, timerEnd:null, timerMin:30, sent:null, callDelay:10, callerName:""
+  sewn:false, plans: Object.fromEntries(Object.entries(store.get("plans",{})||{}).filter(([k,v])=>PLANS[k]&&v&&typeof v==="object")), timerEnd:null, timerMin:30, sent:null, callDelay:10, callerName:""
 };
-const persist=()=>{store.set("saved",S.saved);store.set("paths",S.paths)};
+const persist=()=>{store.set("saved",S.saved);store.set("paths",S.paths);store.set("plans",S.plans)};
 
 /* ---------------- Helpers ---------------- */
 const esc = v => String(v).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"})[c]);
@@ -1014,6 +1218,8 @@ const ICONS = {
   list:'<path d="M9 6h11M9 12h11M9 18h11"/><path d="M4 6l1 1 2-2M4 12l1 1 2-2M4 18l1 1 2-2"/>',
   info:'<circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/>',
   chev:'<path d="M9 6l6 6-6 6"/>',
+  learn:'<path d="M2 5c3-1 6-1 10 1 4-2 7-2 10-1v14c-3-1-6-1-10 1-4-2-7-2-10-1z"/><path d="M12 6v14"/>',
+  pin:'<path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/>',
   left:'<path d="M15 6l-6 6 6 6"/>'
 };
 const icon = (n,cls="") => `<svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[n]}</svg>`;
@@ -1113,15 +1319,18 @@ function viewHome(){
     </form>
   </div>
 
-  <div class="quick" style="grid-template-columns:1fr">
-    <a href="#check" style="--pc:var(--p1);min-height:0;flex-direction:row;align-items:center;gap:14px;padding-bottom:20px"><span class="ico">${icon("list")}</span><span style="display:flex;flex-direction:column;gap:2px"><b>${t("checkTitle")}</b><small>${t("checkSub")}</small></span></a>
+  ${continueCard()}
+  <div class="quick">
+    <a href="#district" style="--pc:var(--p4)"><span class="ico">${icon("pin")}</span><b>${t("nearTitle")}</b><small>${t("nearCard")}</small></a>
+    <a href="#check" style="--pc:var(--p1)"><span class="ico">${icon("list")}</span><b>${t("checkTitle")}</b><small>${t("checkSub")}</small></a>
+    <a href="#learn" style="--pc:var(--p3);grid-column:span 2;min-height:0;flex-direction:row;align-items:center;gap:14px;padding-bottom:20px"><span class="ico">${icon("learn")}</span><span style="display:flex;flex-direction:column;gap:2px"><b>${t("learnTitle")}</b><small>${t("learnCard")}</small></span></a>
   </div>
 
   <section class="section" aria-labelledby="nav-h">
     <div><h2 id="nav-h">${t("navTitle")}</h2><p class="muted small">${t("navSub")}</p></div>
     <div class="sit-list">
-      ${SITUATIONS.map(s=>`<button class="sit" type="button" data-sit="${s.id}" ${pc(s.id==="local"?6:s.pillars[0])}>
-        <span class="ico" ${pc(s.pillars[0]===1&&s.id==="local"?6:s.pillars[0])}>${icon(s.id==="local"?"compass":pillar(s.pillars[0]).icon)}</span>
+      ${SITUATIONS.filter(s=>s.id!=="local").map(s=>`<button class="sit" type="button" data-sit="${s.id}" ${pc(s.pillars[0])}>
+        <span class="ico" ${pc(s.pillars[0])}>${icon(s.id==="job"?"list":pillar(s.pillars[0]).icon)}</span>
         <span class="t">${L(s)}</span>${icon("chev","chev")}</button>`).join("")}
     </div>
   </section>
@@ -1255,9 +1464,9 @@ function viewResource(id){
     </dl>
   </section>
   <section class="section card" aria-live="polite">
-    ${S.reportDone ? `<p class="small">✓ ${t("reportThanks")}</p>`
+    ${S.reportDone ? `<p class="small">✓ ${t("reportThanks")}</p><p class="small muted">${t("reportLocal")}</p><button type="button" class="copy" data-copy="${esc(reportText(r))}">${t("copyReport")}</button>`
       : S.reportOpen ? `<h3>${t("reportQ")}</h3><div class="report-opts">
-          ${["contact","outdated","closed","wrong"].map(k=>`<button type="button" data-report="${k}" data-rid="${r.id}">${t("rp_"+k)}</button>`).join("")}
+          ${["contact","link","closed","eligibility","wrong","outdated"].map(k=>`<button type="button" data-report="${k}" data-rid="${esc(r.id)}">${t("rp_"+k)}</button>`).join("")}
         </div><button type="button" class="back" data-reportcancel="1">${t("cancel")}</button>`
       : `<button type="button" class="back" data-reportopen="1" style="color:var(--primary)">${t("reportBtn")}</button>`}
   </section>
@@ -1315,10 +1524,34 @@ function viewPath(){
     <p class="muted small">${t("mySub")}</p>
     ${S.flash?`<p class="card small" role="status">${S.flash}</p>`:""}
   </section>
+  ${(()=>{ const it=progressItems(); const tot=it.reduce((a,x)=>a+x.total,0), dn=it.reduce((a,x)=>a+x.done,0);
+    return `<section class="tiles dash">
+      <div class="tile"><b>${num(S.saved.filter(byId).length)}</b><span>${t("savedRes")}</span></div>
+      <div class="tile"><b>${num(it.length)}</b><span>${t("plansAndPaths")}</span></div>
+      <div class="tile" style="grid-column:span 2"><b>${num(dn)}/${num(tot)}</b><span>${t("stepsDone")}</span><span class="progress" style="display:block;margin-top:8px"><i style="width:${tot?Math.round(dn/tot*100):0}%"></i></span></div>
+    </section>`; })()}
+  <details class="card privacy-box"><summary><b>${t("storedTitle")}</b></summary>
+    <ul class="small">${["st1","st2","st3","st4","st5","st6"].map(k=>`<li>${t(k)}</li>`).join("")}</ul>
+    <p class="small">${t("storedNot")}</p>
+  </details>
   <section class="section">
     <label class="toggle" for="hide-toggle"><input type="checkbox" id="hide-toggle" ${S.hide?"checked":""}><span class="small">${t("hideMine")}</span></label>
   </section>
   ${S.hide && !S.revealed ? `<section class="card hidden-card"><p class="muted">${t("hiddenMsg")}</p><button type="button" class="btn ghost" id="reveal-btn">${t("showMine")}</button></section>` : `
+  ${Object.keys(S.plans).length?`<section class="section" aria-labelledby="pl-h">
+    <h2 id="pl-h">${t("myPlans")}</h2>
+    ${Object.entries(S.plans).map(([sid,p])=>{ const sit=SITUATIONS.find(x=>x.id===sid), plan=PLANS[sid]; if(!sit||!plan) return "";
+      const done=plan.map((_,i)=>!!(p.done||[])[i]); const n=done.filter(Boolean).length;
+      return `<article class="card" id="plan-${sid}" ${pc(sit.pillars[0])} style="border-left:4px solid var(--pc)">
+        <h3>${L(sit)}</h3>
+        <div style="display:flex;align-items:center;gap:10px;margin:10px 0 6px">
+          <div class="progress" style="flex:1" role="progressbar" aria-valuemin="0" aria-valuemax="${plan.length}" aria-valuenow="${n}"><i style="width:${Math.round(n/plan.length*100)}%"></i></div>
+          <span class="small muted" style="font-variant-numeric:tabular-nums">${num(n)}/${num(plan.length)} ${t("stepsDone")}</span>
+        </div>
+        <div>${plan.map((st,i)=>`<label class="check ${done[i]?"done":""}" for="pk-${sid}-${i}"><input type="checkbox" id="pk-${sid}-${i}" data-pck="${sid}" data-i="${i}" ${done[i]?"checked":""}><span>${L(st.t)}</span></label>`).join("")}</div>
+        <div style="margin-top:8px;display:flex;gap:16px"><button type="button" class="back" data-openplan="${sid}">${t("seeDetails")}</button><button type="button" class="back" data-rmplan="${sid}">${t("remove")}</button></div>
+      </article>`;}).join("")}
+  </section>`:""}
   <section class="section" aria-labelledby="ap-h">
     <h2 id="ap-h">${t("actionPaths")}</h2>
     ${ids.length? ids.map(id=>{
@@ -1397,7 +1630,8 @@ function viewAbout(){
     <ul style="margin:0;padding-left:18px">
       <li>${en?"Browse everything without an account.":"অ্যাকাউন্ট ছাড়াই সব দেখা যায়।"}</li>
       <li>${en?"No incident stories, names or locations are collected.":"কোনো ঘটনার বিবরণ, নাম বা অবস্থান সংগ্রহ করা হয় না।"}</li>
-      <li>${en?"Saved items stay in your browser, and you can clear them anytime.":"সেভ করা তথ্য আপনার ব্রাউজারেই থাকে, যেকোনো সময় মুছে ফেলা যায়।"}</li>
+      <li>${en?"Saved items, plans, ticked steps, your language choice, discreet mode and any problem reports are stored only in this browser on this device. Clear them anytime from My Path.":"সেভ করা তথ্য, পরিকল্পনা, টিক দেওয়া ধাপ, ভাষা, গোপন মোড ও সমস্যার রিপোর্ট শুধু এই ডিভাইসের ব্রাউজারে থাকে। আমার পথ পাতা থেকে যেকোনো সময় মুছে ফেলা যায়।"}</li>
+      <li>${t("storedNot")}</li>
       <li>${en?"A contact that hasn't been checked is never presented as an emergency service.":"যাচাই না করা কোনো যোগাযোগকে কখনো জরুরি সেবা হিসেবে দেখানো হয় না।"}</li>
     </ul>
   </section>
@@ -1472,6 +1706,23 @@ function viewGaps(){
   </section>`;
 }
 
+function reportText(r){
+  const last=S.reports.filter(x=>x.id===r.id).pop();
+  return `NariPath report: ${raw(r.name)} [${r.id}] - ${last?raw(T["rp_"+last.kind]):""} - ${last?last.at:""}`;
+}
+function planBlock(sit){
+  const plan=PLANS[sit.id]; if(!plan) return "";
+  const saved=!!S.plans[sit.id];
+  return `<section class="section card plan">
+    <h2>${t("yourSteps")}</h2>
+    <p class="small muted">${t("planSub")}</p>
+    <ol class="plan-steps">${plan.map(st=>`<li>
+      <b>${L(st.t)}</b><p class="small">${L(st.d)}</p>
+      ${(st.res||[]).length||st.guide?`<div class="chips">${(st.res||[]).map(byId).filter(Boolean).map(r=>`<a class="chip" href="#r-${esc(r.id)}">${L(r.name)}</a>`).join("")}${st.guide&&guideById(st.guide)?`<a class="chip guide-chip" href="#g-${st.guide}">${icon("learn")}${L(guideById(st.guide).title)}</a>`:""}</div>`:""}
+    </li>`).join("")}</ol>
+    ${saved?`<a class="btn ghost" href="#path">${t("planOpen")}</a>`:`<button type="button" class="btn primary" data-saveplan="${sit.id}">${t("planSave")}</button>`}
+  </section>`;
+}
 function viewNavigator(){
   const N=S.nav, sit=SITUATIONS.find(s=>s.id===N.sit);
   if(!sit) return viewHome();
@@ -1498,15 +1749,117 @@ function viewNavigator(){
     <h1>${L(sit)}</h1>
     ${N.district?`<p class="small muted">${t("near")}: ${L(DISTRICTS[N.district])}</p>${LOCAL_COUNT[N.district]?"":`<p class="note">${t("noLocal").replace("{d}",L(DISTRICTS[N.district]))}</p>`}`:""}
   </section>
-  <section class="section card">
-    <h2>${t("yourSteps")}</h2>
-    <ol class="steps">${sit.steps.map(s=>`<li><span>${S.lang==="bn"?s[1]:s[0]}</span></li>`).join("")}</ol>
-  </section>
+  ${planBlock(sit)}
   <section class="section">
     <h2>${t("matched")} <span class="muted small">(${num(list.length)})</span></h2>
     <div class="list">${list.map(r=>resCard(r, N.district&&r.loc===N.district?`<span class="pill verified">${t("near")}</span>`:"")).join("")||`<div class="card empty">${t("noResults")}</div>`}</div>
     <button type="button" class="btn ghost" id="nav-restart">${t("startOver")}</button>
   </section>`;
+}
+
+/* ---------------- Learn & Understand ---------------- */
+function viewLearn(){
+  return `<section class="section">
+      <h1>${t("learnTitle")}</h1>
+      <p class="muted small">${t("learnSub")}</p>
+    </section>
+    <div class="list">${GUIDES.map(g=>`<a class="res guide-card" href="#g-${g.id}" ${pc(g.p)}>
+        <div style="display:flex;gap:12px;align-items:flex-start"><span class="ico">${icon(g.icon)}</span>
+        <div style="flex:1"><h3>${L(g.title)}</h3><span class="org">${L(g.intro)}</span></div></div>
+        <div class="meta"><span class="pill plain">${num(g.sections.length)} ${t("shortParts")}</span><span class="pill plain">${num(g.sources.length)} ${t("sourcesN")}</span></div>
+      </a>`).join("")}</div>
+    <p class="note">${t("guideDisclaimer")}</p>`;
+}
+function viewGuide(id){
+  const g=guideById(id); if(!g) return viewLearn();
+  return `<section class="section" ${pc(g.p)}>
+      <a class="back" href="#learn">${icon("left").replace('class=""','style="width:18px;height:18px"')}${t("learnTitle")}</a>
+      <div style="display:flex;gap:12px;align-items:center"><span class="ico">${icon(g.icon)}</span><span class="small" style="color:var(--pc);font-weight:600">${L(pillar(g.p))}</span></div>
+      <h1>${L(g.title)}</h1>
+      <p class="muted">${L(g.intro)}</p>
+    </section>
+    <ol class="guide-steps" ${pc(g.p)}>${g.sections.map(([h,b])=>`<li class="card"><h3>${L(h)}</h3><p>${L(b)}</p></li>`).join("")}</ol>
+    ${g.related.length?`<section class="section"><h2>${t("relatedServices")}</h2><div class="list">${g.related.map(byId).filter(Boolean).map(r=>resCard(r)).join("")}</div></section>`:""}
+    <section class="section card">
+      <h2>${t("sourceL")}</h2>
+      <ul class="small" style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px">${g.sources.map(k=>GSRC[k]).filter(Boolean).map(x=>`<li><a href="${esc(safeUrl(x.url))}" target="_blank" rel="noopener noreferrer">${L(x)}</a></li>`).join("")}</ul>
+      <p class="small muted">${t("checkedL")}: ${esc(date(g.checked))}</p>
+    </section>
+    <p class="note">${t("guideDisclaimer")}</p>`;
+}
+
+/* ---------------- Support near you (district) ---------------- */
+function detailCard(r){
+  const cparts=[];
+  if(r.phone) cparts.push(`<span class="phone-line"><a class="callbtn" href="tel:${r.phone}" target="_top">${t("call")} ${esc(r.phone)}</a>${copyBtn(r.phone)}</span>`);
+  if(r.email) cparts.push(`<a href="${esc(safeUrl("mailto:"+r.email))}">${esc(r.email)}</a>`);
+  if(r.web) cparts.push(`<a href="${esc(safeUrl(r.web))}" target="_blank" rel="noopener noreferrer">${esc(String(r.web).replace(/^https?:\/\/(www\.)?/,"").split("/")[0])}</a>`);
+  const src=r.source[0];
+  return `<article class="card detail" ${pc(r.p)}>
+    <div style="display:flex;justify-content:space-between;gap:8px;align-items:flex-start">
+      <a href="#r-${esc(r.id)}" class="dt-name"><h3>${L(r.name)}</h3></a>${statusPill(r)}</div>
+    <span class="small muted">${L(r.org)}</span>
+    <dl class="mini">
+      ${r.address?`<div><dt>${t("addressL")}</dt><dd>${L(r.address)}</dd></div>`:""}
+      <div><dt>${t("contact")}</dt><dd>${cparts.length?cparts.join("<br>"):`<span class="muted">${r.notFound.length?t("notPublic"):t("noContact")}</span>`}</dd></div>
+      <div><dt>${t("who")}</dt><dd>${r.elig?L(r.elig):`<span class="muted">${t("noElig")}</span>`}</dd></div>
+      <div><dt>${t("costL")}</dt><dd>${t(r.cost)}</dd></div>
+      <div><dt>${t("sourceL")}</dt><dd>${src?`<a href="${esc(safeUrl(src.url))}" target="_blank" rel="noopener noreferrer">${L(src)}</a>`:`<span class="muted">${t("noSource")}</span>`}</dd></div>
+      <div><dt>${t("checkedL")}</dt><dd>${esc(date(r.checked))}</dd></div>
+    </dl>
+    ${r.note?`<p class="small" style="color:var(--warn)">${L(r.note)}</p>`:""}
+  </article>`;
+}
+function viewDistrict(){
+  const d=S.district && S.district!=="nationwide" ? S.district : "";
+  const local=d?R.filter(r=>r.loc===d):[];
+  const nation=R.filter(r=>r.loc==="nationwide");
+  const name=d?L(DISTRICTS[d]):"";
+  return `<section class="section">
+      <h1>${t("nearTitle")}</h1>
+      <p class="muted small">${t("nearSub")}</p>
+      <label for="d-pick" class="small muted">${t("district")}</label>
+      <select id="d-pick"><option value="">${t("chooseDistrict")}</option>${districtOptions(d,false)}</select>
+      <p class="small muted">${t("whereNote")}</p>
+    </section>
+    ${d?`<section class="section">
+      <h2>${t("localIn").replace("{d}",name)} <span class="muted small">(${num(local.length)})</span></h2>
+      ${local.length?`<div class="list">${local.map(detailCard).join("")}</div>`
+        :`<div class="card empty"><p>${t("noLocal").replace(/\{d\}/g,name)}</p></div>`}
+    </section>
+    <section class="section">
+      <h2>${t("nationAlso").replace("{d}",name)} <span class="muted small">(${num(nation.length)})</span></h2>
+      <details class="card"><summary>${t("showNation")}</summary><div class="list" style="margin-top:10px">${nation.map(detailCard).join("")}</div></details>
+    </section>`:""}
+    <section class="section card">
+      <h2>${t("coverageTitle")}</h2>
+      <p class="small muted">${t("coverageSub").replace("{n}",num(Object.keys(LOCAL_COUNT).length)).replace("{t}",num(TOTAL_DISTRICTS))}</p>
+      <div class="legend small"><span class="dchip has">${t("hasInfo")}</span><span class="dchip none">${t("notResearched")}</span></div>
+      ${DIVISIONS.map(dv=>`<div class="div-row"><b class="small">${L(dv)}</b><div class="dchips">${Object.entries(DISTRICTS).filter(([,x])=>x.div===dv.id).sort((a,b)=>a[1].en.localeCompare(b[1].en))
+        .map(([k,x])=>`<button type="button" class="dchip ${LOCAL_COUNT[k]?"has":"none"}" data-dpick="${k}" aria-pressed="${k===d}" aria-label="${L(x)}: ${LOCAL_COUNT[k]?t("hasInfo"):t("notResearched")}">${L(x)}${LOCAL_COUNT[k]?` <span>${num(LOCAL_COUNT[k])}</span>`:""}</button>`).join("")}</div></div>`).join("")}
+    </section>`;
+}
+
+/* ---------------- Progress helpers (pure: never change state) ---------------- */
+function progressItems(){
+  const items=[];
+  Object.entries(S.paths).forEach(([id,p])=>{ const r=byId(id); if(!r) return; const st=steps(r); const done=st.map((_,i)=>!!(p.done||[])[i]);
+    items.push({kind:"path",id,title:L(r.name),total:st.length,done:done.filter(Boolean).length,next:st[done.indexOf(false)],href:`#path-${id}`}); });
+  Object.entries(S.plans).forEach(([sid,p])=>{ const sit=SITUATIONS.find(s=>s.id===sid), plan=PLANS[sid]; if(!sit||!plan) return; const done=plan.map((_,i)=>!!(p.done||[])[i]);
+    const nx=plan[done.indexOf(false)]; items.push({kind:"plan",id:sid,title:L(sit),total:plan.length,done:done.filter(Boolean).length,next:nx?nx.t:null,href:`#plan-${sid}`}); });
+  return items;
+}
+function continueCard(){
+  const open=progressItems().filter(x=>x.done<x.total).sort((a,b)=>(a.kind==="plan"?0:1)-(b.kind==="plan"?0:1));
+  if(!open.length) return "";
+  const x=open[0];
+  return `<a class="continue" href="#path">
+    <span class="small muted">${t("continueTitle")}</span>
+    <b>${x.title}</b>
+    <span class="small">${t("nextStep")}: ${x.next?L(x.next):""}</span>
+    <span class="progress" aria-hidden="true"><i style="width:${Math.round(x.done/x.total*100)}%"></i></span>
+    <span class="small muted">${num(x.done)}/${num(x.total)} ${t("stepsDone")}</span>
+  </a>`;
 }
 
 /* ---------------- Read aloud ---------------- */
@@ -1524,6 +1877,7 @@ function loadVoices(){
 }
 function pickVoice(voices,want){
   const n=v=>(v.lang||"").toLowerCase().replace("_","-");
+  voices=[...voices].sort((a,b)=>(b.localService===true)-(a.localService===true));   // on-device voices first
   if(want==="bn"){
     return voices.find(v=>n(v)==="bn-bd") || voices.find(v=>n(v)==="bn-in") || voices.find(v=>n(v).startsWith("bn"))
         || voices.find(v=>/bangla|bengali|বাংলা/i.test(v.name));
@@ -1617,11 +1971,15 @@ document.addEventListener("click",e=>{
   const rp=el.closest("[data-report]");
   if(rp){S.reports.push({id:rp.dataset.rid,kind:rp.dataset.report,at:isoLocal(new Date())});store.set("reports",S.reports);S.reportOpen=false;S.reportDone=true;render();return;}
   if(el.closest("#reveal-btn")){S.revealed=true;render();return;}
+  const sp=el.closest("[data-saveplan]"); if(sp){ const id=sp.dataset.saveplan; if(PLANS[id]&&!S.plans[id]){ S.plans[id]={done:PLANS[id].map(()=>false)}; persist(); } toast(t("planSaved")); render(); return; }
+  const rpl=el.closest("[data-rmplan]"); if(rpl){ delete S.plans[rpl.dataset.rmplan]; persist(); render(); return; }
+  const op=el.closest("[data-openplan]"); if(op){ S.nav={sit:op.dataset.openplan,district:"",freeFirst:true,done:true}; location.hash="navigator"; return; }
+  const dp=el.closest("[data-dpick]"); if(dp){ S.district=dp.dataset.dpick; render(); const h=document.querySelector("#view h2"); if(h) h.scrollIntoView({block:"start"}); return; }
 });
 document.addEventListener("click",e=>{
   const c=e.target.closest("[data-copy]"); if(!c) return;
   const n=c.dataset.copy;
-  const ok=()=>{toast(t("copied").replace("{n}",n)); c.textContent="✓";setTimeout(()=>{c.textContent=t("copyNum")},1500);};
+  const ok=()=>{toast(n.length>20?t("copiedText"):t("copied").replace("{n}",n)); c.textContent="✓";setTimeout(()=>{c.textContent=t("copyNum")},1500);};
   const fail=()=>toast(t("copyFail").replace("{n}",n));
   try{ navigator.clipboard.writeText(n).then(ok,fail); }catch(err){ fail(); }
 });
@@ -1643,8 +2001,8 @@ function render(){
     ? `<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/></svg>${t("stop")}`
     : `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg>${t("listen")}`;
   document.getElementById("listen").setAttribute("aria-pressed", speaking);
-  const tab = r.startsWith("r-")||r==="explore" ? "explore" : (r==="path"?"path":(r==="about"||r==="gaps"?"about":"home"));
-  const TABS=[["home","home"],["explore","search"],["path","list"],["about","info"]];
+  const tab = (r.startsWith("r-")||r==="explore"||r==="district") ? "explore" : (r==="learn"||r.startsWith("g-")) ? "learn" : r==="path" ? "path" : (r==="about"||r==="gaps") ? "about" : "home";
+  const TABS=[["home","home"],["explore","search"],["learn","learn"],["path","list"],["about","info"]];
   const ti=Math.max(0,TABS.findIndex(([k])=>k===tab));
   const prevTi = typeof window.__ti==="number" ? window.__ti : ti;
   document.getElementById("tabs").innerHTML = `<span class="pill" style="transform:translateX(${prevTi*100}%)"></span>` + TABS
@@ -1658,6 +2016,9 @@ function render(){
   else if(r==="gaps") html=viewGaps();
   else if(r==="navigator") html=viewNavigator();
   else if(r==="check") html=viewCheck();
+  else if(r==="learn") html=viewLearn();
+  else if(r.startsWith("g-")) html=viewGuide(r.slice(2));
+  else if(r==="district") html=viewDistrict();
   else if(r.startsWith("r-")) html=viewResource(r.slice(2));
   else html=viewHome();
   document.getElementById("view").innerHTML=html;
@@ -1678,7 +2039,7 @@ document.addEventListener("click",e=>{
   const el=e.target.closest("[data-lang],[data-sit],[data-pillar],[data-stage],[data-reset],[data-fp],[data-clearstage],[data-save],[data-startpath],[data-rmpath],#clear-btn,#nav-go,#nav-restart");
   if(!el) return;
   if(el.dataset.lang){S.lang=el.dataset.lang;store.set("lang",S.lang);render();return;}
-  if(el.dataset.sit){S.nav={sit:el.dataset.sit,district:"",freeFirst:true,done:false};location.hash="navigator";if(route()==="navigator")render();return;}
+  if(el.dataset.sit){ if(el.dataset.sit==="local"){location.hash="district";return;} S.nav={sit:el.dataset.sit,district:"",freeFirst:true,done:false};location.hash="navigator";if(route()==="navigator")render();return;}
   if(el.dataset.pillar){S.q="";S.district="";S.cost="";S.status="";S.stage="";S.pillar=+el.dataset.pillar;if(route()==="explore"){e.preventDefault();render();}return;}
   if(el.dataset.stage){S.q="";S.pillar=0;S.district="";S.cost="";S.status="";S.stage=el.dataset.stage;if(route()==="explore"){e.preventDefault();render();}return;}
   if(el.dataset.reset){S.q="";S.pillar=0;S.district="";S.cost="";S.status="";S.stage="";if(route()==="explore"){e.preventDefault();render();}return;}
@@ -1689,7 +2050,7 @@ document.addEventListener("click",e=>{
     location.hash="path";setTimeout(()=>{const a=document.getElementById("path-"+id);if(a)a.scrollIntoView({block:"start"});},30);return;}
   if(el.dataset.rmpath){delete S.paths[el.dataset.rmpath];persist();render();return;}
   if(el.id==="clear-btn"){ if(!S.clearArmed){S.clearArmed=true;render();return;}
-    S.saved=[];S.paths={};S.reports=[];S.hide=false;S.revealed=false;S.clearArmed=false;store.clear();store.set("saved",[]);store.set("paths",{});S.flash=t("cleared");render();return;}
+    S.saved=[];S.paths={};S.plans={};S.reports=[];S.hide=false;S.revealed=false;S.clearArmed=false;store.clear();store.set("saved",[]);store.set("paths",{});S.flash=t("cleared");render();return;}
   if(el.id==="nav-go"){S.nav.district=document.getElementById("nav-district").value;S.nav.freeFirst=document.getElementById("nav-free").checked;S.nav.done=true;render();window.scrollTo(0,0);return;}
   if(el.id==="nav-restart"){location.hash="home";return;}
 });
@@ -1698,6 +2059,8 @@ document.addEventListener("change",e=>{
   if(id==="f-district"){S.district=e.target.value;render();}
   else if(id==="f-cost"){S.cost=e.target.value;render();}
   else if(id==="f-status"){S.status=e.target.value;render();}
+  else if(id==="d-pick"){S.district=e.target.value;render();}
+  else if(e.target.dataset.pck){ const sid=e.target.dataset.pck, plan=PLANS[sid], p=S.plans[sid]; if(!plan||!p) return; p.done=plan.map((_,i)=>!!(p.done||[])[i]); p.done[+e.target.dataset.i]=e.target.checked; persist(); render(); }
   else if(id==="hide-toggle"){S.hide=e.target.checked;S.revealed=false;store.set("hide",S.hide);render();}
   else if(e.target.dataset.ck){const id=e.target.dataset.ck, r=byId(id), p=S.paths[id]; if(!r||!p) return; const n=steps(r).length; p.done=Array.from({length:n},(_,i)=>!!(p.done||[])[i]); p.done[+e.target.dataset.i]=e.target.checked;persist();render();}
 });
