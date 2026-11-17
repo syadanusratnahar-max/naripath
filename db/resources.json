@@ -3,6 +3,8 @@
     "id": "ugc1",
     "pillar": "education-career",
     "data_type": "A_public_source",
+    "status": "public_source",
+    "not_found": [],
     "location": "nationwide",
     "cost": "free",
     "life_stages": [
@@ -53,6 +55,8 @@
     "id": "sicip1",
     "pillar": "education-career",
     "data_type": "A_public_source",
+    "status": "public_source",
+    "not_found": [],
     "location": "nationwide",
     "cost": "free",
     "life_stages": [
@@ -105,6 +109,8 @@
     "id": "sicip2",
     "pillar": "education-career",
     "data_type": "A_public_source",
+    "status": "public_source",
+    "not_found": [],
     "location": "nationwide",
     "cost": "free",
     "life_stages": [
@@ -152,6 +158,8 @@
     "id": "hb16263",
     "pillar": "health-wellbeing",
     "data_type": "A_public_source",
+    "status": "needs_review",
+    "not_found": [],
     "location": "nationwide",
     "cost": "free",
     "life_stages": [
@@ -198,6 +206,8 @@
     "id": "dghsfr",
     "pillar": "health-wellbeing",
     "data_type": "A_public_source",
+    "status": "public_source",
+    "not_found": [],
     "location": "nationwide",
     "cost": "unknown",
     "life_stages": [
@@ -239,6 +249,8 @@
     "id": "r01",
     "pillar": "rights-legal",
     "data_type": "A_public_source",
+    "status": "public_source",
+    "not_found": [],
     "location": "nationwide",
     "cost": "free",
     "life_stages": [
@@ -285,6 +297,8 @@
     "id": "ntcc",
     "pillar": "rights-legal",
     "data_type": "A_public_source",
+    "status": "public_source",
+    "not_found": [],
     "location": "dhaka",
     "cost": "free",
     "life_stages": [
@@ -336,6 +350,10 @@
     "id": "occcells",
     "pillar": "rights-legal",
     "data_type": "A_public_source",
+    "status": "public_source",
+    "not_found": [
+      "phone"
+    ],
     "location": "nationwide",
     "cost": "free",
     "life_stages": [
@@ -382,6 +400,8 @@
     "id": "nlaso",
     "pillar": "rights-legal",
     "data_type": "A_public_source",
+    "status": "public_source",
+    "not_found": [],
     "location": "nationwide",
     "cost": "free",
     "life_stages": [
@@ -428,6 +448,8 @@
     "id": "dlao",
     "pillar": "rights-legal",
     "data_type": "A_public_source",
+    "status": "public_source",
+    "not_found": [],
     "location": "nationwide",
     "cost": "free",
     "life_stages": [
@@ -479,6 +501,8 @@
     "id": "blast",
     "pillar": "rights-legal",
     "data_type": "A_public_source",
+    "status": "public_source",
+    "not_found": [],
     "location": "nationwide",
     "cost": "free",
     "life_stages": [
@@ -530,6 +554,8 @@
     "id": "s01",
     "pillar": "personal-digital-safety",
     "data_type": "A_public_source",
+    "status": "public_source",
+    "not_found": [],
     "location": "nationwide",
     "cost": "free",
     "life_stages": [
@@ -576,6 +602,8 @@
     "id": "pcsw",
     "pillar": "personal-digital-safety",
     "data_type": "A_public_source",
+    "status": "public_source",
+    "not_found": [],
     "location": "nationwide",
     "cost": "free",
     "life_stages": [
@@ -626,6 +654,10 @@
     "id": "blastcyber",
     "pillar": "personal-digital-safety",
     "data_type": "A_public_source",
+    "status": "public_source",
+    "not_found": [
+      "contact"
+    ],
     "location": "nationwide",
     "cost": "free",
     "life_stages": [
@@ -672,6 +704,10 @@
     "id": "wehelp",
     "pillar": "financial-independence",
     "data_type": "A_public_source",
+    "status": "public_source",
+    "not_found": [
+      "website"
+    ],
     "location": "nationwide",
     "cost": "free",
     "life_stages": [
@@ -718,6 +754,8 @@
     "id": "bbwomen",
     "pillar": "financial-independence",
     "data_type": "A_public_source",
+    "status": "public_source",
+    "not_found": [],
     "location": "nationwide",
     "cost": "paid",
     "life_stages": [
@@ -769,6 +807,8 @@
     "id": "bbnew",
     "pillar": "financial-independence",
     "data_type": "A_public_source",
+    "status": "public_source",
+    "not_found": [],
     "location": "nationwide",
     "cost": "paid",
     "life_stages": [
@@ -811,6 +851,8 @@
     "id": "h333",
     "pillar": "everyday-community",
     "data_type": "A_public_source",
+    "status": "public_source",
+    "not_found": [],
     "location": "nationwide",
     "cost": "unknown",
     "life_stages": [
@@ -852,6 +894,8 @@
     "id": "dwacare",
     "pillar": "everyday-community",
     "data_type": "A_public_source",
+    "status": "public_source",
+    "not_found": [],
     "location": "dhaka",
     "cost": "paid",
     "life_stages": [
@@ -899,6 +943,10 @@
     "id": "occ1",
     "pillar": "rights-legal",
     "data_type": "A_public_source",
+    "status": "public_source",
+    "not_found": [
+      "phone"
+    ],
     "location": "dhaka",
     "cost": "free",
     "life_stages": [
@@ -945,6 +993,10 @@
     "id": "occ2",
     "pillar": "rights-legal",
     "data_type": "A_public_source",
+    "status": "public_source",
+    "not_found": [
+      "phone"
+    ],
     "location": "rajshahi",
     "cost": "free",
     "life_stages": [
@@ -991,6 +1043,10 @@
     "id": "occ3",
     "pillar": "rights-legal",
     "data_type": "A_public_source",
+    "status": "public_source",
+    "not_found": [
+      "phone"
+    ],
     "location": "chattogram",
     "cost": "free",
     "life_stages": [
@@ -1037,6 +1093,10 @@
     "id": "occ4",
     "pillar": "rights-legal",
     "data_type": "A_public_source",
+    "status": "public_source",
+    "not_found": [
+      "phone"
+    ],
     "location": "sylhet",
     "cost": "free",
     "life_stages": [
@@ -1083,6 +1143,10 @@
     "id": "occ5",
     "pillar": "rights-legal",
     "data_type": "A_public_source",
+    "status": "public_source",
+    "not_found": [
+      "phone"
+    ],
     "location": "khulna",
     "cost": "free",
     "life_stages": [
@@ -1129,6 +1193,10 @@
     "id": "occ6",
     "pillar": "rights-legal",
     "data_type": "A_public_source",
+    "status": "public_source",
+    "not_found": [
+      "phone"
+    ],
     "location": "barishal",
     "cost": "free",
     "life_stages": [
@@ -1175,6 +1243,10 @@
     "id": "occ7",
     "pillar": "rights-legal",
     "data_type": "A_public_source",
+    "status": "public_source",
+    "not_found": [
+      "phone"
+    ],
     "location": "rangpur",
     "cost": "free",
     "life_stages": [
@@ -1221,6 +1293,10 @@
     "id": "occ8",
     "pillar": "rights-legal",
     "data_type": "A_public_source",
+    "status": "public_source",
+    "not_found": [
+      "phone"
+    ],
     "location": "faridpur",
     "cost": "free",
     "life_stages": [
@@ -1267,6 +1343,10 @@
     "id": "occ9",
     "pillar": "rights-legal",
     "data_type": "A_public_source",
+    "status": "public_source",
+    "not_found": [
+      "phone"
+    ],
     "location": "coxsbazar",
     "cost": "free",
     "life_stages": [

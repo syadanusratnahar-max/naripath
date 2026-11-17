@@ -12,21 +12,26 @@ NariPath does not replace existing organisations or provide medical, legal, fina
 - **Life Situation Navigator:** start from "I want to…" instead of a category, get suggested next steps and matching services.
 - **Resource Passport:** every listing shows who it is for, cost, documents, contact, original sources, last-checked date and verification status.
 - **Personal Action Path:** turn any listing into a checklist with progress tracking.
-- **Eligibility checker:** four tap-only questions; answers are never saved.
-- **Safety tools (simulated):** Trusted Circle alert, safety check-in timer, hidden trigger, fake incoming call, loud alarm.
-- **Quick exit and discreet mode:** one tap covers the app with a recipe page.
+- **Relevance checker:** four tap-only questions show *potentially relevant* services, which answers matched and what still needs confirming. It never decides eligibility; answers are never saved.
+- **Discreet mode:** hide saved items in My Path.
 - **Read aloud** in Bangla or English, **tap-to-call** and **copy number** buttons.
-- **Information Gap Finder:** an admin view showing districts and areas with missing or unconfirmed information.
+- **Information Gap Finder:** an admin view that separates information *not yet researched* from information *checked and not publicly available*, with coverage across all 64 districts.
 
 ## Data
 
 28 public-source records (Type A) from official and reputable sources, checked 13 November 2026, including the 109 and 999 helplines, Police Cyber Support for Women, Shastho Batayon 16263, the government legal aid helpline 16699, District Legal Aid Offices, BLAST, One-Stop Crisis Centres, SME Foundation's WE-HELP, Bangladesh Bank women-entrepreneur refinancing, UGC merit scholarships and SICIP skills training. Every record lists its sources in the app.
 
-| Type | Meaning |
+Every listing describes a real service. None is fictional, and no provider has confirmed its listing yet.
+
+| Status | Meaning |
 | --- | --- |
-| A — Public source | Taken from a public website or publication, with source and checked date |
-| B — Demo | Fictional test data (none in this version) |
-| C — Provider-verified | Confirmed with the provider (none yet; needs partnerships) |
+| Public-source information | Found in a public source |
+| Awaiting provider confirmation | Direct confirmation requested, pending |
+| Provider-confirmed | The provider confirmed it, with reviewer and date |
+| Needs review | May be out of date (set automatically when the review date passes) |
+| Demo record | Synthetic test data (none in this version) |
+
+A source URL alone never makes a listing provider-confirmed. Local listings currently cover 9 of Bangladesh's 64 districts; other districts rely on nationwide services.
 
 Information can change. Always confirm with the provider before acting.
 
@@ -44,11 +49,11 @@ Open `index.html` in any browser, or visit the live demo. To host your own copy,
 
 ## Privacy
 
-No account, no tracking, no names or locations collected. Saved items, Action Paths and Trusted Circle contacts stay in the user's own browser and can be cleared at any time. Safety alerts are simulated in this prototype; real sending needs a native Android app and an SMS service, and will only be built with safeguarding review.
+No account, no tracking, no names or locations collected. Saved items, Action Paths and Trusted Circle contacts stay in the user's own browser and can be cleared at any time. NariPath is not an emergency service. Personal safety alerts (check-in timer, trusted-contact alerts) are listed only as planned future work: they would need a native Android app, an SMS provider, weekly delivery tests and safeguarding review before being built.
 
 ## Roadmap
 
 1. Test with women from different backgrounds and districts.
 2. Connect the Supabase database and shared problem reports.
 3. Expand district coverage and confirm direct contacts with providers (Type C).
-4. Native Android app for real safety alerts, with weekly delivery tests.
+4. Only after safeguarding review: a native Android app for safety alerts, with weekly delivery tests.

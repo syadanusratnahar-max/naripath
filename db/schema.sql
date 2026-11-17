@@ -2,6 +2,8 @@
 -- Load order: run this file, then import db/resources.json into public.resources.
 
 create type data_type as enum ('A_public_source', 'B_demo', 'C_provider_verified');
+-- Status shown to users. A source URL alone never makes a listing provider_confirmed.
+create type listing_status as enum ('public_source', 'awaiting_confirmation', 'provider_confirmed', 'needs_review', 'demo');
 create type cost_type as enum ('free', 'paid', 'unknown');
 
 create table public.resources (
@@ -10,6 +12,8 @@ create table public.resources (
                         'education-career','health-wellbeing','rights-legal',
                         'personal-digital-safety','financial-independence','everyday-community')),
   data_type           data_type not null default 'A_public_source',
+  status              listing_status not null default 'public_source',
+  not_found           text[] not null default '{}',  -- fields searched for and not publicly available, e.g. {phone}
   location            text not null,            -- district slug or 'nationwide'
   cost                cost_type not null default 'unknown',
   life_stages         text[] not null default '{}',
@@ -39,7 +43,8 @@ create table public.resources (
   created_at          timestamptz not null default now(),
   updated_at          timestamptz not null default now(),
   constraint type_a_needs_source check (data_type <> 'A_public_source' or jsonb_array_length(sources) > 0),
-  constraint type_c_needs_reviewer check (data_type <> 'C_provider_verified' or verified_by is not null)
+  constraint type_c_needs_reviewer check (data_type <> 'C_provider_verified' or verified_by is not null),
+  constraint confirmed_needs_reviewer check (status <> 'provider_confirmed' or verified_by is not null)
 );
 
 create index resources_pillar_idx   on public.resources (pillar);
@@ -70,7 +75,9 @@ create policy "public can file reports"    on public.listing_reports for insert 
 -- Gap Finder view: listings overdue for review, missing eligibility, or with no direct contact.
 create view public.gap_finder as
 select id, name_en, location,
+       status,
        next_review < current_date                                  as review_overdue,
+       not_found                                                   as checked_not_available,
        eligibility_en is null                                      as missing_eligibility,
        (phone is null and email is null and website is null and facebook is null) as no_direct_contact,
        (select count(*) from public.listing_reports lr where lr.resource_id = r.id) as user_reports
