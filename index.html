@@ -6,33 +6,35 @@
 <title>NariPath Prototype</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@500;600;700&family=Hind+Siliguri:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 /* Layout idea: a phone-width app shell (max 480px) with a sticky header, a DEMO strip, one view at a time and a bottom tab bar. */
+/* Layout idea: an indigo "night sky" band where a nakshi-kantha running stitch draws NariPath's path through six knots (the six areas); everything below is calm paper with thread-coloured accents. Phone-width shell, floating tab dock. */
 :root{
-  --bg:#f4f4f9; --surface:#ffffff; --text:#1d1f45; --muted:#5b5e80; --line:#e1e2ee;
-  --primary:#2d3291; --accent:#c23a68;
-  --ok:#23704f; --warn:#9a5b00; --bad:#b3261e;
-  --p1:#2d3291; --p2:#b2345d; --p3:#6a3d9a; --p4:#1d6f7a; --p5:#8a6100; --p6:#2f6b3a;
-  --display:"Anek Bangla","Hind Siliguri","Noto Sans Bengali",system-ui,sans-serif;
+  --bg:#f6f5fa; --surface:#ffffff; --text:#1c1a3f; --muted:#5c5a7a; --line:#e4e2ef;
+  --primary:#2b2775; --accent:#d93d6a; --night:#1c1a3f; --night-2:#272459;
+  --ok:#1f7a4f; --warn:#9a5b00; --bad:#b3261e;
+  --p1:#3b36a8; --p2:#c9365f; --p3:#7a3e9d; --p4:#157f75; --p5:#9a6400; --p6:#2f7a45;
+  --t1:#aba8ff; --t2:#ff86a8; --t3:#d9a9f6; --t4:#62d8c8; --t5:#f6c35c; --t6:#91dc9e;
+  --display:"Tiro Bangla","Noto Serif Bengali",Georgia,serif;
   --body:"Hind Siliguri","Noto Sans Bengali",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --r:14px;
+  --r:16px;
   color-scheme:light;
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
-    --bg:#11122a; --surface:#1a1c3a; --text:#ecedf8; --muted:#a6a9c9; --line:#2d3056;
-    --primary:#a9aeff; --accent:#ff7ea6;
+    --bg:#121128; --surface:#1b1a3a; --text:#ecebf8; --muted:#a7a5c8; --line:#2c2a55;
+    --primary:#aba8ff; --accent:#ff86a8; --night:#0d0c22; --night-2:#1a1840;
     --ok:#6fd3a5; --warn:#f2b45a; --bad:#ff8a80;
-    --p1:#a9aeff; --p2:#ff8fb1; --p3:#c9a6f2; --p4:#6fd0dc; --p5:#f0c25a; --p6:#8fd69b;
+    --p1:#aba8ff; --p2:#ff86a8; --p3:#d9a9f6; --p4:#62d8c8; --p5:#f6c35c; --p6:#91dc9e;
     color-scheme:dark;
   }
 }
 :root[data-theme="dark"]{
-  --bg:#11122a; --surface:#1a1c3a; --text:#ecedf8; --muted:#a6a9c9; --line:#2d3056;
-  --primary:#a9aeff; --accent:#ff7ea6;
+  --bg:#121128; --surface:#1b1a3a; --text:#ecebf8; --muted:#a7a5c8; --line:#2c2a55;
+  --primary:#aba8ff; --accent:#ff86a8; --night:#0d0c22; --night-2:#1a1840;
   --ok:#6fd3a5; --warn:#f2b45a; --bad:#ff8a80;
-  --p1:#a9aeff; --p2:#ff8fb1; --p3:#c9a6f2; --p4:#6fd0dc; --p5:#f0c25a; --p6:#8fd69b;
+  --p1:#aba8ff; --p2:#ff86a8; --p3:#d9a9f6; --p4:#62d8c8; --p5:#f6c35c; --p6:#91dc9e;
   color-scheme:dark;
 }
 *{box-sizing:border-box}
@@ -234,13 +236,123 @@ table.cov td.some{background:color-mix(in srgb,var(--ok) 16%,transparent);color:
 .safety-entry div{flex:1}
 .safety-entry small{color:var(--muted)}
 @media (prefers-reduced-motion:no-preference){.res,.sit,.chip,.btn{transition:border-color .15s,background-color .15s}}
+
+/* ===== Redesign: kantha stitch ===== */
+h1,h2,h3{font-weight:400;letter-spacing:-.01em}
+h1{font-size:1.85rem;line-height:1.15}
+h2{font-size:1.3rem}
+h3{font-family:var(--body);font-weight:600;font-size:1rem}
+.app{border:0;background:var(--bg)}
+header.top{background:var(--night);border-bottom:0;color:#fff;padding:12px 16px}
+.brand b{font-family:var(--display);font-weight:400;font-size:1.45rem;color:#fff}
+.brand b span{color:var(--t2)}
+.lang{border-color:rgba(255,255,255,.22)}
+.lang button{color:rgba(255,255,255,.75)}
+.lang button[aria-pressed="true"]{background:#fff;color:var(--night)}
+.demo-strip{background:var(--night);color:rgba(255,255,255,.72);border-bottom:0;font-size:.78rem;padding:0 16px 10px}
+.demo-strip strong{color:var(--t5)}
+main{padding:18px 16px 120px;gap:26px}
+
+/* hero band */
+.band{margin:-18px -16px 0;padding:22px 20px 64px;background:
+  radial-gradient(120% 80% at 85% 0%, var(--night-2) 0%, transparent 60%), var(--night);color:#fff;position:relative;overflow:hidden}
+.band .greet{font-size:.92rem;color:var(--t5)}
+.band h1{font-size:2.15rem;line-height:1.12;color:#fff;margin-top:6px;max-width:15ch}
+.band p.lede{color:rgba(255,255,255,.78);margin-top:10px;max-width:34ch;font-size:.98rem}
+.stitch{display:block;width:100%;height:auto;margin-top:18px;overflow:visible}
+.stitch .thread{fill:none;stroke:url(#threadGrad);stroke-width:3;stroke-linecap:round;stroke-dasharray:8 7}
+.stitch .ghost{fill:none;stroke:rgba(255,255,255,.09);stroke-width:3;stroke-dasharray:8 7}
+.stitch .reveal{fill:none;stroke:#fff;stroke-width:12;stroke-linecap:round}
+.knot{cursor:pointer;outline:none}
+.knot circle.bg{fill:var(--night);stroke-width:2.5}
+.knot circle.halo{fill:none;stroke-width:1;opacity:.35}
+.knot .ic{fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.knot text{font-family:var(--body);font-size:9.5px;fill:rgba(255,255,255,.82);text-anchor:middle}
+.knot:hover circle.bg,.knot:focus-visible circle.bg{fill:var(--night-2)}
+.knot:focus-visible circle.halo{opacity:1;stroke-width:2}
+@media (prefers-reduced-motion:no-preference){
+  .stitch .reveal{stroke-dasharray:var(--len);stroke-dashoffset:var(--len);animation:sew 2.2s cubic-bezier(.6,.05,.3,1) .25s forwards}
+  .knot{opacity:0;transform-box:fill-box;transform-origin:center;animation:knot .5s cubic-bezier(.3,1.6,.5,1) forwards;animation-delay:calc(.45s + var(--i) * .33s)}
+  .knot circle.halo{animation:breathe 3.2s ease-in-out infinite;animation-delay:calc(2.8s + var(--i) * .2s);transform-box:fill-box;transform-origin:center}
+}
+@keyframes sew{to{stroke-dashoffset:0}}
+@keyframes knot{from{opacity:0;transform:scale(.4)}to{opacity:1;transform:scale(1)}}
+@keyframes breathe{50%{transform:scale(1.18);opacity:.1}}
+.band-search{margin:-40px 0 0;position:relative;z-index:2}
+.band-search .search{box-shadow:0 10px 30px -12px rgba(28,26,63,.45);border:0;border-radius:16px;padding:2px 14px}
+.band-search .search input{padding:14px 0}
+
+/* quick actions */
+.quick{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.quick a{display:flex;flex-direction:column;gap:6px;padding:14px;border-radius:var(--r);text-decoration:none;color:var(--text);background:var(--surface);border:1px solid var(--line);position:relative;overflow:hidden;min-height:118px}
+.quick a b{font-family:var(--display);font-weight:400;font-size:1.08rem;line-height:1.2}
+.quick a small{color:var(--muted);font-size:.8rem;line-height:1.35}
+.quick a .ico{width:34px;height:34px}
+.quick a::after{content:"";position:absolute;left:14px;right:14px;bottom:8px;border-bottom:2px dashed var(--pc);opacity:.55}
+.quick a:active{transform:scale(.98)}
+
+/* situations as thread cards */
+.sit-list{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.sit{flex-direction:column;align-items:flex-start;gap:10px;padding:14px;border-radius:var(--r);min-height:122px;border:1px solid var(--line);position:relative}
+.sit::before{content:"";position:absolute;top:9px;left:16px;right:16px;border-top:2px dashed var(--pc,var(--primary));opacity:.7}
+.sit .ico{margin-top:8px}
+.sit span.t{font-size:.95rem;line-height:1.35}
+.sit svg.chev{display:none}
+.sit:hover,.sit:focus-visible{border-color:var(--pc,var(--primary))}
+.sit:active{transform:scale(.98)}
+
+/* pillars */
+.pillar{border:1px solid var(--line);border-radius:var(--r);border-top:1px solid var(--line);position:relative;padding:14px}
+.pillar::before{content:"";position:absolute;inset:6px;border:1.5px dashed var(--pc);border-radius:11px;opacity:0;transition:opacity .2s}
+.pillar:hover::before,.pillar:focus-visible::before{opacity:.7}
+.pillar b{font-family:var(--display);font-weight:400;font-size:1.02rem}
+
+.pillars{grid-template-columns:1fr;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:4px 14px}
+.pillar{flex-direction:row;align-items:center;gap:12px;min-height:0;border:0;border-radius:0;padding:10px 0;background:none}
+.pillar+.pillar{border-top:1.5px dashed var(--line)}
+.pillar::before{display:none}
+.pillar b{flex:1}
+.pillar small{white-space:nowrap}
+/* cards + resources */
+.card{border-radius:var(--r)}
+.res{border-left:0;border-radius:var(--r);position:relative;padding-left:20px}
+.res::before{content:"";position:absolute;left:8px;top:14px;bottom:14px;border-left:3px dashed var(--pc)}
+.res h3{font-family:var(--display);font-weight:400;font-size:1.06rem;line-height:1.3}
+.res:active{transform:scale(.99)}
+.chip[aria-pressed="true"]{background:var(--night);border-color:var(--night);color:#fff}
+.btn.primary{background:var(--night);border-color:var(--night);color:#fff}
+.btn{border-radius:14px}
+.btn.ghost{border-color:var(--line);color:var(--text)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn.primary,:root:not([data-theme="light"]) .chip[aria-pressed="true"]{background:var(--primary);border-color:var(--primary);color:var(--night)}}
+:root[data-theme="dark"] .btn.primary,:root[data-theme="dark"] .chip[aria-pressed="true"]{background:var(--primary);border-color:var(--primary);color:var(--night)}
+.safety-entry,.check-entry{display:none}
+
+.stitch.done .reveal{animation:none!important;stroke-dasharray:none!important}
+.stitch.done .knot{animation:none!important;opacity:1}
+/* floating tab dock with sliding pill */
+nav.tabs{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);width:min(456px,calc(100% - 24px));border:1px solid var(--line);border-radius:22px;background:color-mix(in srgb,var(--surface) 88%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 12px 32px -14px rgba(28,26,63,.45);padding:6px;z-index:8}
+nav.tabs a{border-radius:16px;padding:7px 4px 8px;position:relative;z-index:1}
+nav.tabs a[aria-current="page"]{color:#fff}
+nav.tabs .pill{position:absolute;top:6px;bottom:6px;left:6px;width:calc((100% - 12px)/4);border-radius:16px;background:var(--night);transition:transform .35s cubic-bezier(.3,1.3,.5,1);z-index:0}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) nav.tabs .pill{background:var(--primary)} :root:not([data-theme="light"]) nav.tabs a[aria-current="page"]{color:var(--night)}}
+:root[data-theme="dark"] nav.tabs .pill{background:var(--primary)} :root[data-theme="dark"] nav.tabs a[aria-current="page"]{color:var(--night)}
+.listen{bottom:92px;color:var(--surface)}
+.toast{bottom:150px}
+
+/* page transitions on navigation */
+@media (prefers-reduced-motion:no-preference){
+  ::view-transition-old(root){animation:vt-out .16s ease-in both}
+  ::view-transition-new(root){animation:vt-in .26s cubic-bezier(.2,.8,.3,1) both}
+}
+@keyframes vt-out{to{opacity:0;transform:translateY(-6px)}}
+@keyframes vt-in{from{opacity:0;transform:translateY(10px)}}
 </style>
 </head>
 <body>
 <div class="app">
   <header class="top">
     <a class="brand" href="#home" aria-label="NariPath home">
-      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><circle cx="8" cy="24" r="4" fill="var(--primary)"/><circle cx="16" cy="15" r="4" fill="var(--primary)" opacity=".7"/><circle cx="25" cy="7" r="4" fill="var(--accent)"/></svg>
+      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 26 C 10 26, 11 15, 16 15 S 22 6, 27 6" fill="none" stroke="var(--t5)" stroke-width="2" stroke-dasharray="3.2 3" stroke-linecap="round"/><circle cx="5" cy="26" r="3.4" fill="var(--t1)"/><circle cx="16" cy="15" r="3.4" fill="var(--t4)"/><circle cx="27" cy="6" r="3.4" fill="var(--t2)"/></svg>
       <b>Nari<span>Path</span></b>
     </a>
     <div class="top-right">
@@ -248,7 +360,6 @@ table.cov td.some{background:color-mix(in srgb,var(--ok) 16%,transparent);color:
         <button id="lang-bn" type="button" data-lang="bn">বাংলা</button>
         <button id="lang-en" type="button" data-lang="en">EN</button>
       </div>
-      <button id="qexit" class="qexit" type="button"></button>
     </div>
   </header>
   <div class="demo-strip" id="demo-strip"></div>
@@ -769,7 +880,7 @@ const S = {
   check:{goal:"",age:"",edu:"",sit:[],done:false},
   reportOpen:false, reportDone:false,
   circle: store.get("circle",[]), lastTest: store.get("lastTest",null),
-  timerEnd:null, timerMin:30, sent:null, callDelay:10, callerName:""
+  sewn:false, timerEnd:null, timerMin:30, sent:null, callDelay:10, callerName:""
 };
 const persist=()=>{store.set("saved",S.saved);store.set("paths",S.paths)};
 
@@ -842,32 +953,53 @@ function steps(r){
 function viewHome(){
   const counts = PILLARS.map(p=>R.filter(r=>r.p===p.id).length);
   const recent = ["pcsw","sicip1","bbwomen"].map(byId);
+  const KN=[[30,118],[90,56],[150,116],[210,54],[270,114],[330,52]];
+  const SHORT={1:["Study & work","শিক্ষা ও কাজ"],2:["Health","স্বাস্থ্য"],3:["Rights","অধিকার"],4:["Safety","নিরাপত্তা"],5:["Money","অর্থ"],6:["Community","কমিউনিটি"]};
+  const d="M -6 136 C 10 132, 18 118, 30 118 C 55 118, 65 56, 90 56 S 125 116, 150 116 S 185 54, 210 54 S 245 114, 270 114 S 305 52, 330 52 C 342 52, 352 44, 366 34";
+  const knots=KN.map(([x,y],i)=>{const p=PILLARS[i]; const up=i%2===1; const lab=SHORT[p.id][S.lang==="bn"?1:0];
+    return `<a class="knot" href="#explore" data-pillar="${p.id}" style="--i:${i}" aria-label="${L(p)}" tabindex="0">
+      <circle class="halo" cx="${x}" cy="${y}" r="22" stroke="var(--t${p.id})"/>
+      <circle class="bg" cx="${x}" cy="${y}" r="16" stroke="var(--t${p.id})"/>
+      <g transform="translate(${x-9} ${y-9}) scale(.75)" class="ic" stroke="var(--t${p.id})">${ICONS[p.icon]}</g>
+      <text x="${x}" y="${up?y-28:y+33}">${lab}</text></a>`}).join("");
+  const h=new Date().getHours();
+  const greet = S.lang==="bn"
+    ? (h<5?"শুভ রাত্রি":h<12?"শুভ সকাল":h<16?"শুভ দুপুর":h<18?"শুভ বিকেল":h<20?"শুভ সন্ধ্যা":"শুভ রাত্রি")
+    : (h<5?"Good night":h<12?"Good morning":h<18?"Good afternoon":"Good evening");
   return `
-  <section class="hero">
-    <h1>${t("hello")}</h1>
-    <p>${t("helloSub")}</p>
+  <section class="band">
+    <p class="greet">${greet}</p>
+    <h1>${S.lang==="bn"?"নিজের পথ খুঁজে নিন, এক পা এক পা করে।":"Find your way, one step at a time."}</h1>
+    <p class="lede">${t("helloSub")}</p>
+    <svg class="stitch ${S.sewn?"done":""}" viewBox="0 0 360 160" role="group" aria-label="${t("pillarsTitle")}">
+      <defs>
+        <linearGradient id="threadGrad" x1="0" x2="1" y1="0" y2="0">
+          <stop offset="0" style="stop-color:var(--t1)"/><stop offset=".2" style="stop-color:var(--t2)"/><stop offset=".4" style="stop-color:var(--t3)"/>
+          <stop offset=".6" style="stop-color:var(--t4)"/><stop offset=".8" style="stop-color:var(--t5)"/><stop offset="1" style="stop-color:var(--t6)"/>
+        </linearGradient>
+        <mask id="sewMask" maskUnits="userSpaceOnUse" x="-20" y="0" width="400" height="160"><path class="reveal" d="${d}"/></mask>
+      </defs>
+      <path class="ghost" d="${d}"/>
+      <path class="thread" d="${d}" mask="url(#sewMask)"/>
+      ${knots}
+    </svg>
+  </section>
+  <div class="band-search">
     <form class="search" id="home-search" role="search">
       ${icon("search")}
       <input id="home-q" type="search" placeholder="${t("searchPh")}" aria-label="${t("searchPh")}">
     </form>
-  </section>
+  </div>
 
-  <a class="safety-entry" href="#safety">
-    <span class="ico">${icon("shield")}</span>
-    <div><b>${t("safetyTitle")}</b><br><small>${t("safetyEntry")}</small></div>
-    ${icon("chev","chev").replace('class="chev"','style="width:18px;height:18px;color:var(--muted)"')}
-  </a>
-
-  <a class="check-entry" href="#check">
-    <span class="ico">${icon("list")}</span>
-    <div><b>${t("checkTitle")}</b><br><small>${t("checkSub")}</small></div>
-    ${icon("chev","chev").replace('class="chev"','style="width:18px;height:18px;color:var(--muted)"')}
-  </a>
+  <div class="quick">
+    <a href="#safety" style="--pc:var(--p2)"><span class="ico">${icon("shield")}</span><b>${t("safetyTitle")}</b><small>${t("safetyEntry")}</small></a>
+    <a href="#check" style="--pc:var(--p1)"><span class="ico">${icon("list")}</span><b>${t("checkTitle")}</b><small>${t("checkSub")}</small></a>
+  </div>
 
   <section class="section" aria-labelledby="nav-h">
     <div><h2 id="nav-h">${t("navTitle")}</h2><p class="muted small">${t("navSub")}</p></div>
     <div class="sit-list">
-      ${SITUATIONS.map(s=>`<button class="sit" type="button" data-sit="${s.id}">
+      ${SITUATIONS.map(s=>`<button class="sit" type="button" data-sit="${s.id}" ${pc(s.id==="local"?6:s.pillars[0])}>
         <span class="ico" ${pc(s.pillars[0]===1&&s.id==="local"?6:s.pillars[0])}>${icon(s.id==="local"?"compass":pillar(s.pillars[0]).icon)}</span>
         <span class="t">${L(s)}</span>${icon("chev","chev")}</button>`).join("")}
     </div>
@@ -1049,7 +1181,6 @@ function viewSafety(){
       <h2>${t("alertNow")}</h2>
       <button type="button" class="hold" id="hold-btn" ${has?"":'aria-disabled="true"'}><i></i><span>${t("holdBtn")}</span></button>
       <p class="small muted">${t("holdHint")}</p>
-      <p class="note">${t("hiddenTip")}</p>
     </section>
     <section class="section card">
       <h2>${t("moreTools")}</h2>
@@ -1179,7 +1310,6 @@ function viewAbout(){
   <section class="section card">
     <h2>${en?"Safety and access tools":"নিরাপত্তা ও সহজ ব্যবহারের সুবিধা"}</h2>
     <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px">
-      <li><b>${t("qexit")}:</b> ${en?"the red button at the top instantly covers NariPath with a recipe page. To come back, tap the recipe page's title three times.":"উপরের লাল বোতাম চাপলে সঙ্গে সঙ্গে NariPath ঢেকে একটি রান্নার পাতা দেখায়। ফিরে আসতে রান্নার পাতার শিরোনামে তিনবার চাপুন।"}</li>
       <li><b>${t("listen")}:</b> ${en?"reads the current screen aloud in Bangla or English, using your phone's voice.":"ফোনের ভয়েস ব্যবহার করে বর্তমান পাতা বাংলা বা ইংরেজিতে পড়ে শোনায়।"}</li>
       <li><b>${en?"Discreet mode":"গোপন মোড"}:</b> ${en?"in My Path, hide your saved items from anyone looking at your screen.":"আমার পথ পাতায়, স্ক্রিনের দিকে তাকানো কারও কাছ থেকে আপনার সেভ করা তথ্য লুকান।"}</li>
     </ul>
@@ -1407,7 +1537,7 @@ document.addEventListener("click",e=>{
   const fail=()=>toast(t("copyFail").replace("{n}",n));
   try{ navigator.clipboard.writeText(n).then(ok,fail); }catch(err){ fail(); }
 });
-document.addEventListener("keydown",e=>{ if(e.key==="Escape" && !e.target.closest("input,select") && !document.getElementById("cover").classList.contains("show")) quickExit(); });
+
 
 /* ---------------- Safety tools (simulated) ---------------- */
 function sendAlert(reason){
@@ -1514,7 +1644,6 @@ function render(){
   document.getElementById("demo-strip").innerHTML = t("demoStrip");
   ["bn","en"].forEach(l=>document.getElementById("lang-"+l).setAttribute("aria-pressed", S.lang===l));
   const r=route();
-  document.getElementById("qexit").textContent = t("qexit");
   document.getElementById("vh-english").textContent = S.lang==="bn"?"ইংরেজিতে শুনুন":"Read in English instead";
   document.getElementById("vh-close").textContent = t("dismiss");
   const fn=document.getElementById("frame-note");
@@ -1525,8 +1654,13 @@ function render(){
     : `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg>${t("listen")}`;
   document.getElementById("listen").setAttribute("aria-pressed", speaking);
   const tab = r.startsWith("r-")||r==="explore" ? "explore" : (r==="path"?"path":(r==="about"||r==="gaps"?"about":"home"));
-  document.getElementById("tabs").innerHTML = [["home","home"],["explore","search"],["path","list"],["about","info"]]
+  const TABS=[["home","home"],["explore","search"],["path","list"],["about","info"]];
+  const ti=Math.max(0,TABS.findIndex(([k])=>k===tab));
+  const prevTi = typeof window.__ti==="number" ? window.__ti : ti;
+  document.getElementById("tabs").innerHTML = `<span class="pill" style="transform:translateX(${prevTi*100}%)"></span>` + TABS
     .map(([k,ic])=>`<a href="#${k}" ${tab===k?'aria-current="page"':""}>${icon(ic)}<span>${t(k)}</span></a>`).join("");
+  window.__ti=ti;
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{const p=document.querySelector("nav.tabs .pill"); if(p) p.style.transform=`translateX(${ti*100}%)`;}));
   let html;
   if(r==="explore") html=viewExplore();
   else if(r==="path") html=viewPath();
@@ -1538,12 +1672,16 @@ function render(){
   else if(r.startsWith("r-")) html=viewResource(r.slice(2));
   else html=viewHome();
   document.getElementById("view").innerHTML=html;
+  const rv=document.querySelector(".stitch .reveal");
+  if(rv){ try{ rv.style.setProperty("--len", Math.ceil(rv.getTotalLength())); }catch(e){} if(!S.sewn) setTimeout(()=>{S.sewn=true;},3200); }
 }
 let lastRoute=route();
 window.addEventListener("hashchange",()=>{
   const r=route(); S.clearArmed=false; if(r!=="path"){S.flash="";S.revealed=false;}
   if(r!==lastRoute){S.reportOpen=false;S.reportDone=false;stopSpeech();}
-  render(); if(r!==lastRoute){window.scrollTo(0,0);} lastRoute=r;
+  const go=()=>{ render(); if(r!==lastRoute){window.scrollTo(0,0);} lastRoute=r; };
+  const reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if(document.startViewTransition && r!==lastRoute && !reduce){ try{ document.startViewTransition(go); }catch(e){ go(); } } else go();
 });
 
 /* ---------------- Events ---------------- */
