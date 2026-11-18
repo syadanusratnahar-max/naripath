@@ -31,8 +31,8 @@ vm.createContext(ctx);
 vm.runInContext(code, ctx);
 const { R, ALLOW, GSRC, DISTRICTS, TOTAL_DISTRICTS, TOOL_CHECKED } = ctx.OUT;
 
-const PK = { 1: "education-career", 2: "health-wellbeing", 3: "rights-legal", 4: "safety-digital", 5: "financial-independence", 6: "everyday-community" };
-const ST = { review: "needs_review", awaiting: "awaiting_provider_confirmation", confirmed: "provider_confirmed", demo: "demo" };
+const PK = { 1: "education-career", 2: "health-wellbeing", 3: "rights-legal", 4: "personal-digital-safety", 5: "financial-independence", 6: "everyday-community" };
+const ST = { review: "needs_review", awaiting: "awaiting_confirmation", confirmed: "provider_confirmed", demo: "demo" };
 const t = o => o || { en: null, bn: null };
 const resources = R.map(r => ({
   id: r.id, pillar: PK[r.p], data_type: r.type === "demo" ? "B_demo" : "A_public_source",
