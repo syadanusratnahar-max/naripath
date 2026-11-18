@@ -1388,5 +1388,152 @@
     ],
     "last_checked": "2026-11-13",
     "next_review": "2027-02-13"
+  },
+  {
+    "id": "probash",
+    "pillar": "education-career",
+    "data_type": "A_public_source",
+    "status": "public_source",
+    "not_found": [],
+    "location": "nationwide",
+    "cost": "free",
+    "life_stages": [
+      "career",
+      "working"
+    ],
+    "name_en": "Probash Bondhu Call Centre 16135",
+    "name_bn": "প্রবাস বন্ধু কল সেন্টার ১৬১৩৫",
+    "org_en": "Wage Earners' Welfare Board, Ministry of Expatriates' Welfare",
+    "org_bn": "ওয়েজ আর্নার্স কল্যাণ বোর্ড, প্রবাসী কল্যাণ মন্ত্রণালয়",
+    "description_en": "Toll-free, 24-hour government line for people going abroad for work, migrant workers and their families: information on jobs, loans and problems abroad. From outside Bangladesh call +8809610102030.",
+    "description_bn": "বিদেশে কাজে যেতে ইচ্ছুক, প্রবাসী কর্মী ও তাদের পরিবারের জন্য টোল-ফ্রি, ২৪ ঘণ্টার সরকারি নম্বর: চাকরি, ঋণ ও প্রবাসে সমস্যার তথ্য। বিদেশ থেকে কল করুন +৮৮০৯৬১০১০২০৩০ নম্বরে।",
+    "eligibility_en": "Anyone planning to migrate, migrant workers abroad and their families.",
+    "eligibility_bn": "বিদেশে যেতে ইচ্ছুক যে কেউ, প্রবাসী কর্মী ও তাদের পরিবার।",
+    "required_documents": [],
+    "phone": "16135",
+    "email": null,
+    "website": null,
+    "facebook": null,
+    "address_en": null,
+    "address_bn": null,
+    "caution_en": null,
+    "caution_bn": null,
+    "sources": [
+      {
+        "en": "Dhaka Tribune, Hotline 16135 and +8809610102030 (Mar 2026)",
+        "bn": "ঢাকা ট্রিবিউন, মার্চ ২০২৬",
+        "url": "https://www.dhakatribune.com/bangladesh/405779/control-room-to-remain-open-during-eid-holidays"
+      },
+      {
+        "en": "The Financial Express, Probash Bondhu call centre launched (24/7, toll-free)",
+        "bn": "দ্য ফাইন্যান্সিয়াল এক্সপ্রেস",
+        "url": "https://thefinancialexpress.com.bd/national/bangladesh-launches-hotline-service-for-migrant-workers-1662377840"
+      }
+    ],
+    "last_checked": "2026-11-18",
+    "next_review": "2027-02-18"
+  },
+  {
+    "id": "bmet",
+    "pillar": "education-career",
+    "data_type": "A_public_source",
+    "status": "public_source",
+    "not_found": [
+      "phone"
+    ],
+    "location": "nationwide",
+    "cost": "free",
+    "life_stages": [
+      "career",
+      "working"
+    ],
+    "name_en": "BMET and District Employment and Manpower Offices",
+    "name_bn": "বিএমইটি ও জেলা কর্মসংস্থান ও জনশক্তি অফিস",
+    "org_en": "Bureau of Manpower, Employment and Training",
+    "org_bn": "জনশক্তি, কর্মসংস্থান ও প্রশিক্ষণ ব্যুরো",
+    "description_en": "Licenses recruiting agencies, registers workers going abroad and handles complaints. Check an agency's licence number on BMET's public list before paying anything, and report a suspicious agency to BMET or your District Employment and Manpower Office (DEMO).",
+    "description_bn": "রিক্রুটিং এজেন্সিকে লাইসেন্স দেয়, বিদেশগামী কর্মীদের নিবন্ধন করে ও অভিযোগ গ্রহণ করে। কোনো টাকা দেওয়ার আগে বিএমইটির পাবলিক তালিকায় এজেন্সির লাইসেন্স নম্বর যাচাই করুন, আর সন্দেহজনক এজেন্সির কথা বিএমইটি বা জেলা কর্মসংস্থান ও জনশক্তি অফিসে (ডেমো) জানান।",
+    "eligibility_en": "Anyone going abroad for work through official channels.",
+    "eligibility_bn": "সরকারি নিয়মে বিদেশে কাজে যেতে ইচ্ছুক যে কেউ।",
+    "required_documents": [
+      {
+        "en": "Passport and the agency's licence (RL) number",
+        "bn": "পাসপোর্ট ও এজেন্সির লাইসেন্স (আরএল) নম্বর"
+      }
+    ],
+    "phone": null,
+    "email": null,
+    "website": "https://bmet.gov.bd",
+    "facebook": null,
+    "address_en": null,
+    "address_bn": null,
+    "caution_en": null,
+    "caution_bn": null,
+    "sources": [
+      {
+        "en": "Wego, How to check a BMET recruiting licence (Aug 2026)",
+        "bn": "ওয়েগো, আগস্ট ২০২৬",
+        "url": "https://blog.wego.com/bmet-verify-recruitment-agency/"
+      },
+      {
+        "en": "BMET official website",
+        "bn": "বিএমইটির অফিসিয়াল ওয়েবসাইট",
+        "url": "https://bmet.gov.bd"
+      }
+    ],
+    "last_checked": "2026-11-18",
+    "next_review": "2027-02-18"
+  },
+  {
+    "id": "pkb",
+    "pillar": "financial-independence",
+    "data_type": "A_public_source",
+    "status": "public_source",
+    "not_found": [
+      "phone"
+    ],
+    "location": "nationwide",
+    "cost": "paid",
+    "life_stages": [
+      "career",
+      "working",
+      "entrepreneur"
+    ],
+    "name_en": "Probashi Kallyan Bank loans",
+    "name_bn": "প্রবাসী কল্যাণ ব্যাংকের ঋণ",
+    "org_en": "Probashi Kallyan Bank (state-owned)",
+    "org_bn": "প্রবাসী কল্যাণ ব্যাংক (রাষ্ট্রায়ত্ত)",
+    "description_en": "Collateral-free migration loans for people going abroad for work, plus women's migration loans, women's rehabilitation loans and loans for returnees to start a business. In 2026 it added collateral-free loans of up to Tk 10 lakh for language courses abroad.",
+    "description_bn": "বিদেশে কাজে যেতে জামানতবিহীন অভিবাসন ঋণ, এছাড়া নারী অভিবাসন ঋণ, নারী পুনর্বাসন ঋণ এবং ফিরে আসা কর্মীদের ব্যবসা শুরুর ঋণ। ২০২৬ সালে বিদেশে ভাষা কোর্সের জন্য জামানতবিহীন সর্বোচ্চ ১০ লাখ টাকা ঋণ চালু হয়েছে।",
+    "eligibility_en": "Workers going abroad through official channels, and returnee migrants. Each loan has its own rules; ask a branch.",
+    "eligibility_bn": "সরকারি নিয়মে বিদেশগামী কর্মী এবং ফিরে আসা প্রবাসী। প্রতিটি ঋণের নিয়ম আলাদা; শাখায় জিজ্ঞাসা করুন।",
+    "required_documents": [
+      {
+        "en": "Ask the branch for the loan's document list",
+        "bn": "ঋণের কাগজপত্রের তালিকা শাখায় জিজ্ঞাসা করুন"
+      }
+    ],
+    "phone": null,
+    "email": null,
+    "website": "https://www.pkb.gov.bd",
+    "facebook": null,
+    "address_en": null,
+    "address_bn": null,
+    "caution_en": "A loan must be repaid with interest. Borrow only what the official migration cost requires.",
+    "caution_bn": "ঋণ সুদসহ পরিশোধ করতে হয়। সরকারি অভিবাসন খরচের জন্য যতটুকু দরকার, ততটুকুই নিন।",
+    "sources": [
+      {
+        "en": "The Daily Star, Probashi Kallyan Bank loan types",
+        "bn": "দ্য ডেইলি স্টার",
+        "url": "https://www.thedailystar.net/node/3354026"
+      },
+      {
+        "en": "BSS, Collateral-free language-course loans (Mar 2026)",
+        "bn": "বাসস, মার্চ ২০২৬",
+        "url": "https://www.bssnews.net/others/373156"
+      }
+    ],
+    "last_checked": "2026-11-18",
+    "next_review": "2027-02-18"
   }
 ]

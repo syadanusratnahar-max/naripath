@@ -1,6 +1,6 @@
 /* NariPath service worker: keeps the app usable offline.
    Pages: network first, fall back to the saved copy. Fonts and icons: saved copy first. */
-const CACHE = "naripath-v1";
+const CACHE = "naripath-v2";
 const CORE = ["./", "./index.html", "./manifest.webmanifest", "./icons/icon-192.png", "./icons/icon-512.png", "./icons/apple-touch-icon.png"];
 
 self.addEventListener("install", e => {

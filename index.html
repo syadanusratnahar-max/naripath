@@ -430,6 +430,107 @@ html[data-simple="on"] .sit-list{grid-template-columns:1fr}
 html[data-simple="on"] .sit span.t{font-size:1.08rem;font-weight:600}
 html[data-simple="on"] .btn,html[data-simple="on"] .callbtn{padding:14px 18px;font-size:1.05rem}
 html[data-simple="on"] .quick small,html[data-simple="on"] .res .meta{display:none}
+
+/* ===== Visual refresh: jewel-tone service tiles on kantha-stitched paper ===== */
+.app{background-color:var(--bg);background-image:
+  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44'%3E%3Cpath d='M0 11h6M11 11h6M22 11h6M33 11h6M5 33h6M16 33h6M27 33h6M38 33h6' stroke='%237a74c9' stroke-opacity='.10' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E");}
+:root[data-theme="dark"] .app{background-image:none}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .app{background-image:none}}
+.band{background:
+  radial-gradient(60% 50% at 100% 0%, color-mix(in srgb,var(--t2) 30%,transparent) 0%, transparent 70%),
+  radial-gradient(55% 45% at 0% 100%, color-mix(in srgb,var(--t4) 26%,transparent) 0%, transparent 70%),
+  radial-gradient(120% 80% at 85% 0%, var(--night-2) 0%, transparent 60%), var(--night)}
+.ico{background:linear-gradient(145deg,color-mix(in srgb,var(--pc) 24%,transparent),color-mix(in srgb,var(--pc) 9%,transparent));box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--pc) 18%,transparent)}
+
+/* service grid */
+.svc{display:grid;grid-template-columns:repeat(4,1fr);gap:14px 6px;padding:16px 8px 14px;border-radius:20px;box-shadow:0 14px 30px -22px rgba(28,26,63,.55)}
+.sv{position:relative;display:flex;flex-direction:column;align-items:center;gap:7px;text-decoration:none;color:var(--text);text-align:center;border-radius:14px;padding:2px}
+.sv-ico{--c1:#5b54e8;--c2:#3b36a8;width:52px;height:52px;border-radius:17px;display:grid;place-items:center;color:#fff;
+  background:radial-gradient(120% 90% at 25% 15%,rgba(255,255,255,.32),transparent 55%),linear-gradient(150deg,var(--c1),var(--c2));
+  box-shadow:0 8px 16px -9px var(--c2),inset 0 -2px 0 rgba(0,0,0,.12)}
+.sv-ico svg{width:25px;height:25px;stroke-width:1.9}
+.sv-l{font-size:.78rem;line-height:1.2;font-weight:600}
+.sv1 .sv-ico{--c1:#ffb547;--c2:#d97a00} .sv2 .sv-ico{--c1:#8f86ff;--c2:#4c43c9} .sv3 .sv-ico{--c1:#4fd1c5;--c2:#0f7d74}
+.sv4 .sv-ico{--c1:#ff7aa0;--c2:#c9365f} .sv5 .sv-ico{--c1:#c58af2;--c2:#7a3e9d} .sv6 .sv-ico{--c1:#7fd38e;--c2:#2f7a45}
+.sv7 .sv-ico{--c1:#6ec1ff;--c2:#1f6fb8} .sv8 .sv-ico{--c1:#ff9f7a;--c2:#c2502a}
+.sv .badge{position:absolute;top:-4px;right:calc(50% - 34px);min-width:20px;height:20px;padding:0 5px;border-radius:10px;background:var(--accent);color:#fff;font-size:.72rem;font-weight:700;display:grid;place-items:center;border:2px solid var(--surface)}
+@media (prefers-reduced-motion:no-preference){.sv-ico{transition:transform .18s cubic-bezier(.3,1.6,.5,1)} .sv:hover .sv-ico{transform:translateY(-2px) rotate(-4deg)} .sv:active .sv-ico{transform:scale(.92)}}
+.sv:focus-visible{outline-offset:4px}
+
+/* tool hero banners */
+.tool-hero{--h1:#3b36a8;--h2:#1c1a3f;position:relative;overflow:hidden;border-radius:22px;padding:20px 18px 22px;color:#fff;
+  background:radial-gradient(80% 70% at 100% 0%,rgba(255,255,255,.22),transparent 60%),linear-gradient(140deg,var(--h1),var(--h2))}
+.tool-hero::after{content:"";position:absolute;inset:8px;border:2px dashed rgba(255,255,255,.28);border-radius:16px;pointer-events:none}
+.tool-hero h1{color:#fff;font-size:1.7rem;margin-top:12px;max-width:16ch}
+.tool-hero p{color:rgba(255,255,255,.88);margin-top:6px;max-width:36ch;font-size:.95rem}
+.th-ico{width:50px;height:50px;border-radius:16px;display:grid;place-items:center;background:rgba(255,255,255,.18);box-shadow:inset 0 0 0 1px rgba(255,255,255,.3)}
+.th-ico svg{width:27px;height:27px}
+.th-allow{--h1:#e08a00;--h2:#9a3f00} .th-apps{--h1:#6a62f0;--h2:#2b2775} .th-mig{--h1:#139488;--h2:#0b3f4a}
+
+/* allowance cards */
+.allow{border-top:4px solid var(--ac);display:flex;flex-direction:column;gap:8px;scroll-margin-top:80px}
+.allow-top{display:flex;gap:12px;align-items:flex-start}
+.allow-ico{flex:none;width:42px;height:42px;border-radius:13px;display:grid;place-items:center;color:#fff;background:linear-gradient(150deg,color-mix(in srgb,var(--ac) 70%,#fff),var(--ac))}
+.allow-ico svg{width:22px;height:22px}
+.allow-amt{font-family:var(--display);font-size:1.22rem;line-height:1.25;color:var(--ac);background:color-mix(in srgb,var(--ac) 10%,transparent);border-radius:10px;padding:8px 12px}
+:root[data-theme="dark"] .allow-amt{color:var(--text)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .allow-amt{color:var(--text)}}
+.allow details{border-top:1.5px dashed var(--line);padding-top:8px}
+.allow details summary{cursor:pointer}
+.src-list{margin:6px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:6px}
+
+/* applications */
+article.appcard{display:flex;flex-direction:column;gap:8px;border-left:4px solid var(--primary)}
+article.appcard.st4{border-left-color:var(--ok)} article.appcard.st5{border-left-color:var(--bad)}
+.appcard h3 a{color:var(--text)}
+.app-pill{background:color-mix(in srgb,var(--primary) 12%,transparent);color:var(--primary);border:0}
+article.appcard.st4 .app-pill{background:color-mix(in srgb,var(--ok) 14%,transparent);color:var(--ok)}
+article.appcard.st5 .app-pill{background:color-mix(in srgb,var(--bad) 12%,transparent);color:var(--bad)}
+.stepper{list-style:none;margin:4px 0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);position:relative}
+.stepper li{display:flex;flex-direction:column;align-items:center;gap:4px;position:relative;text-align:center}
+.stepper li::before{content:"";position:absolute;top:7px;right:50%;width:100%;height:2px;background:var(--line);z-index:0}
+.stepper li:first-child::before{display:none}
+.stepper li.done::before,.stepper li.now::before,.stepper li.no::before{background:var(--primary)}
+.stepper .dot{width:16px;height:16px;border-radius:50%;background:var(--surface);border:2px solid var(--line);position:relative;z-index:1}
+.stepper li.done .dot{background:var(--primary);border-color:var(--primary)}
+.stepper li.now .dot{border-color:var(--accent);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 20%,transparent)}
+.stepper li.no .dot{background:var(--bad);border-color:var(--bad)}
+article.appcard.st4 .stepper li.done .dot{background:var(--ok);border-color:var(--ok)}
+.stepper .lab{font-size:.66rem;line-height:1.15;color:var(--muted)}
+.stepper li.now .lab{color:var(--text);font-weight:600}
+.app-ctl{display:grid;grid-template-columns:auto 1fr;gap:6px 10px;align-items:center}
+.app-ctl input[type=date],.app-add input{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:8px;width:100%}
+.app-add{display:flex;flex-direction:column;gap:8px}
+.app-add input{padding:12px}
+.late-txt{color:var(--bad)}
+.apps-link{border-left:4px solid var(--p1)}
+
+/* migration */
+.mig-facts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mig-facts div{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:2px}
+.mig-facts b{font-family:var(--display);font-size:1.7rem;line-height:1.1;color:var(--p4)}
+.mig-facts span{font-size:.8rem;color:var(--muted);line-height:1.35}
+.call-card{border-top:4px solid var(--p4)}
+.agency{background:linear-gradient(160deg,color-mix(in srgb,var(--p4) 9%,var(--surface)),var(--surface))}
+.seg{display:grid;grid-template-columns:repeat(3,1fr);background:color-mix(in srgb,var(--p4) 10%,var(--surface));border:1px solid var(--line);border-radius:14px;padding:4px;gap:4px}
+.seg button{border:0;background:transparent;border-radius:10px;padding:9px 4px;font-size:.84rem;cursor:pointer;color:var(--muted);font-weight:600}
+.seg button[aria-selected="true"]{background:var(--surface);color:var(--text);box-shadow:0 2px 8px -4px rgba(28,26,63,.4)}
+.mig-list{display:flex;flex-direction:column;gap:8px}
+.mig-item{display:flex;gap:12px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px;cursor:pointer}
+.mig-item input{width:20px;height:20px;margin-top:3px;flex:none;accent-color:var(--p4)}
+.mig-item > span{display:flex;flex-direction:column;gap:3px}
+.mig-item.done{border-color:color-mix(in srgb,var(--p4) 45%,var(--line));background:color-mix(in srgb,var(--p4) 6%,var(--surface))}
+.mig-item.done b{text-decoration:line-through;text-decoration-color:color-mix(in srgb,var(--p4) 60%,transparent)}
+.src-a{align-self:flex-start}
+.flags{border-top:4px solid var(--bad)}
+.flags ul{margin:0;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.flags li{position:relative;padding-left:28px}
+.flags li::before{content:"!";position:absolute;left:0;top:1px;width:20px;height:20px;border-radius:50%;background:var(--bad);color:#fff;font-weight:700;font-size:.8rem;display:grid;place-items:center}
+html[data-contrast="high"] .sv-ico,html[data-contrast="high"] .tool-hero{box-shadow:0 0 0 2px var(--text)}
+html[data-simple="on"] .svc{grid-template-columns:repeat(2,1fr)}
+html[data-simple="on"] .sv{flex-direction:row;justify-content:flex-start;padding:6px;gap:10px}
+html[data-simple="on"] .sv-l{font-size:.95rem;text-align:left}
+.sit{background:linear-gradient(170deg,color-mix(in srgb,var(--pc) 9%,var(--surface)) 0%,var(--surface) 70%)}
 /* Reduce motion (user setting) */
 html[data-motion="reduce"] *{animation:none!important;transition:none!important}
 html[data-motion="reduce"] .stitch .reveal{stroke-dasharray:none!important}
@@ -765,7 +866,32 @@ const R = [
    desc:{en:"Daytime care with meals for children aged 6 months to 6 years, 8:30am to 5:30pm. In Dhaka, centres for low-income families are in Mogbazar, Kallyanpur, Mohammadpur, Khilgaon, Rampura, Azimpur, Faridabad and Kamrangirchar, for about Tk 100 a month. More centres run in other districts.",bn:"৬ মাস থেকে ৬ বছর বয়সী শিশুদের জন্য খাবারসহ দিবাযত্ন, সকাল ৮:৩০ থেকে বিকেল ৫:৩০। ঢাকায় নিম্ন-আয়ের পরিবারের জন্য মগবাজার, কল্যাণপুর, মোহাম্মদপুর, খিলগাঁও, রামপুরা, আজিমপুর, ফরিদাবাদ ও কামরাঙ্গীরচরে কেন্দ্র আছে, মাসে প্রায় ১০০ টাকা। অন্যান্য জেলাতেও কেন্দ্র আছে।"},
    elig:{en:"Children of low- and middle-income working mothers. Seats are limited and some centres have waiting lists.",bn:"নিম্ন ও মধ্যম আয়ের কর্মজীবী মায়েদের সন্তান। আসন সীমিত, কিছু কেন্দ্রে অপেক্ষমাণ তালিকা আছে।"},
    docs:[{en:"Ask the centre for its admission requirements",bn:"ভর্তির শর্তাবলি কেন্দ্রে জিজ্ঞাসা করুন"}],
-   source:[{en:"The Daily Star, Child daycare for only Tk 100 a month",bn:"দ্য ডেইলি স্টার",url:"https://www.thedailystar.net/node/3285596"},{en:"Prothom Alo, daycare waiting lists",bn:"প্রথম আলো",url:"https://en.prothomalo.com/bangladesh/mkpbchsbgp"}]}
+   source:[{en:"The Daily Star, Child daycare for only Tk 100 a month",bn:"দ্য ডেইলি স্টার",url:"https://www.thedailystar.net/node/3285596"},{en:"Prothom Alo, daycare waiting lists",bn:"প্রথম আলো",url:"https://en.prothomalo.com/bangladesh/mkpbchsbgp"}]},
+  /* ---------- Safe migration (added 18 Nov 2026) ---------- */
+  {id:"probash",p:1,type:"public",loc:"nationwide",cost:"free",stages:["career","working"],checked:"2026-11-18",next:"2027-02-18",phone:"16135",
+   name:{en:"Probash Bondhu Call Centre 16135",bn:"প্রবাস বন্ধু কল সেন্টার ১৬১৩৫"},
+   org:{en:"Wage Earners' Welfare Board, Ministry of Expatriates' Welfare",bn:"ওয়েজ আর্নার্স কল্যাণ বোর্ড, প্রবাসী কল্যাণ মন্ত্রণালয়"},
+   desc:{en:"Toll-free, 24-hour government line for people going abroad for work, migrant workers and their families: information on jobs, loans and problems abroad. From outside Bangladesh call +8809610102030.",bn:"বিদেশে কাজে যেতে ইচ্ছুক, প্রবাসী কর্মী ও তাদের পরিবারের জন্য টোল-ফ্রি, ২৪ ঘণ্টার সরকারি নম্বর: চাকরি, ঋণ ও প্রবাসে সমস্যার তথ্য। বিদেশ থেকে কল করুন +৮৮০৯৬১০১০২০৩০ নম্বরে।"},
+   elig:{en:"Anyone planning to migrate, migrant workers abroad and their families.",bn:"বিদেশে যেতে ইচ্ছুক যে কেউ, প্রবাসী কর্মী ও তাদের পরিবার।"},
+   docs:[],
+   source:[{en:"Dhaka Tribune, Hotline 16135 and +8809610102030 (Mar 2026)",bn:"ঢাকা ট্রিবিউন, মার্চ ২০২৬",url:"https://www.dhakatribune.com/bangladesh/405779/control-room-to-remain-open-during-eid-holidays"},{en:"The Financial Express, Probash Bondhu call centre launched (24/7, toll-free)",bn:"দ্য ফাইন্যান্সিয়াল এক্সপ্রেস",url:"https://thefinancialexpress.com.bd/national/bangladesh-launches-hotline-service-for-migrant-workers-1662377840"}]},
+  {id:"bmet",p:1,type:"public",notFound:["phone"],loc:"nationwide",cost:"free",stages:["career","working"],checked:"2026-11-18",next:"2027-02-18",
+   web:"https://bmet.gov.bd",
+   name:{en:"BMET and District Employment and Manpower Offices",bn:"বিএমইটি ও জেলা কর্মসংস্থান ও জনশক্তি অফিস"},
+   org:{en:"Bureau of Manpower, Employment and Training",bn:"জনশক্তি, কর্মসংস্থান ও প্রশিক্ষণ ব্যুরো"},
+   desc:{en:"Licenses recruiting agencies, registers workers going abroad and handles complaints. Check an agency's licence number on BMET's public list before paying anything, and report a suspicious agency to BMET or your District Employment and Manpower Office (DEMO).",bn:"রিক্রুটিং এজেন্সিকে লাইসেন্স দেয়, বিদেশগামী কর্মীদের নিবন্ধন করে ও অভিযোগ গ্রহণ করে। কোনো টাকা দেওয়ার আগে বিএমইটির পাবলিক তালিকায় এজেন্সির লাইসেন্স নম্বর যাচাই করুন, আর সন্দেহজনক এজেন্সির কথা বিএমইটি বা জেলা কর্মসংস্থান ও জনশক্তি অফিসে (ডেমো) জানান।"},
+   elig:{en:"Anyone going abroad for work through official channels.",bn:"সরকারি নিয়মে বিদেশে কাজে যেতে ইচ্ছুক যে কেউ।"},
+   docs:[{en:"Passport and the agency's licence (RL) number",bn:"পাসপোর্ট ও এজেন্সির লাইসেন্স (আরএল) নম্বর"}],
+   source:[{en:"Wego, How to check a BMET recruiting licence (Aug 2026)",bn:"ওয়েগো, আগস্ট ২০২৬",url:"https://blog.wego.com/bmet-verify-recruitment-agency/"},{en:"BMET official website",bn:"বিএমইটির অফিসিয়াল ওয়েবসাইট",url:"https://bmet.gov.bd"}]},
+  {id:"pkb",p:5,type:"public",notFound:["phone"],loc:"nationwide",cost:"paid",stages:["career","working","entrepreneur"],checked:"2026-11-18",next:"2027-02-18",
+   web:"https://www.pkb.gov.bd",
+   name:{en:"Probashi Kallyan Bank loans",bn:"প্রবাসী কল্যাণ ব্যাংকের ঋণ"},
+   org:{en:"Probashi Kallyan Bank (state-owned)",bn:"প্রবাসী কল্যাণ ব্যাংক (রাষ্ট্রায়ত্ত)"},
+   desc:{en:"Collateral-free migration loans for people going abroad for work, plus women's migration loans, women's rehabilitation loans and loans for returnees to start a business. In 2026 it added collateral-free loans of up to Tk 10 lakh for language courses abroad.",bn:"বিদেশে কাজে যেতে জামানতবিহীন অভিবাসন ঋণ, এছাড়া নারী অভিবাসন ঋণ, নারী পুনর্বাসন ঋণ এবং ফিরে আসা কর্মীদের ব্যবসা শুরুর ঋণ। ২০২৬ সালে বিদেশে ভাষা কোর্সের জন্য জামানতবিহীন সর্বোচ্চ ১০ লাখ টাকা ঋণ চালু হয়েছে।"},
+   elig:{en:"Workers going abroad through official channels, and returnee migrants. Each loan has its own rules; ask a branch.",bn:"সরকারি নিয়মে বিদেশগামী কর্মী এবং ফিরে আসা প্রবাসী। প্রতিটি ঋণের নিয়ম আলাদা; শাখায় জিজ্ঞাসা করুন।"},
+   docs:[{en:"Ask the branch for the loan's document list",bn:"ঋণের কাগজপত্রের তালিকা শাখায় জিজ্ঞাসা করুন"}],
+   note:{en:"A loan must be repaid with interest. Borrow only what the official migration cost requires.",bn:"ঋণ সুদসহ পরিশোধ করতে হয়। সরকারি অভিবাসন খরচের জন্য যতটুকু দরকার, ততটুকুই নিন।"},
+   source:[{en:"The Daily Star, Probashi Kallyan Bank loan types",bn:"দ্য ডেইলি স্টার",url:"https://www.thedailystar.net/node/3354026"},{en:"BSS, Collateral-free language-course loans (Mar 2026)",bn:"বাসস, মার্চ ২০২৬",url:"https://www.bssnews.net/others/373156"}]}
 ];
 
 /* One-Stop Crisis Centres at medical college hospitals: one record per site */
@@ -958,6 +1084,9 @@ const T = {
   icsBtn:{en:"Calendar file",bn:"ক্যালেন্ডার ফাইল"},
   icsDone:{en:"Calendar file downloaded. Open it to add the reminder.",bn:"ক্যালেন্ডার ফাইল ডাউনলোড হয়েছে। খুললে রিমাইন্ডার যোগ হবে।"},
   icsFail:{en:"Downloads are blocked here. Use Google Calendar instead.",bn:"এখানে ডাউনলোড বন্ধ। গুগল ক্যালেন্ডার ব্যবহার করুন।"},
+  st9:{en:"Applications you track (the name you typed, its stage and follow-up date)",bn:"আপনার ট্র্যাক করা আবেদন (আপনার লেখা নাম, ধাপ ও খোঁজ নেওয়ার তারিখ)"},
+  st10:{en:"Which safe-migration checklist items you ticked",bn:"নিরাপদ অভিবাসন চেকলিস্টে কোনগুলোতে টিক দিয়েছেন"},
+  probashShort:{en:"Probash Bondhu, for migrant workers and families",bn:"প্রবাস বন্ধু, প্রবাসী কর্মী ও পরিবারের জন্য"},
   st7:{en:"Reminders you set (title and date)",bn:"আপনার দেওয়া রিমাইন্ডার (শিরোনাম ও তারিখ)"},
   st8:{en:"Your display settings",bn:"আপনার প্রদর্শন সেটিং"},
   displayTitle:{en:"Display settings",bn:"প্রদর্শন সেটিং"},
@@ -1334,7 +1463,7 @@ const A11Y_DEFAULT={text:"normal",contrast:"normal",simple:"off",motion:"normal"
 const store = {
   get(k,d){try{const v=localStorage.getItem("naripath:"+k);return v?JSON.parse(v):d}catch(e){return d}},
   set(k,v){try{localStorage.setItem("naripath:"+k,JSON.stringify(v))}catch(e){}},
-  clear(){try{["lang","saved","paths","plans","reminders","a11y","reports","hide","circle","lastTest"].forEach(k=>localStorage.removeItem("naripath:"+k))}catch(e){}}
+  clear(){try{["lang","saved","paths","plans","reminders","a11y","reports","hide","circle","lastTest","apps","mig"].forEach(k=>localStorage.removeItem("naripath:"+k))}catch(e){}}
 };
 const S = {
   lang: store.get("lang","bn"),
@@ -1485,11 +1614,7 @@ function viewHome(){
   </div>
 
   ${continueCard()}
-  <div class="quick">
-    <a href="#district" style="--pc:var(--p4)"><span class="ico">${icon("pin")}</span><b>${t("nearTitle")}</b><small>${t("nearCard")}</small></a>
-    <a href="#check" style="--pc:var(--p1)"><span class="ico">${icon("list")}</span><b>${t("checkTitle")}</b><small>${t("checkSub")}</small></a>
-    <a href="#learn" style="--pc:var(--p3);grid-column:span 2;min-height:0;flex-direction:row;align-items:center;gap:14px;padding-bottom:20px"><span class="ico">${icon("learn")}</span><span style="display:flex;flex-direction:column;gap:2px"><b>${t("learnTitle")}</b><small>${t("learnCard")}</small></span></a>
-  </div>
+  ${servicesGrid()}
 
   <section class="section" aria-labelledby="nav-h">
     <div><h2 id="nav-h">${t("navTitle")}</h2><p class="muted small">${t("navSub")}</p></div>
@@ -1610,6 +1735,7 @@ function viewResource(id){
       <button type="button" class="btn ${isSaved?"ghost":"primary"}" data-save="${r.id}" aria-pressed="${isSaved}">${isSaved?"✓ "+t("saved"):t("save")}</button>
       <button type="button" class="btn ${hasPath?"ghost":"primary"}" data-startpath="${r.id}">${hasPath?t("openPath"):t("start")}</button>
     </div>
+    ${S.apps.some(a=>a.ref==="r:"+r.id)?`<a class="back" href="#apps">✓ ${tx("In My applications","আমার আবেদনে আছে")}</a>`:`<button type="button" class="back" data-addapp="r:${esc(r.id)}">${icon("clipboard")}${tx("Track an application to this service","এই সেবায় আবেদন ট্র্যাক করুন")}</button>`}
   </section>
 
   ${shareBlock("r",r.id)}
@@ -1696,9 +1822,10 @@ function viewPath(){
       <div class="tile"><b>${num(it.length)}</b><span>${t("plansAndPaths")}</span></div>
       <div class="tile" style="grid-column:span 2"><b>${num(dn)}/${num(tot)}</b><span>${t("stepsDone")}</span><span class="progress" style="display:block;margin-top:8px"><i style="width:${tot?Math.round(dn/tot*100):0}%"></i></span></div>
     </section>`; })()}
+  <a class="continue apps-link" href="#apps"><span class="small muted">${tx("My applications","আমার আবেদন")}</span><b>${S.apps.length?tx(`${S.apps.filter(a=>a.stage<4).length} in progress, ${S.apps.filter(a=>a.stage===4).length} approved`,`${num(S.apps.filter(a=>a.stage<4).length)}টি চলমান, ${num(S.apps.filter(a=>a.stage===4).length)}টি অনুমোদিত`):tx("Track allowances, scholarships and forms","ভাতা, বৃত্তি ও ফর্ম ট্র্যাক করুন")}</b></a>
   ${remindersBlock()}
   <details class="card privacy-box"><summary><b>${t("storedTitle")}</b></summary>
-    <ul class="small">${["st1","st2","st3","st7","st4","st8","st5","st6"].map(k=>`<li>${t(k)}</li>`).join("")}</ul>
+    <ul class="small">${["st1","st2","st3","st9","st10","st7","st4","st8","st5","st6"].map(k=>`<li>${t(k)}</li>`).join("")}</ul>
     <p class="small">${t("storedNot")}</p>
   </details>
   <section class="section">
@@ -2052,6 +2179,8 @@ function shareText(kind,id){
     if(r.web) lines.push(String(r.web));
     lines.push((S.lang==="bn"?"উৎস যাচাই: ":"Source checked: ")+date(r.checked)+(S.lang==="bn"?"। ব্যবহারের আগে নিশ্চিত হোন।":". Confirm before acting."));
     lines.push(APP_URL+"#r-"+r.id); return lines.join("\n"); }
+  if(kind==="al"){ return [tx("Government allowances for women (FY2026-27)","নারীদের জন্য সরকারি ভাতা (২০২৬-২৭)")].concat(ALLOW.map(a=>"• "+raw(a.name)+": "+raw(a.amount)),[tx("Applying is free. Info: 333","আবেদন বিনামূল্যে। তথ্য: ৩৩৩"),APP_URL+"#allowances"]).join("\n"); }
+  if(kind==="mg"){ return [tx("Going abroad for work? Check the agency's BMET licence before paying anything.","কাজে বিদেশ যাচ্ছেন? টাকা দেওয়ার আগে এজেন্সির বিএমইটি লাইসেন্স যাচাই করুন।"),tx("Probash Bondhu 24h: 16135 (Bangladesh), +8809610102030 (abroad)","প্রবাস বন্ধু ২৪ ঘণ্টা: ১৬১৩৫ (দেশে), +৮৮০৯৬১০১০২০৩০ (বিদেশে)"),APP_URL+"#migrate"].join("\n"); }
   if(kind==="g"){ const g=guideById(id); if(!g) return ""; return [raw(g.title), raw(g.intro), APP_URL+"#g-"+g.id].join("\n"); }
   return "";
 }
@@ -2300,6 +2429,355 @@ document.addEventListener("submit",e=>{
   persist(); S.remindOpen=null; toast(t("remindSaved")); render();
 });
 
+/* ================= Allowances, My Applications, Safe migration ================= */
+const tx=(en,bn)=>S.lang==="bn"?bn:en;          // UI text written in this file (not data)
+const TOOL_CHECKED="2026-11-18";
+Object.assign(ICONS,{
+  wallet:'<path d="M3 7.5h15.5A2.5 2.5 0 0 1 21 10v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M3 7.5l11.5-4v4"/><circle cx="16.5" cy="14" r="1.3"/>',
+  clipboard:'<rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V2.8h6V4"/><path d="M9 12.5l2 2 4-4"/>',
+  plane:'<path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/>',
+  idcard:'<rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2.2"/><path d="M5.8 16c.6-1.6 1.8-2.4 3.2-2.4s2.6.8 3.2 2.4M14 10h4M14 13.5h3"/>'
+});
+const DSS_APPLY="https://dss.bhata.gov.bd/online-application";
+
+Object.assign(GSRC,{
+  ssnJan:{en:"UNB, Safety-net rates fixed for FY2026-27 (Jan 2026)",bn:"ইউএনবি, ২০২৬-২৭ অর্থবছরের ভাতার হার নির্ধারণ (জানুয়ারি ২০২৬)",url:"https://unb.com.bd/category/Bangladesh/social-safety-net-to-be-spread-wider-go-deeper-from-next-fiscal/178109"},
+  budget27:{en:"Prothom Alo, Budget 2026-27: Family Card and other safety-net programmes",bn:"প্রথম আলো, বাজেট ২০২৬-২৭: ফ্যামিলি কার্ড ও অন্যান্য সামাজিক নিরাপত্তা কর্মসূচি",url:"https://en.prothomalo.com/bangladesh/m856l7ntb4"},
+  budgetDis:{en:"The Daily Star, Social safety net budget 2026-27",bn:"দ্য ডেইলি স্টার, সামাজিক নিরাপত্তা বাজেট ২০২৬-২৭",url:"https://www.thedailystar.net/business/bangladesh-budget-2026-27/news/social-safety-net-budget-pro-poor-schemes-get-less-40-4198111"},
+  dssWindow:{en:"BSS, Online allowance applications extended to 31 Aug 2026",bn:"বাসস, ভাতার অনলাইন আবেদন ৩১ আগস্ট ২০২৬ পর্যন্ত বাড়ানো",url:"https://www.bssnews.net/others/415696"},
+  dssRule:{en:"BSS, Social Services online applications and the one-programme rule",bn:"বাসস, সমাজসেবার অনলাইন আবেদন ও একাধিক ভাতা না পাওয়ার নিয়ম",url:"https://www.bssnews.net/others/402190"},
+  dssDis:{en:"BSS, Disability allowance applications open until further notice (Sep 2026)",bn:"বাসস, প্রতিবন্ধী ভাতার আবেদন পরবর্তী নির্দেশনা পর্যন্ত চালু (সেপ্টেম্বর ২০২৬)",url:"https://www.bssnews.net/others/420082"},
+  dssFree:{en:"Department of Social Services, Chandpur: apply online free of charge",bn:"সমাজসেবা অধিদপ্তর, চাঁদপুর: বিনা খরচে অনলাইনে আবেদন",url:"https://dss.chandpur.gov.bd/en/site/page/rSPg-%E0%A6%85%E0%A6%B8%E0%A6%9A%E0%A7%8D%E0%A6%9B%E0%A6%B2-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%A8%E0%A7%8D%E0%A6%A7%E0%A7%80-%E0%A6%AD%E0%A6%BE%E0%A6%A4%E0%A6%BE-%E0%A6%95%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%95%E0%A7%8D%E0%A6%B0%E0%A6%AE"},
+  oldAgeRule:{en:"Summary of a DSS notice: women 62+, men 65+ (secondary source)",bn:"সমাজসেবা অধিদপ্তরের বিজ্ঞপ্তির সারাংশ: নারী ৬২+, পুরুষ ৬৫+ (দ্বিতীয় পর্যায়ের উৎস)",url:"https://bdservicerules.info/?p=25286"},
+  mcbp3:{en:"Daily Observer, Mother and Child Support: Tk 850 a month for 3 years",bn:"ডেইলি অবজারভার, মা ও শিশু সহায়তা: ৩ বছর মাসে ৮৫০ টাকা",url:"https://observerbd.com/news/581377"},
+  fcard:{en:"BD Platform for SDGs, Family Card: Tk 2,500 to the mother's wallet or bank",bn:"এসডিজি প্ল্যাটফর্ম, ফ্যামিলি কার্ড: মায়ের মোবাইল ওয়ালেট বা ব্যাংকে ২,৫০০ টাকা",url:"https://bdplatform4sdgs.net/manifesto_watch/family-card/"},
+  fcardOne:{en:"bdnews24, Cardholder cannot get other personal allowances",bn:"বিডিনিউজ২৪, কার্ডধারী অন্য ব্যক্তিগত ভাতা পাবেন না",url:"https://bdnews24.com/bangladesh/62f3e9f4a36c"},
+  fcardEx:{en:"Dhaka Tribune, Who is excluded from the Family Card",bn:"ঢাকা ট্রিবিউন, কারা ফ্যামিলি কার্ড পাবেন না",url:"https://www.dhakatribune.com/bangladesh/405100/family-card-rollout-begins-tuesday-37-000"},
+  probash:{en:"Dhaka Tribune, Hotline 16135 and +8809610102030 (Mar 2026)",bn:"ঢাকা ট্রিবিউন, হটলাইন ১৬১৩৫ ও +৮৮০৯৬১০১০২০৩০ (মার্চ ২০২৬)",url:"https://www.dhakatribune.com/bangladesh/405779/control-room-to-remain-open-during-eid-holidays"},
+  probash2:{en:"The Financial Express, Probash Bondhu call centre launched (24/7, toll-free)",bn:"দ্য ফাইন্যান্সিয়াল এক্সপ্রেস, প্রবাস বন্ধু কল সেন্টার (২৪ ঘণ্টা, টোল-ফ্রি)",url:"https://thefinancialexpress.com.bd/national/bangladesh-launches-hotline-service-for-migrant-workers-1662377840"},
+  agencyCheck:{en:"Wego, How to check a BMET recruiting licence (Aug 2026)",bn:"ওয়েগো, বিএমইটি রিক্রুটিং লাইসেন্স যাচাইয়ের নিয়ম (আগস্ট ২০২৬)",url:"https://blog.wego.com/bmet-verify-recruitment-agency/"},
+  bima:{en:"socialprotection.gov.bd, Probashi Kormi Bima benefits (2025)",bn:"সামাজিক সুরক্ষা পোর্টাল, প্রবাসী কর্মী বীমার সুবিধা (২০২৫)",url:"https://socialprotection.gov.bd/wp-content/uploads/2025/09/Social-Protection-for-Migrant-Workers_SP-Conference-2025.pdf"},
+  bima2:{en:"The Financial Express, Migrant insurance: Tk 1,000 premium, early-return cover",bn:"দ্য ফাইন্যান্সিয়াল এক্সপ্রেস, প্রবাসী বীমা: ১,০০০ টাকা প্রিমিয়াম, দ্রুত ফেরার সুবিধা",url:"https://thefinancialexpress.com.bd/national/HIV-AIDS-insurance-for-migrants-on-the-anvil"},
+  pkbLoans:{en:"The Daily Star, Probashi Kallyan Bank loan types, incl. women's loans",bn:"দ্য ডেইলি স্টার, প্রবাসী কল্যাণ ব্যাংকের ঋণ, নারীদের ঋণসহ",url:"https://www.thedailystar.net/node/3354026"},
+  pkbLang:{en:"BSS, Collateral-free loans up to Tk 10 lakh for language courses (Mar 2026)",bn:"বাসস, ভাষা কোর্সের জন্য জামানতবিহীন সর্বোচ্চ ১০ লাখ টাকা ঋণ (মার্চ ২০২৬)",url:"https://www.bssnews.net/others/373156"},
+  migStats:{en:"Prothom Alo, Female worker migration depends on two countries",bn:"প্রথম আলো, নারী শ্রম অভিবাসন দুই দেশের ওপর নির্ভরশীল",url:"https://en.prothomalo.com/bangladesh/y8i8hke3hd"},
+  migStats2:{en:"The Daily Star, Labour migration in 2025 (RMMRU report)",bn:"দ্য ডেইলি স্টার, ২০২৫ সালের শ্রম অভিবাসন (রামরু প্রতিবেদন)",url:"https://www.thedailystar.net/nrb/migration/news/labour-migration-12-despite-challenges-4075921"},
+  bmet:{en:"Bureau of Manpower, Employment and Training (BMET)",bn:"জনশক্তি, কর্মসংস্থান ও প্রশিক্ষণ ব্যুরো (বিএমইটি)",url:"https://bmet.gov.bd"},
+  baira:{en:"BAIRA, member agency list",bn:"বায়রা, সদস্য এজেন্সির তালিকা",url:"https://baira.org.bd"}
+});
+
+/* ---------- Allowances data (FY2026-27) ---------- */
+const ALLOW=[
+  {id:"oldage",c:"#d98a00",icon:"coin",
+   name:K("Old-age allowance","বয়স্ক ভাতা"),
+   amount:K("Tk 700 a month · Tk 1,000 if over 90","মাসে ৭০০ টাকা · ৯০ বছরের বেশি হলে ১,০০০ টাকা"),
+   office:K("Department of Social Services (Upazila or City Social Services Office)","সমাজসেবা অধিদপ্তর (উপজেলা বা শহর সমাজসেবা অফিস)"),
+   about:K("Monthly cash for older people with low income, paid to a mobile wallet or bank account.","কম আয়ের প্রবীণদের জন্য মাসিক ভাতা, মোবাইল ওয়ালেট বা ব্যাংক অ্যাকাউন্টে দেওয়া হয়।"),
+   when:K("FY2026-27 online applications closed on 31 August 2026. Watch for the next notice from your Social Services office.","২০২৬-২৭ অর্থবছরের অনলাইন আবেদন ৩১ আগস্ট ২০২৬-এ শেষ হয়েছে। সমাজসেবা অফিসের পরবর্তী বিজ্ঞপ্তির দিকে নজর রাখুন।"),
+   apply:DSS_APPLY, docs:[K("National ID (NID)","জাতীয় পরিচয়পত্র (এনআইডি)"),K("A mobile number or bank account in your own name","নিজের নামে মোবাইল নম্বর বা ব্যাংক অ্যাকাউন্ট"),K("A recent photo","সাম্প্রতিক ছবি")],
+   confirm:[K("Low income, under the limit your Social Services office uses","কম আয়, সমাজসেবা অফিসের নির্ধারিত সীমার মধ্যে"),K("Not a government employee or pensioner","সরকারি চাকরিজীবী বা পেনশনভোগী নন"),K("Not already getting another regular government allowance","ইতিমধ্যে অন্য কোনো নিয়মিত সরকারি ভাতা পাচ্ছেন না")],
+   sources:["ssnJan","dssWindow","dssRule","oldAgeRule","dssFree"]},
+  {id:"widow",c:"#c9365f",icon:"heart",
+   name:K("Allowance for widowed and husband-deserted women","বিধবা ও স্বামী নিগৃহীতা মহিলা ভাতা"),
+   amount:K("Tk 700 a month · Tk 1,000 if over 90","মাসে ৭০০ টাকা · ৯০ বছরের বেশি হলে ১,০০০ টাকা"),
+   office:K("Department of Social Services (Upazila or City Social Services Office)","সমাজসেবা অধিদপ্তর (উপজেলা বা শহর সমাজসেবা অফিস)"),
+   about:K("Monthly cash for widowed women and women deserted by their husbands who have low income.","কম আয়ের বিধবা ও স্বামী পরিত্যক্তা নারীদের জন্য মাসিক ভাতা।"),
+   when:K("FY2026-27 online applications closed on 31 August 2026. Watch for the next notice.","২০২৬-২৭ অর্থবছরের অনলাইন আবেদন ৩১ আগস্ট ২০২৬-এ শেষ হয়েছে। পরবর্তী বিজ্ঞপ্তির দিকে নজর রাখুন।"),
+   apply:DSS_APPLY, docs:[K("National ID (NID)","জাতীয় পরিচয়পত্র (এনআইডি)"),K("Proof of your situation, such as a husband's death certificate; ask the office what it accepts","আপনার অবস্থার প্রমাণ, যেমন স্বামীর মৃত্যু সনদ; অফিস কী গ্রহণ করে জিজ্ঞাসা করুন"),K("A mobile number or bank account in your own name","নিজের নামে মোবাইল নম্বর বা ব্যাংক অ্যাকাউন্ট")],
+   confirm:[K("Low income, under the office's limit","কম আয়, অফিসের নির্ধারিত সীমার মধ্যে"),K("Not already getting another regular government allowance","ইতিমধ্যে অন্য কোনো নিয়মিত সরকারি ভাতা পাচ্ছেন না")],
+   sources:["ssnJan","dssWindow","dssRule","dssFree"]},
+  {id:"disab",c:"#157f75",icon:"shield",
+   name:K("Disability allowance","প্রতিবন্ধী ভাতা"),
+   amount:K("Tk 1,000 a month in the FY2026-27 budget (was Tk 900)","২০২৬-২৭ বাজেটে মাসে ১,০০০ টাকা (আগে ছিল ৯০০ টাকা)"),
+   office:K("Department of Social Services (Upazila or City Social Services Office)","সমাজসেবা অধিদপ্তর (উপজেলা বা শহর সমাজসেবা অফিস)"),
+   about:K("Monthly cash for persons with disabilities. Students with disabilities can also get an education stipend.","প্রতিবন্ধী ব্যক্তিদের মাসিক ভাতা। প্রতিবন্ধী শিক্ষার্থীরা শিক্ষা উপবৃত্তিও পেতে পারেন।"),
+   when:K("Since September 2026, online applications are open until further notice.","সেপ্টেম্বর ২০২৬ থেকে অনলাইন আবেদন পরবর্তী নির্দেশনা না আসা পর্যন্ত চালু।"),
+   open:true,
+   apply:DSS_APPLY, docs:[K("National ID, or a birth certificate plus a guardian's NID for under-18s","জাতীয় পরিচয়পত্র, অথবা ১৮ বছরের কম হলে জন্মসনদ ও অভিভাবকের এনআইডি"),K("Ask the office what disability assessment or ID it needs","অফিসে জিজ্ঞাসা করুন কোন প্রতিবন্ধিতা মূল্যায়ন বা পরিচয়পত্র লাগবে"),K("A mobile number or bank account","মোবাইল নম্বর বা ব্যাংক অ্যাকাউন্ট")],
+   confirm:[K("Disability assessed in the way the office requires","অফিসের নিয়ম অনুযায়ী প্রতিবন্ধিতা মূল্যায়ন"),K("Low income","কম আয়"),K("Not already getting another regular government allowance","ইতিমধ্যে অন্য কোনো নিয়মিত সরকারি ভাতা পাচ্ছেন না")],
+   sources:["budgetDis","dssDis","dssRule"]},
+  {id:"mcbp",c:"#7a3e9d",icon:"heart",
+   name:K("Mother and Child Benefit","মা ও শিশু সহায়তা কর্মসূচি"),
+   amount:K("Tk 850 a month, for up to 3 years","মাসে ৮৫০ টাকা, সর্বোচ্চ ৩ বছর"),
+   office:K("Department of Women Affairs (Upazila Women Affairs Office)","মহিলা বিষয়ক অধিদপ্তর (উপজেলা মহিলা বিষয়ক অফিস)"),
+   about:K("Monthly cash for low-income pregnant women and young mothers, to support nutrition in a child's first years.","কম আয়ের গর্ভবতী নারী ও শিশুর মায়েদের মাসিক ভাতা, শিশুর প্রথম বছরগুলোর পুষ্টির জন্য।"),
+   when:K("Selection and timing are set locally. Ask your Upazila Women Affairs Office when it is enrolling.","বাছাই ও সময় স্থানীয়ভাবে ঠিক হয়। কবে নাম নেওয়া হবে, উপজেলা মহিলা বিষয়ক অফিসে জিজ্ঞাসা করুন।"),
+   apply:null, docs:[K("National ID (NID)","জাতীয় পরিচয়পত্র (এনআইডি)"),K("Proof of pregnancy or the child's birth registration, as the office asks","গর্ভাবস্থার প্রমাণ বা শিশুর জন্মনিবন্ধন, অফিস যেমন চায়"),K("A mobile number or bank account in your own name","নিজের নামে মোবাইল নম্বর বা ব্যাংক অ্যাকাউন্ট")],
+   confirm:[K("Low income","কম আয়"),K("Local selection rules, such as age and number of pregnancies","স্থানীয় বাছাইয়ের নিয়ম, যেমন বয়স ও কততম সন্তান")],
+   sources:["budget27","mcbp3"]},
+  {id:"fcard",c:"#3b36a8",icon:"home",
+   name:K("Family Card","ফ্যামিলি কার্ড"),
+   amount:K("Tk 2,500 a month per household, paid to the mother or female head","প্রতি পরিবারে মাসে ২,৫০০ টাকা, মা বা নারী প্রধানের নামে"),
+   office:K("Ministry of Social Welfare, through a government household survey","সমাজকল্যাণ মন্ত্রণালয়, সরকারি পারিবারিক জরিপের মাধ্যমে"),
+   about:K("A new household card launched in March 2026. The money goes to the woman's own mobile wallet or bank account. Households are chosen by a poverty survey, not by applying.","মার্চ ২০২৬-এ চালু হওয়া নতুন পারিবারিক কার্ড। টাকা যায় নারীর নিজের মোবাইল ওয়ালেট বা ব্যাংক অ্যাকাউন্টে। আবেদনের মাধ্যমে নয়, দারিদ্র্য জরিপের মাধ্যমে পরিবার বাছাই করা হয়।"),
+   when:K("Expanding in phases. Ask your Union Parishad or ward office whether the survey has reached your area.","ধাপে ধাপে বাড়ছে। আপনার এলাকায় জরিপ হয়েছে কিনা ইউনিয়ন পরিষদ বা ওয়ার্ড অফিসে জিজ্ঞাসা করুন।"),
+   apply:null, docs:[K("National ID of the mother or female head","মা বা নারী প্রধানের জাতীয় পরিচয়পত্র"),K("A mobile wallet or bank account in her name","তার নামে মোবাইল ওয়ালেট বা ব্যাংক অ্যাকাউন্ট")],
+   confirm:[K("Selected through the household survey","পারিবারিক জরিপে নির্বাচিত"),K("No household member is paid a salary, allowance or pension by a government body","পরিবারের কেউ সরকারি প্রতিষ্ঠান থেকে বেতন, ভাতা বা পেনশন পান না")],
+   warn:K("If the woman holding the card already gets another personal government allowance (such as old-age or widow), that allowance stops. Other family members can keep theirs. Compare before you accept.","কার্ডধারী নারী যদি আগে থেকে অন্য ব্যক্তিগত সরকারি ভাতা (যেমন বয়স্ক বা বিধবা ভাতা) পান, সেটি বন্ধ হয়ে যাবে। পরিবারের অন্য সদস্যরা তাদের ভাতা রাখতে পারবেন। গ্রহণের আগে তুলনা করে নিন।"),
+   sources:["fcard","fcardOne","fcardEx","budget27"]}
+];
+const allowById=id=>ALLOW.find(a=>a.id===id);
+const AL_AGE=[["u18","Under 18","১৮-এর কম"],["a18","18 to 61","১৮ থেকে ৬১"],["a62","62 to 90","৬২ থেকে ৯০"],["a90","Over 90","৯০-এর বেশি"]];
+const AL_SIT=[["preg","Pregnant or a mother of a young child","গর্ভবতী বা ছোট শিশুর মা"],["widow","Widowed","বিধবা"],["deserted","Deserted by my husband","স্বামী পরিত্যক্তা"],["disab","Living with a disability","প্রতিবন্ধিতা আছে"],["poor","My household has a low income","আমার পরিবারের আয় কম"],["head","I head my household","আমি পরিবারের প্রধান"]];
+function matchAllowances(q){
+  const has=k=>q.sit.includes(k), old=q.age==="a62"||q.age==="a90";
+  const out=[];
+  const push=(id,why)=>{ if(why.length) out.push({a:allowById(id),why}); };
+  push("oldage", old?[K("You are 62 or older (the age for women)","আপনার বয়স ৬২ বা তার বেশি (নারীদের জন্য নির্ধারিত বয়স)")].concat(has("poor")?[K("Low household income","পরিবারের আয় কম")]:[]):[]);
+  push("widow", (has("widow")||has("deserted"))?[has("widow")?K("Widowed","বিধবা"):K("Deserted by husband","স্বামী পরিত্যক্তা")].concat(has("poor")?[K("Low household income","পরিবারের আয় কম")]:[]):[]);
+  push("disab", has("disab")?[K("Living with a disability","প্রতিবন্ধিতা আছে")]:[]);
+  push("mcbp", has("preg")?[K("Pregnant or a mother of a young child","গর্ভবতী বা ছোট শিশুর মা")].concat(has("poor")?[K("Low household income","পরিবারের আয় কম")]:[]):[]);
+  push("fcard", (has("head")||has("poor"))&&q.age!=="u18"?[].concat(has("head")?[K("You head your household","আপনি পরিবারের প্রধান")]:[],has("poor")?[K("Low household income","পরিবারের আয় কম")]:[]):[]);
+  return out;
+}
+
+/* ---------- Applications tracker ---------- */
+const APP_STAGES=[K("Planning","পরিকল্পনা"),K("Documents ready","কাগজপত্র প্রস্তুত"),K("Submitted","জমা দেওয়া হয়েছে"),K("Under review","যাচাই চলছে"),K("Approved","অনুমোদিত"),K("Not approved","অনুমোদিত হয়নি")];
+const APP_NEXT=[K("Gather the documents on the list","তালিকার কাগজপত্র জোগাড় করুন"),K("Submit through the official portal or office","সরকারি পোর্টাল বা অফিসে জমা দিন"),K("Keep your receipt or SMS; ask when to follow up","রসিদ বা এসএমএস রাখুন; কবে খোঁজ নেবেন জিজ্ঞাসা করুন"),K("Follow up with the office on the date they gave","অফিসের দেওয়া তারিখে খোঁজ নিন"),K("Check the first payment reaches your own account","প্রথম টাকা নিজের অ্যাকাউন্টে এসেছে কিনা দেখুন"),K("Ask why, and whether you can apply again or appeal","কারণ জিজ্ঞাসা করুন, আবার আবেদন বা আপিল করা যায় কিনা জানুন")];
+function cleanApps(v){ return (Array.isArray(v)?v:[]).filter(a=>a&&typeof a.id==="string"&&typeof a.title==="string"&&a.title.trim())
+  .map(a=>({id:a.id.slice(0,24),title:a.title.slice(0,80),ref:typeof a.ref==="string"?a.ref.slice(0,40):"",stage:Math.min(5,Math.max(0,parseInt(a.stage,10)||0)),
+    date:/^\d{4}-\d{2}-\d{2}$/.test(a.date||"")?a.date:"",added:/^\d{4}-\d{2}-\d{2}$/.test(a.added||"")?a.added:""})); }
+S.apps=cleanApps(store.get("apps",[]));
+S.al={age:"",sit:[],done:false};
+S.mig=(()=>{ const v=store.get("mig",{})||{}; const o={}; ["before","abroad","home"].forEach(k=>o[k]=Array.isArray(v[k])?v[k].map(Boolean):[]); return o; })();
+S.migTab="before"; S.appAdd=false;
+function saveApps(){ store.set("apps",S.apps); }
+function addApp(title,ref){
+  if(ref && S.apps.some(a=>a.ref===ref)){ toast(tx("Already in My applications","ইতিমধ্যে আমার আবেদনে আছে")); return false; }
+  S.apps.push({id:Date.now().toString(36)+Math.random().toString(36).slice(2,6),title:String(title).slice(0,80),ref:ref||"",stage:0,date:"",added:isoLocal(TODAY)});
+  saveApps(); toast(tx("Added to My applications","আমার আবেদনে যোগ হয়েছে")); return true;
+}
+function appLink(a){
+  if(a.ref.startsWith("al:")&&allowById(a.ref.slice(3))) return "#allowances";
+  if(a.ref.startsWith("r:")&&byId(a.ref.slice(2))) return "#r-"+a.ref.slice(2);
+  return "";
+}
+
+/* ---------- Safe migration checklists ---------- */
+const MIG={
+  before:[
+    [K("Check the agency's licence first","আগে এজেন্সির লাইসেন্স যাচাই করুন"),K("Find the agency's licence (RL) number on BMET's public list and on BAIRA's member list before you pay or hand over your passport.","টাকা বা পাসপোর্ট দেওয়ার আগে বিএমইটির পাবলিক তালিকা ও বায়রার সদস্য তালিকায় এজেন্সির লাইসেন্স (আরএল) নম্বর খুঁজে দেখুন।"),"agencyCheck"],
+    [K("Get the job offer in writing","চাকরির প্রস্তাব লিখিত নিন"),K("Employer, country, work, salary, hours and days off should be written down. Ask someone you trust to read it with you.","নিয়োগকর্তা, দেশ, কাজ, বেতন, কাজের সময় ও ছুটি লিখিত থাকা উচিত। বিশ্বস্ত কাউকে সাথে নিয়ে পড়ুন।"),null],
+    [K("Ask for a receipt for every payment","প্রতিটি টাকার রসিদ নিন"),K("Many women are charged money even where recruitment is meant to cost them little or nothing. Never pay a broker without a receipt from the licensed agency.","নিয়োগে খরচ খুব কম বা না থাকার কথা থাকলেও অনেক নারীর কাছ থেকে টাকা নেওয়া হয়। লাইসেন্সধারী এজেন্সির রসিদ ছাড়া কোনো দালালকে টাকা দেবেন না।"),"migStats"],
+    [K("Register and get BMET clearance","নিবন্ধন করে বিএমইটি ছাড়পত্র নিন"),K("Go through BMET and your District Employment and Manpower Office, and attend the pre-departure training and orientation.","বিএমইটি ও জেলা কর্মসংস্থান ও জনশক্তি অফিসের মাধ্যমে যান, এবং বিদেশ যাত্রার আগের প্রশিক্ষণ ও ওরিয়েন্টেশনে অংশ নিন।"),"bmet"],
+    [K("Know your insurance","আপনার বীমা সম্পর্কে জানুন"),K("Probashi Kormi Bima: a one-time Tk 1,000 premium covers 5 years. Death: Tk 10 lakh to your nominee. Disability: 15–90% of that. Returning within 6 months: Tk 50,000.","প্রবাসী কর্মী বীমা: একবার ১,০০০ টাকা প্রিমিয়ামে ৫ বছরের সুরক্ষা। মৃত্যু: নমিনি পাবেন ১০ লাখ টাকা। প্রতিবন্ধিতা: এর ১৫–৯০%। ৬ মাসের মধ্যে ফিরে এলে: ৫০,০০০ টাকা।"),"bima"],
+    [K("Borrow carefully, if you must","দরকার হলে সাবধানে ঋণ নিন"),K("Probashi Kallyan Bank gives collateral-free migration loans, including loans for women. Avoid moneylenders.","প্রবাসী কল্যাণ ব্যাংক জামানতবিহীন অভিবাসন ঋণ দেয়, নারীদের জন্য আলাদা ঋণসহ। মহাজনের কাছ থেকে ঋণ এড়িয়ে চলুন।"),"pkbLoans"],
+    [K("Leave copies at home","বাড়িতে কপি রেখে যান"),K("Give someone you trust copies of your passport, visa, contract and the agency's details, and save 16135 and +8809610102030 in your phone.","বিশ্বস্ত কারও কাছে পাসপোর্ট, ভিসা, চুক্তি ও এজেন্সির তথ্যের কপি রাখুন, আর ফোনে ১৬১৩৫ ও +৮৮০৯৬১০১০২০৩০ সেভ করুন।"),"probash"]
+  ],
+  abroad:[
+    [K("Keep photos of your papers","কাগজপত্রের ছবি রাখুন"),K("Keep photos of your passport, visa and contract on your phone and with your family, in case originals are taken from you.","পাসপোর্ট, ভিসা ও চুক্তির ছবি ফোনে ও পরিবারের কাছে রাখুন, যদি আসল কাগজ আপনার কাছ থেকে নিয়ে নেওয়া হয়।"),null],
+    [K("Know who to call","কাকে কল করবেন জানুন"),K("Probash Bondhu answers 24 hours: +8809610102030 from abroad, 16135 inside Bangladesh. Your family can call for you too.","প্রবাস বন্ধু ২৪ ঘণ্টা সেবা দেয়: বিদেশ থেকে +৮৮০৯৬১০১০২০৩০, দেশে ১৬১৩৫। আপনার পরিবারও আপনার হয়ে কল করতে পারে।"),"probash2"],
+    [K("Stay in touch on a schedule","নিয়মিত যোগাযোগ রাখুন"),K("Agree a regular day to call home, so your family notices quickly if something is wrong.","বাড়িতে কল করার একটি নির্দিষ্ট দিন ঠিক করুন, যাতে কিছু ভুল হলে পরিবার দ্রুত বুঝতে পারে।"),null],
+    [K("Send money through official channels","সরকারি মাধ্যমে টাকা পাঠান"),K("Use banks or licensed remittance services and keep the receipts.","ব্যাংক বা লাইসেন্সপ্রাপ্ত রেমিট্যান্স সেবা ব্যবহার করুন এবং রসিদ রাখুন।"),null]
+  ],
+  home:[
+    [K("Ask about insurance if you came back early","তাড়াতাড়ি ফিরলে বীমা সম্পর্কে জিজ্ঞাসা করুন"),K("If you returned within 6 months, the migrant insurance may pay Tk 50,000. Ask the Wage Earners' Welfare Board through 16135.","৬ মাসের মধ্যে ফিরে এলে প্রবাসী বীমা থেকে ৫০,০০০ টাকা পাওয়া যেতে পারে। ১৬১৩৫-এ কল করে ওয়েজ আর্নার্স কল্যাণ বোর্ডে জিজ্ঞাসা করুন।"),"bima2"],
+    [K("Report an agency that cheated you","প্রতারক এজেন্সির বিরুদ্ধে অভিযোগ করুন"),K("Complain to BMET or your District Employment and Manpower Office. Free legal advice: 16699.","বিএমইটি বা জেলা কর্মসংস্থান ও জনশক্তি অফিসে অভিযোগ করুন। বিনামূল্যে আইনি পরামর্শ: ১৬৬৯৯।"),"agencyCheck"],
+    [K("Restart with support","সহায়তা নিয়ে নতুন শুরু করুন"),K("Probashi Kallyan Bank has rehabilitation loans for returnees, including women. Free business training is listed under Money in NariPath.","ফিরে আসা কর্মীদের জন্য প্রবাসী কল্যাণ ব্যাংকের পুনর্বাসন ঋণ আছে, নারীদের জন্যও। নারীপথের অর্থ বিভাগে বিনামূল্যের ব্যবসা প্রশিক্ষণের তথ্য আছে।"),"pkbLoans"]
+  ]
+};
+const MIG_FLAGS=[
+  K("Someone asks for your passport or money before showing a BMET licence number","বিএমইটি লাইসেন্স নম্বর দেখানোর আগেই পাসপোর্ট বা টাকা চায়"),
+  K("You are told to travel on a visit or tourist visa and \"change it there\"","ভিজিট বা ট্যুরিস্ট ভিসায় গিয়ে \"সেখানে বদলে নেওয়ার\" কথা বলে"),
+  K("No written contract, or the salary you were promised is not in it","লিখিত চুক্তি নেই, বা প্রতিশ্রুত বেতন চুক্তিতে নেই"),
+  K("You are asked to pay much more than the receipt shows","রসিদে যা লেখা তার চেয়ে অনেক বেশি টাকা চায়"),
+  K("You are told not to tell your family where you are going","কোথায় যাচ্ছেন পরিবারকে না জানাতে বলে")
+];
+
+/* ---------- Shared bits ---------- */
+const srcList=keys=>`<ul class="small src-list">${keys.map(k=>GSRC[k]).filter(Boolean).map(x=>`<li><a href="${esc(safeUrl(x.url))}" target="_blank" rel="noopener noreferrer">${L(x)}</a></li>`).join("")}</ul>`;
+const backLink=(href,label)=>`<a class="back" href="${href}">${icon("left").replace('class=""','style="width:18px;height:18px"')}${label}</a>`;
+function toolHero(cls,ic,title,sub){
+  return `<section class="tool-hero ${cls}"><span class="th-ico">${icon(ic)}</span><h1>${title}</h1><p>${sub}</p></section>`;
+}
+
+/* ---------- Views ---------- */
+function viewAllowances(){
+  const q=S.al;
+  const chip=(k,v,label,on)=>`<button type="button" class="chip" data-aq="${k}" data-v="${v}" aria-pressed="${on}">${label}</button>`;
+  const res=q.done?matchAllowances(q):[];
+  const card=(a,why)=>{ const tracked=S.apps.some(x=>x.ref==="al:"+a.id);
+    return `<article class="card allow" style="--ac:${a.c}" id="al-${a.id}">
+      <div class="allow-top"><span class="allow-ico">${icon(a.icon)}</span><div><h3>${L(a.name)}</h3><span class="small muted">${L(a.office)}</span></div></div>
+      <p class="allow-amt">${L(a.amount)}</p>
+      <p class="small">${L(a.about)}</p>
+      ${why?`<p class="crit-head">${t("someMatch")}</p><ul class="crit-list">${why.map(x=>`<li class="yes"><span class="mk">✓</span><span>${L(x)}</span></li>`).join("")}</ul>`:""}
+      <p class="crit-head">${t("toConfirm")}</p>
+      <ul class="crit-list">${a.confirm.map(x=>`<li class="tbc"><span class="mk">?</span><span>${L(x)}</span></li>`).join("")}<li class="tbc"><span class="mk">?</span><span>${t("officialReq")}</span></li></ul>
+      ${a.warn?`<div class="stamp st-review"><div><b>${tx("Read before you accept","গ্রহণের আগে পড়ুন")}</b><span class="small">${L(a.warn)}</span></div></div>`:""}
+      <details><summary class="small"><b>${tx("Documents, timing and sources","কাগজপত্র, সময় ও উৎস")}</b></summary>
+        <p class="small"><b>${tx("When","কখন")}:</b> ${L(a.when)}</p>
+        <p class="small"><b>${t("docsL")}:</b></p><ul class="small">${a.docs.map(d=>`<li>${L(d)}</li>`).join("")}</ul>
+        ${srcList(a.sources)}
+        <p class="small muted">${t("checkedL")}: ${esc(date(TOOL_CHECKED))}</p>
+      </details>
+      <div class="btn-row">
+        ${a.apply?`<a class="btn ghost" href="${esc(safeUrl(a.apply))}" target="_blank" rel="noopener noreferrer">${a.open?tx("Apply online","অনলাইনে আবেদন"):tx("Official portal","সরকারি পোর্টাল")}</a>`:""}
+        <button type="button" class="btn ${tracked?"ghost":"primary"}" data-addapp="al:${a.id}" ${tracked?'aria-pressed="true"':""}>${tracked?"✓ "+tx("Tracking","ট্র্যাক হচ্ছে"):tx("Track my application","আবেদন ট্র্যাক করুন")}</button>
+      </div>
+    </article>`; };
+  return `${backLink("#home",t("back"))}
+  ${toolHero("th-allow","wallet",tx("Allowances finder","ভাতা খুঁজুন"),tx("Government cash allowances for women in Bangladesh, with this year's amounts and how to apply.","বাংলাদেশে নারীদের জন্য সরকারি নগদ ভাতা, এ বছরের পরিমাণ ও আবেদনের নিয়মসহ।"))}
+  <div class="stamp st-public">${icon("info").replace('class=""','style="width:22px;height:22px;flex:none"')}<div><b>${tx("Applying is free","আবেদন বিনামূল্যে")}</b><span class="small">${tx("Never pay anyone to be put on an allowance list. National Helpline 333 answers questions about allowances.","ভাতার তালিকায় নাম তুলতে কাউকে টাকা দেবেন না। ভাতা সম্পর্কে প্রশ্নের উত্তর দেয় জাতীয় হেল্পলাইন ৩৩৩।")} <a href="tel:333" target="_top">${tx("Call 333","৩৩৩-এ কল")}</a></span></div></div>
+  <section class="section card q">
+    <h3>${tx("1. Your age","১. আপনার বয়স")}</h3>
+    <div class="opts" role="group">${AL_AGE.map(([v,e,b])=>chip("age",v,tx(e,b),q.age===v)).join("")}</div>
+    <h3 style="margin-top:8px">${tx("2. Anything that applies (choose any)","২. যা প্রযোজ্য (যেকোনোটি বাছুন)")}</h3>
+    <div class="opts" role="group">${AL_SIT.map(([v,e,b])=>chip("sit",v,tx(e,b),q.sit.includes(v))).join("")}</div>
+    <p class="small muted">${tx("Your answers stay on this screen and are not saved.","আপনার উত্তর শুধু এই পাতায় থাকে, সংরক্ষণ করা হয় না।")}</p>
+    <button type="button" class="btn primary" id="al-go" ${q.age?"":'aria-disabled="true"'}>${tx("Show potentially relevant allowances","সম্ভাব্য প্রাসঙ্গিক ভাতা দেখুন")}</button>
+  </section>
+  ${q.done?`<section class="section" aria-live="polite">
+    <h2>${t("potHeading")} <span class="muted small">(${num(res.length)})</span></h2>
+    <p class="note">${tx("This is not a decision about whether you qualify. Only the office running each allowance can decide that.","আপনি যোগ্য কিনা এটি সেই সিদ্ধান্ত নয়। প্রতিটি ভাতার দায়িত্বপ্রাপ্ত অফিসই কেবল তা ঠিক করতে পারে।")}</p>
+    ${res.length?res.map(m=>card(m.a,m.why)).join(""):`<div class="card empty">${tx("None of these allowances matched your answers. You can still read them all below.","আপনার উত্তরের সাথে কোনো ভাতা মেলেনি। নিচে সবগুলো পড়ে দেখতে পারেন।")}</div>`}
+  </section>`:""}
+  <section class="section">
+    <h2>${tx("All allowances","সব ভাতা")}</h2>
+    ${ALLOW.filter(a=>!res.some(m=>m.a.id===a.id)).map(a=>card(a,null)).join("")}
+  </section>
+  ${shareBlock("al","all")}
+  <p class="note">${tx("Amounts are from the FY2026-27 decisions and budget reported in July 2026 and later. Rules and dates change; confirm with the office before acting.","পরিমাণগুলো ২০২৬-২৭ অর্থবছরের সিদ্ধান্ত ও বাজেট থেকে নেওয়া। নিয়ম ও তারিখ বদলাতে পারে; কিছু করার আগে অফিসে নিশ্চিত হোন।")}</p>`;
+}
+
+function viewApps(){
+  const today=isoLocal(TODAY);
+  const open=S.apps.filter(a=>a.stage<4), done=S.apps.filter(a=>a.stage>=4);
+  const dueSoon=S.apps.filter(a=>a.date&&a.stage<4&&a.date<=isoLocal(new Date(TODAY.getTime()+7*864e5)));
+  const card=a=>{ const link=appLink(a); const late=a.date&&a.date<today&&a.stage<4;
+    return `<article class="card appcard st${a.stage}" id="app-${esc(a.id)}">
+      <div style="display:flex;justify-content:space-between;gap:10px;align-items:flex-start">
+        <h3>${link?`<a href="${link}">${esc(a.title)}</a>`:esc(a.title)}</h3>
+        <span class="pill app-pill">${L(APP_STAGES[a.stage])}</span>
+      </div>
+      <ol class="stepper" aria-label="${tx("Progress","অগ্রগতি")}">${APP_STAGES.slice(0,5).map((s,i)=>{ const st=a.stage===5&&i===4?"no":i<a.stage||(a.stage===4&&i===4)?"done":i===a.stage?"now":""; return `<li class="${st}"><span class="dot"></span><span class="lab">${L(i===4&&a.stage===5?APP_STAGES[5]:s)}</span></li>`; }).join("")}</ol>
+      <p class="small"><b>${t("nextStep")}:</b> ${L(APP_NEXT[a.stage])}</p>
+      ${a.date?`<p class="small ${late?"late-txt":""}">${tx("Follow-up date","খোঁজ নেওয়ার তারিখ")}: <b>${esc(date(a.date))}</b>${late?" · "+t("overdueRem"):""}</p>`:""}
+      <div class="app-ctl">
+        <label class="small muted" for="as-${esc(a.id)}">${tx("Stage","ধাপ")}</label>
+        <select id="as-${esc(a.id)}" data-appstage="${esc(a.id)}">${APP_STAGES.map((s,i)=>`<option value="${i}" ${a.stage===i?"selected":""}>${L(s)}</option>`).join("")}</select>
+        <label class="small muted" for="ad-${esc(a.id)}">${tx("Follow-up date","খোঁজ নেওয়ার তারিখ")}</label>
+        <input type="date" id="ad-${esc(a.id)}" data-appdate="${esc(a.id)}" value="${esc(a.date)}">
+      </div>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:6px">
+        ${a.stage<4?`<button type="button" class="back" data-appnext="${esc(a.id)}">${tx("Mark next stage","পরের ধাপ চিহ্নিত করুন")}</button>`:""}
+        ${remindForm("app-"+a.id, a.title)}
+        <button type="button" class="back" data-rmapp="${esc(a.id)}">${t("remove")}</button>
+      </div>
+    </article>`; };
+  return `${backLink("#path",t("myTitle"))}
+  ${toolHero("th-apps","clipboard",tx("My applications","আমার আবেদন"),tx("Keep track of every form you send: allowances, scholarships, loans, documents. Saved only on this phone.","যত আবেদন করেন সব এক জায়গায়: ভাতা, বৃত্তি, ঋণ, কাগজপত্র। শুধু এই ফোনে সংরক্ষিত।"))}
+  <section class="tiles dash">
+    <div class="tile"><b>${num(open.length)}</b><span>${tx("In progress","চলমান")}</span></div>
+    <div class="tile"><b>${num(done.filter(a=>a.stage===4).length)}</b><span>${tx("Approved","অনুমোদিত")}</span></div>
+    ${dueSoon.length?`<div class="tile" style="grid-column:span 2"><b>${num(dueSoon.length)}</b><span>${tx("Follow-ups due within a week","এক সপ্তাহের মধ্যে খোঁজ নেওয়ার তারিখ")}</span></div>`:""}
+  </section>
+  <section class="section card">
+    ${S.appAdd?`<form id="app-add" class="app-add">
+      <label for="app-title"><b>${tx("What did you apply for?","কিসের জন্য আবেদন করেছেন?")}</b></label>
+      <input id="app-title" type="text" maxlength="80" required placeholder="${tx("e.g. Trade licence","যেমন: ট্রেড লাইসেন্স")}" autocomplete="off">
+      <p class="small muted">${tx("Don't type ID, account or phone numbers here.","এখানে পরিচয়পত্র, অ্যাকাউন্ট বা ফোন নম্বর লিখবেন না।")}</p>
+      <div class="btn-row"><button type="submit" class="btn primary">${tx("Add","যোগ করুন")}</button><button type="button" class="btn ghost" data-appadd="0">${t("cancel")}</button></div>
+    </form>`:`<div class="btn-row"><button type="button" class="btn primary" data-appadd="1">+ ${tx("Add an application","আবেদন যোগ করুন")}</button><a class="btn ghost" href="#allowances">${tx("Find allowances","ভাতা খুঁজুন")}</a></div>`}
+  </section>
+  ${S.apps.length?`${open.length?`<section class="section"><h2>${tx("In progress","চলমান")}</h2>${open.map(card).join("")}</section>`:""}
+    ${done.length?`<section class="section"><h2>${tx("Decided","সিদ্ধান্ত হয়েছে")}</h2>${done.map(card).join("")}</section>`:""}`
+    :`<div class="card empty">${tx("Nothing tracked yet. Add an application above, or tap \"Track my application\" on an allowance or service.","এখনো কিছু ট্র্যাক করা হয়নি। উপরে আবেদন যোগ করুন, অথবা কোনো ভাতা বা সেবায় \"আবেদন ট্র্যাক করুন\" চাপুন।")}</div>`}
+  <p class="note">${tx("NariPath does not submit anything for you and cannot see your application's real status. Ask the office for updates.","নারীপথ আপনার হয়ে কিছু জমা দেয় না এবং আবেদনের আসল অবস্থা দেখতে পায় না। হালনাগাদের জন্য অফিসে জিজ্ঞাসা করুন।")}</p>`;
+}
+
+function viewMigrate(){
+  const tab=S.migTab, list=MIG[tab], done=list.map((_,i)=>!!(S.mig[tab]||[])[i]);
+  const all=["before","abroad","home"].reduce((a,k)=>a+MIG[k].length,0), dn=["before","abroad","home"].reduce((a,k)=>a+MIG[k].filter((_,i)=>(S.mig[k]||[])[i]).length,0);
+  const TABS=[["before",tx("Before you go","যাওয়ার আগে")],["abroad",tx("While abroad","প্রবাসে থাকাকালীন")],["home",tx("Coming home","দেশে ফেরা")]];
+  return `${backLink("#home",t("back"))}
+  ${toolHero("th-mig","plane",tx("Safe migration for work","কাজের জন্য নিরাপদ অভিবাসন"),tx("For women thinking of working abroad, and their families: check the agency, know the costs, know who to call.","বিদেশে কাজের কথা ভাবছেন এমন নারী ও তাদের পরিবারের জন্য: এজেন্সি যাচাই, খরচ জানা, কাকে কল করবেন জানা।"))}
+  <section class="mig-facts">
+    <div><b>${num(62317)}</b><span>${tx("women went abroad for work in 2025, about 5.5% of all migrant workers","নারী ২০২৫ সালে কাজের জন্য বিদেশে গেছেন, মোট অভিবাসী কর্মীর প্রায় ৫.৫%")}</span></div>
+    <div><b>${tx("90%+","৯০%+")}</b><span>${tx("of them went to just two countries, Saudi Arabia and Jordan","গেছেন মাত্র দুই দেশে, সৌদি আরব ও জর্ডানে")}</span></div>
+  </section>
+  <section class="section card call-card">
+    <h2>${tx("Help, 24 hours","সহায়তা, ২৪ ঘণ্টা")}</h2>
+    ${helpline("16135","probash","probashShort")}
+    <div class="helpline"><a class="num" href="tel:+8809610102030" target="_top" style="font-size:1.05rem">+880 9610 102030</a><span class="small muted">${tx("Probash Bondhu from outside Bangladesh","বিদেশ থেকে প্রবাস বন্ধু")}</span><span class="hl-actions"><a class="callbtn" href="tel:+8809610102030" target="_top">${t("call")}</a>${copyBtn("+8809610102030")}</span></div>
+    <p class="small muted">${tx("Information and complaints line run by the Wage Earners' Welfare Board. It is not an emergency service; in danger in Bangladesh, call 999.","ওয়েজ আর্নার্স কল্যাণ বোর্ড পরিচালিত তথ্য ও অভিযোগের নম্বর। এটি জরুরি সেবা নয়; দেশে বিপদে ৯৯৯-এ কল করুন।")}</p>
+  </section>
+  <section class="section card agency">
+    <h2>${tx("Check an agency in 3 steps","৩ ধাপে এজেন্সি যাচাই")}</h2>
+    <ol class="steps">
+      <li><span>${tx("Ask the agency for its recruiting licence (RL) number.","এজেন্সির কাছে রিক্রুটিং লাইসেন্স (আরএল) নম্বর চান।")}</span></li>
+      <li><span>${tx("Find that number on BMET's public agency list.","বিএমইটির পাবলিক এজেন্সি তালিকায় নম্বরটি খুঁজুন।")}</span></li>
+      <li><span>${tx("Check the same agency on BAIRA's member list as a second check.","দ্বিতীয় যাচাই হিসেবে বায়রার সদস্য তালিকায়ও একই এজেন্সি দেখুন।")}</span></li>
+    </ol>
+    <div class="btn-row"><a class="btn ghost" href="https://bmet.gov.bd" target="_blank" rel="noopener noreferrer">${tx("BMET","বিএমইটি")}</a><a class="btn ghost" href="https://baira.org.bd" target="_blank" rel="noopener noreferrer">${tx("BAIRA","বায়রা")}</a></div>
+    <p class="small muted">${tx("Already paid an agency that seems suspicious? Report it to BMET and your District Employment and Manpower Office right away.","সন্দেহজনক এজেন্সিকে টাকা দিয়ে ফেলেছেন? এখনই বিএমইটি ও জেলা কর্মসংস্থান ও জনশক্তি অফিসে জানান।")}</p>
+  </section>
+  <section class="section">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px"><h2>${tx("Your checklist","আপনার চেকলিস্ট")}</h2><span class="small muted">${num(dn)}/${num(all)} ${t("stepsDone")}</span></div>
+    <div class="seg" role="tablist">${TABS.map(([k,l])=>`<button type="button" role="tab" data-migtab="${k}" aria-selected="${tab===k}">${l}</button>`).join("")}</div>
+    <div class="mig-list">${list.map(([h,b,src],i)=>`<label class="mig-item ${done[i]?"done":""}" for="mg-${tab}-${i}">
+      <input type="checkbox" id="mg-${tab}-${i}" data-mck="${tab}" data-i="${i}" ${done[i]?"checked":""}>
+      <span><b>${L(h)}</b><span class="small">${L(b)}</span>${src&&GSRC[src]?`<a class="small src-a" href="${esc(safeUrl(GSRC[src].url))}" target="_blank" rel="noopener noreferrer">${tx("Source","উৎস")}</a>`:""}</span></label>`).join("")}</div>
+  </section>
+  <section class="section card flags">
+    <h2>${tx("Warning signs","সতর্ক সংকেত")}</h2>
+    <ul>${MIG_FLAGS.map(f=>`<li>${L(f)}</li>`).join("")}</ul>
+    <p class="small muted">${tx("If you see any of these, stop and check with BMET or call 16135 before going further.","এর কোনোটি দেখলে থামুন এবং এগোনোর আগে বিএমইটিতে যাচাই করুন বা ১৬১৩৫-এ কল করুন।")}</p>
+  </section>
+  <section class="section">
+    <h2>${t("relatedServices")}</h2>
+    <div class="list">${["probash","bmet","pkb","nlaso"].map(byId).filter(Boolean).map(r=>resCard(r)).join("")}</div>
+  </section>
+  <section class="section card"><h2>${t("sourceL")}</h2>${srcList(["migStats","migStats2","agencyCheck","probash","probash2","bima","bima2","pkbLoans","pkbLang","bmet","baira"])}<p class="small muted">${t("checkedL")}: ${esc(date(TOOL_CHECKED))}</p></section>
+  ${shareBlock("mg","all")}
+  <p class="note">${tx("General guidance, not legal advice. Rules differ by country and change often; confirm with BMET or 16135.","সাধারণ নির্দেশনা, আইনি পরামর্শ নয়। দেশভেদে নিয়ম আলাদা ও প্রায়ই বদলায়; বিএমইটি বা ১৬১৩৫-এ নিশ্চিত হোন।")}</p>`;
+}
+
+/* bKash-style service grid for Home */
+function servicesGrid(){
+  const SV=[
+    ["#allowances","wallet","sv1",tx("Allowances","ভাতা")],
+    ["#apps","clipboard","sv2",tx("Applications","আবেদন")],
+    ["#migrate","plane","sv3",tx("Work abroad","বিদেশে কাজ")],
+    ["#district","pin","sv4",tx("Near you","কাছাকাছি")],
+    ["#check","list","sv5",tx("Am I eligible?","যোগ্যতা যাচাই")],
+    ["#learn","idcard","sv6",tx("Documents","কাগজপত্র")],
+    ["#explore","search","sv7",tx("All services","সব সেবা")],
+    ["#path","compass","sv8",tx("My Path","আমার পথ")]
+  ];
+  return `<nav class="svc card" aria-label="${tx("Services","সেবাসমূহ")}">
+    ${SV.map(([h,ic,c,l])=>`<a href="${h}" class="sv ${c}"><span class="sv-ico">${icon(ic)}</span><span class="sv-l">${l}</span>${h==="#apps"&&S.apps.filter(a=>a.stage<4).length?`<span class="badge">${num(S.apps.filter(a=>a.stage<4).length)}</span>`:""}</a>`).join("")}
+  </nav>`;
+}
+
+/* Tool events */
+document.addEventListener("click",e=>{
+  const el=e.target;
+  const aq=el.closest("[data-aq]");
+  if(aq){ const k=aq.dataset.aq, v=aq.dataset.v; if(k==="sit") S.al.sit=S.al.sit.includes(v)?S.al.sit.filter(x=>x!==v):[...S.al.sit,v]; else S.al.age=v; S.al.done=false; render(); const b=document.querySelector(`[data-aq="${k}"][data-v="${v}"]`); if(b) b.focus(); return; }
+  if(el.closest("#al-go")){ if(!S.al.age){ toast(tx("Choose your age first","আগে বয়স বাছুন")); return; } S.al.done=true; render(); const h=document.querySelector("[aria-live] h2"); if(h) h.scrollIntoView({block:"start",behavior:"smooth"}); return; }
+  const ad=el.closest("[data-addapp]");
+  if(ad){ const ref=ad.dataset.addapp; let title="";
+    if(ref.startsWith("al:")){ const a=allowById(ref.slice(3)); if(a) title=raw(a.name); }
+    else if(ref.startsWith("r:")){ const r=byId(ref.slice(2)); if(r) title=raw(r.name); }
+    if(title && addApp(title,ref)) render(); return; }
+  const aa=el.closest("[data-appadd]"); if(aa){ S.appAdd=aa.dataset.appadd==="1"; render(); const i=document.getElementById("app-title"); if(i) i.focus(); return; }
+  const an=el.closest("[data-appnext]"); if(an){ const a=S.apps.find(x=>x.id===an.dataset.appnext); if(a&&a.stage<4){ a.stage++; saveApps(); toast(raw(APP_STAGES[a.stage])); render(); } return; }
+  const ra=el.closest("[data-rmapp]"); if(ra){ const id=ra.dataset.rmapp; S.apps=S.apps.filter(x=>x.id!==id); S.reminders=S.reminders.filter(r=>r.ref!=="app-"+id); saveApps(); persist(); render(); return; }
+  const mt=el.closest("[data-migtab]"); if(mt){ S.migTab=mt.dataset.migtab; render(); const b=document.querySelector(`[data-migtab="${S.migTab}"]`); if(b) b.focus(); return; }
+});
+document.addEventListener("change",e=>{
+  const d=e.target.dataset;
+  if(d.appstage){ const a=S.apps.find(x=>x.id===d.appstage); if(a){ a.stage=Math.min(5,Math.max(0,+e.target.value||0)); saveApps(); render(); } }
+  else if(d.appdate!==undefined && e.target.dataset.appdate){ const a=S.apps.find(x=>x.id===d.appdate); if(a){ const v=e.target.value; a.date=/^\d{4}-\d{2}-\d{2}$/.test(v)?v:""; saveApps(); render(); } }
+  else if(d.mck){ const k=d.mck; if(!MIG[k]) return; const arr=MIG[k].map((_,i)=>!!(S.mig[k]||[])[i]); arr[+d.i]=e.target.checked; S.mig[k]=arr; store.set("mig",S.mig); render(); const c=document.getElementById(`mg-${k}-${d.i}`); if(c) c.focus(); }
+});
+document.addEventListener("submit",e=>{
+  if(e.target.id!=="app-add") return; e.preventDefault();
+  const v=(document.getElementById("app-title").value||"").trim(); if(!v) return;
+  if(addApp(v,"")){ S.appAdd=false; render(); }
+});
+
 /* ---------------- Router & render ---------------- */
 function route(){ return (location.hash||"#home").slice(1) || "home"; }
 function render(){
@@ -2319,7 +2797,7 @@ function render(){
     ? `<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/></svg>${t("stop")}`
     : `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg>${t("listen")}`;
   document.getElementById("listen").setAttribute("aria-pressed", speaking);
-  const tab = (r.startsWith("r-")||r==="explore"||r==="district") ? "explore" : (r==="learn"||r.startsWith("g-")) ? "learn" : r==="path" ? "path" : (r==="about"||r==="gaps") ? "about" : "home";
+  const tab = (r.startsWith("r-")||r==="explore"||r==="district") ? "explore" : (r==="learn"||r.startsWith("g-")) ? "learn" : (r==="path"||r==="apps") ? "path" : (r==="about"||r==="gaps") ? "about" : "home";
   const TABS=[["home","home"],["explore","search"],["learn","learn"],["path","list"],["about","info"]];
   const ti=Math.max(0,TABS.findIndex(([k])=>k===tab));
   const prevTi = typeof window.__ti==="number" ? window.__ti : ti;
@@ -2338,6 +2816,9 @@ function render(){
   else if(r.startsWith("g-")) html=viewGuide(r.slice(2));
   else if(r==="district") html=viewDistrict();
   else if(r.startsWith("r-")) html=viewResource(r.slice(2));
+  else if(r==="allowances") html=viewAllowances();
+  else if(r==="apps") html=viewApps();
+  else if(r==="migrate") html=viewMigrate();
   else html=viewHome();
   document.getElementById("view").innerHTML=html;
   const rv=document.querySelector(".stitch .reveal");
@@ -2369,7 +2850,7 @@ document.addEventListener("click",e=>{
     location.hash="path";setTimeout(()=>{const a=document.getElementById("path-"+id);if(a)a.scrollIntoView({block:"start"});},30);return;}
   if(el.dataset.rmpath){delete S.paths[el.dataset.rmpath];persist();render();return;}
   if(el.id==="clear-btn"){ if(!S.clearArmed){S.clearArmed=true;render();return;}
-    S.saved=[];S.paths={};S.plans={};S.reminders=[];S.a11y=Object.assign({},A11Y_DEFAULT);applyA11y();S.reports=[];S.hide=false;S.revealed=false;S.clearArmed=false;store.clear();store.set("saved",[]);store.set("paths",{});S.flash=t("cleared");render();return;}
+    S.saved=[];S.paths={};S.plans={};S.reminders=[];S.apps=[];S.mig={before:[],abroad:[],home:[]};S.a11y=Object.assign({},A11Y_DEFAULT);applyA11y();S.reports=[];S.hide=false;S.revealed=false;S.clearArmed=false;store.clear();store.set("saved",[]);store.set("paths",{});S.flash=t("cleared");render();return;}
   if(el.id==="nav-go"){S.nav.district=document.getElementById("nav-district").value;S.nav.freeFirst=document.getElementById("nav-free").checked;S.nav.done=true;render();window.scrollTo(0,0);return;}
   if(el.id==="nav-restart"){location.hash="home";return;}
 });

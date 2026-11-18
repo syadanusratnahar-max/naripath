@@ -8,6 +8,10 @@ NariPath does not replace existing organisations or provide medical, legal, fina
 
 ## What it does
 
+- **Services grid:** one colourful home screen of tools, like a mobile-banking app: Allowances, Applications, Work abroad, Near you, Eligibility, Documents, All services and My Path.
+- **Allowances finder:** this year's (FY2026-27) amounts and rules for the old-age, widow and husband-deserted women, disability and Mother and Child allowances and the new Family Card. Two quick questions show *potentially relevant* allowances with matched and still-to-confirm criteria, how to apply (free), documents, timing and sources. Warns that a Family Card holder loses her other personal allowances.
+- **My applications:** track any application (allowance, scholarship, loan, document) through Planning → Documents ready → Submitted → Under review → Approved / Not approved, with a follow-up date and calendar reminder. Stores only the name typed, the stage and the date, on the device.
+- **Safe migration for work:** for women thinking of working abroad and their families: Probash Bondhu 24-hour line (16135, +8809610102030 from abroad), a 3-step agency licence check (BMET and BAIRA), migrant insurance and loan facts, warning signs, and before / abroad / coming-home checklists.
 - **Six areas of support:** Education & Career, Health & Wellbeing, Rights & Legal Support, Personal & Digital Safety, Financial Independence, Everyday Life & Community.
 - **What should I do next?** Start from your situation (study, work, health, rights, online problems, money) and get a step-by-step action plan linked to services and guides. Save it and tick off steps.
 - **Support near you:** choose any of the 64 districts to see local services with address, contact, eligibility, cost, source, checked date and status, then nationwide services. Shows which districts have local information and which have not yet been researched.
@@ -27,7 +31,7 @@ NariPath does not replace existing organisations or provide medical, legal, fina
 
 ## Data
 
-28 public-source records (Type A) from official and reputable sources, checked 13 November 2026, including the 109 and 999 helplines, Police Cyber Support for Women, Shastho Batayon 16263, the government legal aid helpline 16699, District Legal Aid Offices, BLAST, One-Stop Crisis Centres, SME Foundation's WE-HELP, Bangladesh Bank women-entrepreneur refinancing, UGC merit scholarships and SICIP skills training. Every record lists its sources in the app.
+31 public-source records (Type A) from official and reputable sources, checked 13–18 November 2026, including the 109 and 999 helplines, Police Cyber Support for Women, Shastho Batayon 16263, the government legal aid helpline 16699, District Legal Aid Offices, BLAST, One-Stop Crisis Centres, SME Foundation's WE-HELP, Bangladesh Bank women-entrepreneur refinancing, UGC merit scholarships, SICIP skills training, the Probash Bondhu call centre, BMET and Probashi Kallyan Bank. Allowance data (5 programmes, FY2026-27) is in `db/allowances.json`. Every record lists its sources in the app.
 
 Every listing describes a real service. None is fictional, and no provider has confirmed its listing yet.
 
@@ -50,7 +54,8 @@ Information can change. Always confirm with the provider before acting.
 | `index.html` | The whole app: one self-contained page, no build step |
 | `sw.js`, `manifest.webmanifest`, `icons/` | Offline support and install-to-home-screen |
 | `db/schema.sql` | Supabase/PostgreSQL schema for the next version |
-| `db/resources.json` | The 28 records, ready to import |
+| `db/resources.json` | The 31 records, ready to import |
+| `db/allowances.json` | Government allowances for women, FY2026-27, with sources |
 
 ## Run it
 
@@ -58,7 +63,7 @@ Open `index.html` in any browser, or visit the live demo. To host your own copy,
 
 ## Privacy
 
-No account, no tracking, no names or locations collected. Saved items, Action Paths and Trusted Circle contacts stay in the user's own browser and can be cleared at any time. NariPath is not an emergency service. Personal safety alerts (check-in timer, trusted-contact alerts) are listed only as planned future work: they would need a native Android app, an SMS provider, weekly delivery tests and safeguarding review before being built.
+No account, no tracking, no names or locations collected. NariPath never holds money and never asks for ID numbers or photos. Saved items, plans, tracked applications and checklists stay in the user's own browser and can be cleared at any time. NariPath is not an emergency service. Personal safety alerts (check-in timer, trusted-contact alerts) are listed only as planned future work: they would need a native Android app, an SMS provider, weekly delivery tests and safeguarding review before being built.
 
 ## Roadmap
 

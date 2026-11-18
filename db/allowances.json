@@ -1,0 +1,359 @@
+[
+  {
+    "id": "oldage",
+    "name": {
+      "en": "Old-age allowance",
+      "bn": "বয়স্ক ভাতা"
+    },
+    "amount": {
+      "en": "Tk 700 a month · Tk 1,000 if over 90",
+      "bn": "মাসে ৭০০ টাকা · ৯০ বছরের বেশি হলে ১,০০০ টাকা"
+    },
+    "office": {
+      "en": "Department of Social Services (Upazila or City Social Services Office)",
+      "bn": "সমাজসেবা অধিদপ্তর (উপজেলা বা শহর সমাজসেবা অফিস)"
+    },
+    "about": {
+      "en": "Monthly cash for older people with low income, paid to a mobile wallet or bank account.",
+      "bn": "কম আয়ের প্রবীণদের জন্য মাসিক ভাতা, মোবাইল ওয়ালেট বা ব্যাংক অ্যাকাউন্টে দেওয়া হয়।"
+    },
+    "when": {
+      "en": "FY2026-27 online applications closed on 31 August 2026. Watch for the next notice from your Social Services office.",
+      "bn": "২০২৬-২৭ অর্থবছরের অনলাইন আবেদন ৩১ আগস্ট ২০২৬-এ শেষ হয়েছে। সমাজসেবা অফিসের পরবর্তী বিজ্ঞপ্তির দিকে নজর রাখুন।"
+    },
+    "apply_url": "https://dss.bhata.gov.bd/online-application",
+    "documents": [
+      {
+        "en": "National ID (NID)",
+        "bn": "জাতীয় পরিচয়পত্র (এনআইডি)"
+      },
+      {
+        "en": "A mobile number or bank account in your own name",
+        "bn": "নিজের নামে মোবাইল নম্বর বা ব্যাংক অ্যাকাউন্ট"
+      },
+      {
+        "en": "A recent photo",
+        "bn": "সাম্প্রতিক ছবি"
+      }
+    ],
+    "still_to_confirm": [
+      {
+        "en": "Low income, under the limit your Social Services office uses",
+        "bn": "কম আয়, সমাজসেবা অফিসের নির্ধারিত সীমার মধ্যে"
+      },
+      {
+        "en": "Not a government employee or pensioner",
+        "bn": "সরকারি চাকরিজীবী বা পেনশনভোগী নন"
+      },
+      {
+        "en": "Not already getting another regular government allowance",
+        "bn": "ইতিমধ্যে অন্য কোনো নিয়মিত সরকারি ভাতা পাচ্ছেন না"
+      }
+    ],
+    "warning": null,
+    "sources": [
+      {
+        "en": "UNB, Safety-net rates fixed for FY2026-27 (Jan 2026)",
+        "bn": "ইউএনবি, ২০২৬-২৭ অর্থবছরের ভাতার হার নির্ধারণ (জানুয়ারি ২০২৬)",
+        "url": "https://unb.com.bd/category/Bangladesh/social-safety-net-to-be-spread-wider-go-deeper-from-next-fiscal/178109"
+      },
+      {
+        "en": "BSS, Online allowance applications extended to 31 Aug 2026",
+        "bn": "বাসস, ভাতার অনলাইন আবেদন ৩১ আগস্ট ২০২৬ পর্যন্ত বাড়ানো",
+        "url": "https://www.bssnews.net/others/415696"
+      },
+      {
+        "en": "BSS, Social Services online applications and the one-programme rule",
+        "bn": "বাসস, সমাজসেবার অনলাইন আবেদন ও একাধিক ভাতা না পাওয়ার নিয়ম",
+        "url": "https://www.bssnews.net/others/402190"
+      },
+      {
+        "en": "Summary of a DSS notice: women 62+, men 65+ (secondary source)",
+        "bn": "সমাজসেবা অধিদপ্তরের বিজ্ঞপ্তির সারাংশ: নারী ৬২+, পুরুষ ৬৫+ (দ্বিতীয় পর্যায়ের উৎস)",
+        "url": "https://bdservicerules.info/?p=25286"
+      },
+      {
+        "en": "Department of Social Services, Chandpur: apply online free of charge",
+        "bn": "সমাজসেবা অধিদপ্তর, চাঁদপুর: বিনা খরচে অনলাইনে আবেদন",
+        "url": "https://dss.chandpur.gov.bd/en/site/page/rSPg-%E0%A6%85%E0%A6%B8%E0%A6%9A%E0%A7%8D%E0%A6%9B%E0%A6%B2-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%A8%E0%A7%8D%E0%A6%A7%E0%A7%80-%E0%A6%AD%E0%A6%BE%E0%A6%A4%E0%A6%BE-%E0%A6%95%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%95%E0%A7%8D%E0%A6%B0%E0%A6%AE"
+      }
+    ],
+    "last_checked": "2026-11-18"
+  },
+  {
+    "id": "widow",
+    "name": {
+      "en": "Allowance for widowed and husband-deserted women",
+      "bn": "বিধবা ও স্বামী নিগৃহীতা মহিলা ভাতা"
+    },
+    "amount": {
+      "en": "Tk 700 a month · Tk 1,000 if over 90",
+      "bn": "মাসে ৭০০ টাকা · ৯০ বছরের বেশি হলে ১,০০০ টাকা"
+    },
+    "office": {
+      "en": "Department of Social Services (Upazila or City Social Services Office)",
+      "bn": "সমাজসেবা অধিদপ্তর (উপজেলা বা শহর সমাজসেবা অফিস)"
+    },
+    "about": {
+      "en": "Monthly cash for widowed women and women deserted by their husbands who have low income.",
+      "bn": "কম আয়ের বিধবা ও স্বামী পরিত্যক্তা নারীদের জন্য মাসিক ভাতা।"
+    },
+    "when": {
+      "en": "FY2026-27 online applications closed on 31 August 2026. Watch for the next notice.",
+      "bn": "২০২৬-২৭ অর্থবছরের অনলাইন আবেদন ৩১ আগস্ট ২০২৬-এ শেষ হয়েছে। পরবর্তী বিজ্ঞপ্তির দিকে নজর রাখুন।"
+    },
+    "apply_url": "https://dss.bhata.gov.bd/online-application",
+    "documents": [
+      {
+        "en": "National ID (NID)",
+        "bn": "জাতীয় পরিচয়পত্র (এনআইডি)"
+      },
+      {
+        "en": "Proof of your situation, such as a husband's death certificate; ask the office what it accepts",
+        "bn": "আপনার অবস্থার প্রমাণ, যেমন স্বামীর মৃত্যু সনদ; অফিস কী গ্রহণ করে জিজ্ঞাসা করুন"
+      },
+      {
+        "en": "A mobile number or bank account in your own name",
+        "bn": "নিজের নামে মোবাইল নম্বর বা ব্যাংক অ্যাকাউন্ট"
+      }
+    ],
+    "still_to_confirm": [
+      {
+        "en": "Low income, under the office's limit",
+        "bn": "কম আয়, অফিসের নির্ধারিত সীমার মধ্যে"
+      },
+      {
+        "en": "Not already getting another regular government allowance",
+        "bn": "ইতিমধ্যে অন্য কোনো নিয়মিত সরকারি ভাতা পাচ্ছেন না"
+      }
+    ],
+    "warning": null,
+    "sources": [
+      {
+        "en": "UNB, Safety-net rates fixed for FY2026-27 (Jan 2026)",
+        "bn": "ইউএনবি, ২০২৬-২৭ অর্থবছরের ভাতার হার নির্ধারণ (জানুয়ারি ২০২৬)",
+        "url": "https://unb.com.bd/category/Bangladesh/social-safety-net-to-be-spread-wider-go-deeper-from-next-fiscal/178109"
+      },
+      {
+        "en": "BSS, Online allowance applications extended to 31 Aug 2026",
+        "bn": "বাসস, ভাতার অনলাইন আবেদন ৩১ আগস্ট ২০২৬ পর্যন্ত বাড়ানো",
+        "url": "https://www.bssnews.net/others/415696"
+      },
+      {
+        "en": "BSS, Social Services online applications and the one-programme rule",
+        "bn": "বাসস, সমাজসেবার অনলাইন আবেদন ও একাধিক ভাতা না পাওয়ার নিয়ম",
+        "url": "https://www.bssnews.net/others/402190"
+      },
+      {
+        "en": "Department of Social Services, Chandpur: apply online free of charge",
+        "bn": "সমাজসেবা অধিদপ্তর, চাঁদপুর: বিনা খরচে অনলাইনে আবেদন",
+        "url": "https://dss.chandpur.gov.bd/en/site/page/rSPg-%E0%A6%85%E0%A6%B8%E0%A6%9A%E0%A7%8D%E0%A6%9B%E0%A6%B2-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%A8%E0%A7%8D%E0%A6%A7%E0%A7%80-%E0%A6%AD%E0%A6%BE%E0%A6%A4%E0%A6%BE-%E0%A6%95%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%95%E0%A7%8D%E0%A6%B0%E0%A6%AE"
+      }
+    ],
+    "last_checked": "2026-11-18"
+  },
+  {
+    "id": "disab",
+    "name": {
+      "en": "Disability allowance",
+      "bn": "প্রতিবন্ধী ভাতা"
+    },
+    "amount": {
+      "en": "Tk 1,000 a month in the FY2026-27 budget (was Tk 900)",
+      "bn": "২০২৬-২৭ বাজেটে মাসে ১,০০০ টাকা (আগে ছিল ৯০০ টাকা)"
+    },
+    "office": {
+      "en": "Department of Social Services (Upazila or City Social Services Office)",
+      "bn": "সমাজসেবা অধিদপ্তর (উপজেলা বা শহর সমাজসেবা অফিস)"
+    },
+    "about": {
+      "en": "Monthly cash for persons with disabilities. Students with disabilities can also get an education stipend.",
+      "bn": "প্রতিবন্ধী ব্যক্তিদের মাসিক ভাতা। প্রতিবন্ধী শিক্ষার্থীরা শিক্ষা উপবৃত্তিও পেতে পারেন।"
+    },
+    "when": {
+      "en": "Since September 2026, online applications are open until further notice.",
+      "bn": "সেপ্টেম্বর ২০২৬ থেকে অনলাইন আবেদন পরবর্তী নির্দেশনা না আসা পর্যন্ত চালু।"
+    },
+    "apply_url": "https://dss.bhata.gov.bd/online-application",
+    "documents": [
+      {
+        "en": "National ID, or a birth certificate plus a guardian's NID for under-18s",
+        "bn": "জাতীয় পরিচয়পত্র, অথবা ১৮ বছরের কম হলে জন্মসনদ ও অভিভাবকের এনআইডি"
+      },
+      {
+        "en": "Ask the office what disability assessment or ID it needs",
+        "bn": "অফিসে জিজ্ঞাসা করুন কোন প্রতিবন্ধিতা মূল্যায়ন বা পরিচয়পত্র লাগবে"
+      },
+      {
+        "en": "A mobile number or bank account",
+        "bn": "মোবাইল নম্বর বা ব্যাংক অ্যাকাউন্ট"
+      }
+    ],
+    "still_to_confirm": [
+      {
+        "en": "Disability assessed in the way the office requires",
+        "bn": "অফিসের নিয়ম অনুযায়ী প্রতিবন্ধিতা মূল্যায়ন"
+      },
+      {
+        "en": "Low income",
+        "bn": "কম আয়"
+      },
+      {
+        "en": "Not already getting another regular government allowance",
+        "bn": "ইতিমধ্যে অন্য কোনো নিয়মিত সরকারি ভাতা পাচ্ছেন না"
+      }
+    ],
+    "warning": null,
+    "sources": [
+      {
+        "en": "The Daily Star, Social safety net budget 2026-27",
+        "bn": "দ্য ডেইলি স্টার, সামাজিক নিরাপত্তা বাজেট ২০২৬-২৭",
+        "url": "https://www.thedailystar.net/business/bangladesh-budget-2026-27/news/social-safety-net-budget-pro-poor-schemes-get-less-40-4198111"
+      },
+      {
+        "en": "BSS, Disability allowance applications open until further notice (Sep 2026)",
+        "bn": "বাসস, প্রতিবন্ধী ভাতার আবেদন পরবর্তী নির্দেশনা পর্যন্ত চালু (সেপ্টেম্বর ২০২৬)",
+        "url": "https://www.bssnews.net/others/420082"
+      },
+      {
+        "en": "BSS, Social Services online applications and the one-programme rule",
+        "bn": "বাসস, সমাজসেবার অনলাইন আবেদন ও একাধিক ভাতা না পাওয়ার নিয়ম",
+        "url": "https://www.bssnews.net/others/402190"
+      }
+    ],
+    "last_checked": "2026-11-18"
+  },
+  {
+    "id": "mcbp",
+    "name": {
+      "en": "Mother and Child Benefit",
+      "bn": "মা ও শিশু সহায়তা কর্মসূচি"
+    },
+    "amount": {
+      "en": "Tk 850 a month, for up to 3 years",
+      "bn": "মাসে ৮৫০ টাকা, সর্বোচ্চ ৩ বছর"
+    },
+    "office": {
+      "en": "Department of Women Affairs (Upazila Women Affairs Office)",
+      "bn": "মহিলা বিষয়ক অধিদপ্তর (উপজেলা মহিলা বিষয়ক অফিস)"
+    },
+    "about": {
+      "en": "Monthly cash for low-income pregnant women and young mothers, to support nutrition in a child's first years.",
+      "bn": "কম আয়ের গর্ভবতী নারী ও শিশুর মায়েদের মাসিক ভাতা, শিশুর প্রথম বছরগুলোর পুষ্টির জন্য।"
+    },
+    "when": {
+      "en": "Selection and timing are set locally. Ask your Upazila Women Affairs Office when it is enrolling.",
+      "bn": "বাছাই ও সময় স্থানীয়ভাবে ঠিক হয়। কবে নাম নেওয়া হবে, উপজেলা মহিলা বিষয়ক অফিসে জিজ্ঞাসা করুন।"
+    },
+    "apply_url": null,
+    "documents": [
+      {
+        "en": "National ID (NID)",
+        "bn": "জাতীয় পরিচয়পত্র (এনআইডি)"
+      },
+      {
+        "en": "Proof of pregnancy or the child's birth registration, as the office asks",
+        "bn": "গর্ভাবস্থার প্রমাণ বা শিশুর জন্মনিবন্ধন, অফিস যেমন চায়"
+      },
+      {
+        "en": "A mobile number or bank account in your own name",
+        "bn": "নিজের নামে মোবাইল নম্বর বা ব্যাংক অ্যাকাউন্ট"
+      }
+    ],
+    "still_to_confirm": [
+      {
+        "en": "Low income",
+        "bn": "কম আয়"
+      },
+      {
+        "en": "Local selection rules, such as age and number of pregnancies",
+        "bn": "স্থানীয় বাছাইয়ের নিয়ম, যেমন বয়স ও কততম সন্তান"
+      }
+    ],
+    "warning": null,
+    "sources": [
+      {
+        "en": "Prothom Alo, Budget 2026-27: Family Card and other safety-net programmes",
+        "bn": "প্রথম আলো, বাজেট ২০২৬-২৭: ফ্যামিলি কার্ড ও অন্যান্য সামাজিক নিরাপত্তা কর্মসূচি",
+        "url": "https://en.prothomalo.com/bangladesh/m856l7ntb4"
+      },
+      {
+        "en": "Daily Observer, Mother and Child Support: Tk 850 a month for 3 years",
+        "bn": "ডেইলি অবজারভার, মা ও শিশু সহায়তা: ৩ বছর মাসে ৮৫০ টাকা",
+        "url": "https://observerbd.com/news/581377"
+      }
+    ],
+    "last_checked": "2026-11-18"
+  },
+  {
+    "id": "fcard",
+    "name": {
+      "en": "Family Card",
+      "bn": "ফ্যামিলি কার্ড"
+    },
+    "amount": {
+      "en": "Tk 2,500 a month per household, paid to the mother or female head",
+      "bn": "প্রতি পরিবারে মাসে ২,৫০০ টাকা, মা বা নারী প্রধানের নামে"
+    },
+    "office": {
+      "en": "Ministry of Social Welfare, through a government household survey",
+      "bn": "সমাজকল্যাণ মন্ত্রণালয়, সরকারি পারিবারিক জরিপের মাধ্যমে"
+    },
+    "about": {
+      "en": "A new household card launched in March 2026. The money goes to the woman's own mobile wallet or bank account. Households are chosen by a poverty survey, not by applying.",
+      "bn": "মার্চ ২০২৬-এ চালু হওয়া নতুন পারিবারিক কার্ড। টাকা যায় নারীর নিজের মোবাইল ওয়ালেট বা ব্যাংক অ্যাকাউন্টে। আবেদনের মাধ্যমে নয়, দারিদ্র্য জরিপের মাধ্যমে পরিবার বাছাই করা হয়।"
+    },
+    "when": {
+      "en": "Expanding in phases. Ask your Union Parishad or ward office whether the survey has reached your area.",
+      "bn": "ধাপে ধাপে বাড়ছে। আপনার এলাকায় জরিপ হয়েছে কিনা ইউনিয়ন পরিষদ বা ওয়ার্ড অফিসে জিজ্ঞাসা করুন।"
+    },
+    "apply_url": null,
+    "documents": [
+      {
+        "en": "National ID of the mother or female head",
+        "bn": "মা বা নারী প্রধানের জাতীয় পরিচয়পত্র"
+      },
+      {
+        "en": "A mobile wallet or bank account in her name",
+        "bn": "তার নামে মোবাইল ওয়ালেট বা ব্যাংক অ্যাকাউন্ট"
+      }
+    ],
+    "still_to_confirm": [
+      {
+        "en": "Selected through the household survey",
+        "bn": "পারিবারিক জরিপে নির্বাচিত"
+      },
+      {
+        "en": "No household member is paid a salary, allowance or pension by a government body",
+        "bn": "পরিবারের কেউ সরকারি প্রতিষ্ঠান থেকে বেতন, ভাতা বা পেনশন পান না"
+      }
+    ],
+    "warning": {
+      "en": "If the woman holding the card already gets another personal government allowance (such as old-age or widow), that allowance stops. Other family members can keep theirs. Compare before you accept.",
+      "bn": "কার্ডধারী নারী যদি আগে থেকে অন্য ব্যক্তিগত সরকারি ভাতা (যেমন বয়স্ক বা বিধবা ভাতা) পান, সেটি বন্ধ হয়ে যাবে। পরিবারের অন্য সদস্যরা তাদের ভাতা রাখতে পারবেন। গ্রহণের আগে তুলনা করে নিন।"
+    },
+    "sources": [
+      {
+        "en": "BD Platform for SDGs, Family Card: Tk 2,500 to the mother's wallet or bank",
+        "bn": "এসডিজি প্ল্যাটফর্ম, ফ্যামিলি কার্ড: মায়ের মোবাইল ওয়ালেট বা ব্যাংকে ২,৫০০ টাকা",
+        "url": "https://bdplatform4sdgs.net/manifesto_watch/family-card/"
+      },
+      {
+        "en": "bdnews24, Cardholder cannot get other personal allowances",
+        "bn": "বিডিনিউজ২৪, কার্ডধারী অন্য ব্যক্তিগত ভাতা পাবেন না",
+        "url": "https://bdnews24.com/bangladesh/62f3e9f4a36c"
+      },
+      {
+        "en": "Dhaka Tribune, Who is excluded from the Family Card",
+        "bn": "ঢাকা ট্রিবিউন, কারা ফ্যামিলি কার্ড পাবেন না",
+        "url": "https://www.dhakatribune.com/bangladesh/405100/family-card-rollout-begins-tuesday-37-000"
+      },
+      {
+        "en": "Prothom Alo, Budget 2026-27: Family Card and other safety-net programmes",
+        "bn": "প্রথম আলো, বাজেট ২০২৬-২৭: ফ্যামিলি কার্ড ও অন্যান্য সামাজিক নিরাপত্তা কর্মসূচি",
+        "url": "https://en.prothomalo.com/bangladesh/m856l7ntb4"
+      }
+    ],
+    "last_checked": "2026-11-18"
+  }
+]
