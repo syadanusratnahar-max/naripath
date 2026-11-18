@@ -940,6 +940,54 @@
     "next_review": "2027-02-13"
   },
   {
+    "id": "ews1090",
+    "pillar": "safety-digital",
+    "data_type": "A_public_source",
+    "status": "public_source",
+    "not_found": [],
+    "location": "nationwide",
+    "cost": "free",
+    "life_stages": [
+      "student",
+      "career",
+      "working",
+      "entrepreneur",
+      "family",
+      "later"
+    ],
+    "name_en": "Disaster early warning 1090",
+    "name_bn": "দুর্যোগের আগাম সতর্কবার্তা ১০৯০",
+    "org_en": "Department of Disaster Management, Ministry of Disaster Management and Relief",
+    "org_bn": "দুর্যোগ ব্যবস্থাপনা অধিদপ্তর, দুর্যোগ ব্যবস্থাপনা ও ত্রাণ মন্ত্রণালয়",
+    "description_en": "Free recorded information line, 24 hours, from any mobile operator: daily weather forecast, rainfall, cyclone, flood and landslide warnings.",
+    "description_bn": "যেকোনো মোবাইল অপারেটর থেকে বিনামূল্যে, ২৪ ঘণ্টার রেকর্ড করা তথ্যসেবা: দৈনিক আবহাওয়ার পূর্বাভাস, বৃষ্টি, ঘূর্ণিঝড়, বন্যা ও ভূমিধসের সতর্কবার্তা।",
+    "eligibility_en": "Anyone.",
+    "eligibility_bn": "যে কেউ।",
+    "required_documents": [],
+    "phone": "1090",
+    "email": null,
+    "website": null,
+    "facebook": null,
+    "address_en": null,
+    "address_bn": null,
+    "caution_en": "Recorded information only, not a rescue service. In danger, call 999.",
+    "caution_bn": "শুধু রেকর্ড করা তথ্য, উদ্ধার সেবা নয়। বিপদে ৯৯৯-এ কল করুন।",
+    "sources": [
+      {
+        "en": "Department of Disaster Management: IVR 1090",
+        "bn": "দুর্যোগ ব্যবস্থাপনা অধিদপ্তর: আইভিআর ১০৯০",
+        "url": "https://ddm.portal.gov.bd/site/page/5de3f14d-66fe-447e-b61a-67300e680fd7/%E0%A6%86%E0%A6%87%E0%A6%AD%E0%A6%BF%E0%A6%86%E0%A6%B0"
+      },
+      {
+        "en": "Ministry of Disaster Management and Relief: IVR early warning",
+        "bn": "দুর্যোগ ব্যবস্থাপনা ও ত্রাণ মন্ত্রণালয়: আইভিআর আগাম সতর্কবার্তা",
+        "url": "https://modmr.portal.gov.bd/sites/default/files/files/modmr.portal.gov.bd/download/f8584dec_3272_45db_b747_8a226ede8711/ivr%20success%20story.pdf"
+      }
+    ],
+    "last_checked": "2026-11-18",
+    "next_review": "2027-02-18"
+  },
+  {
     "id": "probash",
     "pillar": "education-career",
     "data_type": "A_public_source",
