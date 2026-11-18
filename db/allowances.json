@@ -13,13 +13,17 @@
       "en": "Department of Social Services (Upazila or City Social Services Office)",
       "bn": "সমাজসেবা অধিদপ্তর (উপজেলা বা শহর সমাজসেবা অফিস)"
     },
+    "final_confirmation": {
+      "en": "Department of Social Services (Upazila or City Social Services Office)",
+      "bn": "সমাজসেবা অধিদপ্তর (উপজেলা বা শহর সমাজসেবা অফিস)"
+    },
     "about": {
       "en": "Monthly cash for older people with low income, paid to a mobile wallet or bank account.",
       "bn": "কম আয়ের প্রবীণদের জন্য মাসিক ভাতা, মোবাইল ওয়ালেট বা ব্যাংক অ্যাকাউন্টে দেওয়া হয়।"
     },
     "when": {
-      "en": "FY2026-27 online applications closed on 31 August 2026. Watch for the next notice from your Social Services office.",
-      "bn": "২০২৬-২৭ অর্থবছরের অনলাইন আবেদন ৩১ আগস্ট ২০২৬-এ শেষ হয়েছে। সমাজসেবা অফিসের পরবর্তী বিজ্ঞপ্তির দিকে নজর রাখুন।"
+      "en": "FY2026-27 online applications ran 1–31 August 2026 and have closed. Apply under your permanent address. Watch for the next notice from your Social Services office.",
+      "bn": "২০২৬-২৭ অর্থবছরের অনলাইন আবেদন ১–৩১ আগস্ট ২০২৬ চলেছে এবং শেষ হয়েছে। স্থায়ী ঠিকানা অনুযায়ী আবেদন করতে হয়। সমাজসেবা অফিসের পরবর্তী বিজ্ঞপ্তির দিকে নজর রাখুন।"
     },
     "apply_url": "https://dss.bhata.gov.bd/online-application",
     "documents": [
@@ -91,6 +95,10 @@
       "bn": "মাসে ৭০০ টাকা · ৯০ বছরের বেশি হলে ১,০০০ টাকা"
     },
     "office": {
+      "en": "Department of Social Services (Upazila or City Social Services Office)",
+      "bn": "সমাজসেবা অধিদপ্তর (উপজেলা বা শহর সমাজসেবা অফিস)"
+    },
+    "final_confirmation": {
       "en": "Department of Social Services (Upazila or City Social Services Office)",
       "bn": "সমাজসেবা অধিদপ্তর (উপজেলা বা শহর সমাজসেবা অফিস)"
     },
@@ -166,13 +174,17 @@
       "en": "Department of Social Services (Upazila or City Social Services Office)",
       "bn": "সমাজসেবা অধিদপ্তর (উপজেলা বা শহর সমাজসেবা অফিস)"
     },
+    "final_confirmation": {
+      "en": "Department of Social Services (Upazila or City Social Services Office)",
+      "bn": "সমাজসেবা অধিদপ্তর (উপজেলা বা শহর সমাজসেবা অফিস)"
+    },
     "about": {
       "en": "Monthly cash for persons with disabilities. Students with disabilities can also get an education stipend.",
       "bn": "প্রতিবন্ধী ব্যক্তিদের মাসিক ভাতা। প্রতিবন্ধী শিক্ষার্থীরা শিক্ষা উপবৃত্তিও পেতে পারেন।"
     },
     "when": {
-      "en": "Since September 2026, online applications are open until further notice.",
-      "bn": "সেপ্টেম্বর ২০২৬ থেকে অনলাইন আবেদন পরবর্তী নির্দেশনা না আসা পর্যন্ত চালু।"
+      "en": "On 1 September 2026 the department kept online applications open until further notice. Check that it is still open before you apply.",
+      "bn": "১ সেপ্টেম্বর ২০২৬ অধিদপ্তর জানিয়েছে, অনলাইন আবেদন পরবর্তী নির্দেশনা না আসা পর্যন্ত চালু থাকবে। আবেদনের আগে এখনো চালু আছে কিনা দেখে নিন।"
     },
     "apply_url": "https://dss.bhata.gov.bd/online-application",
     "documents": [
@@ -181,8 +193,8 @@
         "bn": "জাতীয় পরিচয়পত্র, অথবা ১৮ বছরের কম হলে জন্মসনদ ও অভিভাবকের এনআইডি"
       },
       {
-        "en": "Ask the office what disability assessment or ID it needs",
-        "bn": "অফিসে জিজ্ঞাসা করুন কোন প্রতিবন্ধিতা মূল্যায়ন বা পরিচয়পত্র লাগবে"
+        "en": "Suborno Nagorik card (disability ID card) or its number, issued by the Department of Social Services",
+        "bn": "সমাজসেবা অধিদপ্তরের দেওয়া সুবর্ণ নাগরিক কার্ড (প্রতিবন্ধিতা পরিচয়পত্র) বা তার নম্বর"
       },
       {
         "en": "A mobile number or bank account",
@@ -191,8 +203,8 @@
     ],
     "still_to_confirm": [
       {
-        "en": "Disability assessed in the way the office requires",
-        "bn": "অফিসের নিয়ম অনুযায়ী প্রতিবন্ধিতা মূল্যায়ন"
+        "en": "Registered through the disability identification survey, with a Suborno Nagorik card",
+        "bn": "প্রতিবন্ধিতা শনাক্তকরণ জরিপে নিবন্ধিত, সুবর্ণ নাগরিক কার্ডসহ"
       },
       {
         "en": "Low income",
@@ -216,6 +228,11 @@
         "url": "https://www.bssnews.net/others/420082"
       },
       {
+        "en": "Dhaka Times, A Suborno Nagorik card is required for the disability allowance (Aug 2026)",
+        "bn": "ঢাকা টাইমস, প্রতিবন্ধী ভাতায় সুবর্ণ নাগরিক কার্ড বাধ্যতামূলক (আগস্ট ২০২৬)",
+        "url": "https://www.dhakatimes24.com/2026/08/03/409843"
+      },
+      {
         "en": "BSS, Social Services online applications and the one-programme rule",
         "bn": "বাসস, সমাজসেবার অনলাইন আবেদন ও একাধিক ভাতা না পাওয়ার নিয়ম",
         "url": "https://www.bssnews.net/others/402190"
@@ -230,10 +247,14 @@
       "bn": "মা ও শিশু সহায়তা কর্মসূচি"
     },
     "amount": {
-      "en": "Tk 850 a month, for up to 3 years",
-      "bn": "মাসে ৮৫০ টাকা, সর্বোচ্চ ৩ বছর"
+      "en": "Tk 850 a month",
+      "bn": "মাসে ৮৫০ টাকা"
     },
     "office": {
+      "en": "Department of Women Affairs (Upazila Women Affairs Office)",
+      "bn": "মহিলা বিষয়ক অধিদপ্তর (উপজেলা মহিলা বিষয়ক অফিস)"
+    },
+    "final_confirmation": {
       "en": "Department of Women Affairs (Upazila Women Affairs Office)",
       "bn": "মহিলা বিষয়ক অধিদপ্তর (উপজেলা মহিলা বিষয়ক অফিস)"
     },
@@ -266,6 +287,10 @@
         "bn": "কম আয়"
       },
       {
+        "en": "How long payments last (reported as 3 years)",
+        "bn": "কত দিন টাকা পাবেন (৩ বছর বলে জানা গেছে)"
+      },
+      {
         "en": "Local selection rules, such as age and number of pregnancies",
         "bn": "স্থানীয় বাছাইয়ের নিয়ম, যেমন বয়স ও কততম সন্তান"
       }
@@ -273,13 +298,18 @@
     "warning": null,
     "sources": [
       {
+        "en": "UNB, Safety-net rates fixed for FY2026-27 (Jan 2026)",
+        "bn": "ইউএনবি, ২০২৬-২৭ অর্থবছরের ভাতার হার নির্ধারণ (জানুয়ারি ২০২৬)",
+        "url": "https://unb.com.bd/category/Bangladesh/social-safety-net-to-be-spread-wider-go-deeper-from-next-fiscal/178109"
+      },
+      {
         "en": "Prothom Alo, Budget 2026-27: Family Card and other safety-net programmes",
         "bn": "প্রথম আলো, বাজেট ২০২৬-২৭: ফ্যামিলি কার্ড ও অন্যান্য সামাজিক নিরাপত্তা কর্মসূচি",
         "url": "https://en.prothomalo.com/bangladesh/m856l7ntb4"
       },
       {
-        "en": "Daily Observer, Mother and Child Support: Tk 850 a month for 3 years",
-        "bn": "ডেইলি অবজারভার, মা ও শিশু সহায়তা: ৩ বছর মাসে ৮৫০ টাকা",
+        "en": "Daily Observer opinion column, Mother and Child Support: Tk 850 a month for 3 years (Jun 2026)",
+        "bn": "ডেইলি অবজারভার মতামত কলাম, মা ও শিশু সহায়তা: ৩ বছর মাসে ৮৫০ টাকা (জুন ২০২৬)",
         "url": "https://observerbd.com/news/581377"
       }
     ],
@@ -296,6 +326,10 @@
       "bn": "প্রতি পরিবারে মাসে ২,৫০০ টাকা, মা বা নারী প্রধানের নামে"
     },
     "office": {
+      "en": "Ministry of Social Welfare, through a government household survey",
+      "bn": "সমাজকল্যাণ মন্ত্রণালয়, সরকারি পারিবারিক জরিপের মাধ্যমে"
+    },
+    "final_confirmation": {
       "en": "Ministry of Social Welfare, through a government household survey",
       "bn": "সমাজকল্যাণ মন্ত্রণালয়, সরকারি পারিবারিক জরিপের মাধ্যমে"
     },

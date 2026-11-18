@@ -8,10 +8,19 @@
 <meta name="theme-color" content="#1c1a3f">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <link rel="icon" href="icons/icon-192.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
+/* Self-hosted fonts (SIL Open Font License, see fonts/): no third-party requests */
+@font-face{font-family:'Hind Siliguri';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/hind-siliguri-bengali-400-normal.woff2) format('woff2');unicode-range:U+0951-0952,U+0964-0965,U+0980-09FE,U+1CD0,U+1CD2,U+1CD5-1CD6,U+1CD8,U+1CE1,U+1CEA,U+1CED,U+1CF2,U+1CF5-1CF7,U+200C-200D,U+20B9,U+25CC,U+A8F1}
+@font-face{font-family:'Hind Siliguri';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/hind-siliguri-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Hind Siliguri';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/hind-siliguri-bengali-500-normal.woff2) format('woff2');unicode-range:U+0951-0952,U+0964-0965,U+0980-09FE,U+1CD0,U+1CD2,U+1CD5-1CD6,U+1CD8,U+1CE1,U+1CEA,U+1CED,U+1CF2,U+1CF5-1CF7,U+200C-200D,U+20B9,U+25CC,U+A8F1}
+@font-face{font-family:'Hind Siliguri';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/hind-siliguri-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Hind Siliguri';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/hind-siliguri-bengali-600-normal.woff2) format('woff2');unicode-range:U+0951-0952,U+0964-0965,U+0980-09FE,U+1CD0,U+1CD2,U+1CD5-1CD6,U+1CD8,U+1CE1,U+1CEA,U+1CED,U+1CF2,U+1CF5-1CF7,U+200C-200D,U+20B9,U+25CC,U+A8F1}
+@font-face{font-family:'Hind Siliguri';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/hind-siliguri-latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Hind Siliguri';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/hind-siliguri-bengali-700-normal.woff2) format('woff2');unicode-range:U+0951-0952,U+0964-0965,U+0980-09FE,U+1CD0,U+1CD2,U+1CD5-1CD6,U+1CD8,U+1CE1,U+1CEA,U+1CED,U+1CF2,U+1CF5-1CF7,U+200C-200D,U+20B9,U+25CC,U+A8F1}
+@font-face{font-family:'Hind Siliguri';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/hind-siliguri-latin-700-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Tiro Bangla';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/tiro-bangla-bengali-400-normal.woff2) format('woff2');unicode-range:U+0951-0952,U+0964-0965,U+0980-09FE,U+1CD0,U+1CD2,U+1CD5-1CD6,U+1CD8,U+1CE1,U+1CEA,U+1CED,U+1CF2,U+1CF5-1CF7,U+200C-200D,U+20B9,U+25CC,U+A8F1}
+@font-face{font-family:'Tiro Bangla';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/tiro-bangla-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 /* Layout idea: a phone-width app shell (max 480px) with a sticky header, a DEMO strip, one view at a time and a bottom tab bar. */
 /* Layout idea: an indigo "night sky" band where a nakshi-kantha running stitch draws NariPath's path through six knots (the six areas); everything below is calm paper with thread-coloured accents. Phone-width shell, floating tab dock. */
 :root{
@@ -175,21 +184,10 @@ table.cov td.some{background:color-mix(in srgb,var(--ok) 16%,transparent);color:
 .toggle input{width:20px;height:20px;accent-color:var(--primary)}
 .navstep{font-size:.8rem;color:var(--accent);font-weight:600;letter-spacing:.3px;text-transform:uppercase}
 .top-right{display:flex;align-items:center;gap:8px}
-.qexit{border:0;background:var(--bad);color:#fff;font-weight:600;font-size:.82rem;border-radius:999px;padding:7px 12px;cursor:pointer;white-space:nowrap}
 .listen{position:fixed;z-index:6;bottom:78px;right:max(16px,calc(50% - 224px));display:inline-flex;align-items:center;gap:6px;border:0;border-radius:999px;padding:10px 16px;background:var(--accent);color:#fff;font-weight:600;box-shadow:0 4px 14px rgba(0,0,0,.18);cursor:pointer}
 .listen svg{width:18px;height:18px}
 .toast{position:fixed;z-index:7;left:50%;transform:translateX(-50%);bottom:136px;max-width:min(440px,calc(100% - 32px));background:var(--text);color:var(--bg);padding:10px 14px;border-radius:10px;font-size:.9rem;display:none}
 .toast.show{display:block}
-.cover{position:fixed;inset:0;z-index:50;background:#fffaf2;color:#3b2a1a;overflow:auto;display:none;font-family:system-ui,sans-serif;color-scheme:light}
-.cover.show{display:block}
-.cover .in{max-width:480px;margin:0 auto;padding:20px 16px;display:flex;flex-direction:column;gap:14px}
-.cover h1{font-family:system-ui,sans-serif;font-size:1.5rem;cursor:default;user-select:none}
-.cover article{background:#fff;border:1px solid #eadcc8;border-radius:12px;padding:14px}
-.cover article b{display:block;margin-bottom:4px}
-.check-entry{display:flex;gap:12px;align-items:center;text-decoration:none;color:var(--text);background:color-mix(in srgb,var(--accent) 9%,var(--surface));border:1.5px solid color-mix(in srgb,var(--accent) 40%,var(--line));border-radius:var(--r);padding:14px}
-.check-entry .ico{--pc:var(--accent)}
-.check-entry div{flex:1}
-.check-entry small{color:var(--muted)}
 .q{display:flex;flex-direction:column;gap:10px}
 .opts{display:flex;flex-wrap:wrap;gap:8px}
 .opts .chip{padding:9px 14px}
@@ -198,47 +196,12 @@ table.cov td.some{background:color-mix(in srgb,var(--ok) 16%,transparent);color:
 .report-opts button{text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 12px;cursor:pointer}
 .report-opts button:hover{border-color:var(--primary)}
 .hidden-card{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
-.timer-strip{display:none;align-items:center;justify-content:space-between;gap:10px;padding:8px 16px;background:var(--primary);color:var(--surface);font-weight:600;font-size:.9rem}
-.timer-strip.show{display:flex}
-.timer-strip button{border:0;border-radius:999px;padding:6px 14px;font-weight:700;background:var(--surface);color:var(--primary);cursor:pointer}
-.sim{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--warn);border:1px solid currentColor;border-radius:999px;padding:1px 8px}
-.circle-row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 0;border-top:1px solid var(--line)}
-.circle-row:first-child{border-top:0}
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.form-grid input[type=text],.form-grid input[type=tel]{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:9px;width:100%}
-.mins{display:flex;gap:8px;flex-wrap:wrap}
-.countdown{font-family:var(--display);font-size:2.6rem;font-weight:700;font-variant-numeric:tabular-nums;line-height:1;color:var(--primary)}
-.hold{position:relative;overflow:hidden;width:100%;border:0;border-radius:14px;padding:18px;font-size:1.05rem;font-weight:700;color:#fff;background:var(--bad);cursor:pointer;touch-action:none;user-select:none;-webkit-user-select:none}
-.hold i{position:absolute;inset:0;width:0;background:rgba(0,0,0,.28)}
-.hold.holding i{width:100%;transition:width 2s linear}
-.hold span{position:relative}
-.sent{border:2px solid var(--ok);background:color-mix(in srgb,var(--ok) 9%,var(--surface))}
-.msg-preview{background:var(--bg);border:1px dashed var(--line);border-radius:10px;padding:10px;font-size:.9rem}
-.tools{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.tools .btn{flex-direction:column;padding:14px 10px;text-align:center}
-.overlay{position:fixed;inset:0;z-index:60;display:none;flex-direction:column;align-items:center;justify-content:space-between;padding:60px 24px 48px;background:#111318;color:#fff;font-family:system-ui,sans-serif;color-scheme:dark}
-.overlay.show{display:flex}
-.overlay .who{text-align:center}
-.overlay .who b{display:block;font-size:2rem;font-weight:600;margin-top:16px}
-.overlay .avatar{width:96px;height:96px;border-radius:50%;background:#3a3f4b;display:grid;place-items:center;font-size:2.4rem;margin:0 auto}
-.overlay .row{display:flex;gap:56px}
-.overlay .rb{width:72px;height:72px;border-radius:50%;border:0;color:#fff;font-size:.8rem;font-weight:600;cursor:pointer}
-.rb.dec{background:#e5383b}.rb.acc{background:#2fb344}
-.alarm-ov{background:#b3261e;justify-content:center;gap:28px}
-.alarm-ov b{font-size:2.2rem}
-.alarm-ov button{border:0;border-radius:999px;padding:16px 32px;font-size:1.1rem;font-weight:700;background:#fff;color:#b3261e;cursor:pointer}
 .vh{position:fixed;inset:0;z-index:70;display:none;align-items:flex-end;justify-content:center;background:rgba(10,12,30,.5)}
 .vh.show{display:flex}
 .vh-card{background:var(--surface);color:var(--text);width:100%;max-width:480px;max-height:88%;overflow:auto;border-radius:18px 18px 0 0;padding:20px 16px 24px;display:flex;flex-direction:column;gap:10px}
 .frame-note{display:flex;gap:10px;align-items:flex-start;justify-content:space-between;padding:9px 16px;background:color-mix(in srgb,var(--primary) 10%,var(--surface));border-bottom:1px solid var(--line);font-size:.84rem}
 .frame-note[hidden]{display:none}
 .frame-note button{border:0;background:none;color:var(--muted);font-size:1.1rem;cursor:pointer;padding:0 4px}
-@media (prefers-reduced-motion:no-preference){.alarm-ov.show{animation:flash .6s steps(2) infinite}}
-@keyframes flash{50%{background:#7a120c}}
-.safety-entry{display:flex;gap:12px;align-items:center;text-decoration:none;color:var(--text);background:color-mix(in srgb,var(--bad) 8%,var(--surface));border:1.5px solid color-mix(in srgb,var(--bad) 40%,var(--line));border-radius:var(--r);padding:14px}
-.safety-entry .ico{--pc:var(--bad)}
-.safety-entry div{flex:1}
-.safety-entry small{color:var(--muted)}
 @media (prefers-reduced-motion:no-preference){.res,.sit,.chip,.btn{transition:border-color .15s,background-color .15s}}
 
 /* ===== Redesign: kantha stitch ===== */
@@ -329,7 +292,6 @@ main{padding:18px 16px 120px;gap:26px}
 .btn.ghost{border-color:var(--line);color:var(--text)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn.primary,:root:not([data-theme="light"]) .chip[aria-pressed="true"]{background:var(--primary);border-color:var(--primary);color:var(--night)}}
 :root[data-theme="dark"] .btn.primary,:root[data-theme="dark"] .chip[aria-pressed="true"]{background:var(--primary);border-color:var(--primary);color:var(--night)}
-.safety-entry,.check-entry{display:none}
 
 .stitch.done .reveal{animation:none!important;stroke-dasharray:none!important}
 .stitch.done .knot{animation:none!important;opacity:1}
@@ -509,6 +471,9 @@ article.appcard.st4 .stepper li.done .dot{background:var(--ok);border-color:var(
 .mig-facts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .mig-facts div{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:2px}
 .mig-facts b{font-family:var(--display);font-size:1.7rem;line-height:1.1;color:var(--p4)}
+.fact-src{font-size:.72rem;color:var(--muted);margin-top:4px}
+.allow-meta{display:flex;flex-direction:column;gap:2px;color:var(--muted);border-left:3px solid var(--ac);padding-left:10px}
+.allow-meta b{color:var(--text);font-weight:600}
 .mig-facts span{font-size:.8rem;color:var(--muted);line-height:1.35}
 .call-card{border-top:4px solid var(--p4)}
 .agency{background:linear-gradient(160deg,color-mix(in srgb,var(--p4) 9%,var(--surface)),var(--surface))}
@@ -573,7 +538,6 @@ html[data-motion="reduce"] .knot{opacity:1!important}
 /* ---------------- Reference data ---------------- */
 const TODAY = (()=>{ const d=new Date(); d.setHours(0,0,0,0); return d; })();
 const isoLocal = d => d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
-
 const PILLARS = [
   {id:1, en:"Education & Career", bn:"শিক্ষা ও ক্যারিয়ার", icon:"book"},
   {id:2, en:"Health & Wellbeing", bn:"স্বাস্থ্য ও সুস্থতা", icon:"heart"},
@@ -582,14 +546,12 @@ const PILLARS = [
   {id:5, en:"Financial Independence", bn:"আর্থিক স্বাধীনতা", icon:"coin"},
   {id:6, en:"Everyday Life & Community", bn:"দৈনন্দিন জীবন ও কমিউনিটি", icon:"home"}
 ];
-
 const DIVISIONS = [
   {id:"dhaka",en:"Dhaka",bn:"ঢাকা"},{id:"ctg",en:"Chattogram",bn:"চট্টগ্রাম"},
   {id:"raj",en:"Rajshahi",bn:"রাজশাহী"},{id:"khu",en:"Khulna",bn:"খুলনা"},
   {id:"syl",en:"Sylhet",bn:"সিলেট"},{id:"bar",en:"Barishal",bn:"বরিশাল"},
   {id:"ran",en:"Rangpur",bn:"রংপুর"},{id:"mym",en:"Mymensingh",bn:"ময়মনসিংহ"}
 ];
-
 const DISTRICTS = {
   nationwide:{en:"Nationwide",bn:"সারাদেশ",div:null},
   dhaka:{en:"Dhaka",bn:"ঢাকা",div:"dhaka"},
@@ -1003,7 +965,7 @@ const T = {
   disclaimer:{en:"NariPath shares information to help you find services. It is not medical, legal or emergency advice.",bn:"NariPath শুধু সেবা খুঁজে পেতে তথ্য দেয়। এটি চিকিৎসা, আইনি বা জরুরি পরামর্শ নয়।"},
   back:{en:"Back",bn:"ফিরে যান"},
   myTitle:{en:"My NariPath",bn:"আমার নারীপথ"},
-  mySub:{en:"Stored only in this browser. No account, no name, no location collected.",bn:"শুধু এই ব্রাউজারে সংরক্ষিত। কোনো অ্যাকাউন্ট, নাম বা অবস্থান সংগ্রহ করা হয় না।"},
+  mySub:{en:"Everything here is stored only in this browser and never sent to NariPath. No account, and the app never asks for your name or location.",bn:"এখানকার সবকিছু শুধু এই ব্রাউজারে সংরক্ষিত, নারীপথে কখনো পাঠানো হয় না। কোনো অ্যাকাউন্ট নেই, আর অ্যাপ কখনো আপনার নাম বা অবস্থান চায় না।"},
   actionPaths:{en:"Action Paths",bn:"অ্যাকশন পাথ"}, savedRes:{en:"Saved resources",bn:"সেভ করা তথ্য"},
   noPaths:{en:"No Action Paths yet. Open any resource and tap Start Action Path.",bn:"এখনো কোনো অ্যাকশন পাথ নেই। যেকোনো তথ্য খুলে অ্যাকশন পাথ শুরু করুন চাপুন।"},
   noSaved:{en:"Nothing saved yet.",bn:"এখনো কিছু সেভ করা হয়নি।"},
@@ -1021,7 +983,6 @@ const T = {
   startOver:{en:"Choose a different situation",bn:"অন্য পরিস্থিতি বেছে নিন"},
   near:{en:"Near you",bn:"আপনার কাছে"},
   gapLink:{en:"Open the Information Gap Finder (admin demo)",bn:"তথ্য ঘাটতি শনাক্তকারী খুলুন (অ্যাডমিন ডেমো)"},
-  qexit:{en:"Quick exit",bn:"দ্রুত বের হন"},
   listen:{en:"Listen",bn:"শুনুন"}, stop:{en:"Stop",bn:"থামুন"},
   noTTS:{en:"Read-aloud isn't supported in this browser.",bn:"এই ব্রাউজারে পড়ে শোনানোর সুবিধা নেই।"},
   noBnVoice:{en:"This device has no Bangla voice installed. Switch to EN, or add a Bangla voice in your phone's text-to-speech settings.",bn:"এই ডিভাইসে বাংলা ভয়েস নেই। EN বেছে নিন, অথবা ফোনের টেক্সট-টু-স্পিচ সেটিংসে বাংলা ভয়েস যোগ করুন।"},
@@ -1084,7 +1045,7 @@ const T = {
   icsBtn:{en:"Calendar file",bn:"ক্যালেন্ডার ফাইল"},
   icsDone:{en:"Calendar file downloaded. Open it to add the reminder.",bn:"ক্যালেন্ডার ফাইল ডাউনলোড হয়েছে। খুললে রিমাইন্ডার যোগ হবে।"},
   icsFail:{en:"Downloads are blocked here. Use Google Calendar instead.",bn:"এখানে ডাউনলোড বন্ধ। গুগল ক্যালেন্ডার ব্যবহার করুন।"},
-  st9:{en:"Applications you track (the name you typed, its stage and follow-up date)",bn:"আপনার ট্র্যাক করা আবেদন (আপনার লেখা নাম, ধাপ ও খোঁজ নেওয়ার তারিখ)"},
+  st9:{en:"Applications you track: the title you typed, its stage and follow-up date. Whatever you type is stored as written, so leave out names and ID numbers.",bn:"আপনার ট্র্যাক করা আবেদন: আপনার লেখা শিরোনাম, ধাপ ও খোঁজ নেওয়ার তারিখ। যা লিখবেন হুবহু সংরক্ষিত হবে, তাই নাম ও পরিচয় নম্বর লিখবেন না।"},
   st10:{en:"Which safe-migration checklist items you ticked",bn:"নিরাপদ অভিবাসন চেকলিস্টে কোনগুলোতে টিক দিয়েছেন"},
   probashShort:{en:"Probash Bondhu, for migrant workers and families",bn:"প্রবাস বন্ধু, প্রবাসী কর্মী ও পরিবারের জন্য"},
   st7:{en:"Reminders you set (title and date)",bn:"আপনার দেওয়া রিমাইন্ডার (শিরোনাম ও তারিখ)"},
@@ -1137,7 +1098,7 @@ const T = {
   st4:{en:"Whether discreet mode is on",bn:"গোপন মোড চালু কিনা"},
   st5:{en:"Problem reports you made (listing, reason and date only)",bn:"আপনার করা সমস্যার রিপোর্ট (শুধু তথ্য, কারণ ও তারিখ)"},
   st6:{en:"No name, phone number, location or answers to the checker are saved",bn:"কোনো নাম, ফোন নম্বর, অবস্থান বা যাচাইয়ের উত্তর সংরক্ষণ করা হয় না"},
-  storedNot:{en:"Nothing you do in NariPath is sent to NariPath or anyone else. Like any website, the host (GitHub Pages) and Google Fonts see your device's internet address when the page loads. Read aloud prefers voices that run on your phone, but some phones use an online voice service that receives the text being read.",bn:"নারীপথে আপনি যা করেন তার কিছুই নারীপথ বা অন্য কারও কাছে পাঠানো হয় না। যেকোনো ওয়েবসাইটের মতো, পাতা খোলার সময় হোস্ট (গিটহাব পেজেস) ও গুগল ফন্টস আপনার ডিভাইসের ইন্টারনেট ঠিকানা দেখতে পায়। পড়ে শোনানোর জন্য ফোনের নিজস্ব ভয়েসকে অগ্রাধিকার দেওয়া হয়, তবে কিছু ফোন অনলাইন ভয়েস সেবা ব্যবহার করে, যা পড়া লেখাটি পায়।"},
+  storedNot:{en:"NariPath has no server and no account. What you save stays in this browser's storage on this device and is never sent to NariPath or anyone else. The app loads only from its own address (GitHub Pages, which, like any web host, sees your internet address when the page loads); fonts are included in the app, and there are no analytics or advertising scripts. You leave NariPath only when you tap a link yourself: a call, WhatsApp or SMS share, Google Calendar, or a source website. Read aloud prefers voices that run on your phone, but some phones use an online voice service that receives the text being read.",bn:"নারীপথের কোনো সার্ভার বা অ্যাকাউন্ট নেই। আপনি যা সংরক্ষণ করেন তা এই ডিভাইসের ব্রাউজারেই থাকে, নারীপথ বা অন্য কারও কাছে কখনো পাঠানো হয় না। অ্যাপটি শুধু নিজের ঠিকানা (গিটহাব পেজেস) থেকে খোলে; যেকোনো ওয়েব হোস্টের মতো এটি পাতা খোলার সময় আপনার ইন্টারনেট ঠিকানা দেখতে পায়। ফন্ট অ্যাপের ভেতরেই আছে, কোনো পরিসংখ্যান বা বিজ্ঞাপনের স্ক্রিপ্ট নেই। আপনি নিজে কোনো লিংকে চাপলে তবেই নারীপথের বাইরে যান: কল, হোয়াটসঅ্যাপ বা এসএমএস শেয়ার, গুগল ক্যালেন্ডার, বা কোনো উৎসের ওয়েবসাইট। পড়ে শোনানোর জন্য ফোনের নিজস্ব ভয়েসকে অগ্রাধিকার দেওয়া হয়, তবে কিছু ফোন অনলাইন ভয়েস সেবা ব্যবহার করে, যা পড়া লেখাটি পায়।"},
   rp_link:{en:"Website link is broken",bn:"ওয়েবসাইটের লিংক কাজ করে না"},
   rp_eligibility:{en:"Eligibility requirements have changed",bn:"যোগ্যতার শর্ত বদলে গেছে"},
   reportLocal:{en:"In this prototype, reports are saved only on this phone and shown in the Gap Finder. They are not sent anywhere. To tell the NariPath team, copy the report and send it to them.",bn:"এই প্রোটোটাইপে রিপোর্ট শুধু এই ফোনে সংরক্ষিত হয় এবং তথ্য ঘাটতি শনাক্তকারীতে দেখায়। কোথাও পাঠানো হয় না। নারীপথ দলকে জানাতে রিপোর্টটি কপি করে পাঠান।"},
@@ -1148,54 +1109,7 @@ const T = {
   copied:{en:"Number copied: {n}. Open your phone app and paste it.",bn:"নম্বর কপি হয়েছে: {n}। ফোন অ্যাপ খুলে পেস্ট করুন।"},
   copyFail:{en:"Couldn't copy. The number is {n}.",bn:"কপি করা যায়নি। নম্বরটি হলো {n}।"},
   pcswShort:{en:"Police Cyber Support for Women. Online harassment and blackmail.",bn:"পুলিশ সাইবার সাপোর্ট ফর উইমেন। অনলাইন হয়রানি ও ব্ল্যাকমেইল।"},
-  safetyTitle:{en:"Safety tools",bn:"নিরাপত্তা সরঞ্জাম"},
-  safetyEntry:{en:"Check-in timer, alert my trusted people, fake call, alarm",bn:"চেক-ইন টাইমার, বিশ্বস্ত মানুষকে সতর্কবার্তা, নকল কল, অ্যালার্ম"},
-  safetySim:{en:"Demo: alerts are simulated and nothing is sent yet. In an emergency, call 999 if you can.",bn:"ডেমো: সতর্কবার্তা অনুকরণ মাত্র, এখনো কিছু পাঠানো হয় না। জরুরি অবস্থায় সম্ভব হলে ৯৯৯-এ কল করুন।"},
-  simulated:{en:"Simulated",bn:"অনুকরণ"},
-  circleTitle:{en:"My Trusted Circle",bn:"আমার বিশ্বস্ত মানুষ"},
-  circleSub:{en:"Up to 3 people who know and agreed to receive your alerts. Saved only on this phone.",bn:"সর্বোচ্চ ৩ জন, যারা জানেন এবং আপনার সতর্কবার্তা পেতে রাজি হয়েছেন। শুধু এই ফোনে সংরক্ষিত।"},
-  namePh:{en:"Name",bn:"নাম"}, phonePh:{en:"Mobile number",bn:"মোবাইল নম্বর"},
-  agreed:{en:"This person knows and agreed",bn:"তিনি জানেন ও রাজি হয়েছেন"},
-  addPerson:{en:"Add person",bn:"যোগ করুন"},
-  needAgree:{en:"Add a name, a number, and tick that they agreed.",bn:"নাম, নম্বর দিন এবং তিনি রাজি হয়েছেন তা টিক দিন।"},
-  noCircle:{en:"Add at least one person first. Alerts go only to people you choose.",bn:"প্রথমে অন্তত একজনকে যোগ করুন। সতর্কবার্তা শুধু আপনার বেছে নেওয়া মানুষের কাছে যায়।"},
-  timerTitle:{en:"Safety check-in",bn:"নিরাপত্তা চেক-ইন"},
-  timerSub:{en:"Going somewhere that feels risky? Set a timer. If you don't tap I'm safe in time, your Trusted Circle is alerted, even if you can't touch your phone.",bn:"ঝুঁকিপূর্ণ কোথাও যাচ্ছেন? টাইমার দিন। সময়মতো 'আমি নিরাপদ' না চাপলে আপনার বিশ্বস্ত মানুষদের কাছে সতর্কবার্তা যাবে, আপনি ফোন ধরতে না পারলেও।"},
-  min:{en:"min",bn:"মিনিট"}, test30:{en:"Test: 30 sec",bn:"পরীক্ষা: ৩০ সেকেন্ড"},
-  startTimer:{en:"Start check-in",bn:"চেক-ইন শুরু করুন"},
-  imSafe:{en:"I'm safe",bn:"আমি নিরাপদ"}, extend:{en:"+15 min",bn:"+১৫ মিনিট"},
-  checkIn:{en:"Check-in in",bn:"চেক-ইন বাকি"},
-  safeDone:{en:"Check-in cancelled. Glad you're safe.",bn:"চেক-ইন বাতিল হয়েছে। আপনি নিরাপদ জেনে ভালো লাগল।"},
-  alertNow:{en:"Alert my Trusted Circle now",bn:"এখনই বিশ্বস্ত মানুষদের জানান"},
-  holdHint:{en:"Press and hold for 2 seconds, so it can't go off by accident.",bn:"২ সেকেন্ড চেপে ধরে রাখুন, যাতে ভুলে চাপ না পড়ে।"},
-  holdBtn:{en:"Hold to send alert",bn:"চেপে ধরে সতর্কবার্তা পাঠান"},
-  sentTitle:{en:"Alert sent (simulated)",bn:"সতর্কবার্তা পাঠানো হয়েছে (অনুকরণ)"},
-  sentTimer:{en:"Your check-in time ran out.",bn:"আপনার চেক-ইনের সময় শেষ হয়েছে।"},
-  sentHidden:{en:"Sent from the hidden trigger on the recipe page.",bn:"রান্নার পাতার গোপন বোতাম থেকে পাঠানো হয়েছে।"},
-  sentManual:{en:"You sent this alert yourself.",bn:"আপনি নিজে এই সতর্কবার্তা পাঠিয়েছেন।"},
-  sentTest:{en:"Test alert. In the real app your contacts would get a message marked TEST.",bn:"পরীক্ষামূলক সতর্কবার্তা। আসল অ্যাপে আপনার পরিচিতরা TEST চিহ্নিত বার্তা পাবেন।"},
-  sentTo:{en:"In the real app, this text message would go to:",bn:"আসল অ্যাপে এই এসএমএস যাবে:"},
-  msg:{en:"NariPath alert from {n}: I may be in danger and can't call. My location: [map link]. Please call me, and call 999 if you can't reach me.",bn:"নারীপথ সতর্কবার্তা ({n}): আমি হয়তো বিপদে আছি এবং কল করতে পারছি না। আমার অবস্থান: [ম্যাপ লিংক]। আমাকে কল করুন, আর না পেলে ৯৯৯-এ কল করুন।"},
-  me:{en:"me",bn:"আমি"},
   dismiss:{en:"Close",bn:"বন্ধ করুন"},
-  moreTools:{en:"Get away or get attention",bn:"সরে যান বা দৃষ্টি আকর্ষণ করুন"},
-  fakeCall:{en:"Fake incoming call",bn:"নকল ইনকামিং কল"},
-  fakeCallSub:{en:"A believable reason to leave",bn:"সরে যাওয়ার একটি বিশ্বাসযোগ্য কারণ"},
-  callerName:{en:"Caller name",bn:"কলারের নাম"},
-  ringIn:{en:"Rings in",bn:"বাজবে"}, now:{en:"Now",bn:"এখনই"}, sec10:{en:"10 sec",bn:"১০ সেকেন্ড"}, sec30:{en:"30 sec",bn:"৩০ সেকেন্ড"},
-  callSet:{en:"The call will ring soon. Lock your screen or keep it on.",bn:"শিগগিরই কল বাজবে। স্ক্রিন বন্ধ বা চালু রাখতে পারেন।"},
-  alarmBtn:{en:"Loud alarm",bn:"জোরালো অ্যালার্ম"},
-  alarmSub:{en:"Draws attention from people nearby",bn:"আশপাশের মানুষের দৃষ্টি আকর্ষণ করে"},
-  testTitle:{en:"Test your setup",bn:"আপনার সেটআপ পরীক্ষা করুন"},
-  testBtn:{en:"Send a test alert",bn:"পরীক্ষামূলক সতর্কবার্তা পাঠান"},
-  lastTest:{en:"Last test:",bn:"সর্বশেষ পরীক্ষা:"}, never:{en:"Never. Test it once so you know it works.",bn:"কখনো না। একবার পরীক্ষা করে নিশ্চিত হোন।"},
-  hiddenTip:{en:"Hidden trigger: on the Quick exit recipe page, press and hold the Cha card for 2 seconds. It looks like saving a favourite, and sends a silent alert.",bn:"গোপন বোতাম: দ্রুত বের হন চাপার পর রান্নার পাতায় 'Cha' কার্ডটি ২ সেকেন্ড চেপে ধরুন। দেখতে প্রিয় রেসিপি সেভ করার মতো, কিন্তু নীরবে সতর্কবার্তা যায়।"},
-  limitsTitle:{en:"What this can and can't do",bn:"এটি কী পারে আর কী পারে না"},
-  lim1:{en:"It alerts people you trust. It cannot send police; only 999 can.",bn:"এটি আপনার বিশ্বস্ত মানুষদের জানায়। পুলিশ পাঠাতে পারে না; সেটি শুধু ৯৯৯ পারে।"},
-  lim2:{en:"Your location is shared only during an alert. No history is kept.",bn:"শুধু সতর্কবার্তার সময় আপনার অবস্থান পাঠানো হয়। কোনো ইতিহাস রাখা হয় না।"},
-  lim3:{en:"Real sending needs the NariPath Android app and an SMS service (planned).",bn:"আসলে পাঠাতে নারীপথ অ্যান্ড্রয়েড অ্যাপ ও এসএমএস সেবা লাগবে (পরিকল্পিত)।"},
-  afterTitle:{en:"When you're safe",bn:"নিরাপদ হলে"},
-  favSaved:{en:"★ Saved",bn:"★ Saved"},
   noContact:{en:"No direct contact confirmed yet.",bn:"সরাসরি যোগাযোগ এখনো নিশ্চিত নয়।"},
   noteL:{en:"Please note",bn:"লক্ষ্য করুন"},
   noReports:{en:"No reports yet. Open any listing and tap Report a problem.",bn:"এখনো কোনো রিপোর্ট নেই। যেকোনো তথ্য খুলে সমস্যা জানান চাপুন।"}
@@ -1463,7 +1377,7 @@ const A11Y_DEFAULT={text:"normal",contrast:"normal",simple:"off",motion:"normal"
 const store = {
   get(k,d){try{const v=localStorage.getItem("naripath:"+k);return v?JSON.parse(v):d}catch(e){return d}},
   set(k,v){try{localStorage.setItem("naripath:"+k,JSON.stringify(v))}catch(e){}},
-  clear(){try{["lang","saved","paths","plans","reminders","a11y","reports","hide","circle","lastTest","apps","mig"].forEach(k=>localStorage.removeItem("naripath:"+k))}catch(e){}}
+  clear(){try{["lang","saved","paths","plans","reminders","a11y","reports","hide","apps","mig",/* legacy keys from the removed safety demo: */"circle","lastTest"].forEach(k=>localStorage.removeItem("naripath:"+k))}catch(e){}}
 };
 const S = {
   lang: store.get("lang","bn"),
@@ -1476,11 +1390,10 @@ const S = {
   hide: store.get("hide",false), revealed:false,
   check:{goal:"",age:"",edu:"",sit:[],done:false},
   reportOpen:false, reportDone:false,
-  circle: store.get("circle",[]), lastTest: store.get("lastTest",null),
   sewn:false, shareOpen:null, remindOpen:null,
   reminders: (store.get("reminders",[])||[]).filter(x=>x&&x.id&&/^\d{4}-\d{2}-\d{2}$/.test(x.date)&&x.title),
   a11y: Object.assign({}, A11Y_DEFAULT, store.get("a11y",{})||{}),
-  plans: Object.fromEntries(Object.entries(store.get("plans",{})||{}).filter(([k,v])=>PLANS[k]&&v&&typeof v==="object")), timerEnd:null, timerMin:30, sent:null, callDelay:10, callerName:""
+  plans: Object.fromEntries(Object.entries(store.get("plans",{})||{}).filter(([k,v])=>PLANS[k]&&v&&typeof v==="object"))
 };
 const persist=()=>{store.set("saved",S.saved);store.set("paths",S.paths);store.set("plans",S.plans);store.set("reminders",S.reminders)};
 
@@ -1923,7 +1836,7 @@ function viewAbout(){
     <h2>${en?"Privacy":"গোপনীয়তা"}</h2>
     <ul style="margin:0;padding-left:18px">
       <li>${en?"Browse everything without an account.":"অ্যাকাউন্ট ছাড়াই সব দেখা যায়।"}</li>
-      <li>${en?"No incident stories, names or locations are collected.":"কোনো ঘটনার বিবরণ, নাম বা অবস্থান সংগ্রহ করা হয় না।"}</li>
+      <li>${en?"NariPath never asks for incident stories, names or locations, and nothing you type is sent to NariPath.":"নারীপথ কখনো ঘটনার বিবরণ, নাম বা অবস্থান চায় না, আর আপনি যা লেখেন তা নারীপথে পাঠানো হয় না।"}</li>
       <li>${en?"Saved items, plans, ticked steps, your language choice, discreet mode and any problem reports are stored only in this browser on this device. Clear them anytime from My Path.":"সেভ করা তথ্য, পরিকল্পনা, টিক দেওয়া ধাপ, ভাষা, গোপন মোড ও সমস্যার রিপোর্ট শুধু এই ডিভাইসের ব্রাউজারে থাকে। আমার পথ পাতা থেকে যেকোনো সময় মুছে ফেলা যায়।"}</li>
       <li>${t("storedNot")}</li>
       <li>${en?"A contact that hasn't been checked is never presented as an emergency service.":"যাচাই না করা কোনো যোগাযোগকে কখনো জরুরি সেবা হিসেবে দেখানো হয় না।"}</li>
@@ -2447,9 +2360,10 @@ Object.assign(GSRC,{
   dssWindow:{en:"BSS, Online allowance applications extended to 31 Aug 2026",bn:"বাসস, ভাতার অনলাইন আবেদন ৩১ আগস্ট ২০২৬ পর্যন্ত বাড়ানো",url:"https://www.bssnews.net/others/415696"},
   dssRule:{en:"BSS, Social Services online applications and the one-programme rule",bn:"বাসস, সমাজসেবার অনলাইন আবেদন ও একাধিক ভাতা না পাওয়ার নিয়ম",url:"https://www.bssnews.net/others/402190"},
   dssDis:{en:"BSS, Disability allowance applications open until further notice (Sep 2026)",bn:"বাসস, প্রতিবন্ধী ভাতার আবেদন পরবর্তী নির্দেশনা পর্যন্ত চালু (সেপ্টেম্বর ২০২৬)",url:"https://www.bssnews.net/others/420082"},
+  suborno:{en:"Dhaka Times, A Suborno Nagorik card is required for the disability allowance (Aug 2026)",bn:"ঢাকা টাইমস, প্রতিবন্ধী ভাতায় সুবর্ণ নাগরিক কার্ড বাধ্যতামূলক (আগস্ট ২০২৬)",url:"https://www.dhakatimes24.com/2026/08/03/409843"},
   dssFree:{en:"Department of Social Services, Chandpur: apply online free of charge",bn:"সমাজসেবা অধিদপ্তর, চাঁদপুর: বিনা খরচে অনলাইনে আবেদন",url:"https://dss.chandpur.gov.bd/en/site/page/rSPg-%E0%A6%85%E0%A6%B8%E0%A6%9A%E0%A7%8D%E0%A6%9B%E0%A6%B2-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%A8%E0%A7%8D%E0%A6%A7%E0%A7%80-%E0%A6%AD%E0%A6%BE%E0%A6%A4%E0%A6%BE-%E0%A6%95%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%95%E0%A7%8D%E0%A6%B0%E0%A6%AE"},
   oldAgeRule:{en:"Summary of a DSS notice: women 62+, men 65+ (secondary source)",bn:"সমাজসেবা অধিদপ্তরের বিজ্ঞপ্তির সারাংশ: নারী ৬২+, পুরুষ ৬৫+ (দ্বিতীয় পর্যায়ের উৎস)",url:"https://bdservicerules.info/?p=25286"},
-  mcbp3:{en:"Daily Observer, Mother and Child Support: Tk 850 a month for 3 years",bn:"ডেইলি অবজারভার, মা ও শিশু সহায়তা: ৩ বছর মাসে ৮৫০ টাকা",url:"https://observerbd.com/news/581377"},
+  mcbp3:{en:"Daily Observer opinion column, Mother and Child Support: Tk 850 a month for 3 years (Jun 2026)",bn:"ডেইলি অবজারভার মতামত কলাম, মা ও শিশু সহায়তা: ৩ বছর মাসে ৮৫০ টাকা (জুন ২০২৬)",url:"https://observerbd.com/news/581377"},
   fcard:{en:"BD Platform for SDGs, Family Card: Tk 2,500 to the mother's wallet or bank",bn:"এসডিজি প্ল্যাটফর্ম, ফ্যামিলি কার্ড: মায়ের মোবাইল ওয়ালেট বা ব্যাংকে ২,৫০০ টাকা",url:"https://bdplatform4sdgs.net/manifesto_watch/family-card/"},
   fcardOne:{en:"bdnews24, Cardholder cannot get other personal allowances",bn:"বিডিনিউজ২৪, কার্ডধারী অন্য ব্যক্তিগত ভাতা পাবেন না",url:"https://bdnews24.com/bangladesh/62f3e9f4a36c"},
   fcardEx:{en:"Dhaka Tribune, Who is excluded from the Family Card",bn:"ঢাকা ট্রিবিউন, কারা ফ্যামিলি কার্ড পাবেন না",url:"https://www.dhakatribune.com/bangladesh/405100/family-card-rollout-begins-tuesday-37-000"},
@@ -2460,24 +2374,24 @@ Object.assign(GSRC,{
   bima2:{en:"The Financial Express, Migrant insurance: Tk 1,000 premium, early-return cover",bn:"দ্য ফাইন্যান্সিয়াল এক্সপ্রেস, প্রবাসী বীমা: ১,০০০ টাকা প্রিমিয়াম, দ্রুত ফেরার সুবিধা",url:"https://thefinancialexpress.com.bd/national/HIV-AIDS-insurance-for-migrants-on-the-anvil"},
   pkbLoans:{en:"The Daily Star, Probashi Kallyan Bank loan types, incl. women's loans",bn:"দ্য ডেইলি স্টার, প্রবাসী কল্যাণ ব্যাংকের ঋণ, নারীদের ঋণসহ",url:"https://www.thedailystar.net/node/3354026"},
   pkbLang:{en:"BSS, Collateral-free loans up to Tk 10 lakh for language courses (Mar 2026)",bn:"বাসস, ভাষা কোর্সের জন্য জামানতবিহীন সর্বোচ্চ ১০ লাখ টাকা ঋণ (মার্চ ২০২৬)",url:"https://www.bssnews.net/others/373156"},
-  migStats:{en:"Prothom Alo, Female worker migration depends on two countries",bn:"প্রথম আলো, নারী শ্রম অভিবাসন দুই দেশের ওপর নির্ভরশীল",url:"https://en.prothomalo.com/bangladesh/y8i8hke3hd"},
-  migStats2:{en:"The Daily Star, Labour migration in 2025 (RMMRU report)",bn:"দ্য ডেইলি স্টার, ২০২৫ সালের শ্রম অভিবাসন (রামরু প্রতিবেদন)",url:"https://www.thedailystar.net/nrb/migration/news/labour-migration-12-despite-challenges-4075921"},
+  migStats:{en:"Prothom Alo, Female worker migration depends on two countries (13 Sep 2026)",bn:"প্রথম আলো, নারী শ্রম অভিবাসন দুই দেশের ওপর নির্ভরশীল (১৩ সেপ্টেম্বর ২০২৬)",url:"https://en.prothomalo.com/bangladesh/y8i8hke3hd"},
+  migStats2:{en:"The Daily Star, Labour migration in 2025 (7 Jan 2026)",bn:"দ্য ডেইলি স্টার, ২০২৫ সালের শ্রম অভিবাসন (৭ জানুয়ারি ২০২৬)",url:"https://www.thedailystar.net/nrb/migration/news/labour-migration-12-despite-challenges-4075921"},
   bmet:{en:"Bureau of Manpower, Employment and Training (BMET)",bn:"জনশক্তি, কর্মসংস্থান ও প্রশিক্ষণ ব্যুরো (বিএমইটি)",url:"https://bmet.gov.bd"},
   baira:{en:"BAIRA, member agency list",bn:"বায়রা, সদস্য এজেন্সির তালিকা",url:"https://baira.org.bd"}
 });
 
 /* ---------- Allowances data (FY2026-27) ---------- */
 const ALLOW=[
-  {id:"oldage",c:"#d98a00",icon:"coin",
+  {id:"oldage",checked:"2026-11-18",c:"#d98a00",icon:"coin",
    name:K("Old-age allowance","বয়স্ক ভাতা"),
    amount:K("Tk 700 a month · Tk 1,000 if over 90","মাসে ৭০০ টাকা · ৯০ বছরের বেশি হলে ১,০০০ টাকা"),
    office:K("Department of Social Services (Upazila or City Social Services Office)","সমাজসেবা অধিদপ্তর (উপজেলা বা শহর সমাজসেবা অফিস)"),
    about:K("Monthly cash for older people with low income, paid to a mobile wallet or bank account.","কম আয়ের প্রবীণদের জন্য মাসিক ভাতা, মোবাইল ওয়ালেট বা ব্যাংক অ্যাকাউন্টে দেওয়া হয়।"),
-   when:K("FY2026-27 online applications closed on 31 August 2026. Watch for the next notice from your Social Services office.","২০২৬-২৭ অর্থবছরের অনলাইন আবেদন ৩১ আগস্ট ২০২৬-এ শেষ হয়েছে। সমাজসেবা অফিসের পরবর্তী বিজ্ঞপ্তির দিকে নজর রাখুন।"),
+   when:K("FY2026-27 online applications ran 1–31 August 2026 and have closed. Apply under your permanent address. Watch for the next notice from your Social Services office.","২০২৬-২৭ অর্থবছরের অনলাইন আবেদন ১–৩১ আগস্ট ২০২৬ চলেছে এবং শেষ হয়েছে। স্থায়ী ঠিকানা অনুযায়ী আবেদন করতে হয়। সমাজসেবা অফিসের পরবর্তী বিজ্ঞপ্তির দিকে নজর রাখুন।"),
    apply:DSS_APPLY, docs:[K("National ID (NID)","জাতীয় পরিচয়পত্র (এনআইডি)"),K("A mobile number or bank account in your own name","নিজের নামে মোবাইল নম্বর বা ব্যাংক অ্যাকাউন্ট"),K("A recent photo","সাম্প্রতিক ছবি")],
    confirm:[K("Low income, under the limit your Social Services office uses","কম আয়, সমাজসেবা অফিসের নির্ধারিত সীমার মধ্যে"),K("Not a government employee or pensioner","সরকারি চাকরিজীবী বা পেনশনভোগী নন"),K("Not already getting another regular government allowance","ইতিমধ্যে অন্য কোনো নিয়মিত সরকারি ভাতা পাচ্ছেন না")],
    sources:["ssnJan","dssWindow","dssRule","oldAgeRule","dssFree"]},
-  {id:"widow",c:"#c9365f",icon:"heart",
+  {id:"widow",checked:"2026-11-18",c:"#c9365f",icon:"heart",
    name:K("Allowance for widowed and husband-deserted women","বিধবা ও স্বামী নিগৃহীতা মহিলা ভাতা"),
    amount:K("Tk 700 a month · Tk 1,000 if over 90","মাসে ৭০০ টাকা · ৯০ বছরের বেশি হলে ১,০০০ টাকা"),
    office:K("Department of Social Services (Upazila or City Social Services Office)","সমাজসেবা অধিদপ্তর (উপজেলা বা শহর সমাজসেবা অফিস)"),
@@ -2486,26 +2400,26 @@ const ALLOW=[
    apply:DSS_APPLY, docs:[K("National ID (NID)","জাতীয় পরিচয়পত্র (এনআইডি)"),K("Proof of your situation, such as a husband's death certificate; ask the office what it accepts","আপনার অবস্থার প্রমাণ, যেমন স্বামীর মৃত্যু সনদ; অফিস কী গ্রহণ করে জিজ্ঞাসা করুন"),K("A mobile number or bank account in your own name","নিজের নামে মোবাইল নম্বর বা ব্যাংক অ্যাকাউন্ট")],
    confirm:[K("Low income, under the office's limit","কম আয়, অফিসের নির্ধারিত সীমার মধ্যে"),K("Not already getting another regular government allowance","ইতিমধ্যে অন্য কোনো নিয়মিত সরকারি ভাতা পাচ্ছেন না")],
    sources:["ssnJan","dssWindow","dssRule","dssFree"]},
-  {id:"disab",c:"#157f75",icon:"shield",
+  {id:"disab",checked:"2026-11-18",c:"#157f75",icon:"shield",
    name:K("Disability allowance","প্রতিবন্ধী ভাতা"),
    amount:K("Tk 1,000 a month in the FY2026-27 budget (was Tk 900)","২০২৬-২৭ বাজেটে মাসে ১,০০০ টাকা (আগে ছিল ৯০০ টাকা)"),
    office:K("Department of Social Services (Upazila or City Social Services Office)","সমাজসেবা অধিদপ্তর (উপজেলা বা শহর সমাজসেবা অফিস)"),
    about:K("Monthly cash for persons with disabilities. Students with disabilities can also get an education stipend.","প্রতিবন্ধী ব্যক্তিদের মাসিক ভাতা। প্রতিবন্ধী শিক্ষার্থীরা শিক্ষা উপবৃত্তিও পেতে পারেন।"),
-   when:K("Since September 2026, online applications are open until further notice.","সেপ্টেম্বর ২০২৬ থেকে অনলাইন আবেদন পরবর্তী নির্দেশনা না আসা পর্যন্ত চালু।"),
+   when:K("On 1 September 2026 the department kept online applications open until further notice. Check that it is still open before you apply.","১ সেপ্টেম্বর ২০২৬ অধিদপ্তর জানিয়েছে, অনলাইন আবেদন পরবর্তী নির্দেশনা না আসা পর্যন্ত চালু থাকবে। আবেদনের আগে এখনো চালু আছে কিনা দেখে নিন।"),
    open:true,
-   apply:DSS_APPLY, docs:[K("National ID, or a birth certificate plus a guardian's NID for under-18s","জাতীয় পরিচয়পত্র, অথবা ১৮ বছরের কম হলে জন্মসনদ ও অভিভাবকের এনআইডি"),K("Ask the office what disability assessment or ID it needs","অফিসে জিজ্ঞাসা করুন কোন প্রতিবন্ধিতা মূল্যায়ন বা পরিচয়পত্র লাগবে"),K("A mobile number or bank account","মোবাইল নম্বর বা ব্যাংক অ্যাকাউন্ট")],
-   confirm:[K("Disability assessed in the way the office requires","অফিসের নিয়ম অনুযায়ী প্রতিবন্ধিতা মূল্যায়ন"),K("Low income","কম আয়"),K("Not already getting another regular government allowance","ইতিমধ্যে অন্য কোনো নিয়মিত সরকারি ভাতা পাচ্ছেন না")],
-   sources:["budgetDis","dssDis","dssRule"]},
-  {id:"mcbp",c:"#7a3e9d",icon:"heart",
+   apply:DSS_APPLY, docs:[K("National ID, or a birth certificate plus a guardian's NID for under-18s","জাতীয় পরিচয়পত্র, অথবা ১৮ বছরের কম হলে জন্মসনদ ও অভিভাবকের এনআইডি"),K("Suborno Nagorik card (disability ID card) or its number, issued by the Department of Social Services","সমাজসেবা অধিদপ্তরের দেওয়া সুবর্ণ নাগরিক কার্ড (প্রতিবন্ধিতা পরিচয়পত্র) বা তার নম্বর"),K("A mobile number or bank account","মোবাইল নম্বর বা ব্যাংক অ্যাকাউন্ট")],
+   confirm:[K("Registered through the disability identification survey, with a Suborno Nagorik card","প্রতিবন্ধিতা শনাক্তকরণ জরিপে নিবন্ধিত, সুবর্ণ নাগরিক কার্ডসহ"),K("Low income","কম আয়"),K("Not already getting another regular government allowance","ইতিমধ্যে অন্য কোনো নিয়মিত সরকারি ভাতা পাচ্ছেন না")],
+   sources:["budgetDis","dssDis","suborno","dssRule"]},
+  {id:"mcbp",checked:"2026-11-18",c:"#7a3e9d",icon:"heart",
    name:K("Mother and Child Benefit","মা ও শিশু সহায়তা কর্মসূচি"),
-   amount:K("Tk 850 a month, for up to 3 years","মাসে ৮৫০ টাকা, সর্বোচ্চ ৩ বছর"),
+   amount:K("Tk 850 a month","মাসে ৮৫০ টাকা"),
    office:K("Department of Women Affairs (Upazila Women Affairs Office)","মহিলা বিষয়ক অধিদপ্তর (উপজেলা মহিলা বিষয়ক অফিস)"),
    about:K("Monthly cash for low-income pregnant women and young mothers, to support nutrition in a child's first years.","কম আয়ের গর্ভবতী নারী ও শিশুর মায়েদের মাসিক ভাতা, শিশুর প্রথম বছরগুলোর পুষ্টির জন্য।"),
    when:K("Selection and timing are set locally. Ask your Upazila Women Affairs Office when it is enrolling.","বাছাই ও সময় স্থানীয়ভাবে ঠিক হয়। কবে নাম নেওয়া হবে, উপজেলা মহিলা বিষয়ক অফিসে জিজ্ঞাসা করুন।"),
    apply:null, docs:[K("National ID (NID)","জাতীয় পরিচয়পত্র (এনআইডি)"),K("Proof of pregnancy or the child's birth registration, as the office asks","গর্ভাবস্থার প্রমাণ বা শিশুর জন্মনিবন্ধন, অফিস যেমন চায়"),K("A mobile number or bank account in your own name","নিজের নামে মোবাইল নম্বর বা ব্যাংক অ্যাকাউন্ট")],
-   confirm:[K("Low income","কম আয়"),K("Local selection rules, such as age and number of pregnancies","স্থানীয় বাছাইয়ের নিয়ম, যেমন বয়স ও কততম সন্তান")],
-   sources:["budget27","mcbp3"]},
-  {id:"fcard",c:"#3b36a8",icon:"home",
+   confirm:[K("Low income","কম আয়"),K("How long payments last (reported as 3 years)","কত দিন টাকা পাবেন (৩ বছর বলে জানা গেছে)"),K("Local selection rules, such as age and number of pregnancies","স্থানীয় বাছাইয়ের নিয়ম, যেমন বয়স ও কততম সন্তান")],
+   sources:["ssnJan","budget27","mcbp3"]},
+  {id:"fcard",checked:"2026-11-18",c:"#3b36a8",icon:"home",
    name:K("Family Card","ফ্যামিলি কার্ড"),
    amount:K("Tk 2,500 a month per household, paid to the mother or female head","প্রতি পরিবারে মাসে ২,৫০০ টাকা, মা বা নারী প্রধানের নামে"),
    office:K("Ministry of Social Welfare, through a government household survey","সমাজকল্যাণ মন্ত্রণালয়, সরকারি পারিবারিক জরিপের মাধ্যমে"),
@@ -2558,7 +2472,7 @@ const MIG={
   before:[
     [K("Check the agency's licence first","আগে এজেন্সির লাইসেন্স যাচাই করুন"),K("Find the agency's licence (RL) number on BMET's public list and on BAIRA's member list before you pay or hand over your passport.","টাকা বা পাসপোর্ট দেওয়ার আগে বিএমইটির পাবলিক তালিকা ও বায়রার সদস্য তালিকায় এজেন্সির লাইসেন্স (আরএল) নম্বর খুঁজে দেখুন।"),"agencyCheck"],
     [K("Get the job offer in writing","চাকরির প্রস্তাব লিখিত নিন"),K("Employer, country, work, salary, hours and days off should be written down. Ask someone you trust to read it with you.","নিয়োগকর্তা, দেশ, কাজ, বেতন, কাজের সময় ও ছুটি লিখিত থাকা উচিত। বিশ্বস্ত কাউকে সাথে নিয়ে পড়ুন।"),null],
-    [K("Ask for a receipt for every payment","প্রতিটি টাকার রসিদ নিন"),K("Many women are charged money even where recruitment is meant to cost them little or nothing. Never pay a broker without a receipt from the licensed agency.","নিয়োগে খরচ খুব কম বা না থাকার কথা থাকলেও অনেক নারীর কাছ থেকে টাকা নেওয়া হয়। লাইসেন্সধারী এজেন্সির রসিদ ছাড়া কোনো দালালকে টাকা দেবেন না।"),"migStats"],
+    [K("Ask for a receipt for every payment","প্রতিটি টাকার রসিদ নিন"),K("Before paying, ask BMET or call 16135 what the official cost is for your job and country. Never pay a broker without a receipt from the licensed agency.","টাকা দেওয়ার আগে বিএমইটিতে জিজ্ঞাসা করুন বা ১৬১৩৫-এ কল করে জেনে নিন আপনার কাজ ও দেশের জন্য সরকারি খরচ কত। লাইসেন্সধারী এজেন্সির রসিদ ছাড়া কোনো দালালকে টাকা দেবেন না।"),null],
     [K("Register and get BMET clearance","নিবন্ধন করে বিএমইটি ছাড়পত্র নিন"),K("Go through BMET and your District Employment and Manpower Office, and attend the pre-departure training and orientation.","বিএমইটি ও জেলা কর্মসংস্থান ও জনশক্তি অফিসের মাধ্যমে যান, এবং বিদেশ যাত্রার আগের প্রশিক্ষণ ও ওরিয়েন্টেশনে অংশ নিন।"),"bmet"],
     [K("Know your insurance","আপনার বীমা সম্পর্কে জানুন"),K("Probashi Kormi Bima: a one-time Tk 1,000 premium covers 5 years. Death: Tk 10 lakh to your nominee. Disability: 15–90% of that. Returning within 6 months: Tk 50,000.","প্রবাসী কর্মী বীমা: একবার ১,০০০ টাকা প্রিমিয়ামে ৫ বছরের সুরক্ষা। মৃত্যু: নমিনি পাবেন ১০ লাখ টাকা। প্রতিবন্ধিতা: এর ১৫–৯০%। ৬ মাসের মধ্যে ফিরে এলে: ৫০,০০০ টাকা।"),"bima"],
     [K("Borrow carefully, if you must","দরকার হলে সাবধানে ঋণ নিন"),K("Probashi Kallyan Bank gives collateral-free migration loans, including loans for women. Avoid moneylenders.","প্রবাসী কল্যাণ ব্যাংক জামানতবিহীন অভিবাসন ঋণ দেয়, নারীদের জন্য আলাদা ঋণসহ। মহাজনের কাছ থেকে ঋণ এড়িয়ে চলুন।"),"pkbLoans"],
@@ -2601,6 +2515,7 @@ function viewAllowances(){
       <div class="allow-top"><span class="allow-ico">${icon(a.icon)}</span><div><h3>${L(a.name)}</h3><span class="small muted">${L(a.office)}</span></div></div>
       <p class="allow-amt">${L(a.amount)}</p>
       <p class="small">${L(a.about)}</p>
+      <p class="allow-meta small"><span>${t("checkedL")}: <b>${esc(date(a.checked||TOOL_CHECKED))}</b></span><span>${tx("Final word","চূড়ান্ত তথ্য")}: <b>${L(a.office)}</b></span></p>
       ${why?`<p class="crit-head">${t("someMatch")}</p><ul class="crit-list">${why.map(x=>`<li class="yes"><span class="mk">✓</span><span>${L(x)}</span></li>`).join("")}</ul>`:""}
       <p class="crit-head">${t("toConfirm")}</p>
       <ul class="crit-list">${a.confirm.map(x=>`<li class="tbc"><span class="mk">?</span><span>${L(x)}</span></li>`).join("")}<li class="tbc"><span class="mk">?</span><span>${t("officialReq")}</span></li></ul>
@@ -2609,7 +2524,6 @@ function viewAllowances(){
         <p class="small"><b>${tx("When","কখন")}:</b> ${L(a.when)}</p>
         <p class="small"><b>${t("docsL")}:</b></p><ul class="small">${a.docs.map(d=>`<li>${L(d)}</li>`).join("")}</ul>
         ${srcList(a.sources)}
-        <p class="small muted">${t("checkedL")}: ${esc(date(TOOL_CHECKED))}</p>
       </details>
       <div class="btn-row">
         ${a.apply?`<a class="btn ghost" href="${esc(safeUrl(a.apply))}" target="_blank" rel="noopener noreferrer">${a.open?tx("Apply online","অনলাইনে আবেদন"):tx("Official portal","সরকারি পোর্টাল")}</a>`:""}
@@ -2637,7 +2551,7 @@ function viewAllowances(){
     ${ALLOW.filter(a=>!res.some(m=>m.a.id===a.id)).map(a=>card(a,null)).join("")}
   </section>
   ${shareBlock("al","all")}
-  <p class="note">${tx("Amounts are from the FY2026-27 decisions and budget reported in July 2026 and later. Rules and dates change; confirm with the office before acting.","পরিমাণগুলো ২০২৬-২৭ অর্থবছরের সিদ্ধান্ত ও বাজেট থেকে নেওয়া। নিয়ম ও তারিখ বদলাতে পারে; কিছু করার আগে অফিসে নিশ্চিত হোন।")}</p>`;
+  <p class="note">${tx("Amounts come from the January 2026 rate decision and the FY2026-27 budget, as reported in the news sources listed on each card. NariPath is not an official source: the office named on each card has the final word on amounts, rules and dates.","পরিমাণগুলো জানুয়ারি ২০২৬-এর হার নির্ধারণ ও ২০২৬-২৭ বাজেট থেকে, প্রতিটি কার্ডে দেওয়া সংবাদ উৎস অনুযায়ী। নারীপথ সরকারি উৎস নয়: পরিমাণ, নিয়ম ও তারিখ সম্পর্কে চূড়ান্ত তথ্য দেবে প্রতিটি কার্ডে লেখা অফিস।")}</p>`;
 }
 
 function viewApps(){
@@ -2676,7 +2590,7 @@ function viewApps(){
     ${S.appAdd?`<form id="app-add" class="app-add">
       <label for="app-title"><b>${tx("What did you apply for?","কিসের জন্য আবেদন করেছেন?")}</b></label>
       <input id="app-title" type="text" maxlength="80" required placeholder="${tx("e.g. Trade licence","যেমন: ট্রেড লাইসেন্স")}" autocomplete="off">
-      <p class="small muted">${tx("Don't type ID, account or phone numbers here.","এখানে পরিচয়পত্র, অ্যাকাউন্ট বা ফোন নম্বর লিখবেন না।")}</p>
+      <p class="small muted">${tx("Saved only on this phone. Don't type names or ID, account or phone numbers.","শুধু এই ফোনে সংরক্ষিত। নাম বা পরিচয়পত্র, অ্যাকাউন্ট বা ফোন নম্বর লিখবেন না।")}</p>
       <div class="btn-row"><button type="submit" class="btn primary">${tx("Add","যোগ করুন")}</button><button type="button" class="btn ghost" data-appadd="0">${t("cancel")}</button></div>
     </form>`:`<div class="btn-row"><button type="button" class="btn primary" data-appadd="1">+ ${tx("Add an application","আবেদন যোগ করুন")}</button><a class="btn ghost" href="#allowances">${tx("Find allowances","ভাতা খুঁজুন")}</a></div>`}
   </section>
@@ -2693,8 +2607,8 @@ function viewMigrate(){
   return `${backLink("#home",t("back"))}
   ${toolHero("th-mig","plane",tx("Safe migration for work","কাজের জন্য নিরাপদ অভিবাসন"),tx("For women thinking of working abroad, and their families: check the agency, know the costs, know who to call.","বিদেশে কাজের কথা ভাবছেন এমন নারী ও তাদের পরিবারের জন্য: এজেন্সি যাচাই, খরচ জানা, কাকে কল করবেন জানা।"))}
   <section class="mig-facts">
-    <div><b>${num(62317)}</b><span>${tx("women went abroad for work in 2025, about 5.5% of all migrant workers","নারী ২০২৫ সালে কাজের জন্য বিদেশে গেছেন, মোট অভিবাসী কর্মীর প্রায় ৫.৫%")}</span></div>
-    <div><b>${tx("90%+","৯০%+")}</b><span>${tx("of them went to just two countries, Saudi Arabia and Jordan","গেছেন মাত্র দুই দেশে, সৌদি আরব ও জর্ডানে")}</span></div>
+    <div><b>${num(62317)}</b><span>${tx("women migrated for work in 2025, 5.5% of all migrant workers","জন নারী ২০২৫ সালে কাজের জন্য বিদেশে গেছেন, মোট অভিবাসী কর্মীর ৫.৫%")}</span><a class="fact-src" href="${esc(safeUrl(GSRC.migStats2.url))}" target="_blank" rel="noopener noreferrer">${tx("The Daily Star, 7 Jan 2026","দ্য ডেইলি স্টার, ৭ জানুয়ারি ২০২৬")}</a></div>
+    <div><b>${tx("90%+","৯০%+")}</b><span>${tx("of the 42,000+ women who went abroad for work in January–August 2026 went to Saudi Arabia or Jordan (BMET data)","জানুয়ারি–আগস্ট ২০২৬-এ কাজে বিদেশে যাওয়া ৪২,০০০-এর বেশি নারীর মধ্যে সৌদি আরব বা জর্ডানে গেছেন (বিএমইটির তথ্য)")}</span><a class="fact-src" href="${esc(safeUrl(GSRC.migStats.url))}" target="_blank" rel="noopener noreferrer">${tx("Prothom Alo, 13 Sep 2026","প্রথম আলো, ১৩ সেপ্টেম্বর ২০২৬")}</a></div>
   </section>
   <section class="section card call-card">
     <h2>${tx("Help, 24 hours","সহায়তা, ২৪ ঘণ্টা")}</h2>
