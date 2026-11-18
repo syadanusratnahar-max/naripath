@@ -16,6 +16,11 @@ NariPath does not replace existing organisations or provide medical, legal, fina
 - **My Path dashboard:** saved listings, plans and Action Paths with progress, and "continue where you left off". Optional, private (stored only in the browser) and clearable in one tap.
 - **Relevance checker:** four tap-only questions show *potentially relevant* services, which answers matched and what still needs confirming. It never decides eligibility; answers are never saved.
 - **Discreet mode:** hide saved items in My Path.
+- **Get your documents:** step-by-step guides for birth registration, NID (new, correction, lost card), trade licence, and bank or mobile-money accounts, with fees, offices and official links.
+- **Share with someone:** send a listing or guide by WhatsApp, SMS or copy, with its source date and link. Nothing about the user is included.
+- **Reminders:** set a date on any plan or Action Path and add it to Google Calendar or a calendar file, so the phone does the reminding.
+- **Display settings (Aa):** larger text, high contrast, simple mode (main actions only, bigger buttons) and reduced motion.
+- **Works offline:** installable from the browser; guides, saved plans and helpline numbers open without internet after the first visit.
 - **Report a problem:** wrong phone number, broken link, closed service, changed eligibility, wrong cost. Reports stay on the device in this prototype and can be copied to send to the team.
 - **Read aloud** in Bangla or English (on-device voices preferred), **tap-to-call** and **copy number** buttons.
 - **Information Gap Finder:** an admin view that separates information *not yet researched* from information *checked and not publicly available*, with coverage across all 64 districts.
@@ -43,6 +48,7 @@ Information can change. Always confirm with the provider before acting.
 | Path | Purpose |
 | --- | --- |
 | `index.html` | The whole app: one self-contained page, no build step |
+| `sw.js`, `manifest.webmanifest`, `icons/` | Offline support and install-to-home-screen |
 | `db/schema.sql` | Supabase/PostgreSQL schema for the next version |
 | `db/resources.json` | The 28 records, ready to import |
 
