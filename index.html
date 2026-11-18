@@ -2090,6 +2090,7 @@ function remindForm(refKey,title){
     <div class="btn-row"><button type="submit" class="btn primary">${t("remindSave")}</button><button type="button" class="btn ghost" data-remindcancel="1">${t("cancel")}</button></div>
   </form>`;
 }
+function isFramed(){ try{ return window.self!==window.top; }catch(e){ return true; } }
 function remindersBlock(){
   if(!S.reminders.length) return "";
   const today=isoLocal(TODAY);
@@ -2098,7 +2099,7 @@ function remindersBlock(){
     <p class="small muted">${t("remindHow")}</p>
     ${S.reminders.slice().sort((a,b)=>a.date.localeCompare(b.date)).map(rem=>{ const st=rem.date<today?"late":rem.date===today?"today":"";
       return `<div class="rem ${st}"><div><b>${esc(rem.title)}</b><br><span class="small">${esc(date(rem.date))}${st==="today"?" · "+t("dueToday"):st==="late"?" · "+t("overdueRem"):""}</span></div>
-        <div class="rem-actions"><a class="copy" href="${esc(gcalLink(rem))}" target="_blank" rel="noopener noreferrer">${t("gcal")}</a><button type="button" class="copy" data-ics="${esc(rem.id)}">${t("icsBtn")}</button><button type="button" class="back" data-rmrem="${esc(rem.id)}">${t("remove")}</button></div></div>`}).join("")}
+        <div class="rem-actions"><a class="copy" href="${esc(gcalLink(rem))}" target="_blank" rel="noopener noreferrer">${t("gcal")}</a>${isFramed()?"":`<button type="button" class="copy" data-ics="${esc(rem.id)}">${t("icsBtn")}</button>`}<button type="button" class="back" data-rmrem="${esc(rem.id)}">${t("remove")}</button></div></div>`}).join("")}
   </section>`;
 }
 
