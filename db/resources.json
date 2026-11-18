@@ -552,7 +552,7 @@
   },
   {
     "id": "s01",
-    "pillar": "safety-digital",
+    "pillar": "personal-digital-safety",
     "data_type": "A_public_source",
     "status": "public_source",
     "not_found": [],
@@ -600,7 +600,7 @@
   },
   {
     "id": "pcsw",
-    "pillar": "safety-digital",
+    "pillar": "personal-digital-safety",
     "data_type": "A_public_source",
     "status": "public_source",
     "not_found": [],
@@ -652,7 +652,7 @@
   },
   {
     "id": "blastcyber",
-    "pillar": "safety-digital",
+    "pillar": "personal-digital-safety",
     "data_type": "A_public_source",
     "status": "public_source",
     "not_found": [
@@ -941,7 +941,7 @@
   },
   {
     "id": "ews1090",
-    "pillar": "safety-digital",
+    "pillar": "personal-digital-safety",
     "data_type": "A_public_source",
     "status": "public_source",
     "not_found": [],
