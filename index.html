@@ -820,6 +820,230 @@ html:not([data-motion="reduce"]) .ps-card{animation:psIn .35s ease-out}}
 h2.res-count{font-family:var(--body);font-weight:400;font-size:.85rem;margin:6px 0}
 #view:focus,#view h1:focus,.ps-say:focus,.ps-q:focus{outline:none}
 :focus-visible{outline:3px solid #5a3fd1;outline-offset:2px}
+/*NEWCSS-START*/
+/* =================== Hero landscape: the path through Bangladesh =================== */
+.band .stitch{margin-top:14px}
+.land .sun-halo{fill:#ffd36b;opacity:.28}
+.land .moon-cut,.land .sky-stars{display:none}
+.land .birds path{fill:none;stroke:#7a6a92;stroke-width:1.4;stroke-linecap:round}
+.land .hill-far{fill:#eadcff;opacity:.85}
+.land .hill-near{fill:#d9f2e0}
+.land .paddy path{fill:none;stroke:#9fd9b0;stroke-width:2;stroke-linecap:round}
+.land .rv1{stop-color:#c6eef1}.land .rv2{stop-color:#93d6df}
+.land .waves path{fill:none;stroke:#fff;stroke-width:1.4;stroke-linecap:round;opacity:.9}
+.land .boat-drift{transform:translate(78px,151px)}
+.land .hull{fill:#7a4a2a}.land .roof{fill:#ffbb3d}.land .oar{stroke:#7a4a2a;stroke-width:1.4;stroke-linecap:round}
+.land .trunk{fill:none;stroke:#a77b52;stroke-width:3;stroke-linecap:round}
+.land .fronds path{fill:none;stroke:#3aa868;stroke-width:3;stroke-linecap:round}
+.land .hut-roof{fill:#d08b34}.land .hut-wall{fill:#f6dcae}.land .hut-door{fill:#8a5a32}
+.walker .w-saree{fill:#e23a7a}.walker .w-anchal{fill:#ffbb3d}.walker .w-head{fill:#c98d63}.walker .w-hair{fill:#2b1d3f}.walker .w-bag{fill:#5a3fd1}
+.walker{filter:drop-shadow(0 2px 2px rgba(43,29,63,.25))}
+.knot text{paint-order:stroke;stroke:rgba(255,255,255,.85);stroke-width:3px;stroke-linejoin:round}
+@media (prefers-reduced-motion:no-preference){
+  html:not([data-motion="reduce"]) .land .sun{animation:sunrise 2.6s cubic-bezier(.2,.8,.2,1) both}
+  html:not([data-motion="reduce"]) .land .sun-halo{animation:halo 4s ease-in-out 2.6s infinite alternate;transform-box:fill-box;transform-origin:center}
+  html:not([data-motion="reduce"]) .land .boat-drift{animation:drift 16s ease-in-out infinite alternate}
+  html:not([data-motion="reduce"]) .land .boat{animation:bob 2.8s ease-in-out infinite alternate}
+  html:not([data-motion="reduce"]) .land .birds{animation:glide 10s ease-in-out infinite alternate}
+  html:not([data-motion="reduce"]) .land .sky-stars circle{animation:twinkle 3s ease-in-out infinite alternate;animation-delay:var(--d)}
+  html:not([data-motion="reduce"]) .stitch.done .land .sun{animation:none}
+  html:not([data-motion="reduce"]) .walker-fig{animation:step .45s ease-in-out 6 .25s alternate}
+}
+@keyframes sunrise{from{transform:translateY(34px);opacity:.2}to{transform:none;opacity:1}}
+@keyframes halo{to{transform:scale(1.18);opacity:.12}}
+@keyframes drift{from{transform:translate(64px,151px)}to{transform:translate(132px,152px)}}
+@keyframes bob{from{transform:translateY(0) rotate(-2deg)}to{transform:translateY(1.6px) rotate(2deg)}}
+@keyframes glide{from{transform:translateX(-8px)}to{transform:translate(10px,-3px)}}
+@keyframes twinkle{from{opacity:.25}to{opacity:1}}
+@keyframes step{to{transform:translate(0,-3.4px)}}
+
+/* =================== Settings =================== */
+.aa.gear{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);padding:0;text-decoration:none}
+.aa.gear svg{width:20px;height:20px}
+html[data-theme] .aa.gear:hover svg{animation:none}
+@media (prefers-reduced-motion:no-preference){html:not([data-motion="reduce"]) .aa.gear:hover svg{transition:transform .6s;transform:rotate(90deg)}}
+.set-card{display:flex;flex-direction:column;gap:12px}
+.set-card h2{font-size:1.15rem}
+.set-row{display:flex;flex-direction:column;gap:8px;padding-top:12px;border-top:1px solid var(--line)}
+.set-card h2+.set-row,.set-card h2+p+.set-row{border-top:0;padding-top:0}
+.set-txt{display:flex;flex-direction:column;gap:2px}
+.set-seg{display:flex;flex-wrap:wrap;gap:6px;background:color-mix(in srgb,var(--line) 55%,transparent);padding:4px;border-radius:14px;width:max-content;max-width:100%}
+.set-seg button{border:0;background:transparent;color:var(--text);font:inherit;font-weight:600;font-size:.92rem;padding:9px 14px;border-radius:11px;cursor:pointer;display:inline-flex;gap:6px;align-items:center;min-height:42px}
+.set-seg button[aria-pressed="true"]{background:var(--surface);color:var(--primary);box-shadow:0 2px 8px -3px rgba(43,29,63,.35)}
+.set-seg button span{display:inline-grid}.set-seg button svg{width:18px;height:18px}
+.set-preview{border:1px dashed var(--line);border-radius:14px;padding:10px 12px;display:flex;flex-direction:column;gap:2px}
+.set-link{display:grid;grid-template-columns:1fr 20px;gap:10px;align-items:center;padding:12px 0;border-top:1px solid var(--line);text-decoration:none;color:var(--text)}
+.set-link>span{display:flex;flex-direction:column;gap:2px}
+.set-link .chev{width:18px;height:18px;color:var(--muted)}
+.set-card ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:4px}
+.listen.on{background:#2b1d3f}
+
+/* =================== Period calendar =================== */
+.pc-hero{display:grid;grid-template-columns:56px 1fr;gap:14px;align-items:center;margin:6px 0 12px}
+.pc-hero h1{font-size:1.6rem;margin-bottom:4px}
+.pc-hero-ico,.pc-lock-ico,.pc-mini{display:grid;place-items:center;width:56px;height:56px;border-radius:18px;background:linear-gradient(135deg,#ff8fb6,#e23a7a);color:#fff;box-shadow:0 10px 24px -12px rgba(226,58,122,.7)}
+.pc-hero-ico svg,.pc-lock-ico svg{width:30px;height:30px}
+.pc-mini{width:84px;height:64px;border-radius:14px}.pc-mini svg{width:30px;height:30px}
+.pc-status{border-left:5px solid #e23a7a;display:flex;flex-direction:column;gap:6px}
+.pc-status h2{font-size:1.25rem}
+.pc-status.tone-warn{border-left-color:#c42b3a;background:color-mix(in srgb,#c42b3a 6%,var(--surface))}
+.pc-today{width:100%;min-height:54px;font-size:1.05rem;justify-content:center;margin:4px 0 12px}
+.pc-head{display:grid;grid-template-columns:44px 1fr 44px;align-items:center;margin-bottom:8px}
+.pc-head h2{text-align:center;font-size:1.15rem}
+.pc-nav{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--text);display:grid;place-items:center;cursor:pointer}
+.pc-nav svg{width:20px;height:20px}.pc-nav[disabled]{opacity:.35;cursor:default}
+.pc-wd,.pc-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.pc-wd span{text-align:center;font-size:.78rem;color:var(--muted);font-weight:600;padding:4px 0}
+.pc-day{aspect-ratio:1;min-height:40px;border-radius:50%;border:0;background:transparent;color:var(--text);font:inherit;font-weight:600;cursor:pointer;display:grid;place-items:center;position:relative}
+.pc-day:not([disabled]):hover{background:color-mix(in srgb,#e23a7a 10%,transparent)}
+.pc-day[disabled]{color:var(--muted);cursor:default}
+.pc-day.on{background:#c41f63;color:#fff}
+.pc-day.pred{box-shadow:inset 0 0 0 2px #ff8fb6;color:#c41f63}
+.pc-day.today{box-shadow:inset 0 0 0 2px var(--primary)}
+.pc-day.today.on{box-shadow:inset 0 0 0 2px var(--primary),inset 0 0 0 4px #fff}
+.pc-legend{display:flex;flex-wrap:wrap;gap:12px;margin-top:10px;color:var(--muted)}
+.pc-legend span{display:inline-flex;gap:6px;align-items:center}
+.pc-legend i{width:14px;height:14px;border-radius:50%;display:inline-block}
+.lg-on{background:#c41f63}.lg-pred{box-shadow:inset 0 0 0 2px #ff8fb6}.lg-today{box-shadow:inset 0 0 0 2px var(--primary)}
+.pc-stats{margin:12px 0}
+.pc-note{border-left:4px solid #ffbb3d;display:flex;flex-direction:column;gap:4px}
+.pc-list{padding-left:20px;line-height:1.6;margin:8px 0}
+.pc-warn{background:color-mix(in srgb,#ffbb3d 12%,var(--surface));display:flex;flex-direction:column;gap:6px}
+.pc-lock{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.pc-lock form,.pc-setpin{display:flex;flex-direction:column;gap:8px;margin-top:6px}
+.pin-in{font-size:1.6rem;letter-spacing:.6em;width:9ch;padding:8px 12px;border-radius:12px;border:2px solid var(--line);background:var(--surface);color:var(--text);text-align:center}
+.bad{color:var(--bad)}
+.pc-banner{background:linear-gradient(120deg,#fff0f5,#fff6e6);border-color:#ffd2a6}
+
+/* =================== Desktop / PC layout (960px and wider) =================== */
+@media (min-width:960px){
+  .app{max-width:none;display:grid;grid-template-columns:252px minmax(0,1fr);grid-template-areas:"head head" "demo demo" "off off" "frame frame" "nav main";align-items:start;border:0}
+  .skip{grid-area:head}
+  header.top{grid-area:head;padding:12px 28px}
+  .demo-strip{grid-area:demo;padding:8px 28px}
+  .offline-note{grid-area:off}.frame-note{grid-area:frame}
+  main#view{grid-area:main;width:100%;max-width:1100px;margin:0 auto;padding:28px 40px 96px;gap:28px}
+  nav.tabs{grid-area:nav;position:sticky!important;top:84px;bottom:auto!important;left:auto!important;transform:none!important;width:auto!important;margin:28px 0 0 24px;display:flex;flex-direction:column;gap:4px;padding:10px;border-radius:22px}
+  nav.tabs .pill{display:none}
+  nav.tabs a{flex-direction:row;justify-content:flex-start;gap:14px;padding:12px 16px;font-size:1rem;border-radius:14px;color:var(--muted)}
+  nav.tabs a svg{width:22px;height:22px}
+  nav.tabs a:hover{background:color-mix(in srgb,var(--primary) 8%,transparent);color:var(--text)}
+  nav.tabs a[aria-current="page"]{background:var(--grad)!important;color:#fff!important;box-shadow:0 10px 22px -12px rgba(90,63,209,.6)}
+  .listen{right:36px!important;bottom:32px!important}
+  .toast{bottom:40px}
+  .vh{align-items:center}.vh-card{border-radius:22px;max-width:520px}
+  /* home */
+  .band{margin:0;border-radius:30px;padding:40px 44px 84px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);column-gap:36px;align-items:center}
+  .band>.greet,.band>h1,.band>.lede{grid-column:1}
+  .band h1{font-size:2.6rem;max-width:14ch}
+  .band .stitch{grid-column:2;grid-row:1 / span 3;margin-top:0}
+  .band-search{max-width:680px;margin:-44px auto 0;width:100%}
+  .sit-list{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .svc{grid-template-columns:repeat(10,1fr);padding:22px 12px}
+  .svc .sv-ico{width:56px;height:56px}
+  .svc .sv-l{font-size:.82rem}
+  .pillars{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .tiles{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .quick{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .mig-facts{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .ps-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .ps-banner{max-width:none}
+  /* reading pages stay at a comfortable width */
+  main p,main li{max-width:78ch}
+  .ps-lesson,.ps-check-card,.pc-cal,.pc-lock{max-width:680px;width:100%;margin-left:auto;margin-right:auto}
+  .pc-day{min-height:56px;font-size:1.05rem}
+  .set-card{max-width:820px}
+  .card{transition:box-shadow .2s,transform .2s}
+  a.card:hover,.res:hover,.ps-item:hover,.sit:hover{transform:translateY(-2px);box-shadow:0 16px 34px -22px rgba(90,63,209,.55)}
+}
+@media (min-width:1400px){ main#view{max-width:1200px} }
+
+/* =================== Dark mode: "monsoon night" =================== */
+:root[data-theme="dark"]{
+  --bg:#150f24; --surface:#211936; --text:#f3eefb; --muted:#bcb0d3; --line:#362b52;
+  --primary:#b9a6ff; --accent:#ff7fb1; --accent-text:#ff9cc4; --night:#150f24; --night-2:#2a2046;
+  --ok:#74d8a8; --warn:#f4b860; --bad:#ff8f86;
+  --p1:#a9adff; --p2:#ff8fbd; --p3:#d6a6ff; --p4:#5fd6c8; --p5:#f6c35c; --p6:#86d99b;
+  --grad:linear-gradient(135deg,#7b4dff 0%,#e23a7a 100%);
+  --grad-soft:linear-gradient(135deg,#2a2046,#3a1f3a);
+  --shadow:0 12px 30px -18px rgba(0,0,0,.8);
+  color-scheme:dark;
+}
+:root[data-theme="dark"] body,:root[data-theme="dark"] .app{background-color:var(--bg)}
+:root[data-theme="dark"] header.top{background:rgba(24,17,40,.88)}
+:root[data-theme="dark"] .lang,:root[data-theme="dark"] .aa{background:var(--surface)!important;color:var(--text)!important;border-color:var(--line)!important}
+:root[data-theme="dark"] .demo-strip{background:var(--surface);color:var(--muted)}
+:root[data-theme="dark"] .demo-strip strong{background:#3d2c12;color:#ffd38a}
+:root[data-theme="dark"] .band{background:linear-gradient(165deg,#2a1745 0%,#1c1840 50%,#0f2a3b 100%)}
+:root[data-theme="dark"] .band .greet{color:#ff9cc4}
+:root[data-theme="dark"] .blob{opacity:.22}
+:root[data-theme="dark"] .land .sun-disc{fill:#f4f0ff}
+:root[data-theme="dark"] .land .sun-halo{fill:#cfc6ff;opacity:.16}
+:root[data-theme="dark"] .land .moon-cut{display:block;fill:#241a42}
+:root[data-theme="dark"] .land .sky-stars{display:block}
+:root[data-theme="dark"] .land .sky-stars circle{fill:#fff}
+:root[data-theme="dark"] .land .birds{display:none}
+:root[data-theme="dark"] .land .hill-far{fill:#2d2352;opacity:1}
+:root[data-theme="dark"] .land .hill-near{fill:#1d3a35}
+:root[data-theme="dark"] .land .paddy path{stroke:#2f6449}
+:root[data-theme="dark"] .land .rv1{stop-color:#1d3b58}:root[data-theme="dark"] .land .rv2{stop-color:#122840}
+:root[data-theme="dark"] .land .waves path{stroke:#a9c8ff;opacity:.35}
+:root[data-theme="dark"] .land .hull{fill:#4a3424}:root[data-theme="dark"] .land .roof{fill:#c98a2a}
+:root[data-theme="dark"] .land .trunk{stroke:#6e5038}:root[data-theme="dark"] .land .fronds path{stroke:#2f7d55}
+:root[data-theme="dark"] .land .hut-roof{fill:#7a4f25}:root[data-theme="dark"] .land .hut-wall{fill:#5d4c3a}:root[data-theme="dark"] .land .hut-door{fill:#ffcf5a}
+:root[data-theme="dark"] .stitch .ghost{stroke:rgba(255,255,255,.12)}
+:root[data-theme="dark"] .knot circle.bg{fill:var(--surface);filter:drop-shadow(0 4px 8px rgba(0,0,0,.45))}
+:root[data-theme="dark"] .knot:hover circle.bg,:root[data-theme="dark"] .knot:focus-visible circle.bg{fill:#2e2450}
+:root[data-theme="dark"] .knot text{fill:#e3dbf3;stroke:rgba(21,15,36,.85)}
+:root[data-theme="dark"] .band-search .search,:root[data-theme="dark"] .svc,:root[data-theme="dark"] .stamp,:root[data-theme="dark"] .btn.ghost,:root[data-theme="dark"] .ans,:root[data-theme="dark"] .ps-card,:root[data-theme="dark"] .ps-item{background:var(--surface);color:var(--text);border-color:var(--line)}
+:root[data-theme="dark"] .btn.primary{background:var(--grad);color:#fff;border-color:transparent}
+:root[data-theme="dark"] .chip[aria-pressed="true"]{background:var(--grad);color:#fff;border-color:transparent}
+:root[data-theme="dark"] .sit{background:linear-gradient(170deg,color-mix(in srgb,var(--pc) 16%,var(--surface)) 0%,var(--surface) 75%);border-color:color-mix(in srgb,var(--pc) 28%,var(--line))}
+:root[data-theme="dark"] nav.tabs{background:rgba(33,25,54,.94)!important;box-shadow:0 14px 34px -18px rgba(0,0,0,.8)!important}
+:root[data-theme="dark"] nav.tabs a[aria-current="page"]{color:#fff}
+:root[data-theme="dark"] .continue{background:linear-gradient(var(--surface),var(--surface)) padding-box,var(--grad) border-box}
+:root[data-theme="dark"] .listen.on{background:#3a2d5c!important}
+:root[data-theme="dark"] .ps-promise span{background:#123d39;color:#86e6da}
+:root[data-theme="dark"] .ps-tag.no{background:#2e2547;color:#d2c7e8}
+:root[data-theme="dark"] .ps-tag.yes{background:#173f2b;color:#94e4b5}
+:root[data-theme="dark"] .ps-lhead h1{color:color-mix(in srgb,var(--lc) 45%,#fff)}
+:root[data-theme="dark"] .ps-banner{background:linear-gradient(120deg,#3b1c37,#2a2152);border-color:#5b2e52}
+:root[data-theme="dark"] .ps-banner b{color:#ff9cc4}
+:root[data-theme="dark"] .pc-banner{background:linear-gradient(120deg,#3b1c37,#3d2b18);border-color:#6b4a2a}
+:root[data-theme="dark"] .pc-warn{background:color-mix(in srgb,#ffbb3d 9%,var(--surface))}
+:root[data-theme="dark"] .pc-day.pred{color:#ff9cc4}
+:root[data-theme="dark"] .pc-day.today.on{box-shadow:inset 0 0 0 2px var(--primary),inset 0 0 0 4px var(--surface)}
+:root[data-theme="dark"] .set-seg button[aria-pressed="true"]{background:#3a2d5c;color:#fff}
+:root[data-theme="dark"] .skip{background:#fff;color:#150f24}
+:root[data-theme="dark"] :focus-visible{outline-color:#c9b8ff}
+:root[data-theme="dark"] input,:root[data-theme="dark"] select,:root[data-theme="dark"] textarea{background:var(--surface);color:var(--text);border-color:var(--line)}
+:root[data-theme="dark"] .toast{background:#f3eefb;color:#150f24}
+
+/* =================== First-time guide =================== */
+#tour{position:fixed;inset:0;z-index:80}
+#tour[hidden]{display:none}
+#tour .tour-dim{position:absolute;inset:0;background:transparent}
+#tour.center .tour-dim{background:rgba(18,10,34,.62)}
+.tour-spot{position:fixed;border-radius:18px;box-shadow:0 0 0 200vmax rgba(18,10,34,.62),0 0 0 3px #ffbb3d inset;pointer-events:none;transition:all .28s cubic-bezier(.3,.8,.3,1)}
+.tour-bub{position:fixed;background:var(--surface);color:var(--text);border-radius:22px;padding:16px 18px 14px;box-shadow:0 24px 60px -20px rgba(0,0,0,.6);display:flex;flex-direction:column;gap:10px;max-width:calc(100vw - 24px);transition:top .28s,left .28s}
+#tour.center .tour-bub{top:50%!important;left:50%!important;transform:translate(-50%,-50%);width:min(380px,calc(100vw - 32px))!important}
+.tour-bub h2{font-size:1.25rem}
+.tour-bub p{font-size:1.02rem;line-height:1.6;margin:0}
+.tour-top{display:flex;justify-content:space-between;align-items:center}
+.tour-say{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--primary);display:grid;place-items:center;cursor:pointer}
+.tour-say svg{width:20px;height:20px}
+.tour-dots{display:flex;gap:5px}
+.tour-dots span{width:7px;height:7px;border-radius:99px;background:var(--line)}
+.tour-dots span.on{width:20px;background:var(--grad)}
+.tour-btns{display:grid;grid-template-columns:1fr 1.6fr;gap:8px}
+.tour-btns .btn{justify-content:center;min-height:48px}
+.tour-skip{background:none;border:0;color:var(--muted);font:inherit;font-size:.88rem;text-decoration:underline;cursor:pointer;align-self:center;padding:4px}
+.tour-lang{margin:2px 0}
+html.touring .listen{z-index:81;pointer-events:none}
+@media (prefers-reduced-motion:reduce){.tour-spot,.tour-bub{transition:none}}
+html[data-motion="reduce"] .tour-spot,html[data-motion="reduce"] .tour-bub{transition:none}
+/*NEWCSS-END*/
 </style>
 </head>
 <body>
@@ -831,7 +1055,7 @@ h2.res-count{font-family:var(--body);font-weight:400;font-size:.85rem;margin:6px
       <b>Nari<span>Path</span></b>
     </a>
     <div class="top-right">
-      <button type="button" class="aa" id="aa-btn" aria-label="Display settings">Aa</button>
+      <a class="aa gear" id="aa-btn" href="#settings" aria-label="Settings"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></a>
       <div class="lang" role="group" aria-label="Language">
         <button id="lang-bn" type="button" data-lang="bn">বাংলা</button>
         <button id="lang-en" type="button" data-lang="en">EN</button>
@@ -1450,6 +1674,8 @@ const T = {
   installFramed:{en:"Open syadanusratnahar-max.github.io/naripath in your phone browser to install NariPath and use it offline.",bn:"নারীপথ ইনস্টল ও অফলাইনে ব্যবহার করতে ফোনের ব্রাউজারে syadanusratnahar-max.github.io/naripath খুলুন।"},
   installed:{en:"NariPath is installed on this device.",bn:"এই ডিভাইসে নারীপথ ইনস্টল করা আছে।"},
   offlineNote:{en:"You're offline. Guides, saved plans and helpline numbers still work. Calls need mobile signal, not internet.",bn:"আপনি অফলাইনে আছেন। নির্দেশিকা, সেভ করা পরিকল্পনা ও হেল্পলাইন নম্বর এখনো কাজ করবে। কল করতে মোবাইল নেটওয়ার্ক লাগে, ইন্টারনেট নয়।"},
+  settings:{en:"Settings",bn:"সেটিংস"},
+  st14:{en:"Period calendar days you marked, and a lock PIN if you set one (stored as a code, not the PIN itself)",bn:"পিরিয়ড ক্যালেন্ডারে চিহ্নিত দিন, আর পিন দিলে তার সাংকেতিক রূপ (পিন নিজে নয়)"},
   learn:{en:"Learn",bn:"শিখুন"},
   learnTitle:{en:"Learn and understand",bn:"শিখুন ও বুঝুন"},
   learnSub:{en:"Short guides in plain language. Each one lists its sources.",bn:"সহজ ভাষায় ছোট নির্দেশিকা। প্রতিটিতে উৎস দেওয়া আছে।"},
@@ -1761,12 +1987,12 @@ GUIDES.push(
   related:["nlaso"], sources:["ekyc","bankDocs","mfs14","mfs14docs","wallet"]}
 );
 
-const A11Y_DEFAULT={text:"normal",contrast:"normal",simple:"off",motion:"normal"};
+const A11Y_DEFAULT={text:"normal",contrast:"normal",simple:"off",motion:"normal",theme:"light",voice:"naripath",rate:"normal"};
 /* ---------------- State ---------------- */
 const store = {
   get(k,d){try{const v=localStorage.getItem("naripath:"+k);return v?JSON.parse(v):d}catch(e){return d}},
   set(k,v){try{localStorage.setItem("naripath:"+k,JSON.stringify(v))}catch(e){}},
-  clear(){try{["lang","saved","paths","plans","reminders","a11y","reports","hide","apps","mig","dis","ps","pss",/* legacy keys from the removed safety demo: */"circle","lastTest"].forEach(k=>localStorage.removeItem("naripath:"+k))}catch(e){}}
+  clear(){try{["lang","saved","paths","plans","reminders","a11y","reports","hide","apps","mig","dis","ps","pss","pcal","voiceSaved",/* legacy keys from the removed safety demo: */"circle","lastTest"].forEach(k=>localStorage.removeItem("naripath:"+k))}catch(e){}}
 };
 const S = {
   lang: store.get("lang","bn"),
@@ -1812,6 +2038,11 @@ const ICONS = {
   list:'<path d="M9 6h11M9 12h11M9 18h11"/><path d="M4 6l1 1 2-2M4 12l1 1 2-2M4 18l1 1 2-2"/>',
   info:'<circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/>',
   chev:'<path d="M9 6l6 6-6 6"/>',
+  sun:'<circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/>',
+  moon:'<path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/>',
+  phone:'<rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/>',
+  gear:'<circle cx="12" cy="12" r="3"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1"/>',
+  cal:'<rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/><circle cx="12" cy="15" r="1.6"/>',
   learn:'<path d="M2 5c3-1 6-1 10 1 4-2 7-2 10-1v14c-3-1-6-1-10 1-4-2-7-2-10-1z"/><path d="M12 6v14"/>',
   share:'<circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/>',
   bell:'<path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15z"/><path d="M10 20a2 2 0 0 0 4 0"/>',
@@ -1893,7 +2124,6 @@ function viewHome(){
     : (h<5?"Good night":h<12?"Good morning":h<18?"Good afternoon":"Good evening");
   return `
   <section class="band">
-    <svg class="alpona" viewBox="-100 -100 200 200" aria-hidden="true"><g class="spin"><circle class="ring" r="94"/><circle class="dt" cx="88.0" cy="0.0" r="2.6"/><circle class="dt" cx="85.0" cy="22.8" r="2.6"/><circle class="dt" cx="76.2" cy="44.0" r="2.6"/><circle class="dt" cx="62.2" cy="62.2" r="2.6"/><circle class="dt" cx="44.0" cy="76.2" r="2.6"/><circle class="dt" cx="22.8" cy="85.0" r="2.6"/><circle class="dt" cx="0.0" cy="88.0" r="2.6"/><circle class="dt" cx="-22.8" cy="85.0" r="2.6"/><circle class="dt" cx="-44.0" cy="76.2" r="2.6"/><circle class="dt" cx="-62.2" cy="62.2" r="2.6"/><circle class="dt" cx="-76.2" cy="44.0" r="2.6"/><circle class="dt" cx="-85.0" cy="22.8" r="2.6"/><circle class="dt" cx="-88.0" cy="0.0" r="2.6"/><circle class="dt" cx="-85.0" cy="-22.8" r="2.6"/><circle class="dt" cx="-76.2" cy="-44.0" r="2.6"/><circle class="dt" cx="-62.2" cy="-62.2" r="2.6"/><circle class="dt" cx="-44.0" cy="-76.2" r="2.6"/><circle class="dt" cx="-22.8" cy="-85.0" r="2.6"/><circle class="dt" cx="-0.0" cy="-88.0" r="2.6"/><circle class="dt" cx="22.8" cy="-85.0" r="2.6"/><circle class="dt" cx="44.0" cy="-76.2" r="2.6"/><circle class="dt" cx="62.2" cy="-62.2" r="2.6"/><circle class="dt" cx="76.2" cy="-44.0" r="2.6"/><circle class="dt" cx="85.0" cy="-22.8" r="2.6"/><path class="pt pt0" d="M0 -26 C 10 -40 9 -62 0 -78 C -9 -62 -10 -40 0 -26Z" transform="rotate(0)"/><path class="pt pt1" d="M0 -26 C 10 -40 9 -62 0 -78 C -9 -62 -10 -40 0 -26Z" transform="rotate(30)"/><path class="pt pt2" d="M0 -26 C 10 -40 9 -62 0 -78 C -9 -62 -10 -40 0 -26Z" transform="rotate(60)"/><path class="pt pt0" d="M0 -26 C 10 -40 9 -62 0 -78 C -9 -62 -10 -40 0 -26Z" transform="rotate(90)"/><path class="pt pt1" d="M0 -26 C 10 -40 9 -62 0 -78 C -9 -62 -10 -40 0 -26Z" transform="rotate(120)"/><path class="pt pt2" d="M0 -26 C 10 -40 9 -62 0 -78 C -9 -62 -10 -40 0 -26Z" transform="rotate(150)"/><path class="pt pt0" d="M0 -26 C 10 -40 9 -62 0 -78 C -9 -62 -10 -40 0 -26Z" transform="rotate(180)"/><path class="pt pt1" d="M0 -26 C 10 -40 9 -62 0 -78 C -9 -62 -10 -40 0 -26Z" transform="rotate(210)"/><path class="pt pt2" d="M0 -26 C 10 -40 9 -62 0 -78 C -9 -62 -10 -40 0 -26Z" transform="rotate(240)"/><path class="pt pt0" d="M0 -26 C 10 -40 9 -62 0 -78 C -9 -62 -10 -40 0 -26Z" transform="rotate(270)"/><path class="pt pt1" d="M0 -26 C 10 -40 9 -62 0 -78 C -9 -62 -10 -40 0 -26Z" transform="rotate(300)"/><path class="pt pt2" d="M0 -26 C 10 -40 9 -62 0 -78 C -9 -62 -10 -40 0 -26Z" transform="rotate(330)"/><path class="ip" d="M0 -12 C 6 -18 6 -28 0 -34 C -6 -28 -6 -18 0 -12Z" transform="rotate(22.5)"/><path class="ip" d="M0 -12 C 6 -18 6 -28 0 -34 C -6 -28 -6 -18 0 -12Z" transform="rotate(67.5)"/><path class="ip" d="M0 -12 C 6 -18 6 -28 0 -34 C -6 -28 -6 -18 0 -12Z" transform="rotate(112.5)"/><path class="ip" d="M0 -12 C 6 -18 6 -28 0 -34 C -6 -28 -6 -18 0 -12Z" transform="rotate(157.5)"/><path class="ip" d="M0 -12 C 6 -18 6 -28 0 -34 C -6 -28 -6 -18 0 -12Z" transform="rotate(202.5)"/><path class="ip" d="M0 -12 C 6 -18 6 -28 0 -34 C -6 -28 -6 -18 0 -12Z" transform="rotate(247.5)"/><path class="ip" d="M0 -12 C 6 -18 6 -28 0 -34 C -6 -28 -6 -18 0 -12Z" transform="rotate(292.5)"/><path class="ip" d="M0 -12 C 6 -18 6 -28 0 -34 C -6 -28 -6 -18 0 -12Z" transform="rotate(337.5)"/><circle class="core" r="8"/><circle class="ring2" r="18"/></g></svg>
     <span class="blob b1" aria-hidden="true"></span><span class="blob b2" aria-hidden="true"></span><span class="blob b3" aria-hidden="true"></span>
     <p class="greet">${greet}</p>
     <h1>${S.lang==="bn"?"নিজের পথ খুঁজে নিন, এক পা এক পা করে।":"Find your way, one step at a time."}</h1>
@@ -1906,9 +2136,34 @@ function viewHome(){
         </linearGradient>
         <mask id="sewMask" maskUnits="userSpaceOnUse" x="-20" y="0" width="400" height="160"><path class="reveal" d="${d}"/></mask>
       </defs>
-      <path class="ghost" d="${d}"/>
+      <g class="land" aria-hidden="true">
+        <defs>
+          <radialGradient id="sunG" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fff3c4"/><stop offset=".55" stop-color="#ffcf5a"/><stop offset="1" stop-color="#ff9f43"/></radialGradient>
+          <linearGradient id="riverG" x1="0" x2="0" y1="0" y2="1"><stop offset="0" class="rv1"/><stop offset="1" class="rv2"/></linearGradient>
+        </defs>
+        <g class="sky-stars">${[[22,16],[64,8],[118,20],[188,10],[240,22],[300,12],[348,24],[160,6]].map(([x,y],i)=>`<circle cx="${x}" cy="${y}" r="${i%3?1:1.4}" style="--d:${i*.4}s"/>`).join("")}</g>
+        <g class="sun"><circle class="sun-halo" cx="150" cy="34" r="26"/><circle class="sun-disc" cx="150" cy="34" r="15" fill="url(#sunG)"/><circle class="moon-cut" cx="157" cy="29" r="12"/></g>
+        <g class="birds"><path d="M38 22 q4 -4 8 0 q4 -4 8 0"/><path d="M56 14 q3 -3 6 0 q3 -3 6 0"/><path d="M246 18 q4 -4 8 0 q4 -4 8 0"/></g>
+        <path class="hill-far" d="M-46 230 C -46 150, -40 118, -14 108 C 20 92, 70 92, 120 104 S 220 84, 280 96 S 350 90, 400 100 V230 H-30Z"/>
+        <path class="hill-near" d="M-38 230 C -38 160, -30 138, 0 130 C 40 118, 110 126, 190 124 S 320 112, 400 120 V230 H-30Z"/>
+        <g class="paddy">${Array.from({length:9},(_,i)=>`<path d="M${-10+i*44} 158 q 8 -14 ${18+i%3*3} -26"/>`).join("")}</g>
+        <path class="river" fill="url(#riverG)" d="M-30 230 C -30 180, -24 156, 4 150 C 50 140, 130 158, 220 148 S 330 142, 400 150 V230 H-30Z"/>
+        <g class="waves"><path d="M20 160 q8 -3 16 0 t16 0"/><path d="M200 162 q8 -3 16 0 t16 0"/><path d="M300 158 q8 -3 16 0 t16 0"/></g>
+        <g class="boat-drift"><g class="boat"><path class="hull" d="M-17 0 Q0 9 17 0 Q8 3 0 3 Q-8 3 -17 0Z"/><path class="roof" d="M-8 -1 Q0 -10 8 -1Z"/><line x1="11" y1="-1" x2="20" y2="-13" class="oar"/></g></g>
+        <g class="palm" transform="translate(12 130)"><path class="trunk" d="M0 0 q-2 -18 4 -34"/><g class="fronds" transform="translate(4 -34)"><path d="M0 0 q-12 -2 -18 6"/><path d="M0 0 q-10 -9 -16 -6"/><path d="M0 0 q2 -11 10 -13"/><path d="M0 0 q11 -5 17 2"/><path d="M0 0 q10 3 13 11"/></g></g>
+        <g class="palm" transform="translate(350 122) scale(.85)"><path class="trunk" d="M0 0 q3 -18 -3 -34"/><g class="fronds" transform="translate(-3 -34)"><path d="M0 0 q-12 -2 -18 6"/><path d="M0 0 q-10 -9 -16 -6"/><path d="M0 0 q2 -11 10 -13"/><path d="M0 0 q11 -5 17 2"/><path d="M0 0 q10 3 13 11"/></g></g>
+        <g class="hut" transform="translate(236 128)"><path class="hut-roof" d="M-12 0 L0 -11 L12 0Z"/><rect class="hut-wall" x="-9" y="0" width="18" height="10"/><rect class="hut-door" x="-2.5" y="3" width="5" height="7"/></g>
+      </g>
+      <path class="ghost" id="walkPath" d="${d}"/>
       <path class="thread" d="${d}" mask="url(#sewMask)"/>
       ${knots}
+      <g class="walker" aria-hidden="true"><g class="walker-fig" transform="translate(0 -4) scale(1.25)">
+        <path class="w-saree" d="M-5 -2 L5 -2 L7 12 L-7 12Z"/><path class="w-anchal" d="M-5 -1 Q2 2 6 -9 L3 -10 Q0 -3 -5 -3Z"/>
+        <circle class="w-head" cx="0" cy="-8" r="3.6"/><path class="w-hair" d="M-3.6 -8.6 a3.6 3.6 0 0 1 7.2 0 q-1 -2 -3.6 -2.2 q-2.6 .2 -3.6 2.2z"/>
+        <circle class="w-bag" cx="-6" cy="3" r="2.2"/></g>
+        ${S.sewn||reduceMotion()?"":`<animateMotion dur="2.4s" begin="0.25s" fill="freeze" calcMode="spline" keyPoints="0;0.975" keyTimes="0;1" keySplines=".6 .05 .3 1"><mpath href="#walkPath"/></animateMotion>`}
+      </g>
+
     </svg>
   </section>
   <div class="band-search">
@@ -2189,7 +2444,7 @@ function viewAbout(){
   const en=S.lang==="en";
   const cls=st=>`<div class="class"><span class="pill st-${st}">${t("st_"+st)}</span><div><p class="small muted">${t("st_"+st+"Long")}</p>
     <p class="small"><b>${en?"In NariPath now":"বর্তমানে নারীপথে"}: ${num(R.filter(r=>statusOf(r)===st).length)}</b></p></div></div>`;
-  return `
+  return `${backLink("#settings",t("settings"))}
   <section class="section">
     <h1>${en?"About NariPath":"নারীপথ সম্পর্কে"}</h1>
     <p>${en?"NariPath makes existing support systems in Bangladesh easier to discover, understand and navigate. It does not replace organisations, and it does not provide medical, legal, financial or emergency services itself."
@@ -2546,6 +2801,8 @@ function remindersBlock(){
 function applyA11y(){
   const d=document.documentElement, a=S.a11y;
   d.dataset.text=a.text; d.dataset.contrast=a.contrast; d.dataset.simple=a.simple; d.dataset.motion=a.motion;
+  const th=themeResolved(); d.dataset.theme=th;
+  const m=document.querySelector('meta[name="theme-color"]'); if(m) m.setAttribute("content",th==="dark"?"#181128":"#fff6fa");
 }
 function settingsSheet(){
   const a=S.a11y, en=S.lang==="en";
@@ -2587,7 +2844,7 @@ window.addEventListener("online",updateOnline); window.addEventListener("offline
 /* ---------------- Read aloud ---------------- */
 let speaking=false, toastTimer=null;
 function toast(msg){const el=document.getElementById("toast");el.textContent=msg;el.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove("show"),5000);}
-function stopSpeech(){ if(speaking){ try{speechSynthesis.cancel()}catch(e){} speaking=false; clearInterval(keepAlive); } }
+function stopSpeech(){ NV.token++; if(NV.audio){ try{ NV.audio.pause(); }catch(e){} NV.audio=null; } try{speechSynthesis.cancel()}catch(e){} clearInterval(keepAlive); if(speaking){ speaking=false; setListenUI(); } }
 function loadVoices(){
   return new Promise(res=>{
     let v=[]; try{v=speechSynthesis.getVoices()}catch(e){}
@@ -2608,37 +2865,9 @@ function pickVoice(voices,want){
 }
 let keepAlive=null;
 async function toggleSpeech(forceLang){
-  if(speaking){stopSpeech();render();return;}
-  if(!("speechSynthesis" in window)){showVoiceHelp(true);return;}
+  if(speaking){ stopSpeech(); return; }
   const want=forceLang||(S.lang==="bn"?"bn":"en");
-  const voices=await loadVoices();
-  const voice=pickVoice(voices,want);
-  if(want==="bn" && !voice){ showVoiceHelp(false); return; }
-  const text=document.getElementById("view").innerText.replace(/[✓✕★]/g,"").replace(/\n{2,}/g,"\n");
-  const chunks=text.split(/(?<=[।.!?:])\s+|\n+/).map(x=>x.trim()).filter(x=>x.length>1);
-  if(!chunks.length) return;
-  try{speechSynthesis.cancel()}catch(e){}
-  speaking=true; render();
-  setTimeout(()=>{
-    let started=false;
-    chunks.forEach((c,i)=>{
-      const u=new SpeechSynthesisUtterance(c);
-      u.lang = want==="bn" ? (voice?voice.lang:"bn-BD") : (voice?voice.lang:"en-GB");
-      if(voice) u.voice=voice; u.rate = want==="bn" ? 0.9 : 0.95;
-      u.onstart=()=>{started=true;};
-      if(i===chunks.length-1){u.onend=()=>{speaking=false;clearInterval(keepAlive);render();};}
-      u.onerror=ev=>{
-        if(!speaking) return;
-        if(ev && ev.error==="interrupted"||ev && ev.error==="canceled") return;
-        speaking=false; clearInterval(keepAlive); try{speechSynthesis.cancel()}catch(e){} render();
-        if(want==="bn") showVoiceHelp(false); else toast(t("noTTS"));
-      };
-      speechSynthesis.speak(u);
-    });
-    clearInterval(keepAlive);
-    keepAlive=setInterval(()=>{ if(!speaking){clearInterval(keepAlive);return;} try{ if(speechSynthesis.speaking && !speechSynthesis.paused){ speechSynthesis.pause(); speechSynthesis.resume(); } }catch(e){} },10000);
-    setTimeout(()=>{ if(speaking && !started && !speechSynthesis.speaking){ speaking=false; clearInterval(keepAlive); render(); if(want==="bn") showVoiceHelp(false); else toast(t("noTTS")); } },4000);
-  },120);
+  await speakChunks(speechChunks(readableText(document.getElementById("view"))),want);
 }
 function showVoiceHelp(noSupport){
   const ov=document.getElementById("voicehelp");
@@ -2673,7 +2902,7 @@ document.getElementById("voicehelp").addEventListener("click",e=>{ if(e.target.i
 /* A refresh or leaving the page must never leave speech running or the button stuck on "Stop". */
 try{ if("speechSynthesis" in window){ speechSynthesis.cancel(); speechSynthesis.getVoices(); } }catch(e){}
 window.addEventListener("pagehide",()=>{ try{speechSynthesis.cancel()}catch(e){} });
-document.addEventListener("visibilitychange",()=>{ if(document.hidden && speaking){ stopSpeech(); render(); } });
+document.addEventListener("visibilitychange",()=>{ if(document.hidden && speaking){ stopSpeech(); } });
 
 document.addEventListener("click",e=>{
   const el=e.target;
@@ -2719,10 +2948,8 @@ document.addEventListener("click",e=>{
     try{ const url=URL.createObjectURL(new Blob([icsFor(rem)],{type:"text/calendar"})); const a=document.createElement("a"); a.href=url; a.download="naripath-reminder.ics"; document.body.appendChild(a); a.click(); a.remove(); setTimeout(()=>URL.revokeObjectURL(url),2000); toast(t("icsDone")); }
     catch(x){ toast(t("icsFail")); } return; }
   const rr=el.closest("[data-rmrem]"); if(rr){ S.reminders=S.reminders.filter(x=>x.id!==rr.dataset.rmrem); persist(); render(); return; }
-  if(el.closest("#aa-btn")){ openSettings(); return; }
   if(el.closest("#settings-close")){ closeSettings(); return; }
-  const ay=el.closest("[data-a11y]"); if(ay){ S.a11y[ay.dataset.a11y]=ay.dataset.v; store.set("a11y",S.a11y); applyA11y(); render();
-    const ov=document.getElementById("settings"); ov.querySelector(".vh-body").innerHTML=settingsSheet(); const b=ov.querySelector(`[data-a11y="${ay.dataset.a11y}"][data-v="${ay.dataset.v}"]`); if(b) b.focus(); return; }
+  const ay=el.closest("[data-a11y]"); if(ay){ S.a11y[ay.dataset.a11y]=ay.dataset.v; store.set("a11y",S.a11y); applyA11y(); if(ay.dataset.a11y==="voice"||ay.dataset.a11y==="rate") stopSpeech(); render(); return; }
   if(el.closest("#install-btn") && deferredInstall){ deferredInstall.prompt(); deferredInstall.userChoice.finally(()=>{ deferredInstall=null; closeSettings(); }); return; }
 });
 document.getElementById("settings").addEventListener("click",e=>{ if(e.target.id==="settings") closeSettings(); });
@@ -3056,7 +3283,7 @@ function servicesGrid(){
     ["#check","list","sv5",tx("Eligible?","যোগ্যতা")],
     ["#learn","idcard","sv6",tx("Documents","কাগজপত্র")],
     ["#explore","search","sv7",tx("All services","সব সেবা")],
-    ["#path","compass","sv8",tx("My Path","আমার পথ")]
+    ["#period-cal","cal","sv8",tx("Period calendar","পিরিয়ড ক্যালেন্ডার")]
   ];
   const intro=!S.svcIntro; if(intro) setTimeout(()=>{S.svcIntro=true;},1400);
   return `<nav class="svc card ${intro?"intro":""}" aria-label="${tx("Services","সেবাসমূহ")}">
@@ -3478,7 +3705,7 @@ const PS_LESSONS=[
     [K("See a doctor or health worker if your period has not started by 15, if bleeding lasts more than 7 days, or if you need a new pad every 1 to 2 hours.","১৫ বছরেও মাসিক শুরু না হলে, ৭ দিনের বেশি রক্ত গেলে, বা ১–২ ঘণ্টা পরপর প্যাড বদলাতে হলে ডাক্তার বা স্বাস্থ্যকর্মী দেখাও।"),"aapHeavy"],
     [K("Also see one if the pain is so bad that you cannot go to school or work, or if your periods stop for 3 months after they had become regular.","ব্যথা এত বেশি যে স্কুলে বা কাজে যেতে পারো না, বা নিয়মিত হওয়ার পর ৩ মাস মাসিক বন্ধ থাকলেও দেখাও।"),"ghPain"],
     [K("Government Mother and Child Welfare Centres, Union Health and Family Welfare Centres and Upazila Health Complexes have adolescent-friendly corners where you can ask in private.","সরকারি মা ও শিশু কল্যাণ কেন্দ্র, ইউনিয়ন স্বাস্থ্য ও পরিবার কল্যাণ কেন্দ্র এবং উপজেলা স্বাস্থ্য কমপ্লেক্সে কৈশোরবান্ধব কর্নার আছে, সেখানে আলাদাভাবে প্রশ্ন করা যায়।"),"afhc"],
-    [K("Call Shastho Batayon 16263 any time for health advice.","স্বাস্থ্য পরামর্শের জন্য যেকোনো সময় স্বাস্থ্য বাতায়ন ১৬২৬৩-এ কল করো।"),null]
+    [K("Shastho Batayon 16263 has offered free health advice by phone. News in 2026 reported funding problems, so if it doesn't connect, go to your nearest government health centre.","স্বাস্থ্য বাতায়ন ১৬২৬৩ ফোনে বিনামূল্যে স্বাস্থ্য পরামর্শ দিয়ে আসছে। ২০২৬ সালে অর্থায়ন সমস্যার খবর এসেছে, তাই কল না গেলে নিকটস্থ সরকারি স্বাস্থ্যকেন্দ্রে যাও।"),null]
   ],src:["aapHeavy","ghPain","afhc","afhc2"]}
 ];
 const psLesson=id=>PS_LESSONS.find(l=>l.id===id);
@@ -3502,14 +3729,7 @@ function psSave(){ store.set("ps",{done:S.ps.done}); }
 function pssSave(){ store.set("pss",S.pss); }
 
 /* ---- Speak one piece of text with the phone's voice ---- */
-async function speakText(text){
-  if(!("speechSynthesis" in window)){ showVoiceHelp(true); return; }
-  const want=S.lang==="bn"?"bn":"en"; const voices=await loadVoices(); const voice=pickVoice(voices,want);
-  if(want==="bn"&&!voice){ showVoiceHelp(false); return; }
-  try{ speechSynthesis.cancel(); }catch(e){}
-  text.split(/\n+|(?<=[।.!?])\s+/).map(x=>x.replace(/[✓“”]/g,"").trim()).filter(Boolean).forEach(c=>{
-    const u=new SpeechSynthesisUtterance(c); u.lang=voice?voice.lang:(want==="bn"?"bn-BD":"en-GB"); if(voice) u.voice=voice; u.rate=want==="bn"?0.82:0.9; speechSynthesis.speak(u); });
-}
+function speakText(text){ return speakChunks(speechChunks(text),S.lang==="bn"?"bn":"en"); }
 
 /* ---- Views ---- */
 function psDraftNote(){
@@ -3529,6 +3749,7 @@ function viewPeriod(){
     <span>${icon("info")}${tx("Nothing shared","কিছুই শেয়ার হয় না")}</span>
   </div>
   ${psDraftNote()}
+  ${pcalCard()}
   <section class="section">
     <div class="section-head"><h2>${tx("Lessons","পাঠসমূহ")}</h2><span class="small muted">${num(done)}/${num(n)} ${tx("done","শেষ")}</span></div>
     <div class="progress" aria-hidden="true"><i style="width:${Math.round(done/n*100)}%"></i></div>
@@ -3543,7 +3764,7 @@ function viewPeriod(){
   <section class="section card">
     <h2>${tx("For girls with disabilities, and the people who help them","প্রতিবন্ধী মেয়েদের ও তাদের সহায়তাকারীদের জন্য")}</h2>
     <ul class="small ps-inc">
-      <li>${tx("Every card has one idea, a picture and a Listen button. Use Display settings (Aa) for bigger text or simple mode.","প্রতিটি কার্ডে একটি কথা, একটি ছবি ও শোনার বোতাম আছে। বড় লেখা বা সহজ মোডের জন্য Aa চাপুন।")}</li>
+      <li>${tx("Every card has one idea, a picture and a Listen button. Use Settings for bigger text, dark mode or simple mode.","প্রতিটি কার্ডে একটি কথা, একটি ছবি ও শোনার বোতাম আছে। বড় লেখা, ডার্ক মোড বা সহজ মোডের জন্য সেটিংসে যান।")}</li>
       <li>${tx("Start talking about periods early. Some girls need more time to understand changes.","মাসিক নিয়ে আগে থেকেই কথা বলা শুরু করুন। কিছু মেয়ের পরিবর্তন বুঝতে বেশি সময় লাগে।")}</li>
       <li>${tx("Practise the steps together before the first period: holding a pad, changing it, washing hands.","প্রথম মাসিকের আগেই ধাপগুলো একসাথে অনুশীলন করুন: প্যাড ধরা, বদলানো, হাত ধোয়া।")}</li>
       <li>${tx("Keep the same simple routine every time, and always respect her privacy.","প্রতিবার একই সহজ নিয়ম মেনে চলুন, এবং সবসময় তার গোপনীয়তাকে সম্মান করুন।")}</li>
@@ -3573,7 +3794,7 @@ function viewPeriodLesson(id){
         ${src&&GSRC[src]?`<a class="small" href="${esc(safeUrl(GSRC[src].url))}" target="_blank" rel="noopener noreferrer">${tx("Source","উৎস")}</a>`:""}
       </div>
     </div>
-    <div class="ps-dots" role="img" aria-label="${tx(`Card ${i+1} of ${cards.length}`,`${num(cards.length)}টির মধ্যে ${num(i+1)} নম্বর কার্ড`)}">${cards.map((_,k)=>`<span class="${k===i?"on":k<i?"past":""}"></span>`).join("")}</div>
+    <div class="ps-dots" data-noread role="img" aria-label="${tx(`Card ${i+1} of ${cards.length}`,`${num(cards.length)}টির মধ্যে ${num(i+1)} নম্বর কার্ড`)}">${cards.map((_,k)=>`<span class="${k===i?"on":k<i?"past":""}"></span>`).join("")}</div>
     <div class="ps-nav">
       <button type="button" class="btn ghost" data-pscard="-1" ${i===0?"disabled":""}>${tx("Back","আগের")}</button>
       ${last?`<button type="button" class="btn primary" data-psdone="${l.id}">${S.ps.done.includes(l.id)?tx("Done ✓","শেষ ✓"):tx("I finished this lesson","পাঠ শেষ করেছি")}</button>`
@@ -3714,6 +3935,446 @@ window.addEventListener("hashchange",()=>{ const h=location.hash.replace("#","")
 function periodBanner(){
   return `<a class="ps-banner" href="#period">${psArt("what")}<span><b>${tx("Period Shikkha","পিরিয়ড শিক্ষা")}</b><span>${tx("Simple lessons about periods for girls · pictures, listening, offline","কিশোরীদের জন্য মাসিক নিয়ে সহজ পাঠ · ছবি, শোনা, অফলাইন")}</span></span>${icon("chev","chev")}</a>`;
 }
+
+/* ================= Settings ================= */
+function themeResolved(){
+  const th=S.a11y.theme||"light";
+  if(th==="auto"){ try{ return matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"; }catch(e){ return "light"; } }
+  return th==="dark"?"dark":"light";
+}
+try{ matchMedia("(prefers-color-scheme: dark)").addEventListener("change",()=>{ if(S.a11y.theme==="auto") applyA11y(); }); }catch(e){}
+
+function viewSettings(){
+  const a=S.a11y, en=S.lang==="en";
+  const seg=(key,opts,label)=>`<div class="set-seg" role="group" aria-label="${label}">${opts.map(([v,l,ic])=>`<button type="button" data-a11y="${key}" data-v="${v}" aria-pressed="${(a[key]||"")===v}">${ic?`<span aria-hidden="true">${ic}</span>`:""}${l}</button>`).join("")}</div>`;
+  const row=(title,desc,ctl)=>`<div class="set-row"><div class="set-txt"><b>${title}</b>${desc?`<span class="small muted">${desc}</span>`:""}</div>${ctl}</div>`;
+  const onoff=(key,on,off)=>seg(key,[[off,t("off")],[on,t("on")]],key);
+  const nvOk=nvSupported();
+  return `
+  <section class="section"><h1>${t("settings")}</h1><p class="small muted">${tx("Changes are saved on this phone only.","পরিবর্তন শুধু এই ফোনে সংরক্ষণ হয়।")}</p></section>
+
+  <section class="section card set-card" aria-labelledby="set-look">
+    <h2 id="set-look">${tx("Appearance","দেখতে কেমন হবে")}</h2>
+    ${row(tx("Theme","থিম"),tx("Dark mode is easier on the eyes at night and saves battery.","রাতে ডার্ক মোডে চোখে আরাম হয়, ব্যাটারিও বাঁচে।"),
+      seg("theme",[["light",tx("Light","লাইট"),icon("sun")],["dark",tx("Dark","ডার্ক"),icon("moon")],["auto",tx("Same as phone","ফোনের মতো"),icon("phone")]],tx("Theme","থিম")))}
+    ${row(tx("Language","ভাষা"),"",`<div class="set-seg" role="group" aria-label="${tx("Language","ভাষা")}"><button type="button" data-lang="bn" aria-pressed="${S.lang==="bn"}">বাংলা</button><button type="button" data-lang="en" aria-pressed="${S.lang==="en"}">English</button></div>`)}
+  </section>
+
+  <section class="section card set-card" aria-labelledby="set-disp">
+    <h2 id="set-disp">${tx("Display","প্রদর্শন")}</h2>
+    ${row(t("textSize"),"",seg("text",[["normal",t("tsNormal")],["large",t("tsLarge")],["xl",t("tsXl")]],t("textSize")))}
+    ${row(t("contrastL"),tx("Stronger colours and borders.","গাঢ় রং ও স্পষ্ট বর্ডার।"),onoff("contrast","high","normal"))}
+    ${row(t("simpleL"),t("simpleNote"),onoff("simple","on","off"))}
+    ${row(t("motionL"),tx("Turns off moving pictures and effects.","নড়াচড়া করা ছবি ও ইফেক্ট বন্ধ করে।"),onoff("motion","reduce","normal"))}
+    <div class="set-preview" aria-hidden="true"><b>${tx("Preview","নমুনা")}</b><span>${tx("This is how text will look.","লেখা এভাবে দেখাবে।")}</span></div>
+  </section>
+
+  <section class="section card set-card" aria-labelledby="set-voice">
+    <h2 id="set-voice">${tx("Voice (read aloud)","ভয়েস (পড়ে শোনানো)")}</h2>
+    <p class="small">${tx("NariPath has its own recorded Bangla voice, so listening works even if your phone has no Bangla voice. English uses your phone's voice.","নারীপথের নিজস্ব রেকর্ড করা বাংলা ভয়েস আছে, তাই ফোনে বাংলা ভয়েস না থাকলেও শোনা যায়। ইংরেজির জন্য ফোনের ভয়েস ব্যবহার হয়।")}</p>
+    ${row(tx("Bangla voice","বাংলা ভয়েস"),nvOk?"":tx("This browser can't play NariPath's voice; your phone's voice will be used.","এই ব্রাউজারে নারীপথের ভয়েস চলে না; ফোনের ভয়েস ব্যবহার হবে।"),
+      seg("voice",[["naripath",tx("NariPath voice","নারীপথের ভয়েস")],["phone",tx("Phone's voice","ফোনের ভয়েস")]],tx("Bangla voice","বাংলা ভয়েস")))}
+    ${row(tx("Speed","গতি"),"",seg("rate",[["slow",tx("Slow","ধীরে")],["normal",tx("Normal","সাধারণ")]],tx("Speed","গতি")))}
+    <div class="btn-row"><button type="button" class="btn ghost" id="voice-test">${icon("speaker")} ${tx("Test the voice","ভয়েস শুনে দেখুন")}</button>
+    <button type="button" class="btn ghost" id="voice-dl">${tx("Save voice for offline use","অফলাইনে শোনার জন্য ভয়েস রাখুন")} <span class="small muted" id="voice-size"></span></button></div>
+    <p class="small muted" id="voice-status" role="status"></p>
+  </section>
+
+  <section class="section card set-card" aria-labelledby="set-help">
+    <h2 id="set-help">${tx("Help","সহায়তা")}</h2>
+    ${row(tx("App guide","অ্যাপ গাইড"),tx("A short step-by-step tour of the app.","অ্যাপের ধাপে ধাপে ছোট পরিচিতি।"),`<button type="button" class="btn primary" id="tour-replay">${tx("Show guide","গাইড দেখুন")}</button>`)}
+    <div class="install-row">${installUi()}</div>
+  </section>
+
+  <section class="section card set-card" aria-labelledby="set-priv">
+    <h2 id="set-priv">${tx("Privacy and your data","গোপনীয়তা ও আপনার তথ্য")}</h2>
+    <p class="small">${tx("Nothing you enter is sent anywhere. These are kept only in this browser on this phone:","আপনি যা লেখেন তা কোথাও পাঠানো হয় না। শুধু এই ফোনের এই ব্রাউজারে থাকে:")}</p>
+    <ul class="small">${["st1","st2","st3","st9","st10","st11","st12","st13","st14","st7","st4","st8","st5","st6"].map(k=>`<li>${t(k)}</li>`).join("")}</ul>
+    <p class="small">${t("storedNot")}</p>
+    <button type="button" class="btn danger" id="clear-btn">${S.clearArmed?t("confirmClear"):t("clearData")}</button>
+  </section>
+
+  <section class="section card set-card" aria-labelledby="set-about">
+    <h2 id="set-about">${tx("About","পরিচিতি")}</h2>
+    <a class="set-link" href="#about"><span><b>${tx("About NariPath","নারীপথ সম্পর্কে")}</b><span class="small muted">${tx("What it is, where the information comes from, privacy","এটি কী, তথ্য কোথা থেকে আসে, গোপনীয়তা")}</span></span>${icon("chev","chev")}</a>
+    <a class="set-link" href="#gaps"><span><b>${t("gapLink")}</b><span class="small muted">${tx("Which districts and areas still need information","কোন জেলা ও বিষয়ে এখনো তথ্য দরকার")}</span></span>${icon("chev","chev")}</a>
+    <p class="small muted">${en?`NariPath · Millennium Fellowship project prototype · Listings last checked ${esc(date(LAST_CHECKED))}`:`নারীপথ · মিলেনিয়াম ফেলোশিপ প্রকল্পের প্রোটোটাইপ · তথ্য সর্বশেষ যাচাই ${esc(date(LAST_CHECKED))}`}</p>
+  </section>`;
+}
+
+/* ================= NariPath voice =================
+   Bangla sentences are pre-recorded with an open-source Bangla voice
+   (Coqui "bn/custom/vits-female" by @mobassir94, Apache 2.0) and packed per page.
+   Each sentence is found by a hash of its text. Anything not recorded falls back
+   to the phone's own voice, if it has one. */
+const NV={idx:null,loading:null,packs:new Map(),audio:null,token:0};
+const NV_BASE="audio/bn/";
+function nvSupported(){ try{ return !!document.createElement("audio").canPlayType('audio/ogg; codecs="opus"'); }catch(e){ return false; } }
+function nvNorm(s){ return String(s).replace(/[✓✕★✗“”"]/g,"").replace(/\s+/g," ").trim(); }
+function nvKey(s){ s=nvNorm(s); let h=0x811c9dc5; for(let i=0;i<s.length;i++){ h^=s.charCodeAt(i); h=Math.imul(h,0x01000193)>>>0; } return h.toString(16).padStart(8,"0"); }
+/* The text the reader speaks: the page, minus parts marked data-noread (calendar grids, dots). */
+function readableText(v){
+  const hide=[...v.querySelectorAll("[data-noread]")].map(e=>[e,e.style.display]);
+  hide.forEach(([e])=>e.style.display="none"); const t=v.innerText; hide.forEach(([e,d])=>e.style.display=d); return t;
+}
+function speechChunks(text){
+  return String(text).replace(/[✓✕★✗]/g,"").replace(/\n{2,}/g,"\n").split(/(?<=[।.!?:])\s+|\n+/).map(x=>x.trim()).filter(x=>x.length>1);
+}
+function nvIndex(){
+  if(NV.idx) return Promise.resolve(NV.idx);
+  if(!NV.loading) NV.loading=fetch(NV_BASE+"index.json").then(r=>r.ok?r.json():null).catch(()=>null).then(j=>{ NV.idx=(j&&j.clips)?j:{clips:{},packs:{}}; nvPrune(); return NV.idx; });
+  return NV.loading;
+}
+/* Remove voice bundles from older versions that this index no longer uses. */
+function nvPrune(){
+  try{ const keep=new Set(Object.values(NV.idx.packs||{}).map(p=>p.f)); if(!keep.size||!("caches" in window)) return;
+    caches.open("naripath-voice").then(c=>c.keys().then(ks=>ks.forEach(r=>{ const f=new URL(r.url).pathname.split("/").pop(); if(f!=="index.json"&&!keep.has(f)) c.delete(r); }))).catch(()=>{});
+  }catch(e){}
+}
+function nvPack(id){
+  if(NV.packs.has(id)) return NV.packs.get(id);
+  const p=fetch(NV_BASE+NV.idx.packs[id].f).then(r=>{ if(!r.ok) throw new Error("pack"); return r.arrayBuffer(); });
+  NV.packs.set(id,p); p.catch(()=>NV.packs.delete(id)); return p;
+}
+function nvPlay(buf,off,len,token){
+  return new Promise(res=>{
+    if(token!==NV.token) return res(false);
+    const url=URL.createObjectURL(new Blob([buf.slice(off,off+len)],{type:"audio/ogg"}));
+    const a=new Audio(url); NV.audio=a; a.playbackRate=S.a11y.rate==="slow"?0.85:1;
+    const done=ok=>{ URL.revokeObjectURL(url); if(NV.audio===a) NV.audio=null; res(ok); };
+    a.onended=()=>done(true); a.onerror=()=>done(false); a.onpause=()=>{ if(token!==NV.token) done(false); };
+    a.play().catch(()=>done(false));
+  });
+}
+function phoneSay(text,voice,want,token){
+  return new Promise(res=>{
+    if(token!==NV.token) return res(false);
+    const u=new SpeechSynthesisUtterance(text);
+    u.lang=voice?voice.lang:(want==="bn"?"bn-BD":"en-GB"); if(voice) u.voice=voice;
+    u.rate=(want==="bn"?0.9:0.95)*(S.a11y.rate==="slow"?0.85:1);
+    let fin=false; const done=ok=>{ if(fin) return; fin=true; clearTimeout(tm); res(ok); };
+    u.onend=()=>done(true); u.onerror=()=>done(false);
+    const tm=setTimeout(()=>done(false),Math.max(6000,text.length*220));
+    try{ speechSynthesis.speak(u); }catch(e){ done(false); }
+  });
+}
+function setListenUI(){
+  const b=document.getElementById("listen"); if(!b) return;
+  b.innerHTML = speaking
+    ? `<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/></svg>${t("stop")}`
+    : `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg>${t("listen")}`;
+  b.setAttribute("aria-pressed",speaking);
+  b.classList.toggle("on",speaking);
+}
+/* Speak a list of sentences. Returns false if nothing could be spoken. */
+async function speakChunks(chunks,want){
+  stopSpeech();
+  const token=++NV.token;
+  if(!chunks.length) return false;
+  const useNV=want==="bn"&&S.a11y.voice!=="phone"&&nvSupported();
+  const idx=useNV?await nvIndex():null;
+  const keys=chunks.map(nvKey);
+  const have=idx?keys.filter(k=>idx.clips[k]).length:0;
+  let voice=null;
+  if("speechSynthesis" in window){ voice=pickVoice(await loadVoices(),want); }
+  if(token!==NV.token) return false;
+  if(!have&&!voice){
+    if(want==="bn"){ if(useNV&&Object.keys(idx.clips).length) toast(tx("This page has no recorded voice yet.","এই পাতার রেকর্ড করা ভয়েস এখনো নেই।")); else showVoiceHelp(!("speechSynthesis" in window)); }
+    else toast(t("noTTS"));
+    return false;
+  }
+  speaking=true; setListenUI();
+  if(idx){ [...new Set(keys.filter(k=>idx.clips[k]).map(k=>idx.clips[k][0]))].forEach(p=>nvPack(p).catch(()=>{})); }
+  for(let i=0;i<chunks.length;i++){
+    if(token!==NV.token) return true;
+    const c=idx&&idx.clips[keys[i]];
+    if(c){ let buf=null; try{ buf=await nvPack(c[0]); }catch(e){}
+      if(buf&&await nvPlay(buf,c[1],c[2],token)) continue;
+      if(token!==NV.token) return true; }
+    if(voice) await phoneSay(chunks[i],voice,want,token);
+  }
+  if(token===NV.token){ speaking=false; setListenUI(); }
+  return true;
+}
+async function nvDownloadAll(){
+  const st=document.getElementById("voice-status"); const idx=await nvIndex();
+  const ids=Object.keys(idx.packs||{}); if(!ids.length){ if(st) st.textContent=tx("The voice files are not available here.","ভয়েস ফাইল এখানে পাওয়া যাচ্ছে না।"); return; }
+  let n=0;
+  for(const id of ids){ try{ await nvPack(id); }catch(e){ if(st) st.textContent=tx("Could not download. Check your internet and try again.","ডাউনলোড হয়নি। ইন্টারনেট দেখে আবার চেষ্টা করুন।"); return; }
+    n++; if(st) st.textContent=tx(`Saving voice… ${Math.round(n/ids.length*100)}%`,`ভয়েস রাখা হচ্ছে… ${bnNum(String(Math.round(n/ids.length*100)))}%`); }
+  try{ store.set("voiceSaved",idx.v||1); }catch(e){}
+  if(st) st.textContent=tx("✓ Voice saved. Listening now works without internet.","✓ ভয়েস রাখা হয়েছে। এখন ইন্টারনেট ছাড়াই শোনা যাবে।");
+}
+async function settingsVoiceInfo(){
+  const el=document.getElementById("voice-size"); if(!el) return;
+  const idx=await nvIndex(); const bytes=Object.values(idx.packs||{}).reduce((a,p)=>a+(p.b||0),0);
+  if(bytes) el.textContent=`(${S.lang==="bn"?bnNum((bytes/1048576).toFixed(1)):(bytes/1048576).toFixed(1)} MB)`;
+  const st=document.getElementById("voice-status");
+  if(st&&store.get("voiceSaved",0)===(idx.v||1)&&!st.textContent) st.textContent=tx("✓ Voice is saved on this phone.","✓ ভয়েস এই ফোনে রাখা আছে।");
+}
+document.addEventListener("click",e=>{
+  if(e.target.closest("#voice-test")){ speakChunks(speechChunks(S.lang==="bn"?"আমি নারীপথের কণ্ঠ। আমি আপনাকে প্রতিটি পাতা পড়ে শোনাতে পারি।":"Hello. I am NariPath. I can read this page to you."),S.lang==="bn"?"bn":"en"); return; }
+  if(e.target.closest("#voice-dl")){ nvDownloadAll(); return; }
+  if(e.target.closest("#tour-replay")){ location.hash="home"; setTimeout(()=>startTour(true),350); return; }
+});
+
+/* ================= Period calendar (optional) =================
+   A woman marks the days she bleeds. Everything stays on this phone, can be
+   locked with a PIN (only a salted hash is stored) and deleted in one tap.
+   Guidance is general information, marked draft until medically reviewed. */
+Object.assign(GSRC,{
+  acogTeen:{en:"ACOG/AAP via MDedge: in adolescence 90% of cycles are 21–45 days",bn:"এসিওজি/এএপি: কৈশোরে ৯০% মাসিক চক্র ২১–৪৫ দিনের",url:"https://mdedge.com/obgyn/article/104579/gynecology/acog-think-menses-vital-sign-adolescents"},
+  nhsLate:{en:"NHS: causes of missed or late periods (pregnancy, stress and more)",bn:"এনএইচএস: মাসিক দেরিতে বা বাদ পড়ার কারণ (গর্ভধারণ, দুশ্চিন্তা ইত্যাদি)",url:"https://www.nhs.uk/conditions/missed-or-late-periods/"},
+  nhsStopped:{en:"NHS: see a doctor if you've missed 3 periods in a row",bn:"এনএইচএস: পরপর ৩ বার মাসিক না হলে ডাক্তার দেখান",url:"https://www.nhs.uk/conditions/stopped-or-missed-periods/"},
+  nhsIrregular:{en:"NHS: irregular periods; see a doctor if they last more than 7 days",bn:"এনএইচএস: অনিয়মিত মাসিক; ৭ দিনের বেশি থাকলে ডাক্তার দেখান",url:"https://www.nhs.uk/conditions/irregular-periods/"},
+  testWait:{en:"Medicspot: a pregnancy test is more accurate a week after the expected date",bn:"মেডিকস্পট: প্রত্যাশিত তারিখের এক সপ্তাহ পরে প্রেগন্যান্সি টেস্ট বেশি নির্ভরযোগ্য",url:"https://www.medicspot.co.uk/health-guides/late-period"}
+});
+const DAY=86400000;
+const isoD=s=>{ const [y,m,d]=s.split("-").map(Number); return new Date(y,m-1,d); };
+const dDiff=(a,b)=>Math.round((isoD(a)-isoD(b))/DAY);
+const addD=(s,n)=>{ const d=isoD(s); d.setDate(d.getDate()+n); return isoLocal(d); };
+S.pcal=(()=>{ const v=store.get("pcal",{})||{}; const days=Array.isArray(v.days)?[...new Set(v.days.filter(x=>/^\d{4}-\d{2}-\d{2}$/.test(x)))].sort():[];
+  return {days, pin:(v.pin&&typeof v.pin.h==="string")?v.pin:null}; })();
+S.pcalOpen=false; S.pcalMonth=null; S.pcalDel=false; S.pcalPin=null;
+function pcalSave(){ store.set("pcal",{days:S.pcal.days,pin:S.pcal.pin}); }
+async function pinHash(salt,pin){
+  try{ const b=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(salt+":"+pin)); return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,"0")).join(""); }
+  catch(e){ return "f"+nvKey(salt+":"+pin)+nvKey(pin+":"+salt); }
+}
+function pcalStats(){
+  const days=S.pcal.days, today=isoLocal(TODAY);
+  const periods=[]; days.forEach(d=>{ const p=periods[periods.length-1]; if(p&&dDiff(d,p[p.length-1])<=2) p.push(d); else periods.push([d]); });
+  const starts=periods.map(p=>p[0]), lens=periods.map(p=>dDiff(p[p.length-1],p[0])+1);
+  const cycles=starts.slice(1).map((s,i)=>dDiff(s,starts[i]));
+  const usable=cycles.filter(c=>c>=15&&c<=60).slice(-6);
+  const guess=usable.length===0;
+  const avg=guess?28:Math.round(usable.reduce((a,b)=>a+b,0)/usable.length);
+  const avgLen=lens.length?Math.min(8,Math.round(lens.slice(-6).reduce((a,b)=>a+b,0)/Math.min(6,lens.length))):5;
+  const last=periods[periods.length-1]||null, lastStart=last?last[0]:null;
+  const ongoing=!!last&&dDiff(today,last[last.length-1])<=1&&dDiff(today,last[0])>=0;
+  const next=lastStart?addD(lastStart,avg):null;
+  return {periods,starts,lens,cycles,avg,avgLen,guess,last,lastStart,ongoing,next,
+    until:next?dDiff(next,today):null, since:lastStart?dDiff(today,lastStart):null,
+    lastCycle:cycles.length?cycles[cycles.length-1]:null, lastLen:lens.length?lens[lens.length-1]:null, today};
+}
+function pcalStatus(st){
+  const D=s=>esc(date(s)), N=n=>num(n);
+  const out={tone:"calm",title:"",body:[],src:[]};
+  if(!st.lastStart){ out.title=tx("Mark your last period to begin","শুরু করতে আপনার শেষ মাসিকের দিনগুলো চিহ্নিত করুন");
+    out.body.push(tx("Tap each day you had your period on the calendar below, or press “My period started today”.","নিচের ক্যালেন্ডারে মাসিকের প্রতিটি দিনে চাপ দিন, অথবা “আজ মাসিক শুরু হয়েছে” চাপুন।")); return out; }
+  if(st.ongoing){ const n=dDiff(st.today,st.last[0])+1;
+    out.title=tx(`Period day ${n}`,`মাসিকের ${N(n)} নম্বর দিন`);
+    if(n>7){ out.tone="warn"; out.body.push(tx("Bleeding for more than 7 days is a reason to see a health worker.","৭ দিনের বেশি রক্ত গেলে স্বাস্থ্যকর্মী দেখানো উচিত।")); out.src.push("nhsIrregular"); }
+    else out.body.push(tx("Keep marking each day you bleed. Change your pad or cloth at least every 6 hours.","যতদিন রক্ত যায়, প্রতিদিন চিহ্ন দিন। অন্তত প্রতি ৬ ঘণ্টায় প্যাড বা কাপড় বদলান।"));
+    return out; }
+  if(st.since>=90){ out.tone="warn"; out.title=tx(`No period for ${st.since} days`,`${N(st.since)} দিন মাসিক হয়নি`);
+    out.body.push(tx("If you are not pregnant and have missed 3 periods in a row, please see a health worker.","আপনি গর্ভবতী না হলে এবং পরপর ৩ বার মাসিক না হলে, একজন স্বাস্থ্যকর্মী দেখান।"),
+      tx("Breastfeeding and some family planning methods can stop periods for a while. A health worker can tell you if this is the reason.","বুকের দুধ খাওয়ানো ও কিছু জন্মনিয়ন্ত্রণ পদ্ধতিতে কিছুদিন মাসিক বন্ধ থাকতে পারে। এটাই কারণ কিনা, স্বাস্থ্যকর্মী বলতে পারবেন।"));
+    out.src.push("nhsStopped"); return out; }
+  if(st.until>3){ out.title=tx(`Next period expected around ${date(st.next)}`,`পরের মাসিক সম্ভবত ${date(st.next)} এর কাছাকাছি`);
+    out.body.push(tx(`That is in about ${st.until} days.`,`অর্থাৎ প্রায় ${N(st.until)} দিন পরে।`)); }
+  else if(st.until>=-3){ out.title=tx("Your period may start any day now","যেকোনো দিন মাসিক শুরু হতে পারে");
+    out.body.push(tx(`Expected around ${date(st.next)}. A few days early or late is normal.`,`প্রত্যাশিত তারিখ ${date(st.next)}। কয়েক দিন আগে-পরে হওয়া স্বাভাবিক।`)); }
+  else { const late=-st.until; out.tone=late>7?"warn":"calm";
+    out.title=tx(`Your period is ${late} days late`,`মাসিক ${N(late)} দিন দেরি হয়েছে`);
+    out.body.push(tx("Periods often come a few days early or late. Stress, illness, losing or gaining weight, travel, breastfeeding and some family planning methods can delay a period.","মাসিক প্রায়ই কয়েক দিন আগে-পরে হয়। দুশ্চিন্তা, অসুখ, ওজন কমা বা বাড়া, ভ্রমণ, বুকের দুধ খাওয়ানো এবং কিছু জন্মনিয়ন্ত্রণ পদ্ধতিতে মাসিক দেরিতে হতে পারে।"),
+      tx("If you are married or have had sex, a pregnancy test can tell you more. Test kits are sold at pharmacies. A test is more reliable a week after the expected date.","বিবাহিত হলে বা শারীরিক সম্পর্ক হয়ে থাকলে প্রেগন্যান্সি টেস্ট করে দেখতে পারেন। ফার্মেসিতে টেস্ট কিট পাওয়া যায়। প্রত্যাশিত তারিখের এক সপ্তাহ পরে টেস্ট করলে ফল বেশি নির্ভরযোগ্য।"),
+      tx("A Family Welfare Centre or Upazila Health Complex can help, in private.","ইউনিয়ন পরিবার কল্যাণ কেন্দ্র বা উপজেলা স্বাস্থ্য কমপ্লেক্সে গোপনে সাহায্য নিতে পারেন।"));
+    out.src.push("nhsLate","testWait","afhc"); }
+  if(st.guess) out.body.push(tx("This is a guess based on a 28-day cycle. After you mark 2 or more periods, NariPath uses your own pattern.","এটি ২৮ দিনের চক্র ধরে একটি অনুমান। ২টি বা তার বেশি মাসিক চিহ্নিত করলে নারীপথ আপনার নিজের হিসাব ব্যবহার করবে।"));
+  return out;
+}
+function pcalNotes(st){
+  const n=[];
+  if(st.lastCycle!==null&&st.lastCycle<21) n.push([tx(`Your last period came after ${st.lastCycle} days, earlier than usual.`,`আপনার শেষ মাসিক এসেছে ${num(st.lastCycle)} দিন পরে, স্বাভাবিকের চেয়ে আগে।`),tx("Once is usually nothing to worry about. If periods keep coming less than 21 days apart, see a health worker.","একবার হলে সাধারণত চিন্তার কিছু নেই। বারবার ২১ দিনের কম ব্যবধানে হলে স্বাস্থ্যকর্মী দেখান।"),"nhsCycle"]);
+  if(st.lastCycle!==null&&st.lastCycle>45&&st.lastCycle<90) n.push([tx(`Your last cycle was ${st.lastCycle} days, longer than usual.`,`আপনার শেষ চক্র ছিল ${num(st.lastCycle)} দিনের, স্বাভাবিকের চেয়ে লম্বা।`),tx("In the first 2–3 years of periods, cycles of 21 to 45 days are normal. For adult women it is usually 21 to 35 days. If long cycles keep happening, see a health worker.","মাসিক শুরুর প্রথম ২–৩ বছরে ২১ থেকে ৪৫ দিনের চক্র স্বাভাবিক। প্রাপ্তবয়স্ক নারীদের সাধারণত ২১ থেকে ৩৫ দিন। বারবার লম্বা চক্র হলে স্বাস্থ্যকর্মী দেখান।"),"acogTeen"]);
+  if(st.lastLen!==null&&st.lastLen>7&&!st.ongoing) n.push([tx(`Your last period lasted ${st.lastLen} days.`,`আপনার শেষ মাসিক ${num(st.lastLen)} দিন ছিল।`),tx("Periods longer than 7 days are a reason to see a health worker.","৭ দিনের বেশি মাসিক থাকলে স্বাস্থ্যকর্মী দেখানো উচিত।"),"nhsIrregular"]);
+  return n;
+}
+function pcalMonthGrid(st){
+  const m=S.pcalMonth||new Date(TODAY.getFullYear(),TODAY.getMonth(),1); S.pcalMonth=m;
+  const y=m.getFullYear(), mo=m.getMonth(), first=new Date(y,mo,1), nd=new Date(y,mo+1,0).getDate();
+  const lead=(first.getDay()+1)%7; // week starts on Saturday in Bangladesh
+  const WD=S.lang==="bn"?["শনি","রবি","সোম","মঙ্গল","বুধ","বৃহ","শুক্র"]:["Sat","Sun","Mon","Tue","Wed","Thu","Fri"];
+  const set=new Set(S.pcal.days), today=st.today;
+  const pred=new Set(); if(st.next){ for(let c=0;c<3;c++) for(let k=0;k<st.avgLen;k++){ const d=addD(st.next,c*st.avg+k); if(d>today) pred.add(d); } }
+  const label=first.toLocaleDateString(S.lang==="bn"?"bn-BD":"en-GB",{month:"long",year:"numeric"});
+  const cells=[]; for(let i=0;i<lead;i++) cells.push(`<span class="pc-day pc-empty" aria-hidden="true"></span>`);
+  for(let d=1;d<=nd;d++){ const iso=isoLocal(new Date(y,mo,d)), on=set.has(iso), fut=iso>today, pr=pred.has(iso), isT=iso===today;
+    const dl=new Date(y,mo,d).toLocaleDateString(S.lang==="bn"?"bn-BD":"en-GB",{day:"numeric",month:"long"});
+    const state=on?tx("period day","মাসিকের দিন"):pr?tx("expected","সম্ভাব্য"):"";
+    cells.push(`<button type="button" class="pc-day ${on?"on":""} ${pr?"pred":""} ${isT?"today":""}" data-pcday="${iso}" ${fut?"disabled":""} aria-pressed="${on}" aria-label="${dl}${isT?", "+tx("today","আজ"):""}${state?", "+state:""}"><span>${num(d)}</span></button>`); }
+  const canNext=new Date(y,mo+1,1)<=new Date(TODAY.getFullYear(),TODAY.getMonth()+3,1);
+  return `<div class="pc-cal">
+    <div class="pc-head"><button type="button" class="pc-nav" data-pcmon="-1" aria-label="${tx("Previous month","আগের মাস")}">${icon("left")}</button><h2 aria-live="polite">${esc(label)}</h2><button type="button" class="pc-nav" data-pcmon="1" ${canNext?"":"disabled"} aria-label="${tx("Next month","পরের মাস")}">${icon("chev")}</button></div>
+    <div class="pc-wd" aria-hidden="true" data-noread>${WD.map(w=>`<span>${w}</span>`).join("")}</div>
+    <div class="pc-grid" role="group" aria-label="${esc(label)}" data-noread>${cells.join("")}</div>
+    <div class="pc-legend small"><span><i class="lg-on"></i>${tx("Period day (tap to mark)","মাসিকের দিন (চাপ দিয়ে চিহ্ন দিন)")}</span><span><i class="lg-pred"></i>${tx("Expected","সম্ভাব্য")}</span><span><i class="lg-today"></i>${tx("Today","আজ")}</span></div>
+  </div>`;
+}
+function viewPeriodCal(){
+  const back=backLink("#period",tx("Period Shikkha","পিরিয়ড শিক্ষা"));
+  if(S.pcal.pin&&!S.pcalOpen) return `${back}
+    <section class="section card pc-lock"><div class="pc-lock-ico" aria-hidden="true">${icon("cal")}</div><h1>${tx("Period calendar is locked","পিরিয়ড ক্যালেন্ডার লক করা আছে")}</h1>
+    <form id="pc-unlock"><label for="pc-pin-in"><b>${tx("Enter your 4-digit PIN","আপনার ৪ সংখ্যার পিন দিন")}</b></label>
+      <input id="pc-pin-in" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="4" autocomplete="off" class="pin-in" required>
+      <p class="small bad" id="pc-pin-err" role="alert"></p>
+      <button class="btn primary" type="submit">${tx("Open","খুলুন")}</button></form>
+    <details class="small"><summary>${tx("Forgot your PIN?","পিন ভুলে গেছেন?")}</summary><p>${tx("For your privacy the PIN cannot be recovered. You can delete all calendar data and start again.","আপনার গোপনীয়তার জন্য পিন উদ্ধার করা যায় না। ক্যালেন্ডারের সব তথ্য মুছে আবার শুরু করতে পারেন।")}</p>
+      <button type="button" class="btn danger" data-pcdel="1">${S.pcalDel?tx("Tap again to delete everything","সব মুছতে আবার চাপুন"):tx("Delete all calendar data","ক্যালেন্ডারের সব তথ্য মুছুন")}</button></details></section>`;
+  const st=pcalStats(), s=pcalStatus(st), notes=pcalNotes(st), today=st.today, todayOn=S.pcal.days.includes(today);
+  const f1=x=>num(x);
+  return `${back}
+  <section class="pc-hero"><div class="pc-hero-ico" aria-hidden="true">${icon("cal")}</div><div><h1>${tx("Period calendar","পিরিয়ড ক্যালেন্ডার")}</h1>
+    <p class="small">${tx("Mark the days of your period. NariPath shows when the next one may come, and what to do if it is early or late.","মাসিকের দিনগুলো চিহ্নিত করুন। পরের মাসিক কবে আসতে পারে, আর আগে বা দেরিতে হলে কী করবেন, নারীপথ তা দেখাবে।")}</p></div></section>
+  <div class="ps-promise"><span>${icon("info")}${tx("Saved only on this phone","শুধু এই ফোনে থাকে")}</span><span>${icon("info")}${S.pcal.pin?tx("Locked with PIN","পিন দিয়ে লক করা"):tx("PIN lock available","পিন লক করা যায়")}</span><span>${icon("info")}${tx("Delete anytime","যেকোনো সময় মুছুন")}</span></div>
+  <section class="section card pc-status tone-${s.tone}" aria-live="polite"><h2>${s.title}</h2>${s.body.map(b=>`<p class="small">${b}</p>`).join("")}${s.src.length?srcList(s.src):""}</section>
+  <button type="button" class="btn ${todayOn?"ghost":"primary"} pc-today" data-pcday="${today}" aria-pressed="${todayOn}">${todayOn?tx("✓ Today is marked as a period day (tap to undo)","✓ আজ মাসিকের দিন হিসেবে চিহ্নিত (বাতিল করতে চাপুন)"):(st.ongoing?tx("I still have my period today","আজও মাসিক চলছে"):tx("My period started today","আজ মাসিক শুরু হয়েছে"))}</button>
+  <section class="section card">${pcalMonthGrid(st)}</section>
+  ${notes.map(([a,b,src])=>`<section class="section card pc-note"><b>${a}</b><p class="small">${b}</p>${srcList([src])}</section>`).join("")}
+  ${st.starts.length?`<section class="tiles dash pc-stats">
+    <div class="tile"><b>${st.guess?"~":""}${f1(st.avg)}</b><span>${tx("days between periods (average)","মাসিকের মাঝে গড় দিন")}</span></div>
+    <div class="tile"><b>${f1(st.avgLen)}</b><span>${tx("days of bleeding (average)","রক্ত যাওয়ার গড় দিন")}</span></div>
+    <div class="tile"><b>${esc(date(st.lastStart))}</b><span>${tx("last period started","শেষ মাসিক শুরু")}</span></div>
+    <div class="tile"><b>${f1(st.starts.length)}</b><span>${tx("periods marked","চিহ্নিত মাসিক")}</span></div></section>`:""}
+  <section class="section card">
+    <h2>${tx("See a health worker if","স্বাস্থ্যকর্মী দেখান যদি")}</h2>
+    <ul class="small pc-list">
+      <li>${tx("bleeding lasts more than 7 days","৭ দিনের বেশি রক্ত যায়")}</li>
+      <li>${tx("you need a new pad every 1 to 2 hours","১–২ ঘণ্টা পরপর প্যাড বদলাতে হয়")}</li>
+      <li>${tx("the pain is so bad you cannot do your daily work","ব্যথা এত বেশি যে দৈনন্দিন কাজ করতে পারেন না")}</li>
+      <li>${tx("you have missed 3 periods in a row and are not pregnant","পরপর ৩ বার মাসিক হয়নি এবং আপনি গর্ভবতী নন")}</li>
+      <li>${tx("periods keep coming less than 21 days apart, or more than 35 days apart (45 days for girls in their first years)","বারবার ২১ দিনের কম, বা ৩৫ দিনের বেশি ব্যবধানে মাসিক হয় (প্রথম কয়েক বছরের কিশোরীদের জন্য ৪৫ দিন)")}</li>
+    </ul>
+    <p class="small">${tx("Shastho Batayon 16263 has offered free health advice by phone; news in 2026 reported funding problems. If it doesn't connect, go to your nearest government health centre.","স্বাস্থ্য বাতায়ন ১৬২৬৩ ফোনে বিনামূল্যে স্বাস্থ্য পরামর্শ দিয়ে আসছে; ২০২৬ সালে অর্থায়ন সমস্যার খবর এসেছে। কল না গেলে নিকটস্থ সরকারি স্বাস্থ্যকেন্দ্রে যান।")}</p>
+    <a class="btn ghost" href="tel:16263" target="_top">${t("call")} ${bnNum("16263")}</a>
+    ${srcList(["nhsIrregular","aapHeavy","ghPain","nhsStopped","nhsCycle","acogTeen"])}
+  </section>
+  <section class="section card pc-warn small"><b>${tx("Please note","দয়া করে মনে রাখুন")}</b>
+    <p>${tx("This calendar is not a way to prevent pregnancy. Dates are estimates.","এই ক্যালেন্ডার গর্ভধারণ এড়ানোর কোনো পদ্ধতি নয়। তারিখগুলো আনুমানিক।")}</p>
+    <p>${tx("Guidance here is general information and is waiting for review by a qualified health professional. It is not medical advice.","এখানকার পরামর্শ সাধারণ তথ্য এবং যোগ্য স্বাস্থ্য পেশাজীবীর পর্যালোচনার অপেক্ষায় আছে। এটি চিকিৎসা পরামর্শ নয়।")}</p></section>
+  <section class="section card">
+    <h2>${tx("Privacy","গোপনীয়তা")}</h2>
+    <p class="small">${tx("Your dates are saved only in this browser on this phone and are never sent anywhere. Anyone who can open this app on your phone could see them, so you can add a PIN.","আপনার তারিখগুলো শুধু এই ফোনের এই ব্রাউজারে থাকে, কোথাও পাঠানো হয় না। আপনার ফোনে কেউ এই অ্যাপ খুললে দেখতে পারে, তাই চাইলে পিন দিন।")}</p>
+    ${S.pcal.pin?`<div class="btn-row"><button type="button" class="btn ghost" data-pclock="1">${tx("Lock now","এখনই লক করুন")}</button><button type="button" class="btn ghost" data-pcpinoff="1">${tx("Remove PIN","পিন সরান")}</button></div>`
+      :(S.pcalPin==="set"?`<form id="pc-setpin" class="pc-setpin"><label for="pc-pin1"><b>${tx("Choose a 4-digit PIN","৪ সংখ্যার একটি পিন বাছুন")}</b></label>
+        <input id="pc-pin1" type="password" inputmode="numeric" pattern="[0-9]{4}" maxlength="4" autocomplete="off" class="pin-in" required>
+        <label for="pc-pin2"><b>${tx("Type it again","আবার লিখুন")}</b></label><input id="pc-pin2" type="password" inputmode="numeric" pattern="[0-9]{4}" maxlength="4" autocomplete="off" class="pin-in" required>
+        <p class="small bad" id="pc-set-err" role="alert"></p>
+        <p class="small muted">${tx("If you forget it, the only way back in is to delete the calendar.","ভুলে গেলে ক্যালেন্ডার মুছে ফেলা ছাড়া আর উপায় নেই।")}</p>
+        <div class="btn-row"><button class="btn primary" type="submit">${tx("Save PIN","পিন সংরক্ষণ করুন")}</button><button class="btn ghost" type="button" data-pcpinset="0">${tx("Cancel","বাতিল")}</button></div></form>`
+      :`<button type="button" class="btn ghost" data-pcpinset="1">${tx("Add a PIN lock","পিন লক যোগ করুন")}</button>`)}
+    ${S.pcal.days.length?`<button type="button" class="btn danger" data-pcdel="1" style="margin-top:10px">${S.pcalDel?tx("Tap again to delete all your dates","সব তারিখ মুছতে আবার চাপুন"):tx("Delete all calendar data","ক্যালেন্ডারের সব তথ্য মুছুন")}</button>`:""}
+  </section>`;
+}
+document.addEventListener("click",e=>{
+  const el=e.target;
+  const dy=el.closest("[data-pcday]"); if(dy&&!dy.disabled){ const d=dy.dataset.pcday; if(d>isoLocal(TODAY)) return;
+    const i=S.pcal.days.indexOf(d); if(i>=0) S.pcal.days.splice(i,1); else { S.pcal.days.push(d); S.pcal.days.sort(); } pcalSave(); render(); return; }
+  const mn=el.closest("[data-pcmon]"); if(mn&&!mn.disabled){ const m=S.pcalMonth; S.pcalMonth=new Date(m.getFullYear(),m.getMonth()+(+mn.dataset.pcmon),1); render(); return; }
+  const dl=el.closest("[data-pcdel]"); if(dl){ if(!S.pcalDel){ S.pcalDel=true; render(); return; } S.pcal={days:[],pin:null}; S.pcalDel=false; S.pcalOpen=false; store.set("pcal",{days:[],pin:null}); toast(tx("Calendar data deleted","ক্যালেন্ডারের তথ্য মুছে ফেলা হয়েছে")); render(); return; }
+  const ps=el.closest("[data-pcpinset]"); if(ps){ S.pcalPin=ps.dataset.pcpinset==="1"?"set":null; render(); const f=document.getElementById("pc-pin1"); if(f) f.focus(); return; }
+  if(el.closest("[data-pcpinoff]")){ S.pcal.pin=null; pcalSave(); toast(tx("PIN removed","পিন সরানো হয়েছে")); render(); return; }
+  if(el.closest("[data-pclock]")){ S.pcalOpen=false; render(); return; }
+});
+document.addEventListener("submit",async e=>{
+  if(e.target.id==="pc-unlock"){ e.preventDefault(); const v=document.getElementById("pc-pin-in").value.trim();
+    const h=await pinHash(S.pcal.pin.s,v); if(h===S.pcal.pin.h){ S.pcalOpen=true; render(); } else { const er=document.getElementById("pc-pin-err"); if(er) er.textContent=tx("That PIN is not right. Try again.","পিন সঠিক নয়। আবার চেষ্টা করুন।"); document.getElementById("pc-pin-in").value=""; } return; }
+  if(e.target.id==="pc-setpin"){ e.preventDefault(); const a=document.getElementById("pc-pin1").value.trim(), b=document.getElementById("pc-pin2").value.trim(), er=document.getElementById("pc-set-err");
+    if(!/^\d{4}$/.test(a)){ er.textContent=tx("Use exactly 4 numbers.","ঠিক ৪টি সংখ্যা দিন।"); return; }
+    if(a!==b){ er.textContent=tx("The two PINs don't match.","দুটি পিন মেলেনি।"); return; }
+    const salt=Math.random().toString(36).slice(2,10)+Date.now().toString(36);
+    S.pcal.pin={s:salt,h:await pinHash(salt,a)}; S.pcalPin=null; S.pcalOpen=true; pcalSave(); toast(tx("PIN saved","পিন সংরক্ষণ হয়েছে")); render(); }
+});
+window.addEventListener("hashchange",()=>{ if(location.hash!=="#period-cal"){ S.pcalOpen=false; S.pcalDel=false; S.pcalPin=null; } });
+function pcalCard(){
+  return `<a class="ps-banner pc-banner" href="#period-cal"><span class="pc-mini" aria-hidden="true">${icon("cal")}</span><span><b>${tx("Period calendar","পিরিয়ড ক্যালেন্ডার")}</b><span>${tx("Optional: track your dates privately, and see what to do if a period is early or late","ঐচ্ছিক: গোপনে তারিখ রাখুন, আর মাসিক আগে বা দেরিতে হলে কী করবেন জানুন")}</span></span>${icon("chev","chev")}</a>`;
+}
+
+/* ================= First-time guide (coach marks) =================
+   Shown once on the home page for new users; replay from Settings.
+   A spotlight highlights each part of the app with a short explanation.
+   Fully keyboard and screen-reader usable; Esc closes it. */
+const TOUR=[
+  {sel:null,lang:true,t:K("Welcome to NariPath","নারীপথে স্বাগতম"),b:K("NariPath helps women in Bangladesh find services, rights and support, all in one place. This short guide shows you how to use it.","নারীপথ বাংলাদেশের নারীদের সেবা, অধিকার ও সহায়তা এক জায়গায় খুঁজে পেতে সাহায্য করে। এই ছোট গাইডে দেখানো হবে কীভাবে ব্যবহার করবেন।")},
+  {sel:"header .lang",t:K("Choose your language","ভাষা বেছে নিন"),b:K("Switch between Bangla and English here at any time.","যেকোনো সময় এখানে বাংলা বা ইংরেজি বেছে নিন।")},
+  {sel:"#home-search",t:K("Search","খুঁজুন"),b:K("Type what you are looking for, like scholarship, clinic or legal aid.","যা খুঁজছেন তা লিখুন, যেমন বৃত্তি, ক্লিনিক বা আইনি সহায়তা।")},
+  {sel:".svc",t:K("Useful tools","দরকারি টুল"),b:K("Allowances, mother and baby care, disaster help, the map, the period calendar and more. Tap any picture to open it.","ভাতা, মা ও শিশুর যত্ন, দুর্যোগে সহায়তা, মানচিত্র, পিরিয়ড ক্যালেন্ডার ও আরও অনেক কিছু। যেকোনো ছবিতে চাপ দিয়ে খুলুন।")},
+  {sel:".ps-banner[href='#period']",t:K("Period Shikkha","পিরিয়ড শিক্ষা"),b:K("Simple lessons about periods for girls, with pictures and listening. No name or dates needed.","কিশোরীদের জন্য মাসিক নিয়ে সহজ পাঠ, ছবি ও শোনার সুবিধাসহ। নাম বা তারিখ লাগে না।")},
+  {sel:".sit-list",t:K("Start with what you need","আপনার প্রয়োজন দিয়ে শুরু করুন"),b:K("Tap the card that matches your situation. NariPath shows matching help and the next steps.","আপনার অবস্থার সাথে মেলে এমন কার্ডে চাপ দিন। নারীপথ উপযুক্ত সহায়তা ও পরের ধাপ দেখাবে।")},
+  {sel:"#listen",t:K("Listen","শুনুন"),b:K("Press here to hear the page read aloud in Bangla. Press again to stop.","এখানে চাপ দিলে পাতাটি বাংলায় পড়ে শোনানো হবে। থামাতে আবার চাপুন।")},
+  {sel:"nav.tabs",t:K("Move around the app","অ্যাপে ঘুরে দেখুন"),b:K("Home, Explore all services, Learn guides, My Path for your saved steps, and Settings.","হোম, সব সেবা খুঁজুন, শিখুন, আপনার সেভ করা ধাপের জন্য আমার পথ, আর সেটিংস।")},
+  {sel:"nav.tabs a[href='#settings']",t:K("Settings","সেটিংস"),b:K("Dark mode, bigger text, language, voice and About NariPath are here. You can watch this guide again from Settings.","ডার্ক মোড, বড় লেখা, ভাষা, ভয়েস ও নারীপথ সম্পর্কে তথ্য এখানে। সেটিংস থেকে এই গাইড আবার দেখতে পারবেন।")},
+  {sel:null,t:K("Your information stays with you","আপনার তথ্য আপনার কাছেই থাকে"),b:K("You don't need an account. Nothing you enter is sent anywhere; it stays on this phone. In an emergency, call 999.","কোনো অ্যাকাউন্ট লাগে না। আপনি যা লেখেন তা কোথাও পাঠানো হয় না; এই ফোনেই থাকে। জরুরি অবস্থায় ৯৯৯-এ কল করুন।")}
+];
+const TR={on:false,i:0,steps:[],ret:null};
+function tourVisible(sel){ if(!sel) return true; const el=document.querySelector(sel); if(!el) return false; const r=el.getBoundingClientRect(); return r.width>0&&r.height>0; }
+function startTour(force){
+  if(TR.on) return;
+  if(!force&&store.get("tour",0)) return;
+  if(route()!=="home"){ location.hash="home"; }
+  TR.on=true; TR.i=0; TR.ret=document.activeElement; stopSpeech();
+  let ov=document.getElementById("tour");
+  if(!ov){ ov=document.createElement("div"); ov.id="tour"; ov.innerHTML=`<div class="tour-dim"></div><div class="tour-spot" aria-hidden="true"></div><div class="tour-bub" role="dialog" aria-modal="true" aria-labelledby="tour-h" aria-describedby="tour-b"></div>`; document.body.appendChild(ov); }
+  ov.hidden=false; document.querySelector(".app").setAttribute("inert",""); document.documentElement.classList.add("touring");
+  tourShow(0);
+}
+function tourEnd(){
+  if(!TR.on) return; TR.on=false; stopSpeech();
+  const ov=document.getElementById("tour"); if(ov) ov.hidden=true;
+  document.querySelector(".app").removeAttribute("inert"); document.documentElement.classList.remove("touring");
+  store.set("tour",1);
+  const h=document.querySelector("#view h1"); if(h){ h.setAttribute("tabindex","-1"); h.focus({preventScroll:true}); }
+  window.scrollTo(0,0);
+}
+function tourShow(i){
+  const steps=TOUR.filter(s=>tourVisible(s.sel)); TR.steps=steps;
+  i=Math.max(0,Math.min(i,steps.length-1)); TR.i=i; const s=steps[i], n=steps.length;
+  const ov=document.getElementById("tour"), bub=ov.querySelector(".tour-bub"), spot=ov.querySelector(".tour-spot");
+  bub.innerHTML=`<div class="tour-top"><span class="small muted">${tx(`Step ${i+1} of ${n}`,`${num(n)}টির মধ্যে ${num(i+1)} নম্বর ধাপ`)}</span>
+      <button type="button" class="tour-say" data-tour="say" aria-label="${tx("Listen","শুনুন")}">${icon("speaker")}</button></div>
+    <h2 id="tour-h">${L(s.t)}</h2><p id="tour-b">${L(s.b)}</p>
+    ${s.lang?`<div class="set-seg tour-lang" role="group" aria-label="${tx("Language","ভাষা")}"><button type="button" data-tourlang="bn" aria-pressed="${S.lang==="bn"}">বাংলা</button><button type="button" data-tourlang="en" aria-pressed="${S.lang==="en"}">English</button></div>`:""}
+    <div class="tour-dots" aria-hidden="true" data-noread>${steps.map((_,k)=>`<span class="${k===i?"on":""}"></span>`).join("")}</div>
+    <div class="tour-btns">${i>0?`<button type="button" class="btn ghost" data-tour="back">${tx("Back","আগের")}</button>`:`<button type="button" class="btn ghost" data-tour="skip">${tx("Skip","বাদ দিন")}</button>`}
+      <button type="button" class="btn primary" data-tour="${i===n-1?"done":"next"}">${i===0?tx("Start the guide","গাইড শুরু করুন"):i===n-1?tx("Start using NariPath","নারীপথ ব্যবহার শুরু করুন"):tx("Next","পরের")}</button></div>
+    ${i>0&&i<n-1?`<button type="button" class="tour-skip" data-tour="skip">${tx("Skip the guide","গাইড বাদ দিন")}</button>`:""}`;
+  const el=s.sel&&document.querySelector(s.sel);
+  if(el){ const fixed=getComputedStyle(el).position==="fixed"||el.closest("nav.tabs,header");
+    if(!fixed){ const r=el.getBoundingClientRect(); if(r.top<90||r.bottom>innerHeight-200) window.scrollTo({top:Math.max(0,scrollY+r.top-Math.max(110,(innerHeight-r.height)/2-80)),behavior:"instant"}); } }
+  tourPlace();
+  setTimeout(()=>{ const b=bub.querySelector('[data-tour="next"],[data-tour="done"]'); if(b) b.focus(); },40);
+}
+function tourPlace(){
+  if(!TR.on) return; const s=TR.steps[TR.i]; const ov=document.getElementById("tour"), bub=ov.querySelector(".tour-bub"), spot=ov.querySelector(".tour-spot");
+  const el=s&&s.sel&&document.querySelector(s.sel);
+  if(!el){ spot.style.cssText="display:none"; ov.classList.add("center"); bub.style.cssText=""; return; }
+  ov.classList.remove("center");
+  const r=el.getBoundingClientRect(), pad=8;
+  const x=Math.max(4,r.left-pad), y=Math.max(4,r.top-pad), w=Math.min(innerWidth-8,r.width+pad*2), h=Math.min(innerHeight-8,r.height+pad*2);
+  spot.style.cssText=`display:block;left:${x}px;top:${y}px;width:${w}px;height:${h}px`;
+  const bw=Math.min(360,innerWidth-24); bub.style.width=bw+"px";
+  const bh=bub.offsetHeight||220; let top;
+  if(y+h+12+bh<innerHeight-8) top=y+h+12; else if(y-12-bh>8) top=y-12-bh; else top=Math.max(8,innerHeight-bh-8);
+  let left=Math.min(Math.max(12,r.left+r.width/2-bw/2),innerWidth-bw-12);
+  bub.style.top=top+"px"; bub.style.left=left+"px";
+}
+addEventListener("resize",()=>{ if(TR.on) tourPlace(); });
+addEventListener("scroll",()=>{ if(TR.on) requestAnimationFrame(tourPlace); },{passive:true});
+document.addEventListener("click",e=>{
+  const b=e.target.closest("[data-tour]"); const lg=e.target.closest("[data-tourlang]");
+  if(lg&&TR.on){ S.lang=lg.dataset.tourlang; store.set("lang",S.lang); document.documentElement.lang=S.lang; render(); tourShow(TR.i); const f=document.querySelector(`[data-tourlang="${S.lang}"]`); if(f) f.focus(); return; }
+  if(!b||!TR.on) return; const a=b.dataset.tour;
+  if(a==="next"){ stopSpeech(); tourShow(TR.i+1); } else if(a==="back"){ stopSpeech(); tourShow(TR.i-1); }
+  else if(a==="skip"||a==="done") tourEnd();
+  else if(a==="say"){ const s=TR.steps[TR.i]; speakChunks(speechChunks(raw(s.t)+"।\n"+raw(s.b)),S.lang==="bn"?"bn":"en"); }
+});
+document.addEventListener("keydown",e=>{
+  if(!TR.on) return;
+  if(e.key==="Escape"){ e.preventDefault(); tourEnd(); return; }
+  if(e.key==="Tab"){ const f=[...document.querySelectorAll("#tour .tour-bub button")]; if(!f.length) return; const i=f.indexOf(document.activeElement);
+    if(e.shiftKey&&i<=0){ e.preventDefault(); f[f.length-1].focus(); } else if(!e.shiftKey&&i===f.length-1){ e.preventDefault(); f[0].focus(); } }
+});
 
 /* ---------- Map ---------- */
 S.mapSel=""; S.mapDiv=""; S.mapVB=null; S.mapCoast=false;
@@ -3863,17 +4524,14 @@ function render(){
   document.getElementById("vh-english").textContent = S.lang==="bn"?"ইংরেজিতে শুনুন":"Read in English instead";
   document.getElementById("vh-close").textContent = t("dismiss");
   document.getElementById("settings-close").textContent = t("dismiss");
-  document.getElementById("aa-btn").setAttribute("aria-label", t("displayTitle"));
+  document.getElementById("aa-btn").setAttribute("aria-label", t("settings"));
   applyA11y(); updateOnline();
   const fn=document.getElementById("frame-note");
   if(fn){ let framed=false; try{framed=window.self!==window.top}catch(e){framed=true}
     if(framed){ fn.hidden=false; fn.innerHTML=`<span>${S.lang==="bn"?"কল ও বাংলা ভয়েস ঠিকমতো চালাতে ফোনের ব্রাউজারে খুলুন:":"For calling and Bangla voice, open NariPath in your phone browser:"} <b>syadanusratnahar-max.github.io/naripath</b> ${copyBtn("https://syadanusratnahar-max.github.io/naripath/").replace(t("copyNum")+"</button>",(S.lang==="bn"?"লিংক কপি":"Copy link")+"</button>")}</span><button type="button" id="frame-close" aria-label="${t("dismiss")}">✕</button>`; } }
-  document.getElementById("listen").innerHTML = speaking
-    ? `<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/></svg>${t("stop")}`
-    : `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg>${t("listen")}`;
-  document.getElementById("listen").setAttribute("aria-pressed", speaking);
-  const tab = (r.startsWith("r-")||r==="explore"||r==="district") ? "explore" : (r==="learn"||r.startsWith("g-")||r.startsWith("period")) ? "learn" : (r==="path"||r==="apps") ? "path" : (r==="about"||r==="gaps") ? "about" : "home";
-  const TABS=[["home","home"],["explore","search"],["learn","learn"],["path","list"],["about","info"]];
+  setListenUI();
+  const tab = (r.startsWith("r-")||r==="explore"||r==="district") ? "explore" : (r==="learn"||r.startsWith("g-")||r.startsWith("period")) ? "learn" : (r==="path"||r==="apps") ? "path" : (r==="about"||r==="gaps"||r==="settings") ? "settings" : "home";
+  const TABS=[["home","home"],["explore","search"],["learn","learn"],["path","list"],["settings","gear"]];
   const ti=Math.max(0,TABS.findIndex(([k])=>k===tab));
   const prevTi = typeof window.__ti==="number" ? window.__ti : ti;
   document.getElementById("tabs").innerHTML = `<span class="pill" style="transform:translateX(${prevTi*100}%)"></span>` + TABS
@@ -3884,6 +4542,7 @@ function render(){
   if(r==="explore") html=viewExplore();
   else if(r==="path") html=viewPath();
   else if(r==="about") html=viewAbout();
+  else if(r==="settings") html=viewSettings();
   else if(r==="gaps") html=viewGaps();
   else if(r==="navigator") html=viewNavigator();
   else if(r==="check") html=viewCheck();
@@ -3900,16 +4559,22 @@ function render(){
   else if(r==="period") html=viewPeriod();
   else if(r==="period-check") html=viewPeriodCheck();
   else if(r==="period-group") html=viewPeriodGroup();
+  else if(r==="period-cal") html=viewPeriodCal();
   else if(r.startsWith("period-")) html=viewPeriodLesson(r.slice(7));
   else html=viewHome();
   const fk=focusKey(document.activeElement);
   document.getElementById("view").innerHTML=html;
   afterRender(r,fk);
+  if(r==="settings") settingsVoiceInfo();
+  if(r==="home"&&!TR.on&&!TR.auto&&!store.get("tour",0)&&!navigator.webdriver){ TR.auto=true; setTimeout(()=>{ if(route()==="home") startTour(false); },reduceMotion()?300:1500); }
   if(r==="map") animateMap();
   const rv=document.querySelector(".stitch .reveal");
   if(rv){ try{ rv.style.setProperty("--len", Math.ceil(rv.getTotalLength())); }catch(e){} if(!S.sewn) setTimeout(()=>{S.sewn=true;},3200); }
-  if(S.a11y.motion==="reduce") S.sewn=true;
+  if(reduceMotion()) S.sewn=true;
+  const wk=document.querySelector(".walker"), wp=document.getElementById("walkPath");
+  if(wk&&wp&&!wk.querySelector("animateMotion")){ try{ const pt=wp.getPointAtLength(wp.getTotalLength()*.975); wk.setAttribute("transform",`translate(${pt.x.toFixed(1)} ${pt.y.toFixed(1)})`); }catch(e){} }
 }
+function reduceMotion(){ if(S.a11y.motion==="reduce") return true; try{ return matchMedia("(prefers-reduced-motion: reduce)").matches; }catch(e){ return false; } }
 let lastRoute=route();
 window.addEventListener("hashchange",()=>{
   const r=route(); S.clearArmed=false; if(r!=="path"){S.flash="";S.revealed=false;}
@@ -3935,7 +4600,7 @@ document.addEventListener("click",e=>{
     location.hash="path";setTimeout(()=>{const a=document.getElementById("path-"+id);if(a)a.scrollIntoView({block:"start"});},30);return;}
   if(el.dataset.rmpath){delete S.paths[el.dataset.rmpath];persist();render();return;}
   if(el.id==="clear-btn"){ if(!S.clearArmed){S.clearArmed=true;render();return;}
-    S.saved=[];S.paths={};S.plans={};S.reminders=[];S.apps=[];S.mig={before:[],abroad:[],home:[]};S.dis={before:[],during:[],after:[]};S.ps={done:[],card:0,check:null};S.pss=[];S.a11y=Object.assign({},A11Y_DEFAULT);applyA11y();S.reports=[];S.hide=false;S.revealed=false;S.clearArmed=false;store.clear();store.set("saved",[]);store.set("paths",{});S.flash=t("cleared");render();return;}
+    S.saved=[];S.paths={};S.plans={};S.reminders=[];S.apps=[];S.mig={before:[],abroad:[],home:[]};S.dis={before:[],during:[],after:[]};S.ps={done:[],card:0,check:null};S.pss=[];S.pcal={days:[],pin:null};S.pcalOpen=false;S.a11y=Object.assign({},A11Y_DEFAULT);applyA11y();S.reports=[];S.hide=false;S.revealed=false;S.clearArmed=false;store.clear();store.set("saved",[]);store.set("paths",{});S.flash=t("cleared");render();return;}
   if(el.id==="nav-go"){S.nav.district=document.getElementById("nav-district").value;S.nav.freeFirst=document.getElementById("nav-free").checked;S.nav.done=true;render();window.scrollTo(0,0);return;}
   if(el.id==="nav-restart"){location.hash="home";return;}
 });

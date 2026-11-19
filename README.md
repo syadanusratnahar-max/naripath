@@ -30,11 +30,15 @@ NariPath does not replace existing organisations or provide medical, legal, fina
 - **Get your documents:** step-by-step guides for birth registration, NID (new, correction, lost card), trade licence, and bank or mobile-money accounts, with fees, offices and official links.
 - **Share with someone:** send a listing or guide by WhatsApp, SMS or copy, with its source date and link. Nothing about the user is included.
 - **Reminders:** set a date on any plan or Action Path and add it to Google Calendar or a calendar file, so the phone does the reminding.
-- **Display settings (Aa):** larger text, high contrast, simple mode (main actions only, bigger buttons) and reduced motion.
+- **Settings (⚙ in the header and the last tab):** light, dark or "same as phone" theme; Bangla or English; text size, high contrast, simple mode (main actions only, bigger buttons) and reduced motion; voice choice and speed; replay the app guide; install; what is stored and "Clear my data"; and **About NariPath** (moved here from the main tabs).
+- **First-time guide:** new users get a 10-step spotlight tour of the home page (language, search, tools, Period Shikkha, situation cards, Listen, tabs, Settings, privacy). It can be skipped, read aloud, used with a keyboard or screen reader (Esc closes it), and replayed from Settings.
+- **Period calendar (optional):** mark the days of your period on a month calendar (week starts on Saturday). NariPath estimates the next period from your own average (28 days until two periods are marked) and says what to do if it is late, early, unusually long or stopped for 3 months: common causes, when a pregnancy test is useful, and when to see a health worker, with sources. Dates stay on the phone, can be locked with a 4-digit PIN (only a salted SHA-256 hash is stored) and deleted in one tap. Not a way to prevent pregnancy; guidance is marked draft until medically reviewed.
+- **Works on PC too:** at 960px and wider the tabs become a sidebar, the home banner sits beside its landscape, and lists, tools and tiles spread into columns; reading pages keep a comfortable line length.
+- **Dark mode ("monsoon night"):** every screen has a dark version; the home landscape turns into a moonlit night with stars and a lit hut.
 - **Screen readers (TalkBack, VoiceOver):** every screen passes an automated axe-core check (WCAG 2 AA, including colour contrast) in Bangla and English. When the page changes, focus moves to its heading and the tab title updates, so the new page is announced; after a tap, focus returns to the same control. A skip link jumps to the main content, buttons have spoken names, pictures are hidden from the screen reader, and the map has a district list for people who cannot see it. Period Shikkha lessons and quiz questions are read out as each new card appears. Not yet tested with blind users on real phones.
 - **Works offline:** installable from the browser. After one online visit, every page (guides, allowances, safe migration, saved plans and applications, helpline numbers) opens without internet, including after an update. Calling still needs a phone signal.
 - **Report a problem:** wrong phone number, broken link, closed service, changed eligibility, wrong cost. Reports stay on the device in this prototype and can be copied to send to the team.
-- **Read aloud** in Bangla or English (on-device voices preferred), **tap-to-call** and **copy number** buttons.
+- **NariPath's own Bangla voice:** every Bangla sentence the app reads aloud (1,500+ across all pages, lessons, the quiz and the guide) is pre-recorded with an open-source female Bangla voice, so **Listen works even on phones with no Bangla voice installed**. Recordings are bundled per area of the app (a phone downloads only what it plays), cached for offline use, and can all be saved from Settings. Anything not recorded, such as text that changes with the date, falls back to the phone's voice. English uses the phone's voice. **Tap-to-call** and **copy number** buttons.
 - **Information Gap Finder:** an admin view that separates information *not yet researched* from information *checked and not publicly available*, with coverage across all 64 districts.
 
 ## Data
@@ -74,24 +78,41 @@ Information can change. Always confirm with the provider before acting.
 | `db/allowances.json` | Government allowances for women, FY2026-27, with sources |
 | District map | Outlines from [geoBoundaries](https://www.geoboundaries.org) (CC BY 4.0; Bangladesh Bureau of Statistics / OCHA) via the MIT-licensed `bangladesh-geojson` package, dissolved to districts (upazilas with missing or duplicate names re-assigned by location) and simplified |
 | `fonts/` | Tiro Bangla and Hind Siliguri, self-hosted (SIL Open Font License) |
+| `audio/bn/` | NariPath's Bangla voice: recorded sentences bundled per app area (`*.bin`, Ogg Opus clips back to back) and `index.json`, which maps a hash of each sentence to its bundle, offset and length |
+| `scripts/voice/` | How the voice is made: `extract.py` collects every sentence the reader speaks, `normalize.py` writes numbers, helplines, dates and symbols as Bangla words, `synth.py` records them, `pack.py` bundles them. See *Voice* below |
 | `scripts/build-data.mjs` | Regenerates the JSON files and the numbers above from `index.html`. Run `node scripts/build-data.mjs` after editing data |
 
 ## Run it
 
 Open `index.html` in any browser, or visit the live demo. To host your own copy, enable GitHub Pages (Settings → Pages → Branch: `main`, folder: `/ (root)`).
 
+## Voice
+
+The voice is the open-source Coqui TTS model `bn/custom/vits-female` by [@mobassir94](https://github.com/mobassir94/comprehensive-bangla-tts) (Apache 2.0), run offline with [sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx). It is a synthetic voice, not a person. To update recordings after changing text:
+
+```
+pip install sherpa-onnx soundfile        # and ffmpeg
+# model: vits-coqui-bn-custom_female from the sherpa-onnx "tts-models" release, unpacked to $NV_MODEL
+python3 scripts/voice/extract.py         # renders every page in Bangla, writes chunks.json
+python3 scripts/voice/synth.py           # records only new sentences (cached by hash)
+python3 scripts/voice/pack.py chunks.json audio/bn
+```
+
+Limits: the model can't say English words, so they are skipped in Bangla sentences and mostly-English lines are not recorded; numbers are spelled out by `normalize.py` (helplines digit by digit). Pronunciation should be checked by Bangla speakers during the pilot, and recordings by a female health worker would be better still for Period Shikkha.
+
 ## Design
 
-Light "alpona morning" theme: blush-white paper with a faint kantha-stitch pattern, violet-to-jamdani-pink accents, and marigold, teal and leaf-green service tiles. The home banner has drifting colour and a slowly turning alpona flower; service tiles pop in once per visit, tool banners have a soft sheen, call buttons pulse gently, and finishing a checklist step or moving an application forward sets off a small confetti burst. All motion stops when the phone's "reduce motion" setting or NariPath's own Animations setting is off, and nothing you tap moves while you aim at it. The app always opens in the light theme.
+Light "alpona morning" theme: blush-white paper with a faint kantha-stitch pattern, violet-to-jamdani-pink accents, and marigold, teal and leaf-green service tiles. The home banner is an illustrated journey: a winding path through a Bangladeshi landscape (paddy, river with a boat, palms, a hut, a rising sun) with the six areas of support as stops along it and a woman walking it as the page opens; service tiles pop in once per visit, tool banners have a soft sheen, call buttons pulse gently, and finishing a checklist step or moving an application forward sets off a small confetti burst. All motion stops when the phone's "reduce motion" setting or NariPath's own Animations setting is off, and nothing you tap moves while you aim at it. The app opens in the light theme; dark mode or "same as phone" can be chosen in Settings.
 
 ## Privacy
 
 - **Nothing is sent to NariPath.** There is no NariPath server, account or login. Saved items, plans, reminders, display settings, problem reports, safe-migration and disaster checklist ticks and tracked applications are kept in the browser's local storage on the user's device, and "Clear my data" removes them.
 - **Period Shikkha asks nothing personal.** Only which lessons were finished is saved. Quiz answers are not saved. Group sessions store the school or community name, the date and numbered, anonymous answers on the facilitator's phone.
+- **Period calendar dates are optional and stay on the phone.** They can be locked with a PIN (stored only as a salted hash) and deleted in one tap; "Clear my data" also removes them.
 - **Mother and baby dates are never stored.** They are kept in memory only while that screen is open.
 - **Application titles are typed by the user** and saved exactly as written on the device, so the app asks people not to enter names or ID, account or phone numbers. NariPath does not ask for or store ID photos, health records or money.
-- **Third-party requests:** the app, fonts and icons all load from the same address (GitHub Pages, which like any host sees the visitor's IP address). There are no analytics, advertising or tracking scripts and no Google Fonts requests. The user leaves NariPath only by tapping a link: a phone call, a WhatsApp or SMS share, Google Calendar, Google Maps directions or search, or a source website. The district map is drawn from data inside the app, so viewing it sends nothing anywhere and NariPath never reads the user's location. On some phones, read-aloud uses an online voice service that receives the text being read.
-- NariPath is not an emergency service. Personal safety alerts (check-in timer, trusted-contact alerts) are described on the About page only as possible future work; they would need a native Android app, an SMS provider, weekly delivery tests and safeguarding review before being built.
+- **Third-party requests:** the app, fonts and icons all load from the same address (GitHub Pages, which like any host sees the visitor's IP address). There are no analytics, advertising or tracking scripts and no Google Fonts requests. The user leaves NariPath only by tapping a link: a phone call, a WhatsApp or SMS share, Google Calendar, Google Maps directions or search, or a source website. The district map is drawn from data inside the app, so viewing it sends nothing anywhere and NariPath never reads the user's location. NariPath's Bangla voice is downloaded from the same address and plays on the phone. When the phone's own voice is used instead, some phones send the text being read to an online voice service.
+- NariPath is not an emergency service. Personal safety alerts (check-in timer, trusted-contact alerts) are described on the About page (Settings → About) only as possible future work; they would need a native Android app, an SMS provider, weekly delivery tests and safeguarding review before being built.
 
 ## Roadmap
 
