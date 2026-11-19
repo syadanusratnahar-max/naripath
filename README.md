@@ -78,7 +78,7 @@ Information can change. Always confirm with the provider before acting.
 | `db/allowances.json` | Government allowances for women, FY2026-27, with sources |
 | District map | Outlines from [geoBoundaries](https://www.geoboundaries.org) (CC BY 4.0; Bangladesh Bureau of Statistics / OCHA) via the MIT-licensed `bangladesh-geojson` package, dissolved to districts (upazilas with missing or duplicate names re-assigned by location) and simplified |
 | `fonts/` | Tiro Bangla and Hind Siliguri, self-hosted (SIL Open Font License) |
-| `audio/bn/` | NariPath's Bangla voice: recorded sentences bundled per app area (`*.bin`, Ogg Opus clips back to back) and `index.json`, which maps a hash of each sentence to its bundle, offset and length |
+| `audio/bn/` | NariPath's Bangla voice: recorded sentences bundled per app area (`*.ogg`, Ogg Opus clips back to back) and `index.json`, which maps a hash of each sentence to its bundle, offset and length |
 | `scripts/voice/` | How the voice is made: `extract.py` collects every sentence the reader speaks, `normalize.py` writes numbers, helplines, dates and symbols as Bangla words, `synth.py` records them, `pack.py` bundles them. See *Voice* below |
 | `scripts/build-data.mjs` | Regenerates the JSON files and the numbers above from `index.html`. Run `node scripts/build-data.mjs` after editing data |
 

@@ -35,7 +35,7 @@ for pid, ks in sorted(packs.items()):
         seen.add(k); b = open(f"{CACHE}/{k}.opus", "rb").read()
         index["clips"][k] = [pid, len(blob), len(b)]; blob += b
     h = hashlib.sha1(blob).hexdigest()[:10]; allh.update(h.encode())
-    fn = f"{pid}-{h}.bin"; open(os.path.join(OUT, fn), "wb").write(blob)
+    fn = f"{pid}-{h}.ogg"; open(os.path.join(OUT, fn), "wb").write(blob)
     index["packs"][pid] = {"f": fn, "b": len(blob)}
 index["v"] = int(allh.hexdigest()[:7], 16)
 json.dump(index, open(os.path.join(OUT, "index.json"), "w"), separators=(",", ":"))
