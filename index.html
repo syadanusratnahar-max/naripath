@@ -1043,6 +1043,12 @@ html[data-theme] .aa.gear:hover svg{animation:none}
 html.touring .listen{z-index:81;pointer-events:none}
 @media (prefers-reduced-motion:reduce){.tour-spot,.tour-bub{transition:none}}
 html[data-motion="reduce"] .tour-spot,html[data-motion="reduce"] .tour-bub{transition:none}
+/* phone voice status */
+.voice-found{display:flex;flex-direction:column;gap:2px;padding:10px 12px;border-radius:14px;border:1px solid var(--line)}
+.voice-found.ok{background:color-mix(in srgb,#1d7a45 9%,var(--surface));border-color:color-mix(in srgb,#1d7a45 30%,var(--line))}
+.voice-found.no{background:color-mix(in srgb,#ffbb3d 12%,var(--surface))}
+.voice-pick{margin-top:8px}
+.voice-how ol{padding-left:20px;line-height:1.6;margin:8px 0}
 /*NEWCSS-END*/
 </style>
 </head>
@@ -1987,7 +1993,7 @@ GUIDES.push(
   related:["nlaso"], sources:["ekyc","bankDocs","mfs14","mfs14docs","wallet"]}
 );
 
-const A11Y_DEFAULT={text:"normal",contrast:"normal",simple:"off",motion:"normal",theme:"light",voice:"naripath",rate:"normal"};
+const A11Y_DEFAULT={text:"normal",contrast:"normal",simple:"off",motion:"normal",theme:"light",voice:"auto",voiceName:"",rate:"normal"};
 /* ---------------- State ---------------- */
 const store = {
   get(k,d){try{const v=localStorage.getItem("naripath:"+k);return v?JSON.parse(v):d}catch(e){return d}},
@@ -2858,6 +2864,8 @@ function pickVoice(voices,want){
   const n=v=>(v.lang||"").toLowerCase().replace("_","-");
   voices=[...voices].sort((a,b)=>(b.localService===true)-(a.localService===true));   // on-device voices first
   if(want==="bn"){
+    const chosen=S.a11y.voiceName&&voices.find(v=>v.name===S.a11y.voiceName&&n(v).startsWith("bn"));
+    if(chosen) return chosen;
     return voices.find(v=>n(v)==="bn-bd") || voices.find(v=>n(v)==="bn-in") || voices.find(v=>n(v).startsWith("bn"))
         || voices.find(v=>/bangla|bengali|বাংলা/i.test(v.name));
   }
@@ -3971,12 +3979,25 @@ function viewSettings(){
 
   <section class="section card set-card" aria-labelledby="set-voice">
     <h2 id="set-voice">${tx("Voice (read aloud)","ভয়েস (পড়ে শোনানো)")}</h2>
-    <p class="small">${tx("NariPath has its own recorded Bangla voice, so listening works even if your phone has no Bangla voice. English uses your phone's voice.","নারীপথের নিজস্ব রেকর্ড করা বাংলা ভয়েস আছে, তাই ফোনে বাংলা ভয়েস না থাকলেও শোনা যায়। ইংরেজির জন্য ফোনের ভয়েস ব্যবহার হয়।")}</p>
-    ${row(tx("Bangla voice","বাংলা ভয়েস"),nvOk?"":tx("This browser can't play NariPath's voice; your phone's voice will be used.","এই ব্রাউজারে নারীপথের ভয়েস চলে না; ফোনের ভয়েস ব্যবহার হবে।"),
-      seg("voice",[["naripath",tx("NariPath voice","নারীপথের ভয়েস")],["phone",tx("Phone's voice","ফোনের ভয়েস")]],tx("Bangla voice","বাংলা ভয়েস")))}
+    <p class="small">${tx("The most natural Bangla voice is your phone's own text-to-speech voice, such as Google's Bangla voice. NariPath uses it when your phone has one. If not, NariPath plays its own recorded Bangla voice.","সবচেয়ে স্বাভাবিক বাংলা ভয়েস হলো আপনার ফোনের নিজস্ব টেক্সট-টু-স্পিচ ভয়েস, যেমন গুগলের বাংলা ভয়েস। ফোনে থাকলে নারীপথ সেটাই ব্যবহার করে। না থাকলে নারীপথের নিজস্ব রেকর্ড করা বাংলা ভয়েস বাজে।")}</p>
+    <div class="voice-found" id="phone-voice-status" role="status">${tx("Checking your phone's voices…","ফোনের ভয়েস খোঁজা হচ্ছে…")}</div>
+    <div id="phone-voice-list"></div>
+    ${row(tx("Bangla voice","বাংলা ভয়েস"),"",
+      seg("voice",[["auto",tx("Best available","সবচেয়ে ভালোটি")],["phone",tx("Phone's voice","ফোনের ভয়েস")],["naripath",tx("NariPath voice","নারীপথের ভয়েস")]],tx("Bangla voice","বাংলা ভয়েস")))}
     ${row(tx("Speed","গতি"),"",seg("rate",[["slow",tx("Slow","ধীরে")],["normal",tx("Normal","সাধারণ")]],tx("Speed","গতি")))}
-    <div class="btn-row"><button type="button" class="btn ghost" id="voice-test">${icon("speaker")} ${tx("Test the voice","ভয়েস শুনে দেখুন")}</button>
-    <button type="button" class="btn ghost" id="voice-dl">${tx("Save voice for offline use","অফলাইনে শোনার জন্য ভয়েস রাখুন")} <span class="small muted" id="voice-size"></span></button></div>
+    <div class="btn-row"><button type="button" class="btn primary" id="voice-test-phone">${icon("speaker")} ${tx("Test phone's voice","ফোনের ভয়েস শুনুন")}</button>
+    <button type="button" class="btn ghost" id="voice-test">${icon("speaker")} ${tx("Test NariPath voice","নারীপথের ভয়েস শুনুন")}</button></div>
+    <details class="voice-how"><summary><b>${tx("How to add Google's Bangla voice (Android, free)","গুগলের বাংলা ভয়েস যোগ করবেন কীভাবে (অ্যান্ড্রয়েড, বিনামূল্যে)")}</b></summary>
+      <ol class="small">
+        <li>${tx("Install or update <b>Speech Services by Google</b> from the Play Store.","প্লে স্টোর থেকে <b>Speech Services by Google</b> ইনস্টল বা আপডেট করুন।")} <a href="https://play.google.com/store/apps/details?id=com.google.android.tts" target="_blank" rel="noopener noreferrer">${tx("Open in Play Store","প্লে স্টোরে খুলুন")}</a></li>
+        <li>${tx("Open phone <b>Settings</b> and search for <b>Text-to-speech</b>.","ফোনের <b>Settings</b> খুলে <b>Text-to-speech</b> লিখে খুঁজুন।")}</li>
+        <li>${tx("Choose <b>Speech Services by Google</b> as the preferred engine, tap ⚙ next to it, then <b>Install voice data</b>.","পছন্দের ইঞ্জিন হিসেবে <b>Speech Services by Google</b> বেছে নিন, পাশের ⚙ চাপুন, তারপর <b>Install voice data</b>।")}</li>
+        <li>${tx("Choose <b>Bengali (Bangladesh)</b>, download it, and pick the voice you like.","<b>Bengali (Bangladesh)</b> বেছে ডাউনলোড করুন, পছন্দের ভয়েসটি বেছে নিন।")}</li>
+        <li>${tx("Close the browser fully, open NariPath again and come back here.","ব্রাউজার পুরোপুরি বন্ধ করে আবার নারীপথ খুলুন, তারপর এখানে ফিরে আসুন।")}</li>
+      </ol>
+      <p class="small muted">${tx("iPhones do not offer a Bangla voice yet, so NariPath's own voice is used there.","আইফোনে এখনো বাংলা ভয়েস নেই, তাই সেখানে নারীপথের নিজস্ব ভয়েস ব্যবহার হয়।")}</p>
+    </details>
+    <div class="btn-row"><button type="button" class="btn ghost" id="voice-dl">${tx("Save NariPath voice for offline use","অফলাইনের জন্য নারীপথের ভয়েস রাখুন")} <span class="small muted" id="voice-size"></span></button></div>
     <p class="small muted" id="voice-status" role="status"></p>
   </section>
 
@@ -4008,6 +4029,8 @@ function viewSettings(){
    Each sentence is found by a hash of its text. Anything not recorded falls back
    to the phone's own voice, if it has one. */
 const NV={idx:null,loading:null,packs:new Map(),audio:null,token:0};
+if(store.get("voiceV",0)!==2){ if(S.a11y.voice==="naripath") S.a11y.voice="auto"; try{ store.set("a11y",S.a11y); store.set("voiceV",2); }catch(e){} }
+try{ speechSynthesis.addEventListener("voiceschanged",()=>{ if(route()==="settings") settingsPhoneVoices(); }); }catch(e){}
 const NV_BASE="audio/bn/";
 function nvSupported(){ try{ return !!document.createElement("audio").canPlayType('audio/ogg; codecs="opus"'); }catch(e){ return false; } }
 function nvNorm(s){ return String(s).replace(/[✓✕★✗“”"]/g,"").replace(/\s+/g," ").trim(); }
@@ -4054,7 +4077,7 @@ function phoneSay(text,voice,want,token){
     u.rate=(want==="bn"?0.9:0.95)*(S.a11y.rate==="slow"?0.85:1);
     let fin=false; const done=ok=>{ if(fin) return; fin=true; clearTimeout(tm); res(ok); };
     u.onend=()=>done(true); u.onerror=()=>done(false);
-    const tm=setTimeout(()=>done(false),Math.max(6000,text.length*220));
+    const tm=setTimeout(()=>done(false),Math.max(8000,text.length*320));
     try{ speechSynthesis.speak(u); }catch(e){ done(false); }
   });
 }
@@ -4067,31 +4090,48 @@ function setListenUI(){
   b.classList.toggle("on",speaking);
 }
 /* Speak a list of sentences. Returns false if nothing could be spoken. */
-async function speakChunks(chunks,want){
+/* Bangla: the phone's own text-to-speech voice is used first when it has one (for example the
+   Bangla voice in Google's "Speech Services" app, which sounds most natural). Otherwise, or if
+   it fails, NariPath's recorded voice plays. "force" lets Settings test one voice on its own. */
+function bnVoiceMode(voice,force){
+  const pref=force||S.a11y.voice||"auto";
+  if(pref==="phone") return voice?"phone":"nv";
+  if(pref==="naripath"||pref==="nv") return "nv";
+  return voice?"phone":"nv";
+}
+async function speakChunks(chunks,want,force){
   stopSpeech();
   const token=++NV.token;
   if(!chunks.length) return false;
-  const useNV=want==="bn"&&S.a11y.voice!=="phone"&&nvSupported();
-  const idx=useNV?await nvIndex():null;
-  const keys=chunks.map(nvKey);
-  const have=idx?keys.filter(k=>idx.clips[k]).length:0;
   let voice=null;
   if("speechSynthesis" in window){ voice=pickVoice(await loadVoices(),want); }
+  const mode=want==="bn"?bnVoiceMode(voice,force):"phone";
+  const idx=(want==="bn"&&nvSupported()&&force!=="phone")?await nvIndex():null;
+  const keys=chunks.map(nvKey);
+  const have=idx?keys.filter(k=>idx.clips[k]).length:0;
   if(token!==NV.token) return false;
+  if(force==="phone"&&!voice){ showVoiceHelp(!("speechSynthesis" in window)); return false; }
   if(!have&&!voice){
-    if(want==="bn"){ if(useNV&&Object.keys(idx.clips).length) toast(tx("This page has no recorded voice yet.","এই পাতার রেকর্ড করা ভয়েস এখনো নেই।")); else showVoiceHelp(!("speechSynthesis" in window)); }
+    if(want==="bn"){ if(idx&&Object.keys(idx.clips).length) toast(tx("This page has no recorded voice yet.","এই পাতার রেকর্ড করা ভয়েস এখনো নেই।")); else showVoiceHelp(!("speechSynthesis" in window)); }
     else toast(t("noTTS"));
     return false;
   }
   speaking=true; setListenUI();
-  if(idx){ [...new Set(keys.filter(k=>idx.clips[k]).map(k=>idx.clips[k][0]))].forEach(p=>nvPack(p).catch(()=>{})); }
+  if(idx&&mode==="nv"){ [...new Set(keys.filter(k=>idx.clips[k]).map(k=>idx.clips[k][0]))].forEach(p=>nvPack(p).catch(()=>{})); }
+  let phoneOk=mode==="phone";
+  const playClip=async i=>{ const c=idx&&idx.clips[keys[i]]; if(!c) return false; let buf=null; try{ buf=await nvPack(c[0]); }catch(e){} return !!(buf&&await nvPlay(buf,c[1],c[2],token)); };
   for(let i=0;i<chunks.length;i++){
     if(token!==NV.token) return true;
-    const c=idx&&idx.clips[keys[i]];
-    if(c){ let buf=null; try{ buf=await nvPack(c[0]); }catch(e){}
-      if(buf&&await nvPlay(buf,c[1],c[2],token)) continue;
-      if(token!==NV.token) return true; }
-    if(voice) await phoneSay(chunks[i],voice,want,token);
+    if(phoneOk){
+      if(await phoneSay(chunks[i],voice,want,token)) continue;
+      if(token!==NV.token) return true;
+      phoneOk=false; try{speechSynthesis.cancel()}catch(e){}           // the phone voice failed: switch to recordings
+      if(await playClip(i)) continue;
+    } else {
+      if(force!=="phone"&&await playClip(i)) continue;
+      if(token!==NV.token) return true;
+      if(voice&&force!=="nv") await phoneSay(chunks[i],voice,want,token);
+    }
   }
   if(token===NV.token){ speaking=false; setListenUI(); }
   return true;
@@ -4105,7 +4145,24 @@ async function nvDownloadAll(){
   try{ store.set("voiceSaved",idx.v||1); }catch(e){}
   if(st) st.textContent=tx("✓ Voice saved. Listening now works without internet.","✓ ভয়েস রাখা হয়েছে। এখন ইন্টারনেট ছাড়াই শোনা যাবে।");
 }
+async function settingsPhoneVoices(){
+  const st=document.getElementById("phone-voice-status"), list=document.getElementById("phone-voice-list"); if(!st) return;
+  let vs=[]; if("speechSynthesis" in window){ try{ vs=await loadVoices(); }catch(e){} }
+  const bn=vs.filter(v=>/^bn/i.test(v.lang||"")||/bangla|bengali|বাংলা/i.test(v.name));
+  const cur=pickVoice(vs,"bn");
+  if(!document.getElementById("phone-voice-status")) return;
+  if(cur){
+    st.className="voice-found ok";
+    st.innerHTML=`<b>✓ ${tx("Your phone has a Bangla voice","আপনার ফোনে বাংলা ভয়েস আছে")}</b><span class="small">${esc(cur.name)} · ${esc(cur.lang)}${S.a11y.voice==="naripath"?"":" · "+tx("NariPath will use it","নারীপথ এটাই ব্যবহার করবে")}</span>`;
+    list.innerHTML=bn.length>1?`<div class="set-seg voice-pick" role="group" aria-label="${tx("Choose a phone voice","ফোনের ভয়েস বাছুন")}">${bn.map(v=>`<button type="button" data-voicename="${esc(v.name)}" aria-pressed="${v===cur}">${esc(v.name.replace(/^(Google|Microsoft)\s+/,""))} <span class="small muted">${esc(v.lang)}</span></button>`).join("")}</div>`:"";
+  } else {
+    st.className="voice-found no";
+    st.innerHTML=`<b>${tx("No Bangla voice on this phone yet","এই ফোনে এখনো বাংলা ভয়েস নেই")}</b><span class="small">${tx("NariPath's recorded voice is being used. You can add Google's Bangla voice for free (steps below).","নারীপথের রেকর্ড করা ভয়েস ব্যবহার হচ্ছে। নিচের ধাপে বিনামূল্যে গুগলের বাংলা ভয়েস যোগ করতে পারেন।")}</span>`;
+    list.innerHTML=""; const d=document.querySelector(".voice-how"); if(d) d.open=true;
+  }
+}
 async function settingsVoiceInfo(){
+  settingsPhoneVoices();
   const el=document.getElementById("voice-size"); if(!el) return;
   const idx=await nvIndex(); const bytes=Object.values(idx.packs||{}).reduce((a,p)=>a+(p.b||0),0);
   if(bytes) el.textContent=`(${S.lang==="bn"?bnNum((bytes/1048576).toFixed(1)):(bytes/1048576).toFixed(1)} MB)`;
@@ -4113,7 +4170,9 @@ async function settingsVoiceInfo(){
   if(st&&store.get("voiceSaved",0)===(idx.v||1)&&!st.textContent) st.textContent=tx("✓ Voice is saved on this phone.","✓ ভয়েস এই ফোনে রাখা আছে।");
 }
 document.addEventListener("click",e=>{
-  if(e.target.closest("#voice-test")){ speakChunks(speechChunks(S.lang==="bn"?"আমি নারীপথের কণ্ঠ। আমি আপনাকে প্রতিটি পাতা পড়ে শোনাতে পারি।":"Hello. I am NariPath. I can read this page to you."),S.lang==="bn"?"bn":"en"); return; }
+  if(e.target.closest("#voice-test")){ speakChunks(speechChunks(S.lang==="bn"?"আমি নারীপথের কণ্ঠ। আমি আপনাকে প্রতিটি পাতা পড়ে শোনাতে পারি।":"Hello. I am NariPath. I can read this page to you."),S.lang==="bn"?"bn":"en",S.lang==="bn"?"nv":undefined); return; }
+  if(e.target.closest("#voice-test-phone")){ speakChunks(speechChunks(S.lang==="bn"?"আমি আপনার ফোনের বাংলা ভয়েস। নারীপথ এই ভয়েসে পাতা পড়ে শোনাবে।":"This is your phone's voice. NariPath will read pages with it."),S.lang==="bn"?"bn":"en","phone"); return; }
+  const vn=e.target.closest("[data-voicename]"); if(vn){ S.a11y.voiceName=vn.dataset.voicename; store.set("a11y",S.a11y); settingsPhoneVoices(); speakChunks(speechChunks("আমি এই ভয়েসে পড়ে শোনাব।"),"bn","phone"); return; }
   if(e.target.closest("#voice-dl")){ nvDownloadAll(); return; }
   if(e.target.closest("#tour-replay")){ location.hash="home"; setTimeout(()=>startTour(true),350); return; }
 });
