@@ -121,7 +121,7 @@ nav.tabs a[aria-current="page"]{color:var(--primary);font-weight:600}
 .callbtn{display:inline-flex;align-items:center;gap:4px;background:var(--primary);color:var(--surface);text-decoration:none;font-weight:600;font-size:.88rem;border-radius:999px;padding:6px 14px}
 .copy{border:1px solid var(--line);background:var(--surface);color:var(--primary);font-weight:600;font-size:.85rem;border-radius:999px;padding:5px 12px;cursor:pointer}
 .phone-line{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
-.helpline .num{font-family:var(--display);font-weight:700;font-size:1.5rem;color:var(--accent);font-variant-numeric:tabular-nums;grid-row:span 3;min-width:3.2ch;text-decoration:none;align-self:start}
+.helpline .num{font-family:var(--display);font-weight:700;font-size:1.5rem;color:var(--accent-text,var(--accent));font-variant-numeric:tabular-nums;grid-row:span 3;min-width:3.2ch;text-decoration:none;align-self:start}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:12px;padding:11px 16px;font-weight:600;cursor:pointer;border:1.5px solid var(--primary);text-decoration:none}
 .btn.primary{background:var(--primary);color:var(--surface)}
 .btn.ghost{background:transparent;color:var(--primary)}
@@ -519,7 +519,7 @@ html[data-simple="on"] .sv-l{font-size:.95rem;text-align:left}
 .signals{list-style:none;margin:6px 0;padding:0;display:flex;flex-direction:column;gap:6px}
 .signals li{display:grid;grid-template-columns:54px 1fr;gap:10px;align-items:center;border-radius:12px;padding:8px 10px;background:color-mix(in srgb,var(--sc) 10%,var(--surface))}
 .signals b{font-family:var(--display);font-size:1.2rem;text-align:center;color:#fff;background:var(--sc);border-radius:9px;padding:4px 0}
-.s-lo{--sc:#3a8f5c}.s-mid{--sc:#c99a12}.s-hi{--sc:#d9661a}.s-max{--sc:#c62a2a}
+.s-lo{--sc:#3a8f5c}.s-mid{--sc:#977000}.s-hi{--sc:#d9661a}.s-max{--sc:#c62a2a}
 .map-wrap{padding:8px;overflow:hidden;background:linear-gradient(170deg,color-mix(in srgb,#3a63d6 8%,var(--surface)),var(--surface))}
 .bdmap{width:100%;height:auto;max-height:70vh;display:block;touch-action:manipulation}
 .bdmap .dst{fill:color-mix(in srgb,var(--muted) 14%,var(--surface));stroke:var(--surface);stroke-width:var(--sw,1.4px);vector-effect:non-scaling-stroke;cursor:pointer}
@@ -628,9 +628,9 @@ html[data-simple="on"] .svc{grid-template-columns:repeat(2,1fr)}
    ===================================================================== */
 :root,:root[data-theme="light"]{
   --bg:#fcf7fb; --surface:#ffffff; --text:#2b1d3f; --muted:#6c6182; --line:#f0e4ef;
-  --primary:#5a3fd1; --accent:#e23a7a; --night:#2b1d3f; --night-2:#43306a;
-  --ok:#1f8a55; --warn:#a85d00; --bad:#c42b3a;
-  --p1:#5056e6; --p2:#e23a7a; --p3:#8f45d6; --p4:#0b9792; --p5:#c27800; --p6:#2a9455;
+  --primary:#5a3fd1; --accent:#e23a7a; --accent-text:#c41f63; --night:#2b1d3f; --night-2:#43306a;
+  --ok:#17703f; --warn:#a85d00; --bad:#c42b3a;
+  --p1:#5056e6; --p2:#c41f63; --p3:#8f45d6; --p4:#08736f; --p5:#946000; --p6:#1d7a45;
   --t1:#7b7bff; --t2:#ff6fa3; --t3:#c38bff; --t4:#2fd0c1; --t5:#ffbb3d; --t6:#5fd18a;
   --grad:linear-gradient(135deg,#7b4dff 0%,#e23a7a 100%);
   --grad-soft:linear-gradient(135deg,#efe8ff,#ffe6f0);
@@ -650,7 +650,7 @@ header.top{background:rgba(255,255,255,.86);backdrop-filter:saturate(1.4) blur(1
 .lang button[aria-pressed="true"]{background:var(--grad);color:#fff}
 .aa{border-color:var(--line)!important;color:var(--text)!important;background:#fff!important}
 .demo-strip{background:#fff;color:var(--muted);border-bottom:1px solid var(--line);padding:8px 16px}
-.demo-strip strong{color:#b25c00;background:#fff1d6;border-radius:999px;padding:1px 8px;margin-right:4px}
+.demo-strip strong{color:#9a4e00;background:#fff1d6;border-radius:999px;padding:1px 8px;margin-right:4px}
 
 /* hero band: sunrise with drifting colour and a turning alpona */
 .band{background:linear-gradient(165deg,#fff3f8 0%,#f4edff 48%,#e9f8f7 100%);color:var(--text);padding-bottom:70px}
@@ -810,10 +810,21 @@ html[lang="bn"] .ps-say,html[lang="bn"] .ps-q{font-size:1.3rem;line-height:1.85}
 html:not([data-motion="reduce"]) .ps-card{animation:psIn .35s ease-out}}
 @keyframes psSpin{to{rotate:360deg}}
 @keyframes psIn{from{opacity:0;transform:translateX(14px)}to{opacity:1;transform:none}}
+
+/* ---- Screen reader support ---- */
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.skip{position:absolute;left:8px;top:-60px;z-index:100;background:#2b1d3f;color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700}
+.skip:focus{top:8px}
+.q h2{font-family:var(--body);font-weight:600;font-size:1rem}
+.guide-steps li h2{font-family:var(--display);font-weight:400;font-size:1.15rem}
+h2.res-count{font-family:var(--body);font-weight:400;font-size:.85rem;margin:6px 0}
+#view:focus,#view h1:focus,.ps-say:focus,.ps-q:focus{outline:none}
+:focus-visible{outline:3px solid #5a3fd1;outline-offset:2px}
 </style>
 </head>
 <body>
 <div class="app">
+  <a class="skip" href="#view" id="skip">Skip to main content</a>
   <header class="top">
     <a class="brand" href="#home" aria-label="NariPath home">
       <svg class="logo" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="lg0" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff6fa3"/><stop offset="1" stop-color="#7b4dff"/></linearGradient><linearGradient id="lg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffbb3d"/><stop offset="1" stop-color="#ff6fa3"/></linearGradient></defs><g class="logo-spin"><ellipse cx="16" cy="8.5" rx="3.6" ry="6.5" transform="rotate(0 16 16)" fill="url(#lg0)"/><ellipse cx="16" cy="8.5" rx="3.6" ry="6.5" transform="rotate(45 16 16)" fill="url(#lg1)"/><ellipse cx="16" cy="8.5" rx="3.6" ry="6.5" transform="rotate(90 16 16)" fill="url(#lg0)"/><ellipse cx="16" cy="8.5" rx="3.6" ry="6.5" transform="rotate(135 16 16)" fill="url(#lg1)"/><ellipse cx="16" cy="8.5" rx="3.6" ry="6.5" transform="rotate(180 16 16)" fill="url(#lg0)"/><ellipse cx="16" cy="8.5" rx="3.6" ry="6.5" transform="rotate(225 16 16)" fill="url(#lg1)"/><ellipse cx="16" cy="8.5" rx="3.6" ry="6.5" transform="rotate(270 16 16)" fill="url(#lg0)"/><ellipse cx="16" cy="8.5" rx="3.6" ry="6.5" transform="rotate(315 16 16)" fill="url(#lg1)"/></g><circle cx="16" cy="16" r="3.4" fill="#fff"/><circle cx="16" cy="16" r="1.8" fill="#7b4dff"/></svg>
@@ -827,7 +838,7 @@ html:not([data-motion="reduce"]) .ps-card{animation:psIn .35s ease-out}}
       </div>
     </div>
   </header>
-  <div class="demo-strip" id="demo-strip"></div>
+  <section class="demo-strip" id="demo-strip" aria-label="Prototype notice"></section>
   <div class="offline-note" id="offline-note" role="status" hidden></div>
   <div class="frame-note" id="frame-note" hidden></div>
   <main id="view" tabindex="-1"></main>
@@ -1829,7 +1840,7 @@ const copyBtn = n => `<button type="button" class="copy" data-copy="${n}" aria-l
 function helpline(n,id,k,lab){
   const big = !lab;
   return `<div class="helpline">
-    <a class="num" href="tel:${n}" target="_top" aria-label="${t("call")} ${n}" style="${big?"":"font-size:1.1rem"}">${big?bnNum(n):lab}</a>
+    <a class="num" href="tel:${n}" target="_top" aria-label="${t("call")} ${big?bnNum(n):lab}" style="${big?"":"font-size:1.1rem"}">${big?bnNum(n):lab}</a>
     <a href="#r-${id}" class="hl-name"><b>${L(byId(id).name)}</b></a>
     <span class="small muted">${big?"":`<b style="font-variant-numeric:tabular-nums">${bnNum(n)}</b> · `}${t(k)}</span>
     <span class="hl-actions"><a class="callbtn" href="tel:${n}" target="_top">${t("call")}</a>${copyBtn(n)}</span>
@@ -1871,7 +1882,7 @@ function viewHome(){
   const SHORT={1:["Study & work","শিক্ষা ও কাজ"],2:["Health","স্বাস্থ্য"],3:["Rights","অধিকার"],4:["Safety","নিরাপত্তা"],5:["Money","অর্থ"],6:["Community","কমিউনিটি"]};
   const d="M -6 136 C 10 132, 18 118, 30 118 C 55 118, 65 56, 90 56 S 125 116, 150 116 S 185 54, 210 54 S 245 114, 270 114 S 305 52, 330 52 C 342 52, 352 44, 366 34";
   const knots=KN.map(([x,y],i)=>{const p=PILLARS[i]; const up=i%2===1; const lab=SHORT[p.id][S.lang==="bn"?1:0];
-    return `<a class="knot" href="#explore" data-pillar="${p.id}" style="--i:${i}" aria-label="${L(p)}" tabindex="0">
+    return `<a class="knot" href="#explore" data-pillar="${p.id}" style="--i:${i}" aria-label="${lab}: ${L(p)}" tabindex="0">
       <circle class="halo" cx="${x}" cy="${y}" r="22" stroke="var(--t${p.id})"/>
       <circle class="bg" cx="${x}" cy="${y}" r="16" stroke="var(--t${p.id})"/>
       <g transform="translate(${x-9} ${y-9}) scale(.75)" class="ic" stroke="var(--t${p.id})">${ICONS[p.icon]}</g>
@@ -1990,7 +2001,7 @@ function viewExplore(){
     </div>
     ${S.pillar===2?periodBanner():""}
     ${S.district && S.district!=="nationwide" && !LOCAL_COUNT[S.district] ? `<p class="note">${t("noLocal").replace("{d}",L(DISTRICTS[S.district]))}</p>`:""}
-    <p class="small muted" aria-live="polite">${num(list.length)}${S.lang==="bn"?"":" "}${t("results")}</p>
+    <h2 class="res-count small muted" id="res-count">${num(list.length)}${S.lang==="bn"?"":" "}${t("results")}</h2>
     <div class="list">
       ${list.length? list.map(r=>resCard(r, `<span class="pill plain" style="color:var(--p${r.p});border-color:currentColor">${L(pillar(r.p))}</span>`)).join("")
         : `<div class="card empty"><p>${t("noResults")}</p><p style="margin-top:12px"><button type="button" class="btn ghost" data-reset="1">${t("clearFilters")}</button></p></div>`}
@@ -2073,10 +2084,10 @@ function viewCheck(){
     const ready=C.goal&&C.age&&C.edu;
     return `<section class="section">${head}
       <h1>${t("checkTitle")}</h1><p class="muted small">${t("checkSub")}</p></section>
-      <section class="section card q"><h3>১. ${t("q1")}</h3><div class="opts" role="group">${opt("goal")}</div></section>
-      <section class="section card q"><h3>২. ${t("q2")}</h3><div class="opts" role="group">${opt("age")}</div></section>
-      <section class="section card q"><h3>৩. ${t("q3")}</h3><div class="opts" role="group">${opt("edu")}</div></section>
-      <section class="section card q"><h3>৪. ${t("q4")}</h3><div class="opts" role="group">${opt("sit",true)}</div></section>
+      <section class="section card q"><h2 id="h-q1">${num(1)}. ${t("q1")}</h2><div class="opts" role="group" aria-labelledby="h-q1">${opt("goal")}</div></section>
+      <section class="section card q"><h2 id="h-q2">${num(2)}. ${t("q2")}</h2><div class="opts" role="group" aria-labelledby="h-q2">${opt("age")}</div></section>
+      <section class="section card q"><h2 id="h-q3">${num(3)}. ${t("q3")}</h2><div class="opts" role="group" aria-labelledby="h-q3">${opt("edu")}</div></section>
+      <section class="section card q"><h2 id="h-q4">${num(4)}. ${t("q4")}</h2><div class="opts" role="group" aria-labelledby="h-q4">${opt("sit",true)}</div></section>
       <section class="section">
         <button type="button" class="btn primary" id="check-go" ${ready?"":"aria-disabled=\"true\""}>${t("seeMatches")}</button>
         ${ready?"":`<p class="small muted">${t("answerAll")}</p>`}
@@ -2273,8 +2284,8 @@ function viewGaps(){
   </section>
   <section class="section card">
     <h2>${en?"Coverage by division":"বিভাগভিত্তিক কভারেজ"}</h2>
-    <div class="grid-wrap"><table class="cov">
-      <thead><tr><th></th>${PILLARS.map(p=>`<th class="ph" title="${L(p)}" style="color:var(--p${p.id})">${num(p.id)}</th>`).join("")}<th class="ph">${en?"Districts":"জেলা"}</th></tr></thead>
+    <div class="grid-wrap" tabindex="0" role="region" aria-label="${en?"Coverage table":"তথ্যের হিসাব"}"><table class="cov">
+      <thead><tr><th><span class="sr-only">${en?"Division":"বিভাগ"}</span></th>${PILLARS.map(p=>`<th class="ph" title="${L(p)}" style="color:var(--p${p.id})">${num(p.id)}</th>`).join("")}<th class="ph">${en?"Districts":"জেলা"}</th></tr></thead>
       <tbody>${DIVISIONS.map(d=>{const dk=Object.keys(DISTRICTS).filter(k=>DISTRICTS[k].div===d.id); const cov=dk.filter(k=>LOCAL_COUNT[k]).length;
         return `<tr><th>${L(d)}</th>${PILLARS.map(p=>{
         const n=R.filter(r=>r.p===p.id&&DISTRICTS[r.loc].div===d.id).length;
@@ -2379,7 +2390,7 @@ function viewGuide(id){
       <p class="muted">${L(g.intro)}</p>
     </section>
     ${g.facts?`<section class="card facts" ${pc(g.p)}><dl class="mini">${g.facts.map(([k,v])=>`<div><dt>${L(k)}</dt><dd>${typeof v==="string"?`<a href="${esc(safeUrl(v))}" target="_blank" rel="noopener noreferrer">${esc(v.replace(/^https?:\/\//,""))}</a>`:L(v)}</dd></div>`).join("")}</dl></section>`:""}
-    <ol class="guide-steps" ${pc(g.p)}>${g.sections.map(([h,b])=>`<li class="card"><h3>${L(h)}</h3><p>${L(b)}</p></li>`).join("")}</ol>
+    <ol class="guide-steps" ${pc(g.p)}>${g.sections.map(([h,b])=>`<li class="card"><h2>${L(h)}</h2><p>${L(b)}</p></li>`).join("")}</ol>
     ${g.related.length?`<section class="section"><h2>${t("relatedServices")}</h2><div class="list">${g.related.map(byId).filter(Boolean).map(r=>resCard(r)).join("")}</div></section>`:""}
     <section class="section card">
       <h2>${t("sourceL")}</h2>
@@ -2438,7 +2449,7 @@ function viewDistrict(){
       <p class="small muted">${t("coverageSub").replace("{n}",num(Object.keys(LOCAL_COUNT).length)).replace("{t}",num(TOTAL_DISTRICTS))}</p>
       <div class="legend small"><span class="dchip has">${t("hasInfo")}</span><span class="dchip none">${t("notResearched")}</span></div>
       ${DIVISIONS.map(dv=>`<div class="div-row"><b class="small">${L(dv)}</b><div class="dchips">${Object.entries(DISTRICTS).filter(([,x])=>x.div===dv.id).sort((a,b)=>a[1].en.localeCompare(b[1].en))
-        .map(([k,x])=>`<button type="button" class="dchip ${LOCAL_COUNT[k]?"has":"none"}" data-dpick="${k}" aria-pressed="${k===d}" aria-label="${L(x)}: ${LOCAL_COUNT[k]?t("hasInfo"):t("notResearched")}">${L(x)}${LOCAL_COUNT[k]?` <span>${num(LOCAL_COUNT[k])}</span>`:""}</button>`).join("")}</div></div>`).join("")}
+        .map(([k,x])=>`<button type="button" class="dchip ${LOCAL_COUNT[k]?"has":"none"}" data-dpick="${k}" aria-pressed="${k===d}" aria-label="${L(x)}${LOCAL_COUNT[k]?" "+num(LOCAL_COUNT[k]):""}: ${LOCAL_COUNT[k]?t("hasInfo"):t("notResearched")}">${L(x)}${LOCAL_COUNT[k]?` <span>${num(LOCAL_COUNT[k])}</span>`:""}</button>`).join("")}</div></div>`).join("")}
     </section>`;
 }
 
@@ -2768,7 +2779,7 @@ Object.assign(GSRC,{
 
 /* ---------- Allowances data (FY2026-27) ---------- */
 const ALLOW=[
-  {id:"oldage",checked:"2026-11-18",c:"#d98a00",icon:"coin",
+  {id:"oldage",checked:"2026-11-18",c:"#9a5a00",icon:"coin",
    name:K("Old-age allowance","বয়স্ক ভাতা"),
    amount:K("Tk 700 a month · Tk 1,000 if over 90","মাসে ৭০০ টাকা · ৯০ বছরের বেশি হলে ১,০০০ টাকা"),
    office:K("Department of Social Services (Upazila or City Social Services Office)","সমাজসেবা অধিদপ্তর (উপজেলা বা শহর সমাজসেবা অফিস)"),
@@ -2777,7 +2788,7 @@ const ALLOW=[
    apply:DSS_APPLY, docs:[K("National ID (NID)","জাতীয় পরিচয়পত্র (এনআইডি)"),K("A mobile number or bank account in your own name","নিজের নামে মোবাইল নম্বর বা ব্যাংক অ্যাকাউন্ট"),K("A recent photo","সাম্প্রতিক ছবি")],
    confirm:[K("Low income, under the limit your Social Services office uses","কম আয়, সমাজসেবা অফিসের নির্ধারিত সীমার মধ্যে"),K("Not a government employee or pensioner","সরকারি চাকরিজীবী বা পেনশনভোগী নন"),K("Not already getting another regular government allowance","ইতিমধ্যে অন্য কোনো নিয়মিত সরকারি ভাতা পাচ্ছেন না")],
    sources:["ssnJan","dssWindow","dssRule","oldAgeRule","dssFree"]},
-  {id:"widow",checked:"2026-11-18",c:"#c9365f",icon:"heart",
+  {id:"widow",checked:"2026-11-18",c:"#b02a52",icon:"heart",
    name:K("Allowance for widowed and husband-deserted women","বিধবা ও স্বামী নিগৃহীতা মহিলা ভাতা"),
    amount:K("Tk 700 a month · Tk 1,000 if over 90","মাসে ৭০০ টাকা · ৯০ বছরের বেশি হলে ১,০০০ টাকা"),
    office:K("Department of Social Services (Upazila or City Social Services Office)","সমাজসেবা অধিদপ্তর (উপজেলা বা শহর সমাজসেবা অফিস)"),
@@ -2786,7 +2797,7 @@ const ALLOW=[
    apply:DSS_APPLY, docs:[K("National ID (NID)","জাতীয় পরিচয়পত্র (এনআইডি)"),K("Proof of your situation, such as a husband's death certificate; ask the office what it accepts","আপনার অবস্থার প্রমাণ, যেমন স্বামীর মৃত্যু সনদ; অফিস কী গ্রহণ করে জিজ্ঞাসা করুন"),K("A mobile number or bank account in your own name","নিজের নামে মোবাইল নম্বর বা ব্যাংক অ্যাকাউন্ট")],
    confirm:[K("Low income, under the office's limit","কম আয়, অফিসের নির্ধারিত সীমার মধ্যে"),K("Not already getting another regular government allowance","ইতিমধ্যে অন্য কোনো নিয়মিত সরকারি ভাতা পাচ্ছেন না")],
    sources:["ssnJan","dssWindow","dssRule","dssFree"]},
-  {id:"disab",checked:"2026-11-18",c:"#157f75",icon:"shield",
+  {id:"disab",checked:"2026-11-18",c:"#0f6c63",icon:"shield",
    name:K("Disability allowance","প্রতিবন্ধী ভাতা"),
    amount:K("Tk 1,000 a month in the FY2026-27 budget (was Tk 900)","২০২৬-২৭ বাজেটে মাসে ১,০০০ টাকা (আগে ছিল ৯০০ টাকা)"),
    office:K("Department of Social Services (Upazila or City Social Services Office)","সমাজসেবা অধিদপ্তর (উপজেলা বা শহর সমাজসেবা অফিস)"),
@@ -2920,10 +2931,10 @@ function viewAllowances(){
   ${toolHero("th-allow","wallet",tx("Allowances finder","ভাতা খুঁজুন"),tx("Government cash allowances for women in Bangladesh, with this year's amounts and how to apply.","বাংলাদেশে নারীদের জন্য সরকারি নগদ ভাতা, এ বছরের পরিমাণ ও আবেদনের নিয়মসহ।"))}
   <div class="stamp st-public">${icon("info").replace('class=""','style="width:22px;height:22px;flex:none"')}<div><b>${tx("Applying is free","আবেদন বিনামূল্যে")}</b><span class="small">${tx("Never pay anyone to be put on an allowance list. National Helpline 333 answers questions about allowances.","ভাতার তালিকায় নাম তুলতে কাউকে টাকা দেবেন না। ভাতা সম্পর্কে প্রশ্নের উত্তর দেয় জাতীয় হেল্পলাইন ৩৩৩।")} <a href="tel:333" target="_top">${tx("Call 333","৩৩৩-এ কল")}</a></span></div></div>
   <section class="section card q">
-    <h3>${tx("1. Your age","১. আপনার বয়স")}</h3>
-    <div class="opts" role="group">${AL_AGE.map(([v,e,b])=>chip("age",v,tx(e,b),q.age===v)).join("")}</div>
-    <h3 style="margin-top:8px">${tx("2. Anything that applies (choose any)","২. যা প্রযোজ্য (যেকোনোটি বাছুন)")}</h3>
-    <div class="opts" role="group">${AL_SIT.map(([v,e,b])=>chip("sit",v,tx(e,b),q.sit.includes(v))).join("")}</div>
+    <h2 id="h-alage">${tx("1. Your age","১. আপনার বয়স")}</h2>
+    <div class="opts" role="group" aria-labelledby="h-alage">${AL_AGE.map(([v,e,b])=>chip("age",v,tx(e,b),q.age===v)).join("")}</div>
+    <h2 id="h-alsit" style="margin-top:8px">${tx("2. Anything that applies (choose any)","২. যা প্রযোজ্য (যেকোনোটি বাছুন)")}</h2>
+    <div class="opts" role="group" aria-labelledby="h-alsit">${AL_SIT.map(([v,e,b])=>chip("sit",v,tx(e,b),q.sit.includes(v))).join("")}</div>
     <p class="small muted">${tx("Your answers stay on this screen and are not saved.","আপনার উত্তর শুধু এই পাতায় থাকে, সংরক্ষণ করা হয় না।")}</p>
     <button type="button" class="btn primary" id="al-go" ${q.age?"":'aria-disabled="true"'}>${tx("Show potentially relevant allowances","সম্ভাব্য প্রাসঙ্গিক ভাতা দেখুন")}</button>
   </section>
@@ -3555,14 +3566,14 @@ function viewPeriodLesson(id){
   <section class="ps-lesson" style="--lc:${l.c}">
     <div class="ps-lhead"><span class="small muted">${tx(`Lesson ${idx+1} of ${PS_LESSONS.length}`,`${num(PS_LESSONS.length)}টির মধ্যে ${num(idx+1)} নম্বর পাঠ`)}</span><h1>${L(l.t)}</h1></div>
     ${psArt(l.id)}
-    <div class="ps-card" aria-live="polite">
+    <div class="ps-card">
       ${body}
       <div class="ps-ctl">
         <button type="button" class="btn ghost ps-listen" data-pssay="${i}">${icon("speaker")||"🔊"} ${tx("Listen","শোনো")}</button>
         ${src&&GSRC[src]?`<a class="small" href="${esc(safeUrl(GSRC[src].url))}" target="_blank" rel="noopener noreferrer">${tx("Source","উৎস")}</a>`:""}
       </div>
     </div>
-    <div class="ps-dots" aria-label="${tx(`Card ${i+1} of ${cards.length}`,`${num(cards.length)}টির মধ্যে ${num(i+1)} নম্বর কার্ড`)}">${cards.map((_,k)=>`<span class="${k===i?"on":k<i?"past":""}"></span>`).join("")}</div>
+    <div class="ps-dots" role="img" aria-label="${tx(`Card ${i+1} of ${cards.length}`,`${num(cards.length)}টির মধ্যে ${num(i+1)} নম্বর কার্ড`)}">${cards.map((_,k)=>`<span class="${k===i?"on":k<i?"past":""}"></span>`).join("")}</div>
     <div class="ps-nav">
       <button type="button" class="btn ghost" data-pscard="-1" ${i===0?"disabled":""}>${tx("Back","আগের")}</button>
       ${last?`<button type="button" class="btn primary" data-psdone="${l.id}">${S.ps.done.includes(l.id)?tx("Done ✓","শেষ ✓"):tx("I finished this lesson","পাঠ শেষ করেছি")}</button>`
@@ -3590,7 +3601,7 @@ function viewPeriodCheck(){
   <section class="section card ps-check-card"><span class="small muted">${tx(`Question ${c.i+1} of ${PS_Q.length}`,`${num(PS_Q.length)}টির মধ্যে ${num(c.i+1)} নম্বর প্রশ্ন`)}</span>
     <p class="ps-q">${L(q)}</p>
     <button type="button" class="btn ghost ps-listen" data-psq="${c.i}">${icon("speaker")||"🔊"} ${tx("Listen","শোনো")}</button>
-    <div class="ps-ans"><button type="button" class="ans yes" data-psans="1"><span>✓</span>${tx("True","ঠিক")}</button><button type="button" class="ans no" data-psans="0"><span>✗</span>${tx("False","ভুল")}</button><button type="button" class="ans dk" data-psans="-1"><span>?</span>${tx("Not sure","জানি না")}</button></div>
+    <div class="ps-ans"><button type="button" class="ans yes" data-psans="1"><span aria-hidden="true">✓</span>${tx("True","ঠিক")}</button><button type="button" class="ans no" data-psans="0"><span aria-hidden="true">✗</span>${tx("False","ভুল")}</button><button type="button" class="ans dk" data-psans="-1"><span aria-hidden="true">?</span>${tx("Not sure","জানি না")}</button></div>
   </section>`;
 }
 
@@ -3613,7 +3624,7 @@ function viewPeriodGroup(){
     if(i>=PS_Q.length) return `<section class="section card ps-check-card"><h1>${tx("Thank you!","ধন্যবাদ!")}</h1><p>${tx("Please give the phone back to your teacher.","দয়া করে ফোনটি শিক্ষকের হাতে ফিরিয়ে দাও।")}</p><button type="button" class="btn primary" data-pg="saveans">${tx("Teacher: save and continue","শিক্ষক: সংরক্ষণ করে এগোন")}</button></section>`;
     return `<section class="section card ps-check-card"><span class="small muted">${S.pg.phase==="pre"?tx("Before the lessons","পাঠের আগে"):tx("After the lessons","পাঠের পরে")} · ${tx("Girl","কিশোরী")} ${num(S.pg.person+1)} · ${num(i+1)}/${num(PS_Q.length)}</span>
       <p class="ps-q">${L(PS_Q[i][0])}</p><button type="button" class="btn ghost ps-listen" data-psq="${i}">${icon("speaker")||"🔊"} ${tx("Listen","শোনো")}</button>
-      <div class="ps-ans"><button type="button" class="ans yes" data-pgans="1"><span>✓</span>${tx("True","ঠিক")}</button><button type="button" class="ans no" data-pgans="0"><span>✗</span>${tx("False","ভুল")}</button><button type="button" class="ans dk" data-pgans="-1"><span>?</span>${tx("Not sure","জানি না")}</button></div></section>`;
+      <div class="ps-ans"><button type="button" class="ans yes" data-pgans="1"><span aria-hidden="true">✓</span>${tx("True","ঠিক")}</button><button type="button" class="ans no" data-pgans="0"><span aria-hidden="true">✗</span>${tx("False","ভুল")}</button><button type="button" class="ans dk" data-pgans="-1"><span aria-hidden="true">?</span>${tx("Not sure","জানি না")}</button></div></section>`;
   }
   if(sess){
     return `${backLink("#period-group",tx("All sessions","সব সেশন"))}
@@ -3642,7 +3653,7 @@ function viewPeriodGroup(){
     <form id="pg-new" class="app-add">
       <label for="pg-site"><b>${tx("School or community name","স্কুল বা কমিউনিটির নাম")}</b></label>
       <input id="pg-site" type="text" maxlength="80" required autocomplete="off" placeholder="${tx("e.g. Char Fasson Girls' High School","যেমন: চরফ্যাশন বালিকা উচ্চ বিদ্যালয়")}">
-      <div class="seg two"><button type="button" data-pgkind="school" aria-selected="${S.pgKind!=="community"}">${tx("School","স্কুল")}</button><button type="button" data-pgkind="community" aria-selected="${S.pgKind==="community"}">${tx("Community","কমিউনিটি")}</button></div>
+      <div class="seg two"><button type="button" data-pgkind="school" aria-pressed="${S.pgKind!=="community"}">${tx("School","স্কুল")}</button><button type="button" data-pgkind="community" aria-pressed="${S.pgKind==="community"}">${tx("Community","কমিউনিটি")}</button></div>
       <button type="submit" class="btn primary">${tx("Start session","সেশন শুরু করুন")}</button>
     </form></section>
   ${S.pss.length?`<section class="section"><h2>${tx("Sessions on this phone","এই ফোনের সেশন")}</h2>${S.pss.map(s=>`<button type="button" class="continue" data-pgopen="${esc(s.id)}"><span class="small muted">${esc(date(s.date))} · ${num(s.people.length)} ${tx("girls","কিশোরী")}${s.verified?" · ✓ "+tx("verified","যাচাইকৃত"):""}</span><b>${esc(s.site)}</b></button>`).join("")}
@@ -3662,24 +3673,27 @@ function pssExport(){
   return lines.join("\n");
 }
 
+/* Move screen-reader focus to the new card or question so it is read out */
+document.addEventListener("click",e=>{ const sk=e.target.closest("#skip"); if(!sk) return; e.preventDefault(); const v=document.getElementById("view"), h=v.querySelector("h1")||v; if(h!==v) h.setAttribute("tabindex","-1"); h.focus(); });
+function psFocus(sel){ const el=document.querySelector(sel); if(!el) return; el.setAttribute("tabindex","-1"); try{ el.focus({preventScroll:false}); }catch(e){} }
 /* ---- Events ---- */
 document.addEventListener("click",e=>{
   const el=e.target;
-  const pc0=el.closest("[data-pscard]"); if(pc0){ S.ps.card=Math.max(0,S.ps.card+(+pc0.dataset.pscard)); try{speechSynthesis.cancel()}catch(err){} stopSpeech(); render(); const nb=document.querySelector(`[data-pscard="${pc0.dataset.pscard}"]:not([disabled])`)||document.querySelector("[data-psdone],[data-pscard]"); if(nb) nb.focus(); return; }
+  const pc0=el.closest("[data-pscard]"); if(pc0){ S.ps.card=Math.max(0,S.ps.card+(+pc0.dataset.pscard)); try{speechSynthesis.cancel()}catch(err){} stopSpeech(); render(); psFocus(".ps-card .ps-say,.ps-card .ps-myth"); return; }
   const pd=el.closest("[data-psdone]"); if(pd){ const id=pd.dataset.psdone; if(!S.ps.done.includes(id)){ S.ps.done.push(id); psSave(); } render(); const nb=document.querySelector("[data-psdone]"); if(nb){ nb.focus(); celebrate(nb); } return; }
   const say=el.closest("[data-pssay]"); if(say){ const l=psLesson(route().slice(7)); if(l){ const c=psCards(l)[+say.dataset.pssay]; speakText(raw(c[2]?{en:c[2].en+". "+c[3].en,bn:c[2].bn+"। "+c[3].bn}:c[0])); } return; }
   const sq=el.closest("[data-psq]"); if(sq){ speakText(raw(PS_Q[+sq.dataset.psq][0])); return; }
-  const ck=el.closest("[data-pscheck]"); if(ck){ S.ps.check={i:0,a:[]}; render(); return; }
-  const an=el.closest("[data-psans]"); if(an&&S.ps.check){ const v=+an.dataset.psans; S.ps.check.a.push(v===-1?null:v===1); S.ps.check.i++; render(); if(S.ps.check.i>=PS_Q.length){ const r=S.ps.check.a.filter((x,k)=>x===PS_Q[k][1]).length; if(r>=6) setTimeout(()=>celebrate(document.querySelector(".ps-result h1")),60); } return; }
+  const ck=el.closest("[data-pscheck]"); if(ck){ S.ps.check={i:0,a:[]}; render(); psFocus(".ps-q"); return; }
+  const an=el.closest("[data-psans]"); if(an&&S.ps.check){ const v=+an.dataset.psans; S.ps.check.a.push(v===-1?null:v===1); S.ps.check.i++; render(); psFocus(".ps-q,.ps-result h1"); if(S.ps.check.i>=PS_Q.length){ const r=S.ps.check.a.filter((x,k)=>x===PS_Q[k][1]).length; if(r>=6) setTimeout(()=>celebrate(document.querySelector(".ps-result h1")),60); } return; }
   // group mode
-  const pk=el.closest("[data-pgkind]"); if(pk){ S.pgKind=pk.dataset.pgkind; document.querySelectorAll("[data-pgkind]").forEach(b=>b.setAttribute("aria-selected",b===pk)); return; }
+  const pk=el.closest("[data-pgkind]"); if(pk){ S.pgKind=pk.dataset.pgkind; document.querySelectorAll("[data-pgkind]").forEach(b=>b.setAttribute("aria-pressed",b===pk)); return; }
   const po=el.closest("[data-pgopen]"); if(po){ S.pg={sid:po.dataset.pgopen,person:-1,phase:"",i:0,ans:[]}; render(); return; }
-  const ga=el.closest("[data-pgans]"); if(ga){ const v=+ga.dataset.pgans; S.pg.ans.push(v===-1?null:v===1); S.pg.i++; render(); return; }
+  const ga=el.closest("[data-pgans]"); if(ga){ const v=+ga.dataset.pgans; S.pg.ans.push(v===-1?null:v===1); S.pg.i++; render(); psFocus(".ps-q,.ps-check-card h1"); return; }
   const pg=el.closest("[data-pg]"); if(pg){ const act=pg.dataset.pg, sess=S.pss.find(s=>s.id===S.pg.sid);
     if(act==="export"){ const txt=pssExport(); try{ navigator.clipboard.writeText(txt).then(()=>toast(tx("Summary copied","সারাংশ কপি হয়েছে")),()=>{ prompt("",txt); }); }catch(err){ toast(txt.slice(0,120)); } return; }
     if(!sess) return;
     if(act==="addgirl"){ sess.people.push({pre:null,post:null,done:false}); pssSave(); render(); return; }
-    if(act==="pre"||act==="post"){ S.pg.person=+pg.dataset.k; S.pg.phase=act; S.pg.i=0; S.pg.ans=[]; render(); return; }
+    if(act==="pre"||act==="post"){ S.pg.person=+pg.dataset.k; S.pg.phase=act; S.pg.i=0; S.pg.ans=[]; render(); psFocus(".ps-q"); return; }
     if(act==="done"){ const p=sess.people[+pg.dataset.k]; p.done=!p.done; pssSave(); render(); return; }
     if(act==="saveans"){ const p=sess.people[S.pg.person]; if(p){ p[S.pg.phase]=S.pg.ans.slice(0,PS_Q.length); pssSave(); } S.pg.phase=""; S.pg.person=-1; render(); return; }
     if(act==="delsess"){ if(!confirm(tx("Delete this session's results?","এই সেশনের ফলাফল মুছবেন?"))) return; S.pss=S.pss.filter(s=>s.id!==sess.id); pssSave(); S.pg={sid:"",person:-1,phase:"",i:0,ans:[]}; render(); return; }
@@ -3751,7 +3765,7 @@ function viewMap(){
   </section>
   <div class="map-wrap">
     <div class="div-chips" role="group" aria-label="${tx("Divisions","বিভাগ")}"><button type="button" class="dchip2 coast-chip" data-mapcoast aria-pressed="${!!S.mapCoast}" style="--dc:#1f6fb8">🌊 ${tx("Coast","উপকূল")}</button>${DIVISIONS.map(d=>`<button type="button" class="dchip2" data-mapdiv="${d.id}" aria-pressed="${S.mapDiv===d.id}" style="--dc:${DIV_COL[d.id]}">${L(d)}</button>`).join("")}</div>
-    <svg class="bdmap" viewBox="${(S.mapVB||vb).join(" ")}" data-target="${vb.join(" ")}" role="img" aria-label="${tx("Map of Bangladesh's 64 districts","বাংলাদেশের ৬৪ জেলার মানচিত্র")}">
+    <svg class="bdmap" viewBox="${(S.mapVB||vb).join(" ")}" data-target="${vb.join(" ")}" role="img" aria-label="${tx("Map of Bangladesh's 64 districts. Screen reader users: choose your district from the list below the map.","বাংলাদেশের ৬৪ জেলার মানচিত্র। স্ক্রিন রিডার ব্যবহারকারীরা মানচিত্রের নিচের তালিকা থেকে জেলা বাছুন।")}">
       <defs>
         <filter id="lift" x="-10%" y="-10%" width="120%" height="120%"><feDropShadow dx="0" dy="${fs(10)}" stdDeviation="${fs(12)}" flood-color="#1c1a3f" flood-opacity=".28"/></filter>
         <pattern id="waves" width="60" height="24" patternUnits="userSpaceOnUse"><path d="M0 12q15-9 30 0t30 0" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".22"/></pattern>
@@ -3820,6 +3834,27 @@ window.addEventListener("hashchange",()=>{ const h=location.hash.replace("#","")
 
 /* ---------------- Router & render ---------------- */
 function route(){ return (location.hash||"#home").slice(1) || "home"; }
+/* Screen readers: keep focus in a sensible place after every re-render.
+   New page: move focus to its heading and update the tab title so the change is announced.
+   Same page: put focus back on the control that was used (it was replaced by the re-render). */
+function focusKey(el){
+  if(!el||el===document.body||!(el.closest("#view")||el.closest("#tabs"))) return null;
+  if(el.id) return "#"+CSS.escape(el.id);
+  for(const a of el.attributes){ if(a.name.startsWith("data-")) return `${el.tagName.toLowerCase()}[${a.name}="${CSS.escape(a.value)}"]`; }
+  if(el.getAttribute("href")) return `a[href="${CSS.escape(el.getAttribute("href"))}"]`;
+  return null;
+}
+let renderedRoute=null;
+function afterRender(r,fk){
+  const view=document.getElementById("view"), h1=view.querySelector("h1");
+  document.title=(h1?h1.innerText.trim()+" · ":"")+"NariPath";
+  const sk=document.getElementById("skip"); if(sk) sk.textContent=S.lang==="bn"?"মূল অংশে যান":"Skip to main content";
+  const ds=document.getElementById("demo-strip"); if(ds) ds.setAttribute("aria-label",S.lang==="bn"?"প্রোটোটাইপ নোটিশ":"Prototype notice");
+  const changed=renderedRoute!==null&&renderedRoute!==r, first=renderedRoute===null; renderedRoute=r;
+  if(first) return;
+  if(changed){ const tgt=h1||view; if(tgt!==view) tgt.setAttribute("tabindex","-1"); try{ tgt.focus({preventScroll:true}); }catch(e){} return; }
+  if(fk&&(document.activeElement===document.body||!document.activeElement)){ const el=document.querySelector(fk); if(el){ try{ el.focus({preventScroll:true}); }catch(e){} } }
+}
 function render(){
   document.documentElement.lang = S.lang==="bn"?"bn":"en";
   document.getElementById("demo-strip").innerHTML = t("demoStrip").replace("{d}", esc(date(LAST_CHECKED)));
@@ -3867,7 +3902,9 @@ function render(){
   else if(r==="period-group") html=viewPeriodGroup();
   else if(r.startsWith("period-")) html=viewPeriodLesson(r.slice(7));
   else html=viewHome();
+  const fk=focusKey(document.activeElement);
   document.getElementById("view").innerHTML=html;
+  afterRender(r,fk);
   if(r==="map") animateMap();
   const rv=document.querySelector(".stitch .reveal");
   if(rv){ try{ rv.style.setProperty("--len", Math.ceil(rv.getTotalLength())); }catch(e){} if(!S.sewn) setTimeout(()=>{S.sewn=true;},3200); }
