@@ -592,6 +592,21 @@ html[data-simple="on"] .svc{grid-template-columns:repeat(2,1fr)}
 .near-btn .ico{width:34px;height:34px;--pc:var(--primary)}
 :root[data-theme="dark"] .map-wrap,:root[data-theme="dark"] .bdmap .sea,:root[data-theme="dark"] .div-chips{background:#14243a;fill:#14243a}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .map-wrap,:root:not([data-theme="light"]) .div-chips{background:#14243a}:root:not([data-theme="light"]) .bdmap .sea{fill:#14243a}}
+
+.care{border-top:4px solid #d4458f}
+.care-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:8px}
+.care .near-btn{font-size:.84rem;padding:8px}
+.care-dist{margin-top:8px;background:color-mix(in srgb,#d4458f 6%,var(--surface));border-radius:14px;padding:4px 12px}
+.care-levels{margin-top:12px;border-top:1px dashed var(--line);padding-top:10px}
+.care-levels summary{cursor:pointer}
+.ladder{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;gap:12px;counter-reset:lv}
+.ladder li{display:grid;grid-template-columns:38px 1fr;gap:10px}
+.ladder .ico{width:38px;height:38px}
+.ladder li div{display:flex;flex-direction:column;gap:2px}
+.care-jump{display:flex;align-items:center;gap:12px;width:100%;margin-top:12px;text-align:left;border:0;border-radius:16px;padding:12px 14px;cursor:pointer;color:#fff;background:linear-gradient(140deg,#d4458f,#7a2a63);box-shadow:0 10px 22px -14px #7a2a63}
+.care-jump svg{width:26px;height:26px;flex:none}
+.care-jump span{display:flex;flex-direction:column;gap:1px}
+.care-jump .small{color:rgba(255,255,255,.85)}
 /* Reduce motion (user setting) */
 html[data-motion="reduce"] *{animation:none!important;transition:none!important}
 html[data-motion="reduce"] .stitch .reveal{stroke-dasharray:none!important}
@@ -2880,6 +2895,10 @@ Object.assign(GSRC,{
   tdSched:{en:"Incepta Vaccine: EPI schedule for women of child-bearing age",bn:"ইনসেপ্টা ভ্যাকসিন: সন্তান ধারণক্ষম নারীদের ইপিআই টিকাসূচি",url:"https://inceptavaccine.com/immunization-schedule.php"},
   danger1:{en:"BSS: go to hospital at once with convulsions or bleeding",bn:"বাসস: খিঁচুনি বা রক্তক্ষরণ হলে সঙ্গে সঙ্গে হাসপাতালে যান",url:"https://www.bssnews.net/news/40805"},
   danger2:{en:"Pregnancy, Birth and Baby (Australian Government-funded): warning signs during pregnancy",bn:"প্রেগন্যান্সি, বার্থ অ্যান্ড বেবি (অস্ট্রেলীয় সরকার-অর্থায়িত): গর্ভাবস্থার সতর্ক লক্ষণ",url:"https://www.pregnancybirthbaby.org.au/pregnancy/health-conditions-and-complications/warning-signs-during-pregnancy"},
+  ccN:{en:"Asia News Network (June 2026): 14,460 community clinics give free primary care to mothers and children",bn:"এশিয়া নিউজ নেটওয়ার্ক (জুন ২০২৬): ১৪,৪৬০টি কমিউনিটি ক্লিনিকে মা ও শিশুর বিনামূল্যে প্রাথমিক সেবা",url:"https://asianews.network/over-23000-doctor-nurse-health-worker-posts-vacant-in-public-hospitals-bangladesh-health-minister/"},
+  uhfwc:{en:"Population Council: about 3,900 Union Health and Family Welfare Centres, many upgraded for round-the-clock normal delivery",bn:"পপুলেশন কাউন্সিল: প্রায় ৩,৯০০ ইউনিয়ন স্বাস্থ্য ও পরিবার কল্যাণ কেন্দ্র, অনেকগুলোতে ২৪ ঘণ্টা স্বাভাবিক প্রসবের ব্যবস্থা",url:"https://knowledgecommons.popcouncil.org/departments_sbsr-rh/901"},
+  mcwc:{en:"BMC study: every district has a district hospital and a Mother and Child Welfare Centre",bn:"বিএমসি গবেষণা: প্রতিটি জেলায় একটি জেলা হাসপাতাল ও একটি মা ও শিশু কল্যাণ কেন্দ্র",url:"https://www.springermedizin.de/quality-of-maternal-and-newborn-healthcare-services-in-two-publi/17490536"},
+  uhc100:{en:"Daily Observer (June 2026): Upazila Health Complexes to be upgraded for complete maternal and newborn care",bn:"ডেইলি অবজারভার (জুন ২০২৬): উপজেলা স্বাস্থ্য কমপ্লেক্সে পূর্ণ মাতৃ ও নবজাতক সেবার পরিকল্পনা",url:"https://observerbd.com/news/580391"},
   signals:{en:"Bangla Tribune: what each storm signal means (BMD)",bn:"বাংলা ট্রিবিউন: কোন সতর্ক সংকেতের অর্থ কী (আবহাওয়া অধিদপ্তর)",url:"https://www.banglatribune.com/weather/798547"},
   ews:{en:"Department of Disaster Management: dial 1090 for early warnings",bn:"দুর্যোগ ব্যবস্থাপনা অধিদপ্তর: আগাম সতর্কবার্তার জন্য ১০৯০",url:"https://ddm.portal.gov.bd/site/page/5de3f14d-66fe-447e-b61a-67300e680fd7/%E0%A6%86%E0%A6%87%E0%A6%AD%E0%A6%BF%E0%A6%86%E0%A6%B0"},
   ews2:{en:"Ministry of Disaster Management and Relief: 1090 covers weather, rainfall, cyclone, flood and landslide",bn:"দুর্যোগ ব্যবস্থাপনা ও ত্রাণ মন্ত্রণালয়: ১০৯০-এ আবহাওয়া, বৃষ্টি, ঘূর্ণিঝড়, বন্যা ও ভূমিধস",url:"https://modmr.portal.gov.bd/sites/default/files/files/modmr.portal.gov.bd/download/f8584dec_3272_45db_b747_8a226ede8711/ivr%20success%20story.pdf"},
@@ -2898,7 +2917,7 @@ const isoDiff=(a,b)=>{ const p=s=>{const [y,m,d]=s.split("-").map(Number);return
 const validIso=s=>/^\d{4}-\d{2}-\d{2}$/.test(s||"")&&!isNaN(new Date(s));
 
 /* ---------- Mother and baby: nothing here is ever saved ---------- */
-S.mb={mode:"",due:"",months:"",dob:""};
+S.mb={mode:"",due:"",months:"",dob:"",dist:""};
 const ANC=[
   {w:16,w2:16,t:K("Check-up 1, by 16 weeks (4 months)","১ম পরীক্ষা, ১৬ সপ্তাহের মধ্যে (৪ মাস)")},
   {w:24,w2:28,t:K("Check-up 2, at 24–28 weeks (6–7 months)","২য় পরীক্ষা, ২৪–২৮ সপ্তাহে (৬–৭ মাস)")},
@@ -2930,6 +2949,49 @@ const DANGER=[
 ];
 function tlRow(cls,dateTxt,title,extra){
   return `<li class="tl-i ${cls}"><span class="tl-dot" aria-hidden="true"></span><div><span class="tl-date small">${dateTxt}</span><b>${title}</b>${extra?`<span class="small muted">${extra}</span>`:""}</div></li>`;
+}
+
+/* Care finder for mothers and children: Google Maps searches + this district's offices */
+const CARE_LEVELS=[
+  {ic:"home",t:K("Community clinic (your ward)","কমিউনিটি ক্লিনিক (আপনার ওয়ার্ড)"),d:K("Free basic care for pregnant women, mothers and children, nutrition advice and referral. The closest place to start.","গর্ভবতী নারী, মা ও শিশুর বিনামূল্যে প্রাথমিক সেবা, পুষ্টি পরামর্শ ও রেফারেল। শুরু করার সবচেয়ে কাছের জায়গা।"),q:"community clinic",src:"ccN"},
+  {ic:"heart",t:K("Union Health and Family Welfare Centre","ইউনিয়ন স্বাস্থ্য ও পরিবার কল্যাণ কেন্দ্র"),d:K("Check-ups in pregnancy, family planning, and in many centres normal delivery at any hour by a Family Welfare Visitor.","গর্ভকালীন পরীক্ষা, পরিবার পরিকল্পনা, এবং অনেক কেন্দ্রে পরিবার কল্যাণ পরিদর্শিকার মাধ্যমে যেকোনো সময় স্বাভাবিক প্রসব।"),q:"union health and family welfare centre",src:"uhfwc"},
+  {ic:"shield",t:K("Upazila Health Complex","উপজেলা স্বাস্থ্য কমপ্লেক্স"),d:K("Doctors, delivery care and treatment for sick children. Referral to the district if needed.","চিকিৎসক, প্রসব সেবা ও অসুস্থ শিশুর চিকিৎসা। প্রয়োজনে জেলায় রেফার করে।"),q:"upazila health complex",src:"uhc100"},
+  {ic:"baby",t:K("Mother and Child Welfare Centre and District Hospital","মা ও শিশু কল্যাণ কেন্দ্র ও জেলা হাসপাতাল"),d:K("Every district has both. Go here for complications, caesarean delivery and sick newborns.","প্রতিটি জেলায় দুটোই আছে। জটিলতা, সিজারিয়ান প্রসব ও অসুস্থ নবজাতকের জন্য এখানে যান।"),q:"mother and child welfare centre",src:"mcwc"}
+];
+const CARE_SEARCH=[
+  ["hospital",K("Hospital","হাসপাতাল"),"heart"],
+  ["maternity hospital",K("Maternity care","প্রসূতি সেবা"),"baby"],
+  ["mother and child welfare centre",K("Mother & child centre","মা ও শিশু কেন্দ্র"),"baby"],
+  ["community clinic",K("Community clinic","কমিউনিটি ক্লিনিক"),"home"],
+  ["child specialist doctor",K("Child doctor","শিশু বিশেষজ্ঞ"),"heart"],
+  ["vaccination centre",K("Vaccination centre","টিকাকেন্দ্র"),"shield"],
+  ["pharmacy",K("Pharmacy","ফার্মেসি"),"list"],
+  ["upazila health complex",K("Upazila Health Complex","উপজেলা স্বাস্থ্য কমপ্লেক্স"),"shield"]
+];
+function careFinder(){
+  const k=DISTRICTS[S.mb.dist]&&S.mb.dist!=="nationwide"?S.mb.dist:"";
+  const d=k?DISTRICTS[k]:null;
+  const distBlock=d?(()=>{ const cs=byId("cs-"+k), occ=R.filter(r=>r.loc===k&&/^occ\d/.test(r.id));
+      const q=s=>`${s}, ${d.en}, Bangladesh`;
+      const links=[[q("District Hospital"),tx(`District Hospital, ${d.en}`,`জেলা হাসপাতাল, ${d.bn}`)],[q("Mother and Child Welfare Centre"),tx(`Mother and Child Welfare Centre, ${d.en}`,`মা ও শিশু কল্যাণ কেন্দ্র, ${d.bn}`)]];
+      return `<div class="care-dist">
+        <ul class="mlist">
+          ${links.map(([qq,l])=>`<li class="mrow" style="--pc:#d4458f"><span class="ico">${icon("baby")}</span><div><b>${l}</b><span class="mrow-act"><a class="dir" href="${esc(mapsUrl(qq))}" target="_blank" rel="noopener noreferrer">${icon("pin")}${tx("Find on map","মানচিত্রে দেখুন")}</a></span></div></li>`).join("")}
+          ${occ.map(r=>`<li class="mrow" ${pc(r.p)}><span class="ico">${icon("heart")}</span><div><a href="#r-${esc(r.id)}"><b>${L(r.name)}</b></a><span class="small muted">${tx("For women and children who face violence","সহিংসতার শিকার নারী ও শিশুর জন্য")}</span><span class="mrow-act">${r.phone?`<a href="tel:${r.phone}" target="_top">${t("call")}</a>`:""}${dirLink(r)}</span></div></li>`).join("")}
+          ${cs?`<li class="mrow" ${pc(cs.p)}><span class="ico">${icon("shield")}</span><div><a href="#r-${esc(cs.id)}"><b>${L(cs.name)}</b></a><span class="small muted">${tx("Ask here for the nearest government hospital and EPI centre","নিকটতম সরকারি হাসপাতাল ও ইপিআই কেন্দ্রের খোঁজ এখানে নিন")}</span><span class="mrow-act">${cs.web?`<a href="${esc(safeUrl(cs.web))}" target="_blank" rel="noopener noreferrer">${tx("Website","ওয়েবসাইট")}</a>`:""}${dirLink(cs)}</span></div></li>`:""}
+        </ul></div>`; })():"";
+  return `<section class="section card care" id="care">
+    <h2>${tx("Find care near you","কাছের সেবা খুঁজুন")}</h2>
+    <p class="small muted">${tx("For check-ups, delivery, vaccines and a sick child. Tap to search on Google Maps near where you are.","পরীক্ষা, প্রসব, টিকা ও অসুস্থ শিশুর জন্য। আপনার কাছাকাছি গুগল ম্যাপসে খুঁজতে চাপুন।")}</p>
+    <div class="care-grid">${CARE_SEARCH.map(([q,l,ic])=>`<a class="near-btn" href="${esc(mapsUrl(q+" near me"))}" target="_blank" rel="noopener noreferrer"><span class="ico" style="--pc:#d4458f">${icon(ic)}</span>${L(l)}</a>`).join("")}</div>
+    <label for="mb-dist" class="small" style="display:block;margin-top:14px"><b>${tx("Government care in your district","আপনার জেলার সরকারি সেবা")}</b></label>
+    <select id="mb-dist" class="mb-in"><option value="">${t("chooseDistrict")}</option>${districtOptions(k,false)}</select>
+    ${distBlock}
+    <details class="care-levels"><summary><b>${tx("Which place is for what?","কোন জায়গা কিসের জন্য?")}</b></summary>
+      <ol class="ladder">${CARE_LEVELS.map(c=>`<li><span class="ico" style="--pc:#d4458f">${icon(c.ic)}</span><div><b>${L(c.t)}</b><span class="small">${L(c.d)}</span><span class="mrow-act"><a class="dir" href="${esc(mapsUrl(c.q+" near me"))}" target="_blank" rel="noopener noreferrer">${icon("pin")}${tx("Nearest","নিকটতম")}</a>${GSRC[c.src]?`<a class="small" href="${esc(safeUrl(GSRC[c.src].url))}" target="_blank" rel="noopener noreferrer">${tx("Source","উৎস")}</a>`:""}</span></div></li>`).join("")}</ol>
+    </details>
+    <p class="small muted">${tx("Google Maps also shows private clinics, which charge fees; government centres are free or low-cost. Google sees your search and, if you allow it, your location. NariPath never sees it, and your district choice here is not saved.","গুগল ম্যাপস বেসরকারি ক্লিনিকও দেখায়, যেখানে খরচ লাগে; সরকারি কেন্দ্র বিনামূল্যে বা কম খরচে। গুগল আপনার সার্চ এবং অনুমতি দিলে অবস্থান দেখতে পায়। নারীপথ তা দেখে না, আর এখানে বাছাই করা জেলাও সংরক্ষণ হয় না।")}</p>
+  </section>`;
 }
 function viewMother(){
   const m=S.mb, today=isoLocal(TODAY);
@@ -2966,6 +3028,7 @@ function viewMother(){
   return `${backLink("#home",t("back"))}
   ${toolHero("th-mom","baby",tx("Mother and baby timeline","মা ও শিশুর সময়সূচি"),tx("When to go for check-ups and vaccines, from Bangladesh's national schedules.","কখন পরীক্ষা ও টিকা নিতে যাবেন, বাংলাদেশের জাতীয় সূচি অনুযায়ী।"))}
   <div class="stamp st-public">${icon("info").replace('class=""','style="width:22px;height:22px;flex:none"')}<div><b>${tx("Nothing here is saved","এখানে কিছুই সংরক্ষণ হয় না")}</b><span class="small">${tx("Dates you enter are used only on this screen and are forgotten when you leave it. NariPath keeps no record about your health.","আপনার দেওয়া তারিখ শুধু এই পাতায় ব্যবহার হয় এবং পাতা ছাড়লেই মুছে যায়। নারীপথ আপনার স্বাস্থ্য সম্পর্কে কিছুই রাখে না।")}</span></div></div>
+  <button type="button" class="care-jump" data-scrollcare>${icon("pin")}<span><b>${tx("Find a hospital or clinic near you","কাছের হাসপাতাল বা ক্লিনিক খুঁজুন")}</b><span class="small">${tx("Maternity care, child doctors, vaccines","প্রসূতি সেবা, শিশু বিশেষজ্ঞ, টিকা")}</span></span></button>
   <section class="section card q">
     <div class="seg" role="tablist">
       <button type="button" role="tab" data-mbmode="preg" aria-selected="${m.mode==="preg"}">${tx("I'm pregnant","আমি গর্ভবতী")}</button>
@@ -2981,6 +3044,7 @@ function viewMother(){
     ${!m.mode?`<p class="small muted">${tx("Choose one to see your dates.","তারিখ দেখতে একটি বাছুন।")}</p>`:""}
   </section>
   ${preg}${baby}
+  ${careFinder()}
   <section class="section card flags">
     <h2>${tx("Go to a hospital at once if you have","এসব হলে সঙ্গে সঙ্গে হাসপাতালে যান")}</h2>
     <ul>${DANGER.map(d=>`<li>${L(d)}</li>`).join("")}</ul>
@@ -2992,7 +3056,7 @@ function viewMother(){
     <a class="continue" href="#allowances"><span class="small muted">${tx("Allowance","ভাতা")}</span><b>${tx("Mother and Child Benefit: Tk 850 a month","মা ও শিশু সহায়তা: মাসে ৮৫০ টাকা")}</b></a>
     <div class="list">${["hb16263","r01"].map(byId).filter(Boolean).map(r=>resCard(r)).join("")}</div>
   </section>
-  <section class="section card"><h2>${t("sourceL")}</h2>${srcList(["ancGuide","ancTimes","whoAnc","pnc","pncPA","epi","epiIcddr","tdWho","tdSched","danger1","danger2"])}<p class="small muted">${t("checkedL")}: ${esc(date(FEAT3_CHECKED))}</p></section>
+  <section class="section card"><h2>${t("sourceL")}</h2>${srcList(["ancGuide","ancTimes","whoAnc","pnc","pncPA","epi","epiIcddr","tdWho","tdSched","danger1","danger2","ccN","uhfwc","mcwc","uhc100"])}<p class="small muted">${t("checkedL")}: ${esc(date(FEAT3_CHECKED))}</p></section>
   <p class="note">${tx("General information, not medical advice. Your doctor, nurse or health worker knows your situation best.","সাধারণ তথ্য, চিকিৎসা পরামর্শ নয়। আপনার চিকিৎসক, নার্স বা স্বাস্থ্যকর্মী আপনার অবস্থা সবচেয়ে ভালো জানেন।")}</p>`;
 }
 
@@ -3097,7 +3161,7 @@ function viewMap(){
       <ul class="mlist">${offices.map(row).join("")}</ul>
       <div class="btn-row"><button type="button" class="btn primary" data-dgo="${sel}">${tx("All support for this district","এই জেলার সব সহায়তা")}</button></div>
     </section>`:"";
-  const NEAR=[["hospital",tx("Hospital","হাসপাতাল"),"heart"],["police station",tx("Police station","থানা"),"shield"],["union parishad",tx("Union Parishad","ইউনিয়ন পরিষদ"),"home"],["upazila social services office",tx("Social Services","সমাজসেবা"),"coin"],["cyclone shelter",tx("Cyclone shelter","আশ্রয়কেন্দ্র"),"storm"]];
+  const NEAR=[["hospital",tx("Hospital","হাসপাতাল"),"heart"],["police station",tx("Police station","থানা"),"shield"],["union parishad",tx("Union Parishad","ইউনিয়ন পরিষদ"),"home"],["upazila social services office",tx("Social Services","সমাজসেবা"),"coin"],["mother and child welfare centre",tx("Mother & child centre","মা ও শিশু কেন্দ্র"),"baby"],["cyclone shelter",tx("Cyclone shelter","আশ্রয়কেন্দ্র"),"storm"]];
   return `${backLink("#home",t("back"))}
   <section class="map-hero">
     <h1>${tx("Support map","সহায়তার মানচিত্র")}</h1>
@@ -3142,6 +3206,7 @@ function animateMap(){
 
 document.addEventListener("click",e=>{
   const el=e.target;
+  if(el.closest("[data-scrollcare]")){ const c=document.getElementById("care"); if(c) c.scrollIntoView({block:"start",behavior:S.a11y.motion==="reduce"?"auto":"smooth"}); return; }
   const mm=el.closest("[data-mbmode]"); if(mm){ S.mb.mode=mm.dataset.mbmode; render(); return; }
   const dt=el.closest("[data-distab]"); if(dt){ S.disTab=dt.dataset.distab; render(); const b=document.querySelector(`[data-distab="${S.disTab}"]`); if(b) b.focus(); return; }
   const mv=el.closest("[data-mapdiv]"); if(mv){ S.mapSel=""; S.mapDiv=S.mapDiv===mv.dataset.mapdiv?"":mv.dataset.mapdiv; render(); return; }
@@ -3155,12 +3220,13 @@ document.addEventListener("change",e=>{
   const id=e.target.id;
   if(id==="mb-due"){ S.mb.due=validIso(e.target.value)?e.target.value:""; if(S.mb.due) S.mb.months=""; render(); }
   else if(id==="mb-months"){ S.mb.months=e.target.value; if(S.mb.months) S.mb.due=""; render(); }
+  else if(id==="mb-dist"){ S.mb.dist=e.target.value; render(); const c=document.getElementById("mb-dist"); if(c) c.focus(); }
   else if(id==="mb-dob"){ S.mb.dob=validIso(e.target.value)?e.target.value:""; render(); }
   else if(id==="map-pick"){ S.mapSel=e.target.value; S.mapDiv=S.mapSel&&DISTRICTS[S.mapSel]?DISTRICTS[S.mapSel].div:""; render(); }
   else if(e.target.dataset.dck){ const k=e.target.dataset.dck; if(!DIS[k]) return; const arr=DIS[k].map((_,i)=>!!(S.dis[k]||[])[i]); arr[+e.target.dataset.i]=e.target.checked; S.dis[k]=arr; store.set("dis",S.dis); render(); const c=document.getElementById(`ds-${k}-${e.target.dataset.i}`); if(c) c.focus(); }
 });
 /* Forget mother-and-baby dates as soon as she leaves that screen */
-window.addEventListener("hashchange",()=>{ const h=location.hash.replace("#",""); if(h!=="mother") S.mb={mode:"",due:"",months:"",dob:""}; if(h!=="map") S.mapVB=null; });
+window.addEventListener("hashchange",()=>{ const h=location.hash.replace("#",""); if(h!=="mother") S.mb={mode:"",due:"",months:"",dob:"",dist:""}; if(h!=="map") S.mapVB=null; });
 
 /* ---------------- Router & render ---------------- */
 function route(){ return (location.hash||"#home").slice(1) || "home"; }
