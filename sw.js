@@ -1,7 +1,7 @@
 /* NariPath service worker: keeps the app usable offline.
    Pages: network first, fall back to the saved copy. Fonts and icons: saved copy first.
    Only same-origin files are handled; NariPath makes no third-party requests. */
-const CACHE = "naripath-v6";
+const CACHE = "naripath-v7";
 const FONTS = [
   "hind-siliguri-bengali-400-normal", "hind-siliguri-bengali-500-normal", "hind-siliguri-bengali-600-normal", "hind-siliguri-bengali-700-normal",
   "hind-siliguri-latin-400-normal", "hind-siliguri-latin-500-normal", "hind-siliguri-latin-600-normal", "hind-siliguri-latin-700-normal",
