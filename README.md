@@ -79,7 +79,7 @@ Information can change. Always confirm with the provider before acting.
 | District map | Outlines from [geoBoundaries](https://www.geoboundaries.org) (CC BY 4.0; Bangladesh Bureau of Statistics / OCHA) via the MIT-licensed `bangladesh-geojson` package, dissolved to districts (upazilas with missing or duplicate names re-assigned by location) and simplified |
 | `fonts/` | Tiro Bangla and Hind Siliguri, self-hosted (SIL Open Font License) |
 | `audio/bn/` | NariPath's Bangla voice: recorded sentences bundled per app area (`*.ogg`, Ogg Opus clips back to back) and `index.json`, which maps a hash of each sentence to its bundle, offset and length |
-| `scripts/voice/` | How the voice is made: `extract.py` collects every sentence the reader speaks, `normalize.py` writes numbers, helplines, dates and symbols as Bangla words, `synth.py` records them, `pack.py` bundles them. See *Voice* below |
+| `scripts/voice/` | How the voice is made: `extract.py` collects every sentence the reader speaks, `normalize.py` writes numbers, helplines, dates and symbols as Bangla words and applies the pronunciation fixes (`respell.py`, `lexicon.json`), `synth.py` records them, `roundtrip_eval.py` and `build_lexicon.py` test pronunciation with an offline Bangla speech recogniser, `pack.py` bundles them. See *Voice* below |
 | `scripts/build-data.mjs` | Regenerates the JSON files and the numbers above from `index.html`. Run `node scripts/build-data.mjs` after editing data |
 
 ## Run it
@@ -88,17 +88,34 @@ Open `index.html` in any browser, or visit the live demo. To host your own copy,
 
 ## Voice
 
-The voice is the open-source Coqui TTS model `bn/custom/vits-female` by [@mobassir94](https://github.com/mobassir94/comprehensive-bangla-tts) (Apache 2.0), run offline with [sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx). It is a synthetic voice, not a person. To update recordings after changing text:
+The voice is the open-source Coqui TTS model `bn/custom/vits-female` by [@mobassir94](https://github.com/mobassir94/comprehensive-bangla-tts) (Apache 2.0), run offline with [sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx). It is a synthetic voice, not a person.
+
+### Pronunciation work (November 2026)
+
+The model reads Bangla letters directly (no phoneme step), so it has to guess pronunciation from spelling. Testing showed one dominant fault: **অন্তঃস্থ য় was pronounced like জ** (জায়গায় heard as "জাজ গাছে", জাতীয় as "জাতিজ", দিয়ে as "দিঝে"). In Bangla, য় is a semivowel: a soft glide or vowel ("ইঅ" / "এ"), never /dʒ/. The model's authors report the same weakness and fix it by respelling with vowels (বায়ান → বাইআন). Other trouble spots in Bangla text-to-speech are the inherent vowel (schwa) and conjuncts such as ক্ষ, জ্ঞ and য-ফলা.
+
+What NariPath does now, before recording (`scripts/voice/normalize.py`):
+
+1. Numbers, dates, percentages and helplines are written as Bangla words; helplines are read digit by digit with short pauses (এক, শূন্য, নয়).
+2. **Tested respellings** (`lexicon.json`, 111 words): every one of the app's 2,187 words was recorded alone and played to an offline Bangla speech recogniser. Where it did not hear the intended word, candidate respellings were tried and the clearest kept, e.g. জাতীয় → জাতীও, প্রয়োজন → প্রইওজন, ফেব্রুয়ারি → ফেব্রুআরি, তথ্য → তথ্থো, জন্য → জন্নো, প্রশিক্ষণ → প্রশিক্খণ, and for a few words the Dhaka "r" for ড় (বাড়িতে → বারিতে).
+3. **য় rules** for every other word: য় + vowel sign becomes that vowel (দিয়ে → দিএ, হওয়া → হওআ), word-final -ীয় becomes -ীও, and other final য় becomes ই (হয় → হই, সময় → সমই).
+
+Measured with the recogniser as listener (`roundtrip_eval.py`): in the controlled comparison on 120 app sentences, character errors fell from **12.3% to 8.0%** and word errors from 34.3% to 27.5%. On the final published recordings, character errors fell from **12.4% to 9.4%** on that set and from 10.8% to 9.3% on a second random set of 150 (each recording varies a little). About 600 of the 1,516 recorded sentences contain য়. A Bangladeshi multi-speaker voice (Mimic 3 `bn/multi_low`, trained on Google's Bangladesh crowd-sourced recordings) was also tested and did not do better (13.9% at best, versus 12.4% for the current voice before fixes). Blanket conjunct rules made results slightly worse, so conjunct fixes are used only where the test confirmed them. The recogniser is an imperfect listener, so **native speakers should still check pronunciation during the pilot**; corrections go into `lexicon.json`.
+
+### Updating recordings after changing text
 
 ```
-pip install sherpa-onnx soundfile        # and ffmpeg
-# model: vits-coqui-bn-custom_female from the sherpa-onnx "tts-models" release, unpacked to $NV_MODEL
-python3 scripts/voice/extract.py         # renders every page in Bangla, writes chunks.json
-python3 scripts/voice/synth.py           # records only new sentences (cached by hash)
+pip install sherpa-onnx soundfile scipy        # and ffmpeg
+# voice: vits-coqui-bn-custom_female; recogniser: sherpa-onnx-streaming-zipformer-bn-vosk-2026-02-09
+# (both from the sherpa-onnx GitHub releases), unpacked next to the scripts or set NV_MODEL / NV_ASR
+python3 scripts/voice/extract.py               # every sentence the reader speaks → chunks.json
+python3 scripts/voice/build_lexicon.py chunks.json scripts/voice/lexicon.json   # optional: test new words
+python3 scripts/voice/synth.py                 # records only sentences whose spoken form changed
 python3 scripts/voice/pack.py chunks.json audio/bn
+python3 scripts/voice/roundtrip_eval.py chunks.json 120                          # check
 ```
 
-Limits: the model can't say English words, so they are skipped in Bangla sentences and mostly-English lines are not recorded; numbers are spelled out by `normalize.py` (helplines digit by digit). Pronunciation should be checked by Bangla speakers during the pilot, and recordings by a female health worker would be better still for Period Shikkha.
+Limits: the model can't say English words, so they are skipped in Bangla sentences and mostly-English lines are not recorded (the phone's voice reads those, if it has one).
 
 ## Design
 

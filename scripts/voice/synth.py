@@ -1,6 +1,6 @@
 """Synthesize every Bangla sentence the app reads aloud (incremental: cached clips are reused).
 Voice: Coqui TTS "bn/custom/vits-female" by @mobassir94 (Apache 2.0), run with sherpa-onnx."""
-import json, os, sys, subprocess, time, numpy as np
+import json, os, sys, subprocess, time, hashlib, numpy as np
 import sherpa_onnx
 sys.path.insert(0, os.path.dirname(__file__))
 from normalize import normalize, speakable
@@ -9,7 +9,14 @@ CACHE = os.environ.get("NV_CACHE", "voice-cache")
 os.makedirs(CACHE, exist_ok=True)
 d = json.load(open(sys.argv[1] if len(sys.argv) > 1 else os.environ.get("NV_CHUNKS","chunks.json")))
 keys = d["keys"]
-todo = [(c, k) for c, k in keys.items() if speakable(c) and normalize(c) and not os.path.exists(f"{CACHE}/{k}.opus")]
+def clip_id(text):  # recordings are cached by what is actually spoken, so pronunciation fixes re-record only what changed
+    return hashlib.sha1(normalize(text).encode("utf-8")).hexdigest()[:16]
+todo = {}
+for c in keys:
+    if speakable(c) and normalize(c):
+        cid = clip_id(c)
+        if not os.path.exists(f"{CACHE}/{cid}.opus"): todo[cid] = c
+todo = [(c, cid) for cid, c in todo.items()]
 print("to synthesize:", len(todo), "of", len(keys), flush=True)
 if not todo: sys.exit(0)
 tts = sherpa_onnx.OfflineTts(sherpa_onnx.OfflineTtsConfig(model=sherpa_onnx.OfflineTtsModelConfig(

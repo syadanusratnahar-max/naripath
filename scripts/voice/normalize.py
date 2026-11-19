@@ -1,7 +1,10 @@
 """Turn on-screen Bangla text into something the voice model can say.
 The model only knows Bangla letters and a few punctuation marks, so numbers,
 helplines, dates, percentages and symbols are written out as words."""
-import re
+import re, json, os
+from respell import ya_variant, decompose
+# Pronunciation lexicon: respellings chosen by a speech-recognition round trip (see README).
+LEX = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "lexicon.json"), encoding="utf-8"))
 
 W = ("শূন্য এক দুই তিন চার পাঁচ ছয় সাত আট নয় দশ এগারো বারো তেরো চৌদ্দ পনেরো ষোলো সতেরো আঠারো উনিশ "
      "বিশ একুশ বাইশ তেইশ চব্বিশ পঁচিশ ছাব্বিশ সাতাশ আটাশ ঊনত্রিশ ত্রিশ একত্রিশ বত্রিশ তেত্রিশ চৌত্রিশ পঁয়ত্রিশ ছত্রিশ সাঁইত্রিশ আটত্রিশ ঊনচল্লিশ "
@@ -37,7 +40,17 @@ def words(n: int) -> str:
 
 
 def digits(s: str) -> str:
-    return " ".join(DIG[int(d)] for d in s)
+    # phone numbers are read digit by digit with a short pause, as people read them aloud
+    return ", ".join(DIG[int(d)] for d in s)
+
+
+def pronounce(t: str) -> str:
+    """Respell words the voice would mispronounce. অন্তঃস্থ য় is a glide or vowel, never /dʒ/:
+    first the tested lexicon, then the general য় rules (য়ে → এ, final -ীয় → -ীও, হয় → হই ...)."""
+    def fix(m):
+        w = m.group(0)
+        return LEX.get(w) or LEX.get(decompose(w)) or ya_variant(decompose(w), "A")
+    return re.sub(r"[\u0980-\u09e3\u09e6-\u09ff\u200c]+", fix, t)
 
 
 def num_token(raw: str) -> str:
@@ -55,7 +68,7 @@ def num_token(raw: str) -> str:
 NUM = r"[0-9০-৯](?:[0-9০-৯,]*[0-9০-৯])?(?:\.[0-9০-৯]+)?"
 
 
-def normalize(t: str) -> str:
+def normalize(t: str, respell: bool = True) -> str:
     t = t.replace("‍", "")
     # dates like "১৮ নভে, ২০২৬"
     for k, v in MONTHS.items():
@@ -74,6 +87,8 @@ def normalize(t: str) -> str:
     t = t.replace(":", ",").replace(";", ",").replace("/", " ").replace("@", " ").replace("–", ", ").replace("—", ", ")
     t = re.sub(r"\s+", " ", t).strip(" ,-")
     t = re.sub(r"\s+([,।?!.])", r"\1", t)
+    if respell:
+        t = pronounce(t)
     if t and t[-1] not in "।?!.":
         t += "।"
     return t

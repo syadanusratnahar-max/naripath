@@ -1,6 +1,8 @@
 """Bundle recorded sentences into one file per area of the app, plus a small index.
 A phone only downloads the bundle for the page it is listening to."""
 import json, os, sys, hashlib, collections
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from normalize import normalize, speakable
 CACHE = os.environ.get("NV_CACHE", "voice-cache")
 OUT = sys.argv[2] if len(sys.argv) > 2 else "audio/bn"
 d = json.load(open(sys.argv[1] if len(sys.argv) > 1 else os.environ.get("NV_CHUNKS","chunks.json")))
@@ -24,15 +26,17 @@ for f in os.listdir(OUT): os.remove(os.path.join(OUT, f))
 packs = collections.defaultdict(list)
 for c, gs in where.items():
     k = keys[c]
-    if not os.path.exists(f"{CACHE}/{k}.opus"): continue
-    packs["common" if len(gs) >= 3 else gs[0]].append(k)
+    if not speakable(c) or not normalize(c): continue
+    cid = hashlib.sha1(normalize(c).encode("utf-8")).hexdigest()[:16]
+    if not os.path.exists(f"{CACHE}/{cid}.opus"): continue
+    packs["common" if len(gs) >= 3 else gs[0]].append((k, cid))
 index = {"v": 0, "voice": "Coqui TTS bn/custom/vits-female by @mobassir94 (Apache-2.0)", "packs": {}, "clips": {}}
 allh = hashlib.sha1()
 for pid, ks in sorted(packs.items()):
     blob = bytearray(); seen = set()
-    for k in sorted(ks):
+    for k, cid in sorted(ks):
         if k in seen: continue
-        seen.add(k); b = open(f"{CACHE}/{k}.opus", "rb").read()
+        seen.add(k); b = open(f"{CACHE}/{cid}.opus", "rb").read()
         index["clips"][k] = [pid, len(blob), len(b)]; blob += b
     h = hashlib.sha1(blob).hexdigest()[:10]; allh.update(h.encode())
     fn = f"{pid}-{h}.ogg"; open(os.path.join(OUT, fn), "wb").write(blob)
