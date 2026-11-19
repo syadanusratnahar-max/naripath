@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-theme="light" lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>NariPath Prototype</title>
 <link rel="manifest" href="manifest.webmanifest">
-<meta name="theme-color" content="#1c1a3f">
+<meta name="theme-color" content="#fff6fa">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <link rel="icon" href="icons/icon-192.png">
 
@@ -621,6 +621,129 @@ html[data-simple="on"] .svc{grid-template-columns:repeat(2,1fr)}
 .bdmap .dst.coast{fill:color-mix(in srgb,#1f6fb8 45%,#fff);stroke:#fff}
 .lg-coast{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px;background:color-mix(in srgb,#1f6fb8 45%,#fff);border:1px solid #1f6fb8}
 .coast-chip::before{display:none}
+
+/* =====================================================================
+   Light theme "Alpona morning": blush paper, violet + jamdani pink,
+   marigold, river teal, paddy green. Motion is gentle and optional.
+   ===================================================================== */
+:root,:root[data-theme="light"]{
+  --bg:#fcf7fb; --surface:#ffffff; --text:#2b1d3f; --muted:#6c6182; --line:#f0e4ef;
+  --primary:#5a3fd1; --accent:#e23a7a; --night:#2b1d3f; --night-2:#43306a;
+  --ok:#1f8a55; --warn:#a85d00; --bad:#c42b3a;
+  --p1:#5056e6; --p2:#e23a7a; --p3:#8f45d6; --p4:#0b9792; --p5:#c27800; --p6:#2a9455;
+  --t1:#7b7bff; --t2:#ff6fa3; --t3:#c38bff; --t4:#2fd0c1; --t5:#ffbb3d; --t6:#5fd18a;
+  --grad:linear-gradient(135deg,#7b4dff 0%,#e23a7a 100%);
+  --grad-soft:linear-gradient(135deg,#efe8ff,#ffe6f0);
+  --shadow:0 10px 28px -18px rgba(90,63,209,.45);
+  --r:18px;
+}
+body{background:var(--bg)}
+.app{background-color:var(--bg);background-image:
+  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44'%3E%3Cpath d='M0 11h6M11 11h6M22 11h6M33 11h6M5 33h6M16 33h6M27 33h6M38 33h6' stroke='%23e23a7a' stroke-opacity='.07' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E")}
+
+/* header: frosted white */
+header.top{background:rgba(255,255,255,.86);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);color:var(--text);border-bottom:1px solid var(--line)}
+.brand b{color:var(--text)}
+.brand b span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lang{border-color:var(--line);background:#fff}
+.lang button{color:var(--muted)}
+.lang button[aria-pressed="true"]{background:var(--grad);color:#fff}
+.aa{border-color:var(--line)!important;color:var(--text)!important;background:#fff!important}
+.demo-strip{background:#fff;color:var(--muted);border-bottom:1px solid var(--line);padding:8px 16px}
+.demo-strip strong{color:#b25c00;background:#fff1d6;border-radius:999px;padding:1px 8px;margin-right:4px}
+
+/* hero band: sunrise with drifting colour and a turning alpona */
+.band{background:linear-gradient(165deg,#fff3f8 0%,#f4edff 48%,#e9f8f7 100%);color:var(--text);padding-bottom:70px}
+.band .greet{color:#c2306a;font-weight:600}
+.band h1{color:var(--text)}
+.band p.lede{color:var(--muted)}
+.blob{position:absolute;border-radius:50%;filter:blur(36px);opacity:.65;pointer-events:none;z-index:0}
+.blob.b1{width:220px;height:220px;background:#ffc2da;top:-60px;right:-40px}
+.blob.b2{width:200px;height:200px;background:#d9ccff;bottom:40px;left:-70px}
+.blob.b3{width:160px;height:160px;background:#bff0e4;bottom:-30px;right:30px}
+.band > *:not(.blob):not(.alpona){position:relative;z-index:1}
+.alpona{position:absolute;width:230px;height:230px;top:-62px;right:-74px;z-index:0;opacity:.9;pointer-events:none}
+.alpona .ring,.alpona .ring2{fill:none;stroke:#e23a7a;stroke-opacity:.28;stroke-width:1.4;stroke-dasharray:3 5}
+.alpona .dt{fill:#ffbb3d;opacity:.7}
+.alpona .pt{fill:none;stroke-width:1.6;stroke-linejoin:round}
+.alpona .pt0{stroke:#e23a7a;stroke-opacity:.45} .alpona .pt1{stroke:#7b4dff;stroke-opacity:.4} .alpona .pt2{stroke:#0b9792;stroke-opacity:.4}
+.alpona .ip{fill:#ff6fa3;fill-opacity:.18;stroke:#e23a7a;stroke-opacity:.4;stroke-width:1.2}
+.alpona .core{fill:#ffbb3d;opacity:.8}
+.stitch .ghost{stroke:rgba(43,29,63,.12)}
+.stitch .reveal{stroke:#fff}
+.knot circle.bg{fill:#fff;filter:drop-shadow(0 4px 8px rgba(90,63,209,.18))}
+.knot:hover circle.bg,.knot:focus-visible circle.bg{fill:#fff7fb}
+.knot text{fill:var(--muted);font-weight:600}
+.band-search .search{background:#fff;box-shadow:0 14px 34px -16px rgba(226,58,122,.45);border:1px solid #fbe3ee}
+
+/* surfaces */
+.card,.res,.sit,.continue{box-shadow:var(--shadow)}
+.card{border-color:var(--line);border-radius:var(--r)}
+.svc{background:#fff;border:1px solid var(--line);box-shadow:0 18px 40px -26px rgba(226,58,122,.5)}
+.sv-l{color:var(--text)}
+.sv-ico svg *{fill:rgba(255,255,255,.22)}
+.sv1 .sv-ico{--c1:#ffc24d;--c2:#f08a00} .sv2 .sv-ico{--c1:#9b8cff;--c2:#5a3fd1} .sv3 .sv-ico{--c1:#4fe0cf;--c2:#0b9792}
+.sv4 .sv-ico{--c1:#ff8fb6;--c2:#e23a7a} .sv5 .sv-ico{--c1:#d59bff;--c2:#8f45d6} .sv6 .sv-ico{--c1:#8fe6a3;--c2:#2a9455}
+.sv7 .sv-ico{--c1:#7fd0ff;--c2:#2378d1} .sv8 .sv-ico{--c1:#ffb08a;--c2:#e2603a} .sv9 .sv-ico{--c1:#ffa0d4;--c2:#c93c8e} .sv10 .sv-ico{--c1:#8fb5ff;--c2:#3557d6}
+.ico svg *{fill:color-mix(in srgb,var(--pc) 16%,transparent)}
+.th-ico svg *{fill:rgba(255,255,255,.2)}
+.sit{background:linear-gradient(170deg,color-mix(in srgb,var(--pc) 10%,#fff) 0%,#fff 75%);border-color:color-mix(in srgb,var(--pc) 18%,var(--line))}
+
+/* buttons, chips */
+.btn.primary{background:var(--grad);border-color:transparent;color:#fff;box-shadow:0 10px 22px -12px rgba(226,58,122,.7);position:relative;overflow:hidden}
+.btn.ghost{background:#fff}
+.chip[aria-pressed="true"]{background:var(--primary);border-color:var(--primary);color:#fff}
+.plan-steps li::before{background:var(--grad)}
+nav.tabs{background:rgba(255,255,255,.9)!important;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line)!important;box-shadow:0 14px 34px -18px rgba(90,63,209,.5)!important}
+nav.tabs .pill{background:var(--grad)!important}
+nav.tabs .pill{border:0!important;box-shadow:0 8px 18px -10px rgba(226,58,122,.8)}
+.tile{border-radius:16px;box-shadow:var(--shadow)}
+.tile b{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.progress i{background:linear-gradient(90deg,#2fd0c1,#5fd18a)}
+.continue{border-left-color:transparent;background:linear-gradient(#fff,#fff) padding-box,var(--grad) border-box;border:1.5px solid transparent}
+nav.tabs a[aria-current="page"]{color:#fff!important}
+.listen{background:var(--grad)!important;color:#fff!important;box-shadow:0 12px 26px -12px rgba(226,58,122,.75)!important}
+
+/* tool banners: brighter */
+.th-allow{--h1:#ffad33;--h2:#e0610f} .th-apps{--h1:#8b6dff;--h2:#4b33c2} .th-mig{--h1:#1fc2b2;--h2:#0b7f86}
+.th-mom{--h1:#ff6fa8;--h2:#c42f80} .th-dis{--h1:#5b8cff;--h2:#3346c7}
+.tool-hero{box-shadow:0 18px 36px -22px var(--h2)}
+.map-hero{background:radial-gradient(70% 90% at 100% 0%,rgba(255,255,255,.35),transparent 60%),linear-gradient(140deg,#5b8cff,#7b4dff 60%,#c43fa8)}
+.map-hero::after{border-color:rgba(255,255,255,.35)}
+
+/* stamps */
+.stamp{background:#fff}
+
+/* ---------------- Motion (skipped when the person turns motion off) ---------------- */
+@media (prefers-reduced-motion:no-preference){
+  html:not([data-motion="reduce"]) .alpona .spin{transform-origin:0 0;animation:spin 80s linear infinite}
+  html:not([data-motion="reduce"]) .alpona .ip{transform-box:fill-box;transform-origin:50% 100%;animation:bloom 4.5s ease-in-out infinite}
+  html:not([data-motion="reduce"]) .blob.b1{animation:drift1 16s ease-in-out infinite alternate}
+  html:not([data-motion="reduce"]) .blob.b2{animation:drift2 19s ease-in-out infinite alternate}
+  html:not([data-motion="reduce"]) .blob.b3{animation:drift1 22s ease-in-out infinite alternate-reverse}
+  html:not([data-motion="reduce"]) .logo-spin{transform-origin:16px 16px;animation:spin 24s linear infinite}
+  html:not([data-motion="reduce"]) .svc.intro .sv{opacity:0;animation:pop .55s cubic-bezier(.3,1.5,.5,1) forwards;animation-delay:calc(var(--n) * 55ms + .15s)}
+  html:not([data-motion="reduce"]) .th-ico{animation:bob 3.6s ease-in-out infinite}
+  html:not([data-motion="reduce"]) .tool-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.28) 45%,transparent 60%);transform:translateX(-100%);animation:sheen 6s ease-in-out 1s infinite;pointer-events:none}
+  html:not([data-motion="reduce"]) .btn.primary::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 35%,rgba(255,255,255,.35) 50%,transparent 65%);transform:translateX(-120%);animation:sheen 5s ease-in-out 2s infinite}
+  html:not([data-motion="reduce"]) .callbtn,html:not([data-motion="reduce"]) .helpline .num{animation:ring 2.8s ease-out infinite}
+  html:not([data-motion="reduce"]) .res,html:not([data-motion="reduce"]) .sit,html:not([data-motion="reduce"]) .card.allow,html:not([data-motion="reduce"]) .near-btn{transition:transform .18s ease,box-shadow .18s ease}
+  html:not([data-motion="reduce"]) .res:active,html:not([data-motion="reduce"]) .sit:active,html:not([data-motion="reduce"]) .near-btn:active,html:not([data-motion="reduce"]) .btn:active{transform:scale(.97)}
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes bloom{50%{transform:scale(1.18)}}
+@keyframes drift1{to{transform:translate(-40px,30px) scale(1.15)}}
+@keyframes drift2{to{transform:translate(50px,-25px) scale(.9)}}
+@keyframes pop{from{opacity:0;transform:translateY(14px) scale(.7)}to{opacity:1;transform:none}}
+@keyframes bob{50%{transform:translateY(-5px) rotate(-4deg)}}
+@keyframes sheen{0%,60%{transform:translateX(-120%)}100%{transform:translateX(120%)}}
+@keyframes ring{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--accent) 45%,transparent)}70%{box-shadow:0 0 0 12px transparent}100%{box-shadow:0 0 0 0 transparent}}
+@keyframes floaty{50%{transform:translateY(-4px)}}
+/* celebration burst */
+.burst{position:fixed;z-index:60;pointer-events:none;width:0;height:0}
+.burst i{position:absolute;width:8px;height:8px;border-radius:2px;background:var(--c);left:-4px;top:-4px;animation:burst .75s cubic-bezier(.2,.7,.3,1) forwards}
+.burst i:nth-child(3n){border-radius:50%}
+@keyframes burst{0%{transform:translate(0,0) rotate(0) scale(1);opacity:1}100%{transform:translate(var(--x),var(--y)) rotate(var(--r)) scale(.4);opacity:0}}
 /* Reduce motion (user setting) */
 html[data-motion="reduce"] *{animation:none!important;transition:none!important}
 html[data-motion="reduce"] .stitch .reveal{stroke-dasharray:none!important}
@@ -631,7 +754,7 @@ html[data-motion="reduce"] .knot{opacity:1!important}
 <div class="app">
   <header class="top">
     <a class="brand" href="#home" aria-label="NariPath home">
-      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 26 C 10 26, 11 15, 16 15 S 22 6, 27 6" fill="none" stroke="var(--t5)" stroke-width="2" stroke-dasharray="3.2 3" stroke-linecap="round"/><circle cx="5" cy="26" r="3.4" fill="var(--t1)"/><circle cx="16" cy="15" r="3.4" fill="var(--t4)"/><circle cx="27" cy="6" r="3.4" fill="var(--t2)"/></svg>
+      <svg class="logo" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="lg0" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff6fa3"/><stop offset="1" stop-color="#7b4dff"/></linearGradient><linearGradient id="lg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffbb3d"/><stop offset="1" stop-color="#ff6fa3"/></linearGradient></defs><g class="logo-spin"><ellipse cx="16" cy="8.5" rx="3.6" ry="6.5" transform="rotate(0 16 16)" fill="url(#lg0)"/><ellipse cx="16" cy="8.5" rx="3.6" ry="6.5" transform="rotate(45 16 16)" fill="url(#lg1)"/><ellipse cx="16" cy="8.5" rx="3.6" ry="6.5" transform="rotate(90 16 16)" fill="url(#lg0)"/><ellipse cx="16" cy="8.5" rx="3.6" ry="6.5" transform="rotate(135 16 16)" fill="url(#lg1)"/><ellipse cx="16" cy="8.5" rx="3.6" ry="6.5" transform="rotate(180 16 16)" fill="url(#lg0)"/><ellipse cx="16" cy="8.5" rx="3.6" ry="6.5" transform="rotate(225 16 16)" fill="url(#lg1)"/><ellipse cx="16" cy="8.5" rx="3.6" ry="6.5" transform="rotate(270 16 16)" fill="url(#lg0)"/><ellipse cx="16" cy="8.5" rx="3.6" ry="6.5" transform="rotate(315 16 16)" fill="url(#lg1)"/></g><circle cx="16" cy="16" r="3.4" fill="#fff"/><circle cx="16" cy="16" r="1.8" fill="#7b4dff"/></svg>
       <b>Nari<span>Path</span></b>
     </a>
     <div class="top-right">
@@ -1694,6 +1817,8 @@ function viewHome(){
     : (h<5?"Good night":h<12?"Good morning":h<18?"Good afternoon":"Good evening");
   return `
   <section class="band">
+    <svg class="alpona" viewBox="-100 -100 200 200" aria-hidden="true"><g class="spin"><circle class="ring" r="94"/><circle class="dt" cx="88.0" cy="0.0" r="2.6"/><circle class="dt" cx="85.0" cy="22.8" r="2.6"/><circle class="dt" cx="76.2" cy="44.0" r="2.6"/><circle class="dt" cx="62.2" cy="62.2" r="2.6"/><circle class="dt" cx="44.0" cy="76.2" r="2.6"/><circle class="dt" cx="22.8" cy="85.0" r="2.6"/><circle class="dt" cx="0.0" cy="88.0" r="2.6"/><circle class="dt" cx="-22.8" cy="85.0" r="2.6"/><circle class="dt" cx="-44.0" cy="76.2" r="2.6"/><circle class="dt" cx="-62.2" cy="62.2" r="2.6"/><circle class="dt" cx="-76.2" cy="44.0" r="2.6"/><circle class="dt" cx="-85.0" cy="22.8" r="2.6"/><circle class="dt" cx="-88.0" cy="0.0" r="2.6"/><circle class="dt" cx="-85.0" cy="-22.8" r="2.6"/><circle class="dt" cx="-76.2" cy="-44.0" r="2.6"/><circle class="dt" cx="-62.2" cy="-62.2" r="2.6"/><circle class="dt" cx="-44.0" cy="-76.2" r="2.6"/><circle class="dt" cx="-22.8" cy="-85.0" r="2.6"/><circle class="dt" cx="-0.0" cy="-88.0" r="2.6"/><circle class="dt" cx="22.8" cy="-85.0" r="2.6"/><circle class="dt" cx="44.0" cy="-76.2" r="2.6"/><circle class="dt" cx="62.2" cy="-62.2" r="2.6"/><circle class="dt" cx="76.2" cy="-44.0" r="2.6"/><circle class="dt" cx="85.0" cy="-22.8" r="2.6"/><path class="pt pt0" d="M0 -26 C 10 -40 9 -62 0 -78 C -9 -62 -10 -40 0 -26Z" transform="rotate(0)"/><path class="pt pt1" d="M0 -26 C 10 -40 9 -62 0 -78 C -9 -62 -10 -40 0 -26Z" transform="rotate(30)"/><path class="pt pt2" d="M0 -26 C 10 -40 9 -62 0 -78 C -9 -62 -10 -40 0 -26Z" transform="rotate(60)"/><path class="pt pt0" d="M0 -26 C 10 -40 9 -62 0 -78 C -9 -62 -10 -40 0 -26Z" transform="rotate(90)"/><path class="pt pt1" d="M0 -26 C 10 -40 9 -62 0 -78 C -9 -62 -10 -40 0 -26Z" transform="rotate(120)"/><path class="pt pt2" d="M0 -26 C 10 -40 9 -62 0 -78 C -9 -62 -10 -40 0 -26Z" transform="rotate(150)"/><path class="pt pt0" d="M0 -26 C 10 -40 9 -62 0 -78 C -9 -62 -10 -40 0 -26Z" transform="rotate(180)"/><path class="pt pt1" d="M0 -26 C 10 -40 9 -62 0 -78 C -9 -62 -10 -40 0 -26Z" transform="rotate(210)"/><path class="pt pt2" d="M0 -26 C 10 -40 9 -62 0 -78 C -9 -62 -10 -40 0 -26Z" transform="rotate(240)"/><path class="pt pt0" d="M0 -26 C 10 -40 9 -62 0 -78 C -9 -62 -10 -40 0 -26Z" transform="rotate(270)"/><path class="pt pt1" d="M0 -26 C 10 -40 9 -62 0 -78 C -9 -62 -10 -40 0 -26Z" transform="rotate(300)"/><path class="pt pt2" d="M0 -26 C 10 -40 9 -62 0 -78 C -9 -62 -10 -40 0 -26Z" transform="rotate(330)"/><path class="ip" d="M0 -12 C 6 -18 6 -28 0 -34 C -6 -28 -6 -18 0 -12Z" transform="rotate(22.5)"/><path class="ip" d="M0 -12 C 6 -18 6 -28 0 -34 C -6 -28 -6 -18 0 -12Z" transform="rotate(67.5)"/><path class="ip" d="M0 -12 C 6 -18 6 -28 0 -34 C -6 -28 -6 -18 0 -12Z" transform="rotate(112.5)"/><path class="ip" d="M0 -12 C 6 -18 6 -28 0 -34 C -6 -28 -6 -18 0 -12Z" transform="rotate(157.5)"/><path class="ip" d="M0 -12 C 6 -18 6 -28 0 -34 C -6 -28 -6 -18 0 -12Z" transform="rotate(202.5)"/><path class="ip" d="M0 -12 C 6 -18 6 -28 0 -34 C -6 -28 -6 -18 0 -12Z" transform="rotate(247.5)"/><path class="ip" d="M0 -12 C 6 -18 6 -28 0 -34 C -6 -28 -6 -18 0 -12Z" transform="rotate(292.5)"/><path class="ip" d="M0 -12 C 6 -18 6 -28 0 -34 C -6 -28 -6 -18 0 -12Z" transform="rotate(337.5)"/><circle class="core" r="8"/><circle class="ring2" r="18"/></g></svg>
+    <span class="blob b1" aria-hidden="true"></span><span class="blob b2" aria-hidden="true"></span><span class="blob b3" aria-hidden="true"></span>
     <p class="greet">${greet}</p>
     <h1>${S.lang==="bn"?"নিজের পথ খুঁজে নিন, এক পা এক পা করে।":"Find your way, one step at a time."}</h1>
     <p class="lede">${t("helloSub")}</p>
@@ -2854,8 +2979,9 @@ function servicesGrid(){
     ["#explore","search","sv7",tx("All services","সব সেবা")],
     ["#path","compass","sv8",tx("My Path","আমার পথ")]
   ];
-  return `<nav class="svc card" aria-label="${tx("Services","সেবাসমূহ")}">
-    ${SV.map(([h,ic,c,l])=>`<a href="${h}" class="sv ${c}"><span class="sv-ico">${icon(ic)}</span><span class="sv-l">${l}</span>${h==="#apps"&&S.apps.filter(a=>a.stage<4).length?`<span class="badge">${num(S.apps.filter(a=>a.stage<4).length)}</span>`:""}</a>`).join("")}
+  const intro=!S.svcIntro; if(intro) setTimeout(()=>{S.svcIntro=true;},1400);
+  return `<nav class="svc card ${intro?"intro":""}" aria-label="${tx("Services","সেবাসমূহ")}">
+    ${SV.map(([h,ic,c,l],n)=>`<a href="${h}" class="sv ${c}" style="--n:${n}"><span class="sv-ico">${icon(ic)}</span><span class="sv-l">${l}</span>${h==="#apps"&&S.apps.filter(a=>a.stage<4).length?`<span class="badge">${num(S.apps.filter(a=>a.stage<4).length)}</span>`:""}</a>`).join("")}
   </nav>`;
 }
 
@@ -2869,9 +2995,9 @@ document.addEventListener("click",e=>{
   if(ad){ const ref=ad.dataset.addapp; let title="";
     if(ref.startsWith("al:")){ const a=allowById(ref.slice(3)); if(a) title=raw(a.name); }
     else if(ref.startsWith("r:")){ const r=byId(ref.slice(2)); if(r) title=raw(r.name); }
-    if(title && addApp(title,ref)) render(); return; }
+    if(title && addApp(title,ref)){ const r0=ad.getBoundingClientRect(); render(); const fake={getBoundingClientRect:()=>r0}; celebrate(fake); } return; }
   const aa=el.closest("[data-appadd]"); if(aa){ S.appAdd=aa.dataset.appadd==="1"; render(); const i=document.getElementById("app-title"); if(i) i.focus(); return; }
-  const an=el.closest("[data-appnext]"); if(an){ const a=S.apps.find(x=>x.id===an.dataset.appnext); if(a&&a.stage<4){ a.stage++; saveApps(); toast(raw(APP_STAGES[a.stage])); render(); } return; }
+  const an=el.closest("[data-appnext]"); if(an){ const a=S.apps.find(x=>x.id===an.dataset.appnext); if(a&&a.stage<4){ a.stage++; saveApps(); toast(raw(APP_STAGES[a.stage])); render(); celebrate(document.querySelector(`#app-${a.id} .stepper li.now, #app-${a.id} .stepper li.done:last-child`)); } return; }
   const ra=el.closest("[data-rmapp]"); if(ra){ const id=ra.dataset.rmapp; S.apps=S.apps.filter(x=>x.id!==id); S.reminders=S.reminders.filter(r=>r.ref!=="app-"+id); saveApps(); persist(); render(); return; }
   const mt=el.closest("[data-migtab]"); if(mt){ S.migTab=mt.dataset.migtab; render(); const b=document.querySelector(`[data-migtab="${S.migTab}"]`); if(b) b.focus(); return; }
 });
@@ -2879,7 +3005,7 @@ document.addEventListener("change",e=>{
   const d=e.target.dataset;
   if(d.appstage){ const a=S.apps.find(x=>x.id===d.appstage); if(a){ a.stage=Math.min(5,Math.max(0,+e.target.value||0)); saveApps(); render(); } }
   else if(d.appdate!==undefined && e.target.dataset.appdate){ const a=S.apps.find(x=>x.id===d.appdate); if(a){ const v=e.target.value; a.date=/^\d{4}-\d{2}-\d{2}$/.test(v)?v:""; saveApps(); render(); } }
-  else if(d.mck){ const k=d.mck; if(!MIG[k]) return; const arr=MIG[k].map((_,i)=>!!(S.mig[k]||[])[i]); arr[+d.i]=e.target.checked; S.mig[k]=arr; store.set("mig",S.mig); render(); const c=document.getElementById(`mg-${k}-${d.i}`); if(c) c.focus(); }
+  else if(d.mck){ const k=d.mck; if(!MIG[k]) return; const arr=MIG[k].map((_,i)=>!!(S.mig[k]||[])[i]); arr[+d.i]=e.target.checked; S.mig[k]=arr; store.set("mig",S.mig); render(); const c=document.getElementById(`mg-${k}-${d.i}`); if(c){ c.focus(); if(c.checked) celebrate(c); } }
 });
 document.addEventListener("submit",e=>{
   if(e.target.id!=="app-add") return; e.preventDefault();
@@ -3169,6 +3295,18 @@ function shelterFinder(k,selId){
     :`<p class="small muted">${tx("Choose your district to see a shelter search for every upazila. Coastal districts are marked.","প্রতিটি উপজেলার আশ্রয়কেন্দ্র খুঁজতে আপনার জেলা বাছুন। উপকূলীয় জেলা চিহ্নিত আছে।")}</p>`}
   </div>`;
 }
+
+/* Small confetti burst for finished steps (skipped when motion is off) */
+function celebrate(el){
+  if(!el||S.a11y.motion==="reduce"||matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const r=el.getBoundingClientRect(), b=document.createElement("div"); b.className="burst";
+  b.style.left=(r.left+Math.min(r.width,40)/2)+"px"; b.style.top=(r.top+Math.min(r.height,40)/2)+"px";
+  const C=["#e23a7a","#7b4dff","#ffbb3d","#2fd0c1","#5fd18a","#ff6fa3"];
+  for(let i=0;i<14;i++){ const a=Math.PI*2*i/14+Math.random()*.4, d=34+Math.random()*30, s=document.createElement("i");
+    s.style.setProperty("--x",(Math.cos(a)*d).toFixed(0)+"px"); s.style.setProperty("--y",(Math.sin(a)*d).toFixed(0)+"px");
+    s.style.setProperty("--r",(Math.random()*540-270).toFixed(0)+"deg"); s.style.setProperty("--c",C[i%C.length]); b.appendChild(s); }
+  document.body.appendChild(b); setTimeout(()=>b.remove(),800);
+}
 /* ---------- Map ---------- */
 S.mapSel=""; S.mapDiv=""; S.mapVB=null; S.mapCoast=false;
 const PLACES_EN=r=>{ const ad=r.address&&r.address.en||"", nm=r.name.en, place=ad&&nm.includes(ad)?nm:(ad?(ad.includes(nm)?ad:nm+", "+ad):nm);
@@ -3281,7 +3419,7 @@ document.addEventListener("change",e=>{
   else if(id==="sh-map"){ S.mapSel=e.target.value; S.mapDiv=S.mapSel&&DISTRICTS[S.mapSel]?DISTRICTS[S.mapSel].div:""; render(); const c=document.getElementById("shelters"); if(c) c.scrollIntoView({block:"start"}); }
   else if(id==="sh-dis"){ S.shDist=e.target.value; render(); const c=document.getElementById("sh-dis"); if(c) c.focus(); }
   else if(id==="map-pick"){ S.mapSel=e.target.value; S.mapDiv=S.mapSel&&DISTRICTS[S.mapSel]?DISTRICTS[S.mapSel].div:""; render(); }
-  else if(e.target.dataset.dck){ const k=e.target.dataset.dck; if(!DIS[k]) return; const arr=DIS[k].map((_,i)=>!!(S.dis[k]||[])[i]); arr[+e.target.dataset.i]=e.target.checked; S.dis[k]=arr; store.set("dis",S.dis); render(); const c=document.getElementById(`ds-${k}-${e.target.dataset.i}`); if(c) c.focus(); }
+  else if(e.target.dataset.dck){ const k=e.target.dataset.dck; if(!DIS[k]) return; const arr=DIS[k].map((_,i)=>!!(S.dis[k]||[])[i]); arr[+e.target.dataset.i]=e.target.checked; S.dis[k]=arr; store.set("dis",S.dis); render(); const c=document.getElementById(`ds-${k}-${e.target.dataset.i}`); if(c){ c.focus(); if(c.checked) celebrate(c); } }
 });
 /* Forget mother-and-baby dates as soon as she leaves that screen */
 window.addEventListener("hashchange",()=>{ const h=location.hash.replace("#",""); if(h!=="mother") S.mb={mode:"",due:"",months:"",dob:"",dist:""}; if(h!=="map") S.mapVB=null; });

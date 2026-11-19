@@ -77,6 +77,10 @@ Information can change. Always confirm with the provider before acting.
 
 Open `index.html` in any browser, or visit the live demo. To host your own copy, enable GitHub Pages (Settings → Pages → Branch: `main`, folder: `/ (root)`).
 
+## Design
+
+Light "alpona morning" theme: blush-white paper with a faint kantha-stitch pattern, violet-to-jamdani-pink accents, and marigold, teal and leaf-green service tiles. The home banner has drifting colour and a slowly turning alpona flower; service tiles pop in once per visit, tool banners have a soft sheen, call buttons pulse gently, and finishing a checklist step or moving an application forward sets off a small confetti burst. All motion stops when the phone's "reduce motion" setting or NariPath's own Animations setting is off, and nothing you tap moves while you aim at it. The app always opens in the light theme.
+
 ## Privacy
 
 - **Nothing is sent to NariPath.** There is no NariPath server, account or login. Saved items, plans, reminders, display settings, problem reports, safe-migration and disaster checklist ticks and tracked applications are kept in the browser's local storage on the user's device, and "Clear my data" removes them.
