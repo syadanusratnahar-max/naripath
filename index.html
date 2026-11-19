@@ -748,6 +748,68 @@ nav.tabs a[aria-current="page"]{color:#fff!important}
 html[data-motion="reduce"] *{animation:none!important;transition:none!important}
 html[data-motion="reduce"] .stitch .reveal{stroke-dasharray:none!important}
 html[data-motion="reduce"] .knot{opacity:1!important}
+
+/* ---- Period Shikkha ---- */
+.ps-art{width:100%;height:auto;display:block;border-radius:22px}
+.ps-hero{display:grid;grid-template-columns:110px 1fr;gap:14px;align-items:center;margin:6px 0 12px}
+.ps-hero h1{margin:0 0 4px;font-size:1.7rem}
+.ps-hero p{margin:0;font-size:1.02rem;line-height:1.55}
+.ps-promise{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+.ps-promise span{display:inline-flex;gap:6px;align-items:center;background:#e9fbf7;color:#0b7a74;border-radius:99px;padding:6px 12px;font-size:.84rem;font-weight:600}
+.ps-promise svg{width:16px;height:16px}
+.ps-draft{color:#b4570f;margin:0 0 12px} .ps-draft span{display:block;margin-top:4px;color:var(--text)}
+.ps-list{list-style:none;padding:0;margin:12px 0 0;display:flex;flex-direction:column;gap:10px}
+.ps-item{display:grid;grid-template-columns:34px 76px 1fr;gap:12px;align-items:center;padding:10px 12px;border-radius:18px;background:#fff;border:1.5px solid color-mix(in srgb,var(--lc) 25%,#fff);text-decoration:none;color:var(--text);box-shadow:var(--shadow)}
+.ps-item .ps-art{border-radius:12px}
+.ps-num{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--lc);color:#fff;font-weight:700}
+.ps-item.ok .ps-num{background:#2a9455}
+.ps-t{display:flex;flex-direction:column;gap:2px} .ps-t b{font-size:1.02rem;line-height:1.35}
+.ps-lesson{display:flex;flex-direction:column;gap:12px}
+.ps-lhead h1{margin:2px 0 0;font-size:1.45rem;color:var(--lc)}
+.ps-lesson>.ps-art{max-width:300px;margin:0 auto}
+.ps-card{background:#fff;border-radius:22px;padding:18px;border:2px solid color-mix(in srgb,var(--lc) 30%,#fff);box-shadow:var(--shadow);min-height:150px;display:flex;flex-direction:column;justify-content:space-between;gap:14px}
+.ps-say{font-size:1.22rem;line-height:1.7;margin:0}
+html[lang="bn"] .ps-say,html[lang="bn"] .ps-q{font-size:1.3rem;line-height:1.85}
+.ps-myth,.ps-fact{margin:0;font-size:1.1rem;line-height:1.65}
+.ps-myth{color:var(--muted)}
+.ps-tag{display:block;width:max-content;font-size:.78rem;font-weight:700;border-radius:99px;padding:2px 10px;margin-bottom:4px}
+.ps-tag.no{background:#f1ecf8;color:#6c6182} .ps-tag.yes{background:#e3f6ea;color:#1f7a44}
+.ps-ctl{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.ps-listen{display:inline-flex;gap:6px;align-items:center;min-height:44px}
+.ps-listen svg{width:20px;height:20px}
+.ps-dots{display:flex;gap:6px;justify-content:center}
+.ps-dots span{width:9px;height:9px;border-radius:50%;background:var(--line)}
+.ps-dots span.past{background:color-mix(in srgb,var(--lc) 45%,#fff)}
+.ps-dots span.on{background:var(--lc);width:22px;border-radius:99px}
+.ps-nav{display:grid;grid-template-columns:1fr 2fr;gap:10px}
+.ps-nav .btn{min-height:52px;font-size:1.02rem;justify-content:center}
+.ps-nav .btn[disabled]{opacity:.4}
+.ps-q{font-size:1.2rem;line-height:1.65;margin:10px 0}
+.ps-ans{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+.ans{border:2px solid var(--line);background:#fff;border-radius:16px;padding:12px 4px;font-weight:700;font-size:1rem;display:flex;flex-direction:column;align-items:center;gap:4px;cursor:pointer;min-height:80px;color:var(--text)}
+.ans span{font-size:1.5rem;line-height:1}
+.ans.yes{border-color:#9fdcb6} .ans.yes span{color:#1f7a44}
+.ans.no{border-color:#f3b0c8} .ans.no span{color:#c22a63}
+.ans.dk span{color:#6c6182}
+.ps-review{list-style:none;padding:0;display:flex;flex-direction:column;gap:10px}
+.ps-review li{display:grid;grid-template-columns:24px 1fr;gap:8px} .ps-review li>div{display:flex;flex-direction:column;gap:2px}
+.ps-review li.ok>span{color:#1f7a44;font-weight:700} .ps-review li.no>span{color:#c22a63;font-weight:700}
+.ps-inc,.ps-pilot{padding-left:20px;line-height:1.6} .ps-inc li,.ps-pilot li{margin-bottom:6px}
+.ps-banner{display:grid;grid-template-columns:84px 1fr 20px;gap:12px;align-items:center;padding:12px;margin:14px 0;border-radius:22px;text-decoration:none;color:var(--text);background:linear-gradient(120deg,#ffe7f0,#f1e9ff);border:1.5px solid #ffc2da;box-shadow:var(--shadow)}
+.ps-banner .ps-art{border-radius:14px}
+.ps-banner>span{display:flex;flex-direction:column;gap:3px} .ps-banner b{font-size:1.1rem;color:#c22a63} .ps-banner>span>span{font-size:.86rem;color:var(--muted)}
+.ps-banner .chev{width:20px;height:20px;color:#c22a63}
+.ps-fac-link{margin-top:12px}
+.ps-stats{margin:10px 0}
+.seg.two{grid-template-columns:1fr 1fr}
+.pg-people{padding-left:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+.pg-people li{display:flex;flex-direction:column;gap:6px;padding:10px;border:1px solid var(--line);border-radius:14px}
+.pg-steps{display:flex;gap:6px;flex-wrap:wrap}
+.pg-ver{display:flex;gap:8px;align-items:flex-start;margin:12px 0;font-size:.9rem}
+@media (prefers-reduced-motion:no-preference){html:not([data-motion="reduce"]) .ps-sun{animation:psSpin 18s linear infinite;transform-box:fill-box;transform-origin:center}
+html:not([data-motion="reduce"]) .ps-card{animation:psIn .35s ease-out}}
+@keyframes psSpin{to{rotate:360deg}}
+@keyframes psIn{from{opacity:0;transform:translateX(14px)}to{opacity:1;transform:none}}
 </style>
 </head>
 <body>
@@ -1361,6 +1423,8 @@ const T = {
   st10:{en:"Which safe-migration checklist items you ticked",bn:"নিরাপদ অভিবাসন চেকলিস্টে কোনগুলোতে টিক দিয়েছেন"},
   ewsShort:{en:"Free weather, cyclone and flood warnings, 24 hours",bn:"বিনামূল্যে আবহাওয়া, ঘূর্ণিঝড় ও বন্যার সতর্কবার্তা, ২৪ ঘণ্টা"},
   st11:{en:"Which disaster checklist items you ticked",bn:"দুর্যোগ চেকলিস্টে কোনগুলোতে টিক দিয়েছেন"},
+  st12:{en:"Which Period Shikkha lessons you finished (never your name or period dates)",bn:"পিরিয়ড শিক্ষার কোন পাঠ শেষ করেছেন (কখনো নাম বা মাসিকের তারিখ নয়)"},
+  st13:{en:"Group session tallies a teacher records: school name, date and anonymous answers, no names",bn:"শিক্ষকের লেখা দলগত সেশনের হিসাব: স্কুলের নাম, তারিখ ও নামহীন উত্তর"},
   probashShort:{en:"Probash Bondhu, for migrant workers and families",bn:"প্রবাস বন্ধু, প্রবাসী কর্মী ও পরিবারের জন্য"},
   st7:{en:"Reminders you set (title and date)",bn:"আপনার দেওয়া রিমাইন্ডার (শিরোনাম ও তারিখ)"},
   st8:{en:"Your display settings",bn:"আপনার প্রদর্শন সেটিং"},
@@ -1691,7 +1755,7 @@ const A11Y_DEFAULT={text:"normal",contrast:"normal",simple:"off",motion:"normal"
 const store = {
   get(k,d){try{const v=localStorage.getItem("naripath:"+k);return v?JSON.parse(v):d}catch(e){return d}},
   set(k,v){try{localStorage.setItem("naripath:"+k,JSON.stringify(v))}catch(e){}},
-  clear(){try{["lang","saved","paths","plans","reminders","a11y","reports","hide","apps","mig","dis",/* legacy keys from the removed safety demo: */"circle","lastTest"].forEach(k=>localStorage.removeItem("naripath:"+k))}catch(e){}}
+  clear(){try{["lang","saved","paths","plans","reminders","a11y","reports","hide","apps","mig","dis","ps","pss",/* legacy keys from the removed safety demo: */"circle","lastTest"].forEach(k=>localStorage.removeItem("naripath:"+k))}catch(e){}}
 };
 const S = {
   lang: store.get("lang","bn"),
@@ -1741,7 +1805,8 @@ const ICONS = {
   share:'<circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/>',
   bell:'<path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15z"/><path d="M10 20a2 2 0 0 0 4 0"/>',
   pin:'<path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/>',
-  left:'<path d="M15 6l-6 6 6 6"/>'
+  left:'<path d="M15 6l-6 6 6 6"/>',
+  speaker:'<path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/>'
 };
 const icon = (n,cls="") => `<svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[n]}</svg>`;
 
@@ -1844,6 +1909,7 @@ function viewHome(){
 
   ${continueCard()}
   ${servicesGrid()}
+  ${periodBanner()}
 
   <section class="section" aria-labelledby="nav-h">
     <div><h2 id="nav-h">${t("navTitle")}</h2><p class="muted small">${t("navSub")}</p></div>
@@ -1922,6 +1988,7 @@ function viewExplore(){
       </div>
       ${st?`<div class="chips"><button type="button" class="chip" aria-pressed="true" data-clearstage="1">${t("stageOn")}: ${L(st)} ✕</button></div>`:""}
     </div>
+    ${S.pillar===2?periodBanner():""}
     ${S.district && S.district!=="nationwide" && !LOCAL_COUNT[S.district] ? `<p class="note">${t("noLocal").replace("{d}",L(DISTRICTS[S.district]))}</p>`:""}
     <p class="small muted" aria-live="polite">${num(list.length)}${S.lang==="bn"?"":" "}${t("results")}</p>
     <div class="list">
@@ -2056,7 +2123,7 @@ function viewPath(){
   <a class="continue apps-link" href="#apps"><span class="small muted">${tx("My applications","আমার আবেদন")}</span><b>${S.apps.length?tx(`${S.apps.filter(a=>a.stage<4).length} in progress, ${S.apps.filter(a=>a.stage===4).length} approved`,`${num(S.apps.filter(a=>a.stage<4).length)}টি চলমান, ${num(S.apps.filter(a=>a.stage===4).length)}টি অনুমোদিত`):tx("Track allowances, scholarships and forms","ভাতা, বৃত্তি ও ফর্ম ট্র্যাক করুন")}</b></a>
   ${remindersBlock()}
   <details class="card privacy-box"><summary><b>${t("storedTitle")}</b></summary>
-    <ul class="small">${["st1","st2","st3","st9","st10","st11","st7","st4","st8","st5","st6"].map(k=>`<li>${t(k)}</li>`).join("")}</ul>
+    <ul class="small">${["st1","st2","st3","st9","st10","st11","st12","st13","st7","st4","st8","st5","st6"].map(k=>`<li>${t(k)}</li>`).join("")}</ul>
     <p class="small">${t("storedNot")}</p>
   </details>
   <section class="section">
@@ -2288,6 +2355,7 @@ function viewLearn(){
       <h1>${t("learnTitle")}</h1>
       <p class="muted small">${t("learnSub")}</p>
     </section>
+    ${periodBanner()}
     <h2>${t("docsTitle")}</h2><p class="small muted">${t("docsSub")}</p>
     <div class="list">${GUIDES.filter(g=>g.kind==="doc").map(g=>`<a class="res guide-card" href="#g-${g.id}" ${pc(g.p)}>
         <div style="display:flex;gap:12px;align-items:flex-start"><span class="ico">${icon(g.icon)}</span>
@@ -3307,6 +3375,332 @@ function celebrate(el){
     s.style.setProperty("--r",(Math.random()*540-270).toFixed(0)+"deg"); s.style.setProperty("--c",C[i%C.length]); b.appendChild(s); }
   document.body.appendChild(b); setTimeout(()=>b.remove(),800);
 }
+/* ================= Period Shikkha (পিরিয়ড শিক্ষা) =================
+   Bangla-first lessons on periods for girls. Nothing personal is asked:
+   no name, no period dates, no experiences. Lesson progress and group-session
+   tallies (no names) stay on this device. All lessons are DRAFTS until a
+   qualified health professional reviews them. */
+const PS_REVIEW={status:"draft",reviewedBy:null,reviewedOn:null};
+Object.assign(GSRC,{
+  bahws:{en:"BAHWS 2019-20 summary (NIPORT): only 30% of unmarried girls knew about periods before their first one",bn:"বাংলাদেশ কিশোর-কিশোরী স্বাস্থ্য জরিপ ২০১৯-২০: মাত্র ৩০% অবিবাহিত কিশোরী প্রথম মাসিকের আগে এ বিষয়ে জানত",url:"https://www.data4impactproject.org/wp-content/uploads/2021/03/BAHWS-2019-20-Summary-Findings_FS-20-514_D4I.pdf"},
+  bahwsSchool:{en:"The Daily Star: 1 in 4 in-school girls missed school during their last period (BAHWS)",bn:"দ্য ডেইলি স্টার: স্কুলগামী প্রতি ৪ জনে ১ জন কিশোরী গত মাসিকে স্কুলে যায়নি (জরিপ)",url:"https://www.thedailystar.net/health/news/hygienic-menstrual-practices-very-low-among-adolescent-girls-survey-2043185"},
+  bahwsWant:{en:"The Daily Star: 73% of unmarried girls want to learn about puberty (BAHWS)",bn:"দ্য ডেইলি স্টার: ৭৩% অবিবাহিত কিশোরী বয়ঃসন্ধি সম্পর্কে জানতে চায় (জরিপ)",url:"https://www.thedailystar.net/city/news/usage-menstrual-products-high-hygiene-low-survey-2043569"},
+  mhmBrief:{en:"Data for Impact (2022), Bangladesh MHM brief: change pads or cloth every six hours",bn:"ডেটা ফর ইমপ্যাক্ট (২০২২): প্যাড বা কাপড় প্রতি ছয় ঘণ্টায় বদলান",url:"https://www.data4impactproject.org/wp-content/uploads/2022/11/Bangladesh-MHM-Technical-Brief_FS-22-584_508c.pdf"},
+  mhmSchools:{en:"BMC Public Health (2022), Bangladesh schools study: wash with soap, dry in sunlight",bn:"বিএমসি পাবলিক হেলথ (২০২২), বাংলাদেশের স্কুল গবেষণা: সাবান দিয়ে ধুয়ে রোদে শুকান",url:"https://bmcpublichealth.biomedcentral.com/articles/10.1186/s12889-022-13478-1/tables/4"},
+  mhmDry:{en:"WSUP with UNICEF (Dhaka): about a third of girls dried cloths in hidden, dark places",bn:"ডব্লিউএসইউপি ও ইউনিসেফ (ঢাকা): প্রায় এক-তৃতীয়াংশ মেয়ে কাপড় লুকিয়ে অন্ধকার জায়গায় শুকাত",url:"https://assets.publishing.service.gov.uk/media/57a089a1ed915d622c000307/PN018-ENGLISH-Menstrual-hygiene.pdf"},
+  mhmCloth:{en:"UNICEF Bangladesh case study: keep whatever material is available clean",bn:"ইউনিসেফ বাংলাদেশ কেস স্টাডি: যে উপকরণ আছে, সেটাই পরিষ্কার রাখা",url:"https://es.ircwash.org/sites/default/files/Seymour-2008-Bangladesh.pdf"},
+  nhsStart:{en:"NHS (Manchester University): periods usually start around 12, from 8 to 15",bn:"এনএইচএস: মাসিক সাধারণত ১২ বছরের কাছাকাছি শুরু হয়, ৮ থেকে ১৫-এর মধ্যে",url:"https://mft.nhs.uk/app/uploads/sites/4/2022/05/Periods-in-adolescent-girls-2025.pdf"},
+  nhsCycle:{en:"NHS 111 Wales: periods last 2–7 days, every 21–35 days",bn:"এনএইচএস ১১১ ওয়েলস: মাসিক ২–৭ দিন থাকে, ২১–৩৫ দিন পরপর আসে",url:"https://111.wales.nhs.uk/periods/"},
+  nhsPain:{en:"NHS: period pain usually lasts 48 to 72 hours",bn:"এনএইচএস: মাসিকের ব্যথা সাধারণত ৪৮ থেকে ৭২ ঘণ্টা থাকে",url:"https://axahealth.co.uk/staying-healthy/nhs-factsheets/period-pain"},
+  aapHeavy:{en:"American Academy of Pediatrics: when to see a doctor about periods",bn:"আমেরিকান একাডেমি অব পেডিয়াট্রিক্স: মাসিক নিয়ে কখন ডাক্তার দেখাবেন",url:"https://www.healthychildren.org/English/health-issues/conditions/genitourinary-tract/Pages/Menstrual-Disorders.aspx/1000"},
+  ghPain:{en:"girlshealth.gov (US Office on Women's Health): very bad pain is a reason to see a doctor",bn:"গার্লসহেলথ (যুক্তরাষ্ট্রের নারী স্বাস্থ্য দপ্তর): খুব বেশি ব্যথা হলে ডাক্তার দেখান",url:"https://girlshealth.gov/node/7248"},
+  afhc:{en:"Adolescent Friendly Health Corners in MCWCs, UHFWCs and public hospitals (DGFP)",bn:"মা ও শিশু কল্যাণ কেন্দ্র, ইউনিয়ন কেন্দ্র ও সরকারি হাসপাতালে কৈশোরবান্ধব স্বাস্থ্য কর্নার",url:"https://www.health.comminit.com/node/9493539"},
+  afhc2:{en:"The Daily Star: adolescent health corners in upazila health complexes",bn:"দ্য ডেইলি স্টার: উপজেলা স্বাস্থ্য কমপ্লেক্সে কৈশোরবান্ধব স্বাস্থ্য কর্নার",url:"https://images.thedailystar.net/node/3567986"},
+  marriage18:{en:"JURIST (Oct 2026): under the 2017 Act, a woman under 18 marrying is a child marriage",bn:"জুরিস্ট (অক্টোবর ২০২৬): ২০১৭ সালের আইনে ১৮ বছরের কম বয়সী মেয়ের বিয়ে বাল্যবিবাহ",url:"https://www.jurist.org/news/2026/10/unicef-chief-urges-bangladesh-to-eliminate-legal-loopholes-that-allow-child-marriage/"},
+  ndPrep:{en:"NHS Norfolk: neurodivergent children may need time; start preparing early",bn:"এনএইচএস নরফোক: স্নায়ুবৈচিত্র্যময় শিশুদের সময় লাগতে পারে; আগে থেকে প্রস্তুতি নিন",url:"https://www.justonenorfolk.nhs.uk/nd-digital-library/growing-up/periods/"},
+  water:{en:"Plain water is enough to wash; perfumed soaps can irritate",bn:"ধোয়ার জন্য শুধু পানিই যথেষ্ট; সুগন্ধি সাবানে জ্বালা হতে পারে",url:"https://www.westmorlandandfurness.gov.uk/family-help/advice-and-support/secondary-and-teen-aged-11-years/teen-health-and-wellbeing/periods"}
+});
+
+/* ---- Illustrations: simple, friendly, no body detail ---- */
+const PS_ART={
+  girl:(x,y,s,c)=>`<g transform="translate(${x} ${y}) scale(${s})"><path d="M-6 -50 q-10 22 -2 40" stroke="#3b2a4f" stroke-width="5" fill="none" stroke-linecap="round"/><circle cy="-52" r="15" fill="#f6c9a8"/><path d="M-15 -55 q15 -20 30 0 q-6 -9 -15 -9 q-9 0 -15 9z" fill="#3b2a4f"/><path d="M-22 -30 q22 -10 44 0 l8 52 h-60z" fill="${c}"/><path d="M-20 -32 q30 8 32 40" stroke="#ffbb3d" stroke-width="7" fill="none" stroke-linecap="round" opacity=".9"/></g>`,
+  sun:(x,y)=>`<g transform="translate(${x} ${y})" class="ps-sun"><circle r="14" fill="#ffbb3d"/>${[0,45,90,135,180,225,270,315].map(a=>`<line x1="0" y1="-20" x2="0" y2="-27" stroke="#ffbb3d" stroke-width="3" stroke-linecap="round" transform="rotate(${a})"/>`).join("")}</g>`
+};
+function psArt(id){
+  const bg=c=>`<rect x="0" y="0" width="240" height="150" rx="22" fill="${c}"/>`;
+  const g=PS_ART.girl, sun=PS_ART.sun;
+  const A={
+    what:`${bg("#ffe7f0")}<g transform="translate(160 75)">${Array.from({length:28},(_,i)=>{const a=i/28*Math.PI*2-Math.PI/2;return `<circle cx="${(44*Math.cos(a)).toFixed(1)}" cy="${(44*Math.sin(a)).toFixed(1)}" r="${i<5?5:3.2}" fill="${i<5?"#e23a7a":"#c9b6e8"}"/>`}).join("")}<text y="6" text-anchor="middle" font-size="16" fill="#6c6182" font-family="var(--display)">২৮</text></g>${g(62,118,1,"#8f6bff")}`,
+    body:`${bg("#efe8ff")}${g(70,124,.75,"#ff8fb6")}${g(150,124,1.05,"#8f6bff")}<path d="M98 58 l30 -10" stroke="#e23a7a" stroke-width="3" stroke-dasharray="4 5" stroke-linecap="round"/><path d="M122 40 l8 8 l-10 4" fill="none" stroke="#e23a7a" stroke-width="3" stroke-linecap="round"/>${["✦","✦","✦"].map((s,i)=>`<text x="${185+i*14}" y="${40+i*18}" fill="#ffbb3d" font-size="${14-i*2}">${s}</text>`).join("")}`,
+    pads:`${bg("#e6f7f4")}${sun(200,32)}<line x1="20" y1="58" x2="230" y2="58" stroke="#6c6182" stroke-width="2"/><rect x="110" y="58" width="56" height="62" rx="6" fill="#fff" stroke="#e23a7a" stroke-width="2"/><path d="M118 70h40M118 82h40M118 94h40" stroke="#ffc2da" stroke-width="3"/><circle cx="114" cy="58" r="4" fill="#ffbb3d"/><circle cx="162" cy="58" r="4" fill="#ffbb3d"/><g transform="translate(58 98)"><path d="M-30 -10 q-12 10 0 20 h60 q12 -10 0 -20z" fill="#fff" stroke="#8f6bff" stroke-width="2"/><rect x="-22" y="-14" width="44" height="28" rx="14" fill="#efe8ff" stroke="#8f6bff" stroke-width="2"/></g>`,
+    clean:`${bg("#e9f3ff")}<g transform="translate(70 90)"><rect x="-34" y="-18" width="68" height="36" rx="12" fill="#ffd6e6"/><circle cx="-8" cy="-26" r="7" fill="#fff" stroke="#9fc4ff" stroke-width="2"/><circle cx="12" cy="-36" r="5" fill="#fff" stroke="#9fc4ff" stroke-width="2"/><circle cx="26" cy="-24" r="4" fill="#fff" stroke="#9fc4ff" stroke-width="2"/></g><g transform="translate(168 78)"><path d="M0 -40 q-26 34 -26 52 a26 26 0 0 0 52 0 q0 -18 -26 -52z" fill="#7fb8ff"/><path d="M-10 6 q2 12 12 14" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/></g>`,
+    pain:`${bg("#fff1e0")}${g(80,124,1,"#ff8fb6")}<g transform="translate(168 84)"><rect x="-30" y="-26" width="60" height="52" rx="18" fill="#ff9f7a"/><rect x="-8" y="-36" width="16" height="12" rx="3" fill="#e2603a"/><path d="M-14 -4 q7 -8 14 0 t14 0" stroke="#fff" stroke-width="3" fill="none"/><path d="M-14 8 q7 -8 14 0 t14 0" stroke="#fff" stroke-width="3" fill="none"/></g><path d="M200 30 c-6 -8 -18 -2 -12 8 l12 12 l12 -12 c6 -10 -6 -16 -12 -8z" fill="#e23a7a"/>`,
+    myths:`${bg("#f3ecff")}<g transform="translate(70 66)"><rect x="-48" y="-36" width="96" height="62" rx="18" fill="#fff" stroke="#c9b6e8" stroke-width="2"/><path d="M-20 26 l-10 18 l24 -18z" fill="#fff" stroke="#c9b6e8" stroke-width="2"/><text y="12" text-anchor="middle" font-size="40" fill="#c9b6e8" font-family="var(--display)">?</text></g><g transform="translate(170 84)"><rect x="-48" y="-36" width="96" height="62" rx="18" fill="#2fd0c1"/><path d="M20 26 l10 18 l-24 -18z" fill="#2fd0c1"/><path d="M-16 -4 l10 10 l22 -22" stroke="#fff" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>`,
+    help:`${bg("#e8f8ee")}${g(62,124,.95,"#8f6bff")}${g(126,124,1.08,"#2fd0c1")}<g transform="translate(196 60)"><circle r="26" fill="#fff" stroke="#5fd18a" stroke-width="3"/><path d="M0 -13v26M-13 0h26" stroke="#e23a7a" stroke-width="7" stroke-linecap="round"/></g><path d="M86 34 q8 -10 16 0" stroke="#e23a7a" stroke-width="3" fill="none" stroke-linecap="round"/><circle cx="94" cy="26" r="3" fill="#e23a7a"/>`
+  };
+  return `<svg class="ps-art" viewBox="0 0 240 150" role="img" aria-hidden="true">${A[id]||""}</svg>`;
+}
+
+/* ---- Lessons: one idea per card, everyday Bangla first ---- */
+const PS_LESSONS=[
+  {id:"what",c:"#e23a7a",t:K("What is a period?","মাসিক (পিরিয়ড) কী?"),cards:[
+    [K("A period is a normal, healthy part of growing up. It is not an illness, and it is nothing to be ashamed of.","মাসিক বড় হওয়ার একটি স্বাভাবিক ও সুস্থ অংশ। এটা কোনো অসুখ নয়, লজ্জার কিছুও নয়।"),null],
+    [K("Every month, the womb makes a soft lining inside. When it is not needed, it comes out of the body as blood. This is a period.","প্রতি মাসে জরায়ুর ভেতরে একটি নরম আস্তরণ তৈরি হয়। দরকার না হলে তা রক্ত হয়ে শরীর থেকে বের হয়ে আসে। একেই মাসিক বলে।"),null],
+    [K("Most girls have their first period at around 12. Anywhere from 8 to 15 can be normal.","বেশিরভাগ মেয়ের প্রথম মাসিক হয় ১২ বছরের কাছাকাছি। ৮ থেকে ১৫ বছরের মধ্যে যেকোনো সময় হওয়াও স্বাভাবিক।"),"nhsStart"],
+    [K("A period usually lasts 2 to 7 days and comes about every 3 to 5 weeks. In the first year or two it may not come regularly. That is normal too.","মাসিক সাধারণত ২ থেকে ৭ দিন থাকে এবং ৩ থেকে ৫ সপ্তাহ পরপর আসে। প্রথম এক-দুই বছর নিয়মিত না-ও আসতে পারে। সেটাও স্বাভাবিক।"),"nhsCycle"]
+  ],src:["nhsStart","nhsCycle"]},
+  {id:"body",c:"#8f45d6",t:K("Body changes before your first period","প্রথম মাসিকের আগে শরীরের পরিবর্তন"),cards:[
+    [K("One or two years before the first period, the body starts to change. You grow taller, your breasts start to grow, and hair grows under the arms and between the legs.","প্রথম মাসিকের এক-দুই বছর আগে শরীর বদলাতে শুরু করে। লম্বা হতে থাকো, স্তন বড় হতে শুরু করে, আর বগলে ও দুই পায়ের মাঝে লোম গজায়।"),"nhsStart"],
+    [K("Pimples on the face are common at this age.","এই বয়সে মুখে ব্রণ ওঠা খুব সাধারণ।"),"nhsStart"],
+    [K("Your feelings can change quickly too: happy one day, sad or angry the next. This is normal.","মনও তাড়াতাড়ি বদলায়: কোনো দিন খুশি, কোনো দিন মন খারাপ বা রাগ। এটা স্বাভাবিক।"),null],
+    [K("Every girl grows at her own speed. There is no need to compare yourself with friends.","প্রতিটি মেয়ে নিজের গতিতে বড় হয়। বন্ধুদের সাথে নিজেকে তুলনা করার দরকার নেই।"),null]
+  ],src:["nhsStart"]},
+  {id:"pads",c:"#0b9792",t:K("Pad or cloth: keeping it clean","প্যাড না কাপড়: পরিষ্কার রাখার নিয়ম"),cards:[
+    [K("You can use a pad or a clean cotton cloth. Both are fine when they are kept clean.","প্যাড বা পরিষ্কার সুতি কাপড়, যেকোনোটাই ব্যবহার করা যায়। পরিষ্কার রাখলে দুটোই ভালো।"),"mhmCloth"],
+    [K("Change your pad or cloth at least every 6 hours, even if it does not look full.","অন্তত প্রতি ৬ ঘণ্টায় প্যাড বা কাপড় বদলাও, ভরে না গেলেও।"),"mhmBrief"],
+    [K("Wash the cloth with soap and clean water, then dry it in the sun. Sunlight helps keep it clean.","কাপড় সাবান ও পরিষ্কার পানি দিয়ে ধুয়ে রোদে শুকাও। রোদ কাপড়কে জীবাণুমুক্ত রাখতে সাহায্য করে।"),"mhmSchools"],
+    [K("Many girls hide the cloth in a damp, dark place to dry. It stays wet there and can cause infection. If you want privacy, dry it in the sun under a thin cloth.","অনেক মেয়ে কাপড় লুকিয়ে ভেজা, অন্ধকার জায়গায় শুকায়। সেখানে কাপড় ভেজা থাকে, সংক্রমণ হতে পারে। আড়াল চাইলে পাতলা কাপড়ের নিচে রেখে রোদে শুকাও।"),"mhmDry"],
+    [K("Wrap a used pad in paper and put it in a bin. Don't throw it in a toilet, pond or river.","ব্যবহার করা প্যাড কাগজে মুড়িয়ে ময়লার ঝুড়িতে ফেলো। টয়লেট, পুকুর বা নদীতে ফেলো না।"),null]
+  ],src:["mhmBrief","mhmSchools","mhmDry","mhmCloth"]},
+  {id:"clean",c:"#2378d1",t:K("Staying clean and fresh","পরিষ্কার ও সতেজ থাকা"),cards:[
+    [K("Wash your hands with soap before and after changing a pad or cloth.","প্যাড বা কাপড় বদলানোর আগে ও পরে সাবান দিয়ে হাত ধোও।"),null],
+    [K("Wash the outside of your body with plain water every day. Plain water is enough; scented soap can sting.","প্রতিদিন শরীরের বাইরের অংশ শুধু পানি দিয়ে ধোও। পানিই যথেষ্ট; সুগন্ধি সাবানে জ্বালা করতে পারে।"),"water"],
+    [K("Taking a bath during your period is safe and helps you feel fresh.","মাসিকের সময় গোসল করা নিরাপদ, এতে সতেজও লাগে।"),null],
+    [K("Wear clean cotton underwear and change it every day.","পরিষ্কার সুতির অন্তর্বাস পরো এবং প্রতিদিন বদলাও।"),null]
+  ],src:["water"]},
+  {id:"pain",c:"#e2603a",t:K("Pain and taking care of yourself","ব্যথা ও নিজের যত্ন"),cards:[
+    [K("A mild pain in the belly or back is common. It usually lasts 2 to 3 days.","পেটে বা কোমরে হালকা ব্যথা খুব সাধারণ। সাধারণত ২ থেকে ৩ দিন থাকে।"),"nhsPain"],
+    [K("A warm water bottle on the belly, rest, gentle walking and drinking water can help.","পেটে গরম পানির বোতল, বিশ্রাম, হালকা হাঁটা আর পানি খাওয়া আরাম দিতে পারে।"),"nhsPain"],
+    [K("Eat as usual: rice, lentils, vegetables, fish, eggs and fruit. Green leafy vegetables and lentils give you iron.","স্বাভাবিক খাবার খাও: ভাত, ডাল, শাকসবজি, মাছ, ডিম ও ফল। সবুজ শাক আর ডাল শরীরে আয়রন জোগায়।"),null],
+    [K("Ask a health worker before taking any medicine for pain.","ব্যথার কোনো ওষুধ খাওয়ার আগে স্বাস্থ্যকর্মীকে জিজ্ঞাসা করো।"),null]
+  ],src:["nhsPain"]},
+  {id:"myths",c:"#5056e6",t:K("What people say, and what is true","লোকে যা বলে, আর আসল সত্য"),intro:K("Many families pass on ideas about periods with love and care. Some of them are true and some are not. Here is what doctors know.","অনেক পরিবারে ভালোবাসা থেকেই মাসিক নিয়ে নানা কথা বলা হয়। এর কিছু সত্য, কিছু নয়। ডাক্তাররা যা জানেন, তা এখানে দেওয়া হলো।"),myths:[
+    [K("“Don't bathe during your period.”","“মাসিকের সময় গোসল করা যাবে না।”"),K("Bathing is safe and keeps you clean.","গোসল নিরাপদ, এতে শরীর পরিষ্কার থাকে।"),null],
+    [K("“Don't eat fish, eggs or sour food.”","“মাছ, ডিম বা টক খাবার খাওয়া যাবে না।”"),K("No food is harmful during a period. Eating well gives you strength.","মাসিকের সময় কোনো খাবার ক্ষতিকর নয়। ভালো খেলে শরীরে শক্তি থাকে।"),null],
+    [K("“Period blood is dirty.”","“মাসিকের রক্ত অপবিত্র বা নোংরা।”"),K("It is ordinary blood and lining from the womb. It is not dirty and it is not a sign of illness.","এটা জরায়ুর সাধারণ রক্ত ও আস্তরণ। এটা নোংরা নয়, অসুখের লক্ষণও নয়।"),null],
+    [K("“Stay home from school during your period.”","“মাসিকের সময় স্কুলে যাওয়া উচিত নয়।”"),K("You can go to school, play and work as usual. In Bangladesh, 1 in 4 school girls missed school during their last period. Being prepared helps.","তুমি স্বাভাবিকভাবে স্কুলে যেতে, খেলতে ও কাজ করতে পারো। বাংলাদেশে স্কুলগামী প্রতি ৪ জনে ১ জন মেয়ে গত মাসিকে স্কুলে যায়নি। আগে থেকে প্রস্তুত থাকলে সুবিধা হয়।"),"bahwsSchool"],
+    [K("“Dry the cloth hidden away so no one sees.”","“কাপড় কেউ যেন না দেখে, লুকিয়ে শুকাও।”"),K("Dry it in the sun. Cover it with a thin cloth if you want privacy.","রোদে শুকাও। আড়াল চাইলে পাতলা কাপড় দিয়ে ঢেকে দাও।"),"mhmDry"],
+    [K("“Once a girl has her period, she is ready to marry.”","“মাসিক শুরু হলেই মেয়ে বিয়ের উপযুক্ত।”"),K("A period does not mean a girl is ready for marriage. In Bangladesh, marriage of a girl under 18 is child marriage. National Helpline 109 can help.","মাসিক শুরু হওয়া মানে বিয়ের জন্য প্রস্তুত হওয়া নয়। বাংলাদেশে ১৮ বছরের কম বয়সী মেয়ের বিয়ে বাল্যবিবাহ। জাতীয় হেল্পলাইন ১০৯ সাহায্য করতে পারে।"),"marriage18"]
+  ],src:["bahwsSchool","mhmDry","marriage18"]},
+  {id:"help",c:"#2a9455",t:K("Talking and getting help","কথা বলা ও সাহায্য নেওয়া"),cards:[
+    [K("It is fine to ask questions. Talk to your mother, sister, aunt or a female teacher you trust.","প্রশ্ন করা ঠিক আছে। মা, বোন, খালা-ফুপু বা বিশ্বস্ত কোনো নারী শিক্ষকের সাথে কথা বলো।"),null],
+    [K("See a doctor or health worker if your period has not started by 15, if bleeding lasts more than 7 days, or if you need a new pad every 1 to 2 hours.","১৫ বছরেও মাসিক শুরু না হলে, ৭ দিনের বেশি রক্ত গেলে, বা ১–২ ঘণ্টা পরপর প্যাড বদলাতে হলে ডাক্তার বা স্বাস্থ্যকর্মী দেখাও।"),"aapHeavy"],
+    [K("Also see one if the pain is so bad that you cannot go to school or work, or if your periods stop for 3 months after they had become regular.","ব্যথা এত বেশি যে স্কুলে বা কাজে যেতে পারো না, বা নিয়মিত হওয়ার পর ৩ মাস মাসিক বন্ধ থাকলেও দেখাও।"),"ghPain"],
+    [K("Government Mother and Child Welfare Centres, Union Health and Family Welfare Centres and Upazila Health Complexes have adolescent-friendly corners where you can ask in private.","সরকারি মা ও শিশু কল্যাণ কেন্দ্র, ইউনিয়ন স্বাস্থ্য ও পরিবার কল্যাণ কেন্দ্র এবং উপজেলা স্বাস্থ্য কমপ্লেক্সে কৈশোরবান্ধব কর্নার আছে, সেখানে আলাদাভাবে প্রশ্ন করা যায়।"),"afhc"],
+    [K("Call Shastho Batayon 16263 any time for health advice.","স্বাস্থ্য পরামর্শের জন্য যেকোনো সময় স্বাস্থ্য বাতায়ন ১৬২৬৩-এ কল করো।"),null]
+  ],src:["aapHeavy","ghPain","afhc","afhc2"]}
+];
+const psLesson=id=>PS_LESSONS.find(l=>l.id===id);
+const psCards=l=>l.myths?[[l.intro,null]].concat(l.myths.map(([m,f,s])=>[{en:`${m.en}\n✓ ${f.en}`,bn:`${m.bn}\n✓ ${f.bn}`},s,m,f])):l.cards;
+
+/* ---- Knowledge check: same statements before and after ---- */
+const PS_Q=[
+  [K("A period is a normal, healthy part of growing up.","মাসিক বড় হওয়ার একটি স্বাভাবিক ও সুস্থ অংশ।"),true,"what"],
+  [K("Bathing during a period is harmful.","মাসিকের সময় গোসল করা ক্ষতিকর।"),false,"clean"],
+  [K("A washed cloth should be dried in the sun.","ধোয়া কাপড় রোদে শুকানো উচিত।"),true,"pads"],
+  [K("A pad or cloth should be changed at least every 6 hours.","অন্তত প্রতি ৬ ঘণ্টায় প্যাড বা কাপড় বদলানো উচিত।"),true,"pads"],
+  [K("Girls should stay home from school during their period.","মাসিকের সময় মেয়েদের স্কুলে যাওয়া উচিত নয়।"),false,"myths"],
+  [K("Fish and eggs are harmful during a period.","মাসিকের সময় মাছ ও ডিম খাওয়া ক্ষতিকর।"),false,"myths"],
+  [K("Bleeding for more than 7 days is a reason to see a health worker.","৭ দিনের বেশি রক্ত গেলে স্বাস্থ্যকর্মী দেখানো উচিত।"),true,"help"]
+];
+
+/* ---- State (nothing personal) ---- */
+S.ps={ done:(()=>{ const v=store.get("ps",{})||{}; return Array.isArray(v.done)?v.done.filter(x=>psLesson(x)):[]; })(), card:0, check:null };
+S.pss=(()=>{ const v=store.get("pss",[]); return Array.isArray(v)?v.filter(s=>s&&typeof s.id==="string"&&Array.isArray(s.people)).slice(0,200):[]; })();
+function psSave(){ store.set("ps",{done:S.ps.done}); }
+function pssSave(){ store.set("pss",S.pss); }
+
+/* ---- Speak one piece of text with the phone's voice ---- */
+async function speakText(text){
+  if(!("speechSynthesis" in window)){ showVoiceHelp(true); return; }
+  const want=S.lang==="bn"?"bn":"en"; const voices=await loadVoices(); const voice=pickVoice(voices,want);
+  if(want==="bn"&&!voice){ showVoiceHelp(false); return; }
+  try{ speechSynthesis.cancel(); }catch(e){}
+  text.split(/\n+|(?<=[।.!?])\s+/).map(x=>x.replace(/[✓“”]/g,"").trim()).filter(Boolean).forEach(c=>{
+    const u=new SpeechSynthesisUtterance(c); u.lang=voice?voice.lang:(want==="bn"?"bn-BD":"en-GB"); if(voice) u.voice=voice; u.rate=want==="bn"?0.82:0.9; speechSynthesis.speak(u); });
+}
+
+/* ---- Views ---- */
+function psDraftNote(){
+  return `<div class="stamp st-review ps-draft"><div><b>${tx("Draft lessons, not yet medically reviewed","খসড়া পাঠ, এখনো চিকিৎসক পর্যালোচনা করেননি")}</b><span class="small">${tx("Each lesson is based on the sources listed, but a qualified health professional must review it before it is used with girls. Not medical advice.","প্রতিটি পাঠ তালিকাভুক্ত উৎসের ভিত্তিতে লেখা, তবে মেয়েদের সাথে ব্যবহারের আগে একজন যোগ্য স্বাস্থ্য পেশাজীবীর পর্যালোচনা প্রয়োজন। এটি চিকিৎসা পরামর্শ নয়।")}</span></div></div>`;
+}
+function viewPeriod(){
+  const done=S.ps.done.length, n=PS_LESSONS.length;
+  return `${backLink("#home",t("back"))}
+  <section class="ps-hero">
+    ${psArt("what").replace('class="ps-art"','class="ps-art ps-hero-art"')}
+    <div><h1>${tx("Period Shikkha","পিরিয়ড শিক্ষা")}</h1>
+    <p>${tx("Short, simple lessons about periods for girls, with pictures and listening. Works without internet.","কিশোরীদের জন্য মাসিক নিয়ে ছোট ও সহজ পাঠ, ছবি ও শোনার সুবিধাসহ। ইন্টারনেট ছাড়াও চলে।")}</p></div>
+  </section>
+  <div class="ps-promise">
+    <span>${icon("info")}${tx("No name needed","নাম লাগবে না")}</span>
+    <span>${icon("info")}${tx("No dates asked","কোনো তারিখ চাওয়া হয় না")}</span>
+    <span>${icon("info")}${tx("Nothing shared","কিছুই শেয়ার হয় না")}</span>
+  </div>
+  ${psDraftNote()}
+  <section class="section">
+    <div class="section-head"><h2>${tx("Lessons","পাঠসমূহ")}</h2><span class="small muted">${num(done)}/${num(n)} ${tx("done","শেষ")}</span></div>
+    <div class="progress" aria-hidden="true"><i style="width:${Math.round(done/n*100)}%"></i></div>
+    <ol class="ps-list">${PS_LESSONS.map((l,i)=>{ const ok=S.ps.done.includes(l.id); return `<li><a href="#period-${l.id}" class="ps-item ${ok?"ok":""}" style="--lc:${l.c}">
+      <span class="ps-num">${ok?"✓":num(i+1)}</span>${psArt(l.id)}<span class="ps-t"><b>${L(l.t)}</b><span class="small muted">${num(psCards(l).length)} ${tx("cards","কার্ড")}</span></span></a></li>`; }).join("")}</ol>
+  </section>
+  <section class="section card ps-check-card">
+    <h2>${tx("Check what you know","তুমি কী জানো, যাচাই করো")}</h2>
+    <p class="small muted">${tx("7 quick true-or-false questions. Try them before and after the lessons. Your answers are not saved.","৭টি ছোট ঠিক-ভুল প্রশ্ন। পাঠের আগে ও পরে চেষ্টা করো। উত্তর সংরক্ষণ হয় না।")}</p>
+    <a class="btn primary" href="#period-check">${tx("Start the check","যাচাই শুরু করো")}</a>
+  </section>
+  <section class="section card">
+    <h2>${tx("For girls with disabilities, and the people who help them","প্রতিবন্ধী মেয়েদের ও তাদের সহায়তাকারীদের জন্য")}</h2>
+    <ul class="small ps-inc">
+      <li>${tx("Every card has one idea, a picture and a Listen button. Use Display settings (Aa) for bigger text or simple mode.","প্রতিটি কার্ডে একটি কথা, একটি ছবি ও শোনার বোতাম আছে। বড় লেখা বা সহজ মোডের জন্য Aa চাপুন।")}</li>
+      <li>${tx("Start talking about periods early. Some girls need more time to understand changes.","মাসিক নিয়ে আগে থেকেই কথা বলা শুরু করুন। কিছু মেয়ের পরিবর্তন বুঝতে বেশি সময় লাগে।")}</li>
+      <li>${tx("Practise the steps together before the first period: holding a pad, changing it, washing hands.","প্রথম মাসিকের আগেই ধাপগুলো একসাথে অনুশীলন করুন: প্যাড ধরা, বদলানো, হাত ধোয়া।")}</li>
+      <li>${tx("Keep the same simple routine every time, and always respect her privacy.","প্রতিবার একই সহজ নিয়ম মেনে চলুন, এবং সবসময় তার গোপনীয়তাকে সম্মান করুন।")}</li>
+    </ul>
+    ${srcList(["ndPrep"])}
+  </section>
+  <section class="section card ps-why">
+    <h2>${tx("Why this matters","কেন এটা জরুরি")}</h2>
+    <p class="small">${tx("In Bangladesh's national adolescent survey, only 30% of unmarried girls knew about periods before their first one, and 73% said they want to learn about puberty.","বাংলাদেশের জাতীয় কিশোর-কিশোরী জরিপে মাত্র ৩০% অবিবাহিত কিশোরী প্রথম মাসিকের আগে এ বিষয়ে জানত, আর ৭৩% বয়ঃসন্ধি সম্পর্কে জানতে চায়।")}</p>
+    ${srcList(["bahws","bahwsWant","bahwsSchool"])}
+  </section>
+  <a class="continue ps-fac-link" href="#period-group"><span class="small muted">${tx("For teachers and volunteers","শিক্ষক ও স্বেচ্ছাসেবীদের জন্য")}</span><b>${tx("Run a group session and record results (no names)","দলগত সেশন চালান ও ফলাফল লিখে রাখুন (নাম ছাড়া)")}</b></a>`;
+}
+function viewPeriodLesson(id){
+  const l=psLesson(id); if(!l) return viewPeriod();
+  const cards=psCards(l), i=Math.min(Math.max(0,S.ps.card),cards.length-1), [txt,src,m,f]=cards[i];
+  const last=i===cards.length-1, idx=PS_LESSONS.indexOf(l), next=PS_LESSONS[idx+1];
+  const body=m?`<p class="ps-myth"><span class="ps-tag no">${tx("People say","লোকে বলে")}</span>${L(m)}</p><p class="ps-fact"><span class="ps-tag yes">${tx("The truth","আসল সত্য")}</span>${L(f)}</p>`:`<p class="ps-say">${L(txt)}</p>`;
+  return `${backLink("#period",tx("Period Shikkha","পিরিয়ড শিক্ষা"))}
+  <section class="ps-lesson" style="--lc:${l.c}">
+    <div class="ps-lhead"><span class="small muted">${tx(`Lesson ${idx+1} of ${PS_LESSONS.length}`,`${num(PS_LESSONS.length)}টির মধ্যে ${num(idx+1)} নম্বর পাঠ`)}</span><h1>${L(l.t)}</h1></div>
+    ${psArt(l.id)}
+    <div class="ps-card" aria-live="polite">
+      ${body}
+      <div class="ps-ctl">
+        <button type="button" class="btn ghost ps-listen" data-pssay="${i}">${icon("speaker")||"🔊"} ${tx("Listen","শোনো")}</button>
+        ${src&&GSRC[src]?`<a class="small" href="${esc(safeUrl(GSRC[src].url))}" target="_blank" rel="noopener noreferrer">${tx("Source","উৎস")}</a>`:""}
+      </div>
+    </div>
+    <div class="ps-dots" aria-label="${tx(`Card ${i+1} of ${cards.length}`,`${num(cards.length)}টির মধ্যে ${num(i+1)} নম্বর কার্ড`)}">${cards.map((_,k)=>`<span class="${k===i?"on":k<i?"past":""}"></span>`).join("")}</div>
+    <div class="ps-nav">
+      <button type="button" class="btn ghost" data-pscard="-1" ${i===0?"disabled":""}>${tx("Back","আগের")}</button>
+      ${last?`<button type="button" class="btn primary" data-psdone="${l.id}">${S.ps.done.includes(l.id)?tx("Done ✓","শেষ ✓"):tx("I finished this lesson","পাঠ শেষ করেছি")}</button>`
+        :`<button type="button" class="btn primary" data-pscard="1">${tx("Next","পরের")}</button>`}
+    </div>
+    ${last&&next?`<a class="continue" href="#period-${next.id}"><span class="small muted">${tx("Next lesson","পরের পাঠ")}</span><b>${L(next.t)}</b></a>`:""}
+    ${last&&!next?`<a class="continue" href="#period-check"><span class="small muted">${tx("All lessons read","সব পাঠ পড়া হয়েছে")}</span><b>${tx("Check what you know now","এখন যাচাই করো তুমি কী জানো")}</b></a>`:""}
+  </section>
+  <details class="card small"><summary><b>${tx("All text in this lesson","এই পাঠের পুরো লেখা")}</b></summary><ol>${cards.map(c=>`<li>${L(c[0]).replace(/\n/g,"<br>")}</li>`).join("")}</ol>${srcList(l.src)}</details>
+  ${psDraftNote()}`;
+}
+function viewPeriodCheck(){
+  const c=S.ps.check;
+  if(!c) return `${backLink("#period",tx("Period Shikkha","পিরিয়ড শিক্ষা"))}
+    <section class="section card ps-check-card"><h1>${tx("Check what you know","তুমি কী জানো, যাচাই করো")}</h1>
+    <p>${tx("Read each sentence and choose True, False or Not sure. There are no marks and nothing is saved.","প্রতিটি বাক্য পড়ে ঠিক, ভুল বা জানি না বেছে নাও। কোনো নম্বর নেই, কিছুই সংরক্ষণ হয় না।")}</p>
+    <button type="button" class="btn primary" data-pscheck="start">${tx("Start","শুরু করো")}</button></section>`;
+  if(c.i>=PS_Q.length){ const right=c.a.filter((x,k)=>x===PS_Q[k][1]).length;
+    return `${backLink("#period",tx("Period Shikkha","পিরিয়ড শিক্ষা"))}
+    <section class="section card ps-check-card ps-result"><h1>${tx(`${right} of ${PS_Q.length} correct`,`${num(PS_Q.length)}টির মধ্যে ${num(right)}টি সঠিক`)}</h1>
+    <ul class="ps-review">${PS_Q.map(([q,ans,les],k)=>`<li class="${c.a[k]===ans?"ok":"no"}"><span>${c.a[k]===ans?"✓":"✗"}</span><div>${L(q)}<span class="small muted">${tx("Answer","উত্তর")}: ${ans?tx("True","ঠিক"):tx("False","ভুল")} · <a href="#period-${les}">${tx("Read the lesson","পাঠ পড়ো")}</a></span></div></li>`).join("")}</ul>
+    <div class="btn-row"><button type="button" class="btn primary" data-pscheck="start">${tx("Try again","আবার চেষ্টা করো")}</button><a class="btn ghost" href="#period">${tx("Back to lessons","পাঠে ফিরে যাও")}</a></div></section>`; }
+  const [q]=PS_Q[c.i];
+  return `${backLink("#period",tx("Period Shikkha","পিরিয়ড শিক্ষা"))}
+  <section class="section card ps-check-card"><span class="small muted">${tx(`Question ${c.i+1} of ${PS_Q.length}`,`${num(PS_Q.length)}টির মধ্যে ${num(c.i+1)} নম্বর প্রশ্ন`)}</span>
+    <p class="ps-q">${L(q)}</p>
+    <button type="button" class="btn ghost ps-listen" data-psq="${c.i}">${icon("speaker")||"🔊"} ${tx("Listen","শোনো")}</button>
+    <div class="ps-ans"><button type="button" class="ans yes" data-psans="1"><span>✓</span>${tx("True","ঠিক")}</button><button type="button" class="ans no" data-psans="0"><span>✗</span>${tx("False","ভুল")}</button><button type="button" class="ans dk" data-psans="-1"><span>?</span>${tx("Not sure","জানি না")}</button></div>
+  </section>`;
+}
+
+/* ---- Group session mode for teachers and volunteers (no names, ever) ---- */
+S.pg={sid:"",person:-1,phase:"",i:0,ans:[]};
+function pssStats(list){
+  const ppl=list.flatMap(s=>s.people), qn=PS_Q.length;
+  const pre=ppl.filter(p=>p.pre), post=ppl.filter(p=>p.post), both=ppl.filter(p=>p.pre&&p.post);
+  const avg=a=>a.length?a.reduce((x,y)=>x+y,0)/a.length:0;
+  const sc=arr=>arr.filter((x,k)=>x===PS_Q[k][1]).length;
+  const corrected=both.reduce((n,p)=>n+p.pre.filter((x,k)=>x!==PS_Q[k][1]&&p.post[k]===PS_Q[k][1]).length,0);
+  return {sessions:list.length, girls:ppl.length, completed:ppl.filter(p=>p.done).length, preAvg:avg(pre.map(p=>sc(p.pre))), postAvg:avg(post.map(p=>sc(p.post))), paired:both.length, corrected, qn,
+    sites:new Set(list.map(s=>s.site+"|"+s.kind)).size, verified:list.filter(s=>s.verified).length};
+}
+function viewPeriodGroup(){
+  const sess=S.pss.find(s=>s.id===S.pg.sid);
+  const st=pssStats(S.pss), f1=x=>S.lang==="bn"?bnNum(x.toFixed(1)):x.toFixed(1);
+  if(sess&&S.pg.phase){ // a girl answering on the shared phone
+    const i=S.pg.i;
+    if(i>=PS_Q.length) return `<section class="section card ps-check-card"><h1>${tx("Thank you!","ধন্যবাদ!")}</h1><p>${tx("Please give the phone back to your teacher.","দয়া করে ফোনটি শিক্ষকের হাতে ফিরিয়ে দাও।")}</p><button type="button" class="btn primary" data-pg="saveans">${tx("Teacher: save and continue","শিক্ষক: সংরক্ষণ করে এগোন")}</button></section>`;
+    return `<section class="section card ps-check-card"><span class="small muted">${S.pg.phase==="pre"?tx("Before the lessons","পাঠের আগে"):tx("After the lessons","পাঠের পরে")} · ${tx("Girl","কিশোরী")} ${num(S.pg.person+1)} · ${num(i+1)}/${num(PS_Q.length)}</span>
+      <p class="ps-q">${L(PS_Q[i][0])}</p><button type="button" class="btn ghost ps-listen" data-psq="${i}">${icon("speaker")||"🔊"} ${tx("Listen","শোনো")}</button>
+      <div class="ps-ans"><button type="button" class="ans yes" data-pgans="1"><span>✓</span>${tx("True","ঠিক")}</button><button type="button" class="ans no" data-pgans="0"><span>✗</span>${tx("False","ভুল")}</button><button type="button" class="ans dk" data-pgans="-1"><span>?</span>${tx("Not sure","জানি না")}</button></div></section>`;
+  }
+  if(sess){
+    return `${backLink("#period-group",tx("All sessions","সব সেশন"))}
+    <section class="section card"><h1>${esc(sess.site)}</h1><p class="small muted">${esc(date(sess.date))} · ${sess.kind==="school"?tx("School","স্কুল"):tx("Community","কমিউনিটি")}</p>
+      <ol class="pg-people">${sess.people.map((p,k)=>`<li><b>${tx("Girl","কিশোরী")} ${num(k+1)}</b>
+        <span class="pg-steps"><button type="button" class="chip" data-pg="pre" data-k="${k}" aria-pressed="${!!p.pre}">${p.pre?"✓ ":""}${tx("Before","আগে")}</button>
+        <button type="button" class="chip" data-pg="done" data-k="${k}" aria-pressed="${!!p.done}">${p.done?"✓ ":""}${tx("All lessons","সব পাঠ")}</button>
+        <button type="button" class="chip" data-pg="post" data-k="${k}" aria-pressed="${!!p.post}">${p.post?"✓ ":""}${tx("After","পরে")}</button></span></li>`).join("")}</ol>
+      <div class="btn-row"><button type="button" class="btn primary" data-pg="addgirl">+ ${tx("Add a girl (no name)","কিশোরী যোগ করুন (নাম ছাড়া)")}</button></div>
+      <label class="pg-ver"><input type="checkbox" data-pgver ${sess.verified?"checked":""}> ${tx("A head teacher or local official has signed the attendance sheet for this session","এই সেশনের হাজিরা শিটে প্রধান শিক্ষক বা স্থানীয় কর্মকর্তা স্বাক্ষর করেছেন")}</label>
+      <button type="button" class="back" data-pg="delsess">${tx("Delete this session","এই সেশন মুছুন")}</button>
+    </section>`;
+  }
+  return `${backLink("#period",tx("Period Shikkha","পিরিয়ড শিক্ষা"))}
+  <section class="section"><h1>${tx("Group sessions","দলগত সেশন")}</h1>
+  <p class="small muted">${tx("For trained female teachers, counsellors and health volunteers running voluntary sessions. Girls answer the same 7 questions before and after on this phone. Only answers and counts are kept on this phone; never names.","প্রশিক্ষিত নারী শিক্ষক, কাউন্সেলর ও স্বাস্থ্য স্বেচ্ছাসেবীদের জন্য, যারা স্বেচ্ছামূলক সেশন চালান। মেয়েরা এই ফোনে পাঠের আগে ও পরে একই ৭টি প্রশ্নের উত্তর দেয়। এই ফোনে শুধু উত্তর ও সংখ্যা থাকে; কখনো নাম নয়।")}</p></section>
+  <section class="tiles dash ps-stats">
+    <div class="tile"><b>${num(st.girls)}</b><span>${tx("girls in sessions","কিশোরী অংশ নিয়েছে")}</span></div>
+    <div class="tile"><b>${num(st.completed)}</b><span>${tx("completed all lessons","সব পাঠ শেষ করেছে")}</span></div>
+    <div class="tile"><b>${f1(st.preAvg)} → ${f1(st.postAvg)}</b><span>${tx(`average score out of ${PS_Q.length}, before → after`,`${num(PS_Q.length)}-এর মধ্যে গড় নম্বর, আগে → পরে`)}</span></div>
+    <div class="tile"><b>${num(st.corrected)}</b><span>${tx("wrong ideas corrected","ভুল ধারণা সংশোধিত")}</span></div>
+    <div class="tile"><b>${num(st.sites)}</b><span>${tx("schools or communities","স্কুল বা কমিউনিটি")}</span></div>
+    <div class="tile"><b>${num(st.verified)}/${num(st.sessions)}</b><span>${tx("sessions verified","যাচাইকৃত সেশন")}</span></div>
+  </section>
+  <section class="section card"><h2>${tx("Start a new session","নতুন সেশন শুরু করুন")}</h2>
+    <form id="pg-new" class="app-add">
+      <label for="pg-site"><b>${tx("School or community name","স্কুল বা কমিউনিটির নাম")}</b></label>
+      <input id="pg-site" type="text" maxlength="80" required autocomplete="off" placeholder="${tx("e.g. Char Fasson Girls' High School","যেমন: চরফ্যাশন বালিকা উচ্চ বিদ্যালয়")}">
+      <div class="seg two"><button type="button" data-pgkind="school" aria-selected="${S.pgKind!=="community"}">${tx("School","স্কুল")}</button><button type="button" data-pgkind="community" aria-selected="${S.pgKind==="community"}">${tx("Community","কমিউনিটি")}</button></div>
+      <button type="submit" class="btn primary">${tx("Start session","সেশন শুরু করুন")}</button>
+    </form></section>
+  ${S.pss.length?`<section class="section"><h2>${tx("Sessions on this phone","এই ফোনের সেশন")}</h2>${S.pss.map(s=>`<button type="button" class="continue" data-pgopen="${esc(s.id)}"><span class="small muted">${esc(date(s.date))} · ${num(s.people.length)} ${tx("girls","কিশোরী")}${s.verified?" · ✓ "+tx("verified","যাচাইকৃত"):""}</span><b>${esc(s.site)}</b></button>`).join("")}
+    <button type="button" class="btn ghost" data-pg="export">${tx("Copy results summary","ফলাফলের সারাংশ কপি করুন")}</button></section>`:""}
+  <section class="section card"><h2>${tx("Pilot first, with reviewers","আগে পাইলট, পর্যালোচকসহ")}</h2>
+    <ol class="small ps-pilot">
+      <li>${tx("A qualified doctor or nurse and two female teachers review every lesson. Keep a record of who reviewed each lesson and when. The draft label comes off only after that review.","একজন যোগ্য চিকিৎসক বা নার্স এবং দুজন নারী শিক্ষক প্রতিটি পাঠ পর্যালোচনা করবেন। কে কবে কোন পাঠ পর্যালোচনা করলেন, তা লিখে রাখুন। পর্যালোচনার পরেই কেবল ‘খসড়া’ লেখা সরানো হবে।")}</li>
+      <li>${tx("Start small: 2 or 3 schools or communities in one upazila.","ছোট পরিসরে শুরু করুন: এক উপজেলার ২–৩টি স্কুল বা কমিউনিটি।")}</li>
+      <li>${tx("Sessions are voluntary. Get permission from the school and inform parents. Girls can skip any question.","সেশন স্বেচ্ছামূলক। স্কুলের অনুমতি নিন ও অভিভাবকদের জানান। মেয়েরা যেকোনো প্রশ্ন বাদ দিতে পারে।")}</li>
+      <li>${tx("Count only what you can verify: signed attendance sheets, before-and-after answers, lessons completed.","শুধু যাচাইযোগ্য বিষয় গণনা করুন: স্বাক্ষরিত হাজিরা শিট, আগে-পরের উত্তর, শেষ করা পাঠ।")}</li>
+    </ol></section>`;
+}
+function pssExport(){
+  const st=pssStats(S.pss);
+  const lines=["Period Shikkha pilot summary (no names collected)",`Sessions: ${st.sessions} (verified: ${st.verified})`,`Schools/communities: ${st.sites}`,`Girls: ${st.girls}`,`Completed all lessons: ${st.completed}`,`Average score (out of ${st.qn}): before ${st.preAvg.toFixed(2)}, after ${st.postAvg.toFixed(2)} (paired: ${st.paired})`,`Misconceptions corrected: ${st.corrected}`,"",
+    "date,site,type,verified,girls,completed,pre_avg,post_avg,corrected"].concat(S.pss.map(s=>{ const x=pssStats([s]); return [s.date,`"${s.site.replace(/"/g,"'")}"`,s.kind,s.verified?1:0,x.girls,x.completed,x.preAvg.toFixed(2),x.postAvg.toFixed(2),x.corrected].join(","); }));
+  return lines.join("\n");
+}
+
+/* ---- Events ---- */
+document.addEventListener("click",e=>{
+  const el=e.target;
+  const pc0=el.closest("[data-pscard]"); if(pc0){ S.ps.card=Math.max(0,S.ps.card+(+pc0.dataset.pscard)); try{speechSynthesis.cancel()}catch(err){} stopSpeech(); render(); const nb=document.querySelector(`[data-pscard="${pc0.dataset.pscard}"]:not([disabled])`)||document.querySelector("[data-psdone],[data-pscard]"); if(nb) nb.focus(); return; }
+  const pd=el.closest("[data-psdone]"); if(pd){ const id=pd.dataset.psdone; if(!S.ps.done.includes(id)){ S.ps.done.push(id); psSave(); } render(); const nb=document.querySelector("[data-psdone]"); if(nb){ nb.focus(); celebrate(nb); } return; }
+  const say=el.closest("[data-pssay]"); if(say){ const l=psLesson(route().slice(7)); if(l){ const c=psCards(l)[+say.dataset.pssay]; speakText(raw(c[2]?{en:c[2].en+". "+c[3].en,bn:c[2].bn+"। "+c[3].bn}:c[0])); } return; }
+  const sq=el.closest("[data-psq]"); if(sq){ speakText(raw(PS_Q[+sq.dataset.psq][0])); return; }
+  const ck=el.closest("[data-pscheck]"); if(ck){ S.ps.check={i:0,a:[]}; render(); return; }
+  const an=el.closest("[data-psans]"); if(an&&S.ps.check){ const v=+an.dataset.psans; S.ps.check.a.push(v===-1?null:v===1); S.ps.check.i++; render(); if(S.ps.check.i>=PS_Q.length){ const r=S.ps.check.a.filter((x,k)=>x===PS_Q[k][1]).length; if(r>=6) setTimeout(()=>celebrate(document.querySelector(".ps-result h1")),60); } return; }
+  // group mode
+  const pk=el.closest("[data-pgkind]"); if(pk){ S.pgKind=pk.dataset.pgkind; document.querySelectorAll("[data-pgkind]").forEach(b=>b.setAttribute("aria-selected",b===pk)); return; }
+  const po=el.closest("[data-pgopen]"); if(po){ S.pg={sid:po.dataset.pgopen,person:-1,phase:"",i:0,ans:[]}; render(); return; }
+  const ga=el.closest("[data-pgans]"); if(ga){ const v=+ga.dataset.pgans; S.pg.ans.push(v===-1?null:v===1); S.pg.i++; render(); return; }
+  const pg=el.closest("[data-pg]"); if(pg){ const act=pg.dataset.pg, sess=S.pss.find(s=>s.id===S.pg.sid);
+    if(act==="export"){ const txt=pssExport(); try{ navigator.clipboard.writeText(txt).then(()=>toast(tx("Summary copied","সারাংশ কপি হয়েছে")),()=>{ prompt("",txt); }); }catch(err){ toast(txt.slice(0,120)); } return; }
+    if(!sess) return;
+    if(act==="addgirl"){ sess.people.push({pre:null,post:null,done:false}); pssSave(); render(); return; }
+    if(act==="pre"||act==="post"){ S.pg.person=+pg.dataset.k; S.pg.phase=act; S.pg.i=0; S.pg.ans=[]; render(); return; }
+    if(act==="done"){ const p=sess.people[+pg.dataset.k]; p.done=!p.done; pssSave(); render(); return; }
+    if(act==="saveans"){ const p=sess.people[S.pg.person]; if(p){ p[S.pg.phase]=S.pg.ans.slice(0,PS_Q.length); pssSave(); } S.pg.phase=""; S.pg.person=-1; render(); return; }
+    if(act==="delsess"){ if(!confirm(tx("Delete this session's results?","এই সেশনের ফলাফল মুছবেন?"))) return; S.pss=S.pss.filter(s=>s.id!==sess.id); pssSave(); S.pg={sid:"",person:-1,phase:"",i:0,ans:[]}; render(); return; }
+  }
+});
+document.addEventListener("change",e=>{
+  if(e.target.matches("[data-pgver]")){ const s=S.pss.find(x=>x.id===S.pg.sid); if(s){ s.verified=e.target.checked; pssSave(); } }
+});
+document.addEventListener("submit",e=>{
+  if(e.target.id!=="pg-new") return; e.preventDefault();
+  const site=(document.getElementById("pg-site").value||"").trim().slice(0,80); if(!site) return;
+  const s={id:Date.now().toString(36),site,kind:S.pgKind==="community"?"community":"school",date:isoLocal(TODAY),verified:false,people:[]};
+  S.pss.unshift(s); pssSave(); S.pg={sid:s.id,person:-1,phase:"",i:0,ans:[]}; render();
+});
+window.addEventListener("hashchange",()=>{ const h=location.hash.replace("#",""); S.ps.card=0; try{speechSynthesis.cancel()}catch(err){} if(h!=="period-check") S.ps.check=null; if(h!=="period-group") S.pg={sid:"",person:-1,phase:"",i:0,ans:[]}; });
+
+/* Home banner */
+function periodBanner(){
+  return `<a class="ps-banner" href="#period">${psArt("what")}<span><b>${tx("Period Shikkha","পিরিয়ড শিক্ষা")}</b><span>${tx("Simple lessons about periods for girls · pictures, listening, offline","কিশোরীদের জন্য মাসিক নিয়ে সহজ পাঠ · ছবি, শোনা, অফলাইন")}</span></span>${icon("chev","chev")}</a>`;
+}
+
 /* ---------- Map ---------- */
 S.mapSel=""; S.mapDiv=""; S.mapVB=null; S.mapCoast=false;
 const PLACES_EN=r=>{ const ad=r.address&&r.address.en||"", nm=r.name.en, place=ad&&nm.includes(ad)?nm:(ad?(ad.includes(nm)?ad:nm+", "+ad):nm);
@@ -3443,7 +3837,7 @@ function render(){
     ? `<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/></svg>${t("stop")}`
     : `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg>${t("listen")}`;
   document.getElementById("listen").setAttribute("aria-pressed", speaking);
-  const tab = (r.startsWith("r-")||r==="explore"||r==="district") ? "explore" : (r==="learn"||r.startsWith("g-")) ? "learn" : (r==="path"||r==="apps") ? "path" : (r==="about"||r==="gaps") ? "about" : "home";
+  const tab = (r.startsWith("r-")||r==="explore"||r==="district") ? "explore" : (r==="learn"||r.startsWith("g-")||r.startsWith("period")) ? "learn" : (r==="path"||r==="apps") ? "path" : (r==="about"||r==="gaps") ? "about" : "home";
   const TABS=[["home","home"],["explore","search"],["learn","learn"],["path","list"],["about","info"]];
   const ti=Math.max(0,TABS.findIndex(([k])=>k===tab));
   const prevTi = typeof window.__ti==="number" ? window.__ti : ti;
@@ -3468,6 +3862,10 @@ function render(){
   else if(r==="mother") html=viewMother();
   else if(r==="disaster") html=viewDisaster();
   else if(r==="map") html=viewMap();
+  else if(r==="period") html=viewPeriod();
+  else if(r==="period-check") html=viewPeriodCheck();
+  else if(r==="period-group") html=viewPeriodGroup();
+  else if(r.startsWith("period-")) html=viewPeriodLesson(r.slice(7));
   else html=viewHome();
   document.getElementById("view").innerHTML=html;
   if(r==="map") animateMap();
@@ -3500,7 +3898,7 @@ document.addEventListener("click",e=>{
     location.hash="path";setTimeout(()=>{const a=document.getElementById("path-"+id);if(a)a.scrollIntoView({block:"start"});},30);return;}
   if(el.dataset.rmpath){delete S.paths[el.dataset.rmpath];persist();render();return;}
   if(el.id==="clear-btn"){ if(!S.clearArmed){S.clearArmed=true;render();return;}
-    S.saved=[];S.paths={};S.plans={};S.reminders=[];S.apps=[];S.mig={before:[],abroad:[],home:[]};S.dis={before:[],during:[],after:[]};S.a11y=Object.assign({},A11Y_DEFAULT);applyA11y();S.reports=[];S.hide=false;S.revealed=false;S.clearArmed=false;store.clear();store.set("saved",[]);store.set("paths",{});S.flash=t("cleared");render();return;}
+    S.saved=[];S.paths={};S.plans={};S.reminders=[];S.apps=[];S.mig={before:[],abroad:[],home:[]};S.dis={before:[],during:[],after:[]};S.ps={done:[],card:0,check:null};S.pss=[];S.a11y=Object.assign({},A11Y_DEFAULT);applyA11y();S.reports=[];S.hide=false;S.revealed=false;S.clearArmed=false;store.clear();store.set("saved",[]);store.set("paths",{});S.flash=t("cleared");render();return;}
   if(el.id==="nav-go"){S.nav.district=document.getElementById("nav-district").value;S.nav.freeFirst=document.getElementById("nav-free").checked;S.nav.done=true;render();window.scrollTo(0,0);return;}
   if(el.id==="nav-restart"){location.hash="home";return;}
 });
